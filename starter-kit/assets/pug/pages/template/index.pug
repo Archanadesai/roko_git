@@ -1,0 +1,763 @@
+- var theme_customizer      = true;
+- var apex                  = true;
+- var apexmoment            = true;
+- var dashboard_default     = true;
+- var datatable             = true;
+- var page_datatable        = true;
+- var page_datatable_select = true;
+- var datatable_select      = true;
+- var notify                = true;
+- var animate               = true;
+- var typeahead             = true;
+- var typeahead_search      = true;
+- var sidebar               = true;
+- var scrollbar             = true;
+- var wow                   = true;
+- var slick                 = true;
+- var header_slider         = true;
+//- - var clock                 = true;
+- var customcard            = true;
+- var height_equal          = true;
+
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+      include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          .container-fluid         
+            .page-title
+              .row
+                .col-12.col-sm-6
+                  h3
+                    | Crypto Dashboard
+                .col-12.col-sm-6
+                  ol.breadcrumb
+                    li.breadcrumb-item
+                      a(href='index.html')                                        
+                        i(data-feather='home')
+                    li.breadcrumb-item Dashboard
+                    li.breadcrumb-item.active Crypto      
+          // Container-fluid starts
+          .container-fluid.dashboard_default
+            .row.widget-grid
+              .col-xl-4.col-lg-4.col-md-6.proorder-xl-1.proorder-lg-1
+                .card.total-earning
+                  .card-header.card-no-border.pb-0
+                    .d-flex
+                      .badge.badge-rounded.animation
+                        svg.bit-icon
+                          use(href='../assets/svg/icon-sprite.svg#bit-icon')
+                      .flex-grow-1
+                        h5 $20.790
+                        p.d-flex
+                          span.bg-light-secondary.me-2
+                            svg
+                              use(href='../assets/svg/icon-sprite.svg#arrow-down')
+                          span.font-secondary.me-2 - 36.28%
+                          span Since last month
+                  .card-body.p-0
+                    div 
+                      #income-chart    
+              .col-xl-4.col-lg-4.col-md-6.proorder-xl-2.proorder-lg-2
+                .card.total-earning
+                  .card-header.card-no-border.pb-0
+                    .d-flex
+                      .badge.badge-rounded.font-success.animation
+                        svg.ethereum-icon
+                          use(href='../assets/svg/icon-sprite.svg#ethereum')
+                      .flex-grow-1
+                        h5 $20.790
+                        p.d-flex
+                          span.bg-light-success.me-2
+                            svg
+                              use(href='../assets/svg/icon-sprite.svg#arrow-up')
+                          span.font-success.me-2 + 23.28%
+                          span Since last month
+                  .card-body.p-0
+                    div 
+                      #ethereumchart 
+              .col-xl-4.col-lg-4.proorder-xl-3.proorder-lg-3
+                .card.total-earning
+                  .card-header.card-no-border.pb-0
+                    .d-flex
+                      .badge.badge-rounded.animation
+                        svg.litecoin-icon
+                          use(href='../assets/svg/icon-sprite.svg#litecoin')
+                      .flex-grow-1
+                        h5 $20.790
+                        p.d-flex
+                          span.bg-light-secondary.me-2
+                            svg
+                              use(href='../assets/svg/icon-sprite.svg#arrow-down')
+                          span.font-secondary.me-2 - 36.28%
+                          span Since last month
+                  .card-body.p-0
+                    div 
+                      #litecoinchart     
+              .col-xxl-6.col-xl-7.box-col-7.proorder-xl-4.proorder-lg-4
+                .card.activeorder
+                  .card-header.card-no-border.pb-0 
+                    h3 Active Order
+                  .card-body
+                    .table-responsive.custom-scrollbar
+                      table#active-order.table.display(style='width:100%')
+                        thead
+                          tr
+                            th
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label(for='flexCheckDefault')
+                            th Date
+                            th Type
+                            th Customer
+                            th Price
+                            th Usd   
+                            th Status
+                        tbody
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label(for='flexCheckDefault')
+                            td
+                              .d-flex
+                                .flex-grow-1
+                                  a(href="product-page.html")
+                                    h6.f-w-600 May 5,2023
+                                    span 01:08 PM
+                            td 
+                              button.btn.type Buy
+                            td 
+                              .user-details.customers
+                                ul 
+                                  li.d-inline-block
+                                    img.rounded-circle(src="../assets/images/dashboard/user/1.png", alt="user")
+                                  li.d-inline-block
+                                    img.rounded-circle(src="../assets/images/dashboard/user/2.png", alt="user")
+                                  li.d-inline-block
+                                    img.rounded-circle(src="../assets/images/dashboard/user/3.png", alt="user")
+                            td 12600.66
+                            td $ 7521.56
+                            td 
+                              .order 
+                                p Done
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label(for='flexCheckDefault')
+                            td
+                              .d-flex
+                                .flex-grow-1
+                                  a(href="product-page.html")
+                                    h6.f-w-600 March 23,2023
+                                    span 01:24 PM
+                            td 
+                              button.btn.type Sell
+                            td 
+                              .user-details.customers
+                                ul 
+                                  li.d-inline-block
+                                    img.rounded-circle(src="../assets/images/dashboard/user/4.png", alt="user")
+                                  li.d-inline-block
+                                    img.rounded-circle(src="../assets/images/dashboard/user/1.png", alt="user")
+                                  li.d-inline-block
+                                    img.rounded-circle(src="../assets/images/dashboard/user/5.png", alt="user")
+                                  li.d-inline-block
+                                    .light-card
+                                      span.f-w-600 6+
+                            td 6513.85
+                            td $ 9512.12
+                            td 
+                              .order 
+                                p Pending
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label(for='flexCheckDefault')
+                            td
+                              .d-flex
+                                .flex-grow-1
+                                  a(href="product-page.html")
+                                    h6.f-w-600 Sep 14,2023
+                                    span 05:32 PM
+                            td 
+                              button.btn.type Buy
+                            td 
+                              .user-details.customers
+                                ul 
+                                  li.d-inline-block
+                                    img.rounded-circle(src="../assets/images/dashboard/user/6.png", alt="user")
+                                  li.d-inline-block
+                                    img.rounded-circle(src="../assets/images/dashboard/user/7.png", alt="user")
+                            td 6591.85
+                            td $ 3215.41
+                            td 
+                              .order 
+                                p Done
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label(for='flexCheckDefault')
+                            td
+                              .d-flex
+                                .flex-grow-1
+                                  a(href="product-page.html")
+                                    h6.f-w-600 Jun 5,2023
+                                    span 23:90 PM
+                            td 
+                              button.btn.type Sell
+                            td 
+                              .user-details.customers
+                                ul 
+                                  li.d-inline-block
+                                    img.rounded-circle(src="../assets/images/dashboard/user/8.png", alt="user")
+                                  li.d-inline-block
+                                    img.rounded-circle(src="../assets/images/dashboard/user/9.png", alt="user")
+                                  li.d-inline-block
+                                    img.rounded-circle(src="../assets/images/dashboard/user/1.png", alt="user")
+                                  li.d-inline-block
+                                    .light-card
+                                      span.f-w-600 5+
+                            td 9512.95
+                            td $ 9514.35
+                            td 
+                              .order 
+                                p In Progress
+              .col-xxl-3.col-xl-6.box-col-6.col-lg-6.col-md-6.proorder-xl-8.proorder-lg-5
+                .card.buysell-section 
+                  .card-header.card-no-border.pb-0
+                    ul#pills-tab.nav.nav-pills.nav-primary(role='tablist')
+                      li.nav-item
+                        a#pills-aboutus-tab.nav-link.active(data-bs-toggle='pill' href='#pills-aboutus' role='tab' aria-controls='pills-aboutus' aria-selected='true')
+                          | Buy
+                      li.nav-item.sell-tab
+                        a#pills-contactus-tab.nav-link(data-bs-toggle='pill' href='#pills-contactus' role='tab' aria-controls='pills-contactus' aria-selected='false') Sell
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          div
+                            i.icon-settings
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body 
+                    #pills-tabContent.tab-content
+                      #pills-aboutus.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='pills-aboutus-tab')
+                        div.from-buy.mb-4
+                          p BTC 
+                          label(for="money")  Volume:
+                          input.form-control(type='text', placeholder='Min 0.001')   
+                        div.from-buy.price-content
+                          p BTC 
+                          label(for="money")  Price:
+                          input.form-control(type='text', placeholder='$7487,385')  
+                        div.from-buy.amount
+                          label(for="money")  Amount:
+                          input.form-control(type='text', placeholder='Buy Amount')    
+                        a(href="pricing.html")   
+                          button.btn.btn-primary.btn-lg(type='button') Buy Now
+                      #pills-contactus.tab-pane.fade(role='tabpanel' aria-labelledby='pills-contactus-tab')
+                        div.from-buy.mb-4
+                          p BTC 
+                          label(for="money")  Volume:
+                          input.form-control(type='text', placeholder='Min 0.001')   
+                        div.from-buy.price-content
+                          p BTC 
+                          label(for="money")  Price:
+                          input.form-control(type='text', placeholder='$7487,385')  
+                        div.from-buy.amount
+                          label(for="money")  Amount:
+                          input.form-control(type='text', placeholder='Buy Amount')   
+                        a(href="pricing.html")    
+                          button.btn.btn-primary.btn-lg(type='button') Sell Coins
+              .col-xxl-3.col-xl-5.box-col-5.col-lg-6.col-md-6.proorder-xl-5.proorder-lg-6 
+                .card.live-price
+                  .card-header.card-no-border.pb-0 
+                    h3 Live Prices
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          div
+                            i.icon-settings
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body
+                    .table-responsive.custom-scrollbar
+                      table.table.display(style='width:100%')
+                        tbody
+                          tr 
+                            td 
+                              .d-flex.gap-2
+                                .flex-shrink-0
+                                  svg.animation
+                                    use(href='../assets/svg/icon-sprite.svg#bit-icon')
+                                .flex-grow-1
+                                  h6.f-w-600 Bitcoin
+                                  p BTC
+                            td 
+                              #priceChart1
+                            td 
+                              .flex-grow-1
+                                h6.f-w-600 $20,512
+                                p +0,20%      
+                          tr 
+                            td 
+                              .d-flex.gap-2
+                                .flex-shrink-0
+                                  svg.animation
+                                    use(href='../assets/svg/icon-sprite.svg#ethereum')
+                                .flex-grow-1
+                                  h6.f-w-600 Ethereum
+                                  p ETH
+                            td 
+                              #priceChart2
+                            td 
+                              .flex-grow-1
+                                h6.f-w-600 $26,838
+                                p -0,16%
+                          tr 
+                            td 
+                              .d-flex.gap-2
+                                .flex-shrink-0
+                                  svg.animation
+                                    use(href='../assets/svg/icon-sprite.svg#monero')
+                                .flex-grow-1
+                                  h6.f-w-600 Monero
+                                  p XMR
+                            td 
+                              #priceChart3
+                            td 
+                              .flex-grow-1
+                                h6.f-w-600 $28,738
+                                p +0,23%
+                          tr 
+                            td 
+                              .d-flex.gap-2
+                                .flex-shrink-0
+                                  svg.animation
+                                    use(href='../assets/svg/icon-sprite.svg#litecoin')
+                                .flex-grow-1
+                                  h6.f-w-600 Litecoin
+                                  p LTC
+                            td 
+                              #priceChart4
+                            td 
+                              .flex-grow-1
+                                h6.f-w-600 $22,222
+                                p -0,12%
+                          tr 
+                            td 
+                              .d-flex.gap-2
+                                .flex-shrink-0
+                                  svg.animation
+                                    use(href='../assets/svg/icon-sprite.svg#bit-icon')
+                                .flex-grow-1
+                                  h6.f-w-600 Bitcoin
+                                  p BTC
+                            td 
+                              #priceChart5
+                            td 
+                              .flex-grow-1
+                                h6.f-w-600 $22,512
+                                p +0,20%  
+
+              .col-xl-6.proorder-xl-6.proorder-lg-7
+                .card.recent-activities
+                  .card-header.card-no-border.pb-0 
+                    h3 Recent Trading Activities
+                  .card-body
+                    .table-responsive.custom-scrollbar
+                      table#recent-trading.table.display(style='width:100%')
+                        thead
+                          tr
+                            th
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label(for='flexCheckDefault')
+                            th Name and type
+                            th Customer
+                            th ID and Status
+                            th Volume
+                        tbody
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label(for='flexCheckDefault')
+                            td
+                              .d-flex.gap-2
+                                .flex-shrink-0
+                                  svg.animation
+                                    use(href='../assets/svg/icon-sprite.svg#sent')
+                                .flex-grow-1
+                                  h6.f-w-600 Sent LTC
+                                  p To Coinbase
+                            td 
+                              h6.f-w-600 May 5,2023
+                              p 01:08 PM
+                            td 
+                              .d-flex.gap-2
+                                p.m-0 6212
+                                .progress
+                                  .progress-bar.bg-primary(role='progressbar', style='width: 70%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100')
+                            td 
+                                h6.f-w-600 0.00512 BTC
+                                p -220 USD
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label(for='flexCheckDefault')
+                            td
+                              .d-flex.gap-2
+                                .flex-shrink-0
+                                  svg.animation
+                                    use(href='../assets/svg/icon-sprite.svg#Buy')
+                                .flex-grow-1
+                                  h6.f-w-600 Bought LTC
+                                  p Using USD Account
+                            td 
+                              h6.f-w-600 March 3,2023 
+                              p 01:24 PM
+                            td 
+                              .d-flex.gap-2
+                                p.m-0 2512
+                                .progress
+                                  .progress-bar.bg-secondary(role='progressbar', style='width: 40%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100')
+                            td 
+                                h6.f-w-600 0.00365 ETH
+                                p 500 USD
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label(for='flexCheckDefault')
+                            td
+                              .d-flex.gap-2
+                                .flex-shrink-0
+                                  svg.animation
+                                    use(href='../assets/svg/icon-sprite.svg#download')
+                                .flex-grow-1
+                                  h6.f-w-600 Received BTC
+                                  p From Exodus
+                            td 
+                              h6.f-w-600 Sep 8,2023
+                              p 05:32 PM
+                            td 
+                              .d-flex.gap-2
+                                p.m-0 9546
+                                .progress
+                                  .progress-bar.bg-info(role='progressbar', style='width: 70%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100')
+                            td 
+                                h6.f-w-600 0.00956 BTC
+                                p 500 USD
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label(for='flexCheckDefault')
+                            td
+                              .d-flex.gap-2
+                                .flex-shrink-0
+                                  svg.animation
+                                    use(href='../assets/svg/icon-sprite.svg#arrow-action')
+                                .flex-grow-1
+                                  h6.f-w-600 Sent DOGE
+                                  p To Binance
+                            td 
+                              h6.f-w-600 May 5,2023
+                              p 23:90 PM
+                            td 
+                              .d-flex.gap-2
+                                p.m-0 3548
+                                .progress
+                                  .progress-bar.bg-info(role='progressbar', style='width: 40%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100')
+                            td 
+                                h6.f-w-600 0.00856 LTC
+                                p 500 USD
+              .col-xl-6.proorder-xl-7.proorder-lg-8 
+                .card.market-overview
+                  .card-header.card-no-border.pb-0
+                    h3 Market Overview  
+                  .card-body 
+                    #market-stickchart          
+              .col-xxl-3.col-xl-6.box-col-6.col-lg-6.proorder-xl-9.proorder-lg-9.col-md-6
+                .card.contact-details
+                  .card-header.card-no-border.pb-0 
+                    h3 Contact Details
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          div
+                            i.icon-settings
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-car
+                  .card-body
+                    .d-flex
+                      span.f-w-600 Amount BTC
+                      span.f-w-700 1,3000000
+                    h4 Recent Contact
+                    ul
+                      li 
+                        img(src="../assets/images/dashboard/user/10.png", alt="user")
+                        p.f-w-600.m-0 Olivia
+                        span @olivia
+                        .active-status.active-online
+                      li 
+                        img(src="../assets/images/dashboard/user/11.png", alt="user")
+                        p.f-w-600.m-0 Gilbert
+                        span @gilbert
+                        .active-status.active-online
+                      li 
+                        img(src="../assets/images/dashboard/user/12.png", alt="user")
+                        p.f-w-600.m-0 Emma
+                        span @emma
+                        .active-status.active-online
+                      li 
+                        img(src="../assets/images/dashboard/user/13.png", alt="user")
+                        p.f-w-600.m-0 Helena
+                        span @helena
+                        .active-status.active-online
+                      li 
+                        img(src="../assets/images/dashboard/user/14.png", alt="user")
+                        p.f-w-600.m-0 Jessica
+                        span @jessica   
+                        .active-status.active-online   
+              .col-xl-6.proorder-xl-10.col-lg-6.proorder-lg-11.col-lg-12
+                .card.progress-show 
+                  .card-header.card-no-border.pb-0
+                    .d-flex   
+                      .d-flex
+                        h3 Our Distributed
+                        p 4,562,737 CIC
+                      .d-flex 
+                        h3 Our Contributed
+                        p 3798 ETH   70 VTH
+                  .card-body
+                    .progress-widget
+                      .progress.sm-progress-bar.progress-animate
+                        .progress-gradient-primary(role='progressbar' style='width: 65%' aria-valuenow='75' aria-valuemin='0' aria-valuemax='100')
+                          span.animate-circle
+                          span.tool-tip 3.5   
+                          svg
+                            use(href='../assets/svg/icon-sprite.svg#arrow')
+                      div.progress-range
+                        span $10
+                        span $5M
+              .col-xxl-3.col-xl-6.box-col-6.proorder-xl-11.proorder-lg-10.col-lg-6.col-md-6 
+                .card.main-balance
+                  .card-header.card-no-border.pb-0
+                    h3 Balance
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          div
+                            i.icon-settings
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body
+                    p.m-0.f-w-600 Main Balance
+                    h3 $10,843,372
+                    .progress.bg-light-primary
+                      .progress-bar.bg-primary(role='progressbar', style='width: 45%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100')
+                    .d-flex.balance-holder 
+                      .flex-grow-1 
+                        p.m-0 Card Holder
+                        h5 Rara Avis
+                      .d-flex 
+                        i.icon-more-alt 
+                        i.icon-more-alt 
+                        i.icon-more-alt 
+                        P.m-0 1234 
+                    .balance-limit
+                      .d-flex.gap-2
+                        .d-flex.limit-balance-title.gap-2
+                          h5 50%
+                          .limit-balance
+                            h5 Main Limits
+                            p $200 / from $2000
+                        .d-flex.seconds-balance-title.gap-2
+                          h5 74%
+                          .limit-balance
+                            h5 Seconds
+                            p $500 / from $3000
+              .col-xl-6.proorder-xl-12.proorder-lg-12 
+                .card.market-chart
+                  .card-header.card-no-border.pb-0
+                    .header-top
+                      h3 Live Market Cap
+                      .dropdown
+                        button#dropdownMenuButton4.btn.dropdown-toggle.yearly(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+                          | Yearly
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='dropdownMenuButton4')
+                          a.dropdown-item(href='#') Today
+                          a.dropdown-item(href='#') Tomorrow
+                          a.dropdown-item(href='#') Yesterday
+                  .card-body 
+                    #liveMarkCapBoxChart           
+              .col-xl-6.proorder-xl-13.proorder-lg-13 
+                .card.coins-table
+                  .card-header.card-no-border.pb-0
+                    h3 Popular Coins
+                    .card-header-right
+                      ul.simple-wrapper#myTab.nav.nav-pills(role='tablist')
+                        li.nav-item
+                          a#home-tab.nav-link(data-bs-toggle='tab' href='#home' role='tab' aria-controls='home' aria-selected='true') Home
+                        li.nav-item
+                          a#profile-tabs.nav-link(data-bs-toggle='tab' href='#profile' role='tab' aria-controls='profile' aria-selected='false') Profile
+                        li.nav-item
+                          a#contact-tab.nav-link.active(data-bs-toggle='tab' href='#contact' role='tab' aria-controls='contact' aria-selected='false') Contact
+                  .card-body
+                    .table-responsive.custom-scrollbar
+                      table#coins-table.table.display(style='width:100%')
+                        thead
+                          tr
+                            th
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label(for='flexCheckDefault')
+                            th Name
+                            th Price
+                            th.text-center 24h%
+                            th.text-center 7d%
+                            th Market Cap
+                            th Volume(24h)
+                        tbody
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label(for='flexCheckDefault')
+                            td 
+                              .d-flex.gap-2
+                                .flex-shrink-0
+                                  svg.fill-primary.animation
+                                    use(href='../assets/svg/icon-sprite.svg#bit-icon')
+                                p Bitcoin BTC
+                            td 
+                              p $40,651.64
+                            td.font-secondary 
+                              span -0.02%
+                            td 
+                              span -0.02%
+                            td $512,651,64,954
+                            td 
+                              p.m-0 $512,651,64
+                              span 567,389 BTC
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label(for='flexCheckDefault')
+                            td 
+                              .d-flex.gap-2
+                                .flex-shrink-0
+                                  svg.fill-secondary.animation
+                                    use(href='../assets/svg/icon-sprite.svg#ethereum')
+                                p Ethereum ETH
+                            td 
+                              p $20,651.45
+                            td.font-secondary 
+                              span -4.33%
+                            td.font-primary 
+                              span -4.33%
+                            td $651,695,15,156
+                            td 
+                              p.m-0 $512,651,64
+                              span 567,389 ETH
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label(for='flexCheckDefault')
+                            td 
+                              .d-flex.gap-2
+                                .flex-shrink-0
+                                  svg.animation
+                                    use(href='../assets/svg/icon-sprite.svg#monero')
+                                p Monero XMR
+                            td 
+                              p $92,365.02
+                            td 
+                              span +0.01%
+                            td  
+                              span +0.01%
+                            td $952,354,65,951
+                            td 
+                              p.m-0 $512,651,64
+                              span 567,389 XMR
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label(for='flexCheckDefault')
+                            td 
+                              .d-flex.gap-2
+                                .flex-shrink-0
+                                  svg.fill-primary.animation
+                                    use(href='../assets/svg/icon-sprite.svg#litecoin')
+                                p Litecoin LTC
+                            td 
+                              p $91,365.21
+                            td 
+                              span +9.80%
+                            td.font-primary 
+                              span +9.80%
+                            td $951,561,12,698
+                            td 
+                              p.m-0 $512,651,64
+                              span 567,389 LTC
+
+
+
+
+
+
+
+          // Container-fluid Ends
+        include ../../components/footer        
+    include ../../components/footer-files
+    script. 
+      new WOW().init();

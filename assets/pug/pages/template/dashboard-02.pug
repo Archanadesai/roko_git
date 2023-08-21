@@ -1,0 +1,819 @@
+- var apex                  = true;
+- var theme_customizer      = true;
+- var dashboard_2           = true;
+- var animate               = true;
+- var counter               = true;
+- var owlcarousel           = true;
+- var page_owlcarousel      = true;
+- var wow                   = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var scrollbar             = true;
+- var datatable             = true;
+- var page_datatable        = true;
+- var page_datatable_select = true;
+- var datatable_select      = true;
+- var customcard            = true;
+- var vector_map            = true;
+- var clipboard             = true;
+- var page_vector_map       = true;
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+      include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          .container-fluid
+            .page-title
+              .row
+                .col-12.col-sm-6
+                  h3 
+                    | ecommerce dashboard
+                .col-12.col-sm-6
+                  ol.breadcrumb
+                    li.breadcrumb-item
+                      a(href='index.html')
+                        i(data-feather='home')
+                    li.breadcrumb-item Dashboard
+                    li.breadcrumb-item.active E-Commerce
+          // Container-fluid starts
+          .container-fluid.dashboard_ecommerce
+            .row
+              .col-xl-6
+                .row 
+                  .col-xl-12.col-lg-6 
+                    .card.profit
+                      .card-header
+                        .header-top
+                          h2.f-w-600 Profit
+                          .dropdown
+                            button#dropdownMenuButton4.btn.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+                              | Yearly
+                            .dropdown-menu.dropdown-menu-end(aria-labelledby='dropdownMenuButton4')
+                              a.dropdown-item(href='#') Today
+                              a.dropdown-item(href='#') Tomorrow
+                              a.dropdown-item(href='#') Yesterday
+                      .card-body.profit-earning
+                        .d-flex
+                          .badge.badge-rounded
+                              svg.bit-icon.animation  
+                                use(href='../assets/svg/icon-sprite.svg#profit-up')  
+                          .flex-grow-1      
+                            .d-flex
+                              h2.me-2 $20.790,
+                                span 00
+                              span.bg-light-secondary.me-2
+                                svg
+                                  use(href='../assets/svg/icon-sprite.svg#arrow-down')
+                              span.font-secondary - 12.32%
+                            p Earned this month
+                          #profit-chart
+                  .col-xl-12.col-lg-6
+                    .card 
+                      .card-body.revenue-ecommerce
+                        .d-flex   
+                          .flex-grow-1.ecommerce 
+                            h5 Ecommerce Revenue
+                            h3 $256,980
+                            button.btn.bg-light-secondary.d-flex.gap-1
+                              span.bg-light-secondary
+                                svg.fill-secondary
+                                  use(href='../assets/svg/icon-sprite.svg#arrow-down')
+                              span.font-secondary.f-w-600 - 12.32% 
+                          .flex-grow-1.ecommerce
+                            h5 New Customers
+                            h3 654
+                            button.btn.bg-light-success.d-flex.gap-1
+                              span.bg-light-success
+                                svg.fill-success
+                                  use(href='../assets/svg/icon-sprite.svg#arrow-up')
+                              span.font-success.f-w-600 - 12.32% 
+                          .flex-grow-1.ecommerce 
+                            h5 Repeat Purchase Rate
+                            h3 23.64%
+                            button.btn.bg-light-secondary.d-flex.gap-1 
+                              span.bg-light-secondary
+                                svg.fill-secondary
+                                  use(href='../assets/svg/icon-sprite.svg#arrow-down')
+                              span.font-secondary.f-w-600 - 12.32%
+                          .flex-grow-1.ecommerce 
+                            h5 Average Order Value
+                            h3 12.56%
+                            button.btn.bg-light-success.d-flex.gap-1 
+                              span.bg-light-success
+                                svg.fill-success
+                                  use(href='../assets/svg/icon-sprite.svg#arrow-up')
+                              span.font-success.f-w-600 - 12.32% 
+              .col-xl-6.col-lg-6 
+                .card.selling-table
+                  .card-header.card-no-border.pb-0 
+                    h3 Top Selling (2023)
+                  .card-body
+                    .table-responsive.custom-scrollbar
+                      table#slling-card.table.display(style='width:100%')
+                        thead
+                          tr
+                            th
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            th Product Name
+                            th Client name
+                            th date
+                            th sold
+                            th 
+                              span Earning
+                        tbody
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td 
+                              .d-flex.gap-2
+                                .flex-shrink-0
+                                  img(src="../assets/images/dashboard-2/product/1.png", alt="user")
+                                .flex-grow-1
+                                  h6.f-w-600 Mi watch revolve
+                                  span $726
+                                .active-status.active-online
+                            td John Keter
+                            td Jun,4
+                            td 400 pcs
+                            td 
+                              span $78.700
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td 
+                              .d-flex.gap-2
+                                .flex-shrink-0
+                                  img(src="../assets/images/dashboard-2/product/2.png", alt="user")
+                                .flex-grow-1
+                                  h6.f-w-600 Tree stylish pot
+                                  span $698
+                                .active-status.active-online
+                            td Harry Venter
+                            td Aug, 8
+                            td 266 pcs
+                            td 
+                              span $64.8450
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td 
+                              .d-flex.gap-2
+                                .flex-shrink-0
+                                  img(src="../assets/images/dashboard-2/product/3.png", alt="user")
+                                .flex-grow-1
+                                  h6.f-w-600 Wood Chair Dark
+                                  span $158
+                                .active-status.active-online
+                            td Loadin Deo
+                            td May,8
+                            td 199 pcs
+                            td 
+                              span $39.548
+                          tr
+                            td
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td 
+                              .d-flex.gap-2
+                                .flex-shrink-0
+                                  img(src="../assets/images/dashboard-2/product/4.png", alt="user")
+                                .flex-grow-1
+                                  h6.f-w-600 Sneakers for men
+                                  span $942
+                                .active-status.active-online
+                            td Fenter Jessy
+                            td Nov,4
+                            td 495 pcs
+                            td 
+                              span $95.594
+              .col-xl-6.col-lg-6 
+                .card.latest-sales
+                  .card-header.card-no-border.pb-0 
+                    h3 Latest Sales
+                  .card-body
+                    .table-responsive.custom-scrollbar
+                      table#latest-sales.table.display(style='width:100%')
+                        thead
+                          tr
+                            th
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            th Customer
+                            th Product 
+                            th address
+                            th Total
+                            th Payment
+                            th Status
+                        tbody 
+                          tr 
+                            td 
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td 
+                              .d-flex.gap-2
+                                .flex-shrink-0
+                                  img(src="../assets/images/dashboard-2/user/1.png", alt="user")
+                                .flex-grow-1
+                                  h6.f-w-600 Ernest Elliott
+                                  span ernest@gmail.com
+                                .active-status.active-online
+                            td 
+                              h6.f-w-600 Shoes
+                              span #A5647KB
+                            td Germany
+                            td $560.65
+                            td Done
+                            td 
+                              .order 
+                                span Received
+                          tr 
+                            td 
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td 
+                              .d-flex.gap-2
+                                .flex-shrink-0
+                                  img(src="../assets/images/dashboard-2/user/2.png", alt="user")
+                                .flex-grow-1
+                                  h6.f-w-600 Helen Emmert
+                                  span helen@gmail.com
+                                .active-status.active-online
+                            td 
+                              h6.f-w-600 Shirt
+                              span #NB86H2E
+                            td Switzerland
+                            td $560.65
+                            td Pending
+                            td 
+                              .order 
+                                span Shipping
+                          tr 
+                            td 
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td 
+                              .d-flex.gap-2
+                                .flex-shrink-0
+                                  img(src="../assets/images/dashboard-2/user/3.png", alt="user")
+                                .flex-grow-1
+                                  h6.f-w-600 Miguel Thomas
+                                  span miguel@gmail.com
+                                .active-status.active-online
+                            td 
+                              h6.f-w-600 Travel Bag
+                              span #UB654GH
+                            td Argentina
+                            td $956.42
+                            td Done
+                            td 
+                              .order 
+                                span Received
+                          tr 
+                            td 
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td 
+                              .d-flex.gap-2
+                                .flex-shrink-0
+                                  img(src="../assets/images/dashboard-2/user/4.png", alt="user")
+                                .flex-grow-1
+                                  h6.f-w-600 Augustine Ebron
+                                  span augustin@gmail.com
+                                .active-status.active-online
+                            td 
+                              h6.f-w-600 Cap
+                              span #BAS4567
+                            td Canada
+                            td $645.23
+                            td Pending
+                            td 
+                              .order 
+                                span Shipping
+              .col-xl-6 
+                .card.sales-chart
+                  .card-header.card-no-border.pb-0 
+                    h3 Sales Analytics
+                  .card-body
+                    ul 
+                      li.me-2
+                        span.circle.bg-primary.me-1 
+                        p Pending
+                          span ($4,875)
+                      li 
+                        span.circle.bg-secondary.me-1
+                        p Complete   
+                          span ($1,450)
+                    .legend 
+                    #sales-analytics
+              .col-xl-7
+                .card.top-dealer-sec
+                  .card-header.pb-0.card-no-border
+                    .header-top.d-sm-flex.justify-content-between.align-items-center
+                      h3 Top Dealer
+                      .center-content                                   
+                        p.d-flex
+                          span.bg-light-primary.me-1
+                            svg
+                              use(href='../assets/svg/icon-sprite.svg#arrow-down')
+                          span.font-primary.me-1 635 Dealer
+                          span 65% More Than Last Year
+                      .card-header-right
+                        ul.list-unstyled.card-option
+                          li
+                            div
+                              i.icon-settings
+                          li
+                            i.view-html.fa.fa-code
+                          li
+                            i.icofont.icofont-maximize.full-card
+                          li
+                            i.icofont.icofont-minus.minimize-card
+                          li
+                            i.icofont.icofont-refresh.reload-card
+                          li
+                            i.icofont.icofont-error.close-card
+                  .card-body.overflow-hidden
+                    #owl-carousel-14.owl-carousel.owl-theme
+                      .item
+                        .row
+                          .col-12
+                            .owl-carousel-16.owl-carousel.owl-theme
+                              .item
+                                .card
+                                  .top-dealerbox.text-center
+                                    img.card-img-top(src='../assets/images/dashboard-2/user/5.png' alt='...')
+                                    h6 Leslie Alexander
+                                    p Malasiya
+                                    a.btn.btn-rounded(href='social-app.html') View More
+                              .item
+                                .card
+                                  .top-dealerbox.text-center
+                                    img.card-img-top(src='../assets/images/dashboard-2/user/6.png' alt='...')
+                                    h6 Jenny Wilson
+                                    p Bangladesh
+                                    a.btn.btn-rounded(href='social-app.html') View More
+                              .item
+                                .card
+                                  .top-dealerbox.text-center
+                                    img.card-img-top(src='../assets/images/dashboard-2/user/7.png' alt='...')
+                                    h6 Jacob Jones
+                                    p Belgium
+                                    a.btn.btn-rounded(href='social-app.html') View More
+                              .item
+                                .card
+                                  .top-dealerbox.text-center
+                                    img.card-img-top(src='../assets/images/dashboard-2/user/8.png' alt='...')
+                                    h6 Esther Howard
+                                    p Canada
+                                    a.btn.btn-rounded(href='social-app.html') View More
+                          .col-12
+                            .owl-carousel-16.owl-carousel.owl-theme
+                              .item
+                                .card.m-0
+                                  .top-dealerbox.text-center
+                                    img.card-img-top(src='../assets/images/dashboard-2/user/9.png' alt='...')
+                                    h6 Cody Fisher
+                                    p India
+                                    a.btn.btn-rounded(href='social-app.html') View More
+                              .item
+                                .card.m-0
+                                  .top-dealerbox.text-center
+                                    img.card-img-top(src='../assets/images/dashboard-2/user/1.png' alt='...')
+                                    h6 Kristin Watson
+                                    p China
+                                    a.btn.btn-rounded(href='social-app.html') View More
+                              .item
+                                .card.m-0
+                                  .top-dealerbox.text-center
+                                    img.card-img-top(src='../assets/images/dashboard-2/user/10.png' alt='...')
+                                    h6 Ralph Edwards
+                                    p Denmark
+                                    a.btn.btn-rounded(href='social-app.html') View More
+                              .item
+                                .card.m-0
+                                  .top-dealerbox.text-center
+                                    img.card-img-top(src='../assets/images/dashboard-2/user/11.png' alt='...')
+                                    h6 Annette Black
+                                    p Japan
+                                    a.btn.btn-rounded(href='social-app.html') View More
+                      .item
+                        .row
+                          .col-12
+                            .owl-carousel-16.owl-carousel.owl-theme
+                              .item
+                                .card
+                                  .top-dealerbox.text-center
+                                    img.card-img-top(src='../assets/images/dashboard-2/user/5.png' alt='...')
+                                    h6 Leslie Alexander
+                                    p Malasiya
+                                    a.btn.btn-rounded(href='social-app.html') View More
+                              .item
+                                .card
+                                  .top-dealerbox.text-center
+                                    img.card-img-top(src='../assets/images/dashboard-2/user/6.png' alt='...')
+                                    h6 Jenny Wilson
+                                    p Bangladesh
+                                    a.btn.btn-rounded(href='social-app.html') View More
+                              .item
+                                .card
+                                  .top-dealerbox.text-center
+                                    img.card-img-top(src='../assets/images/dashboard-2/user/7.png' alt='...')
+                                    h6 Jacob Jones
+                                    p Belgium
+                                    a.btn.btn-rounded(href='social-app.html') View More
+                              .item
+                                .card
+                                  .top-dealerbox.text-center
+                                    img.card-img-top(src='../assets/images/dashboard-2/user/8.png' alt='...')
+                                    h6 Esther Howard
+                                    p Canada
+                                    a.btn.btn-rounded(href='social-app.html') View More
+                          .col-12
+                            .owl-carousel-16.owl-carousel.owl-theme
+                              .item
+                                .card.m-0
+                                  .top-dealerbox.text-center
+                                    img.card-img-top(src='../assets/images/dashboard-2/user/9.png' alt='...')
+                                    h6 Cody Fisher
+                                    p India
+                                    a.btn.btn-rounded(href='social-app.html') View More
+                              .item
+                                .card.m-0
+                                  .top-dealerbox.text-center
+                                    img.card-img-top(src='../assets/images/dashboard-2/user/1.png' alt='...')
+                                    h6 Kristin Watson
+                                    p China
+                                    a.btn.btn-rounded(href='social-app.html') View More
+                              .item
+                                .card.m-0
+                                  .top-dealerbox.text-center
+                                    img.card-img-top(src='../assets/images/dashboard-2/user/10.png' alt='...')
+                                    h6 Ralph Edwards
+                                    p Denmark
+                                    a.btn.btn-rounded(href='social-app.html') View More
+                              .item
+                                .card.m-0
+                                  .top-dealerbox.text-center
+                                    img.card-img-top(src='../assets/images/dashboard-2/user/11.png' alt='...')
+                                    h6 Annette Black
+                                    p Japan
+                                    a.btn.btn-rounded(href='social-app.html') View More
+                      .item
+                        .row
+                          .col-12
+                            .owl-carousel-16.owl-carousel.owl-theme
+                              .item
+                                .card
+                                  .top-dealerbox.text-center
+                                    img.card-img-top(src='../assets/images/dashboard-2/user/5.png' alt='...')
+                                    h6 Leslie Alexander
+                                    p Malasiya
+                                    a.btn.btn-rounded(href='social-app.html') View More
+                              .item
+                                .card
+                                  .top-dealerbox.text-center
+                                    img.card-img-top(src='../assets/images/dashboard-2/user/6.png' alt='...')
+                                    h6 Jenny Wilson
+                                    p Bangladesh
+                                    a.btn.btn-rounded(href='social-app.html') View More
+                              .item
+                                .card
+                                  .top-dealerbox.text-center
+                                    img.card-img-top(src='../assets/images/dashboard-2/user/7.png' alt='...')
+                                    h6 Jacob Jones
+                                    p Belgium
+                                    a.btn.btn-rounded(href='social-app.html') View More
+                              .item
+                                .card
+                                  .top-dealerbox.text-center
+                                    img.card-img-top(src='../assets/images/dashboard-2/user/8.png' alt='...')
+                                    h6 Esther Howard
+                                    p Canada
+                                    a.btn.btn-rounded(href='social-app.html') View More
+                          .col-12
+                            .owl-carousel-16.owl-carousel.owl-theme
+                              .item
+                                .card.m-0
+                                  .top-dealerbox.text-center
+                                    img.card-img-top(src='../assets/images/dashboard-2/user/9.png' alt='...')
+                                    h6 Cody Fisher
+                                    p India
+                                    a.btn.btn-rounded(href='social-app.html') View More
+                              .item
+                                .card.m-0
+                                  .top-dealerbox.text-center
+                                    img.card-img-top(src='../assets/images/dashboard-2/user/1.png' alt='...')
+                                    h6 Kristin Watson
+                                    p China
+                                    a.btn.btn-rounded(href='social-app.html') View More
+                              .item
+                                .card.m-0
+                                  .top-dealerbox.text-center
+                                    img.card-img-top(src='../assets/images/dashboard-2/user/10.png' alt='...')
+                                    h6 Ralph Edwards
+                                    p Denmark
+                                    a.btn.btn-rounded(href='social-app.html') View More
+                              .item
+                                .card.m-0
+                                  .top-dealerbox.text-center
+                                    img.card-img-top(src='../assets/images/dashboard-2/user/11.png' alt='...')
+                                    h6 Annette Black
+                                    p Japan
+                                    a.btn.btn-rounded(href='social-app.html') View More
+                      .item
+                        .row
+                          .col-12
+                            .owl-carousel-16.owl-carousel.owl-theme
+                              .item
+                                .card
+                                  .top-dealerbox.text-center
+                                    img.card-img-top(src='../assets/images/dashboard-2/user/5.png' alt='...')
+                                    h6 Leslie Alexander
+                                    p Malasiya
+                                    a.btn.btn-rounded(href='social-app.html') View More
+                              .item
+                                .card
+                                  .top-dealerbox.text-center
+                                    img.card-img-top(src='../assets/images/dashboard-2/user/6.png' alt='...')
+                                    h6 Jenny Wilson
+                                    p Bangladesh
+                                    a.btn.btn-rounded(href='social-app.html') View More
+                              .item
+                                .card
+                                  .top-dealerbox.text-center
+                                    img.card-img-top(src='../assets/images/dashboard-2/user/7.png' alt='...')
+                                    h6 Jacob Jones
+                                    p Belgium
+                                    a.btn.btn-rounded(href='social-app.html') View More
+                              .item
+                                .card
+                                  .top-dealerbox.text-center
+                                    img.card-img-top(src='../assets/images/dashboard-2/user/8.png' alt='...')
+                                    h6 Esther Howard
+                                    p Canada
+                                    a.btn.btn-rounded(href='social-app.html') View More
+                          .col-12
+                            .owl-carousel-16.owl-carousel.owl-theme
+                              .item
+                                .card.m-0
+                                  .top-dealerbox.text-center
+                                    img.card-img-top(src='../assets/images/dashboard-2/user/9.png' alt='...')
+                                    h6 Cody Fisher
+                                    p India
+                                    a.btn.btn-rounded(href='social-app.html') View More
+                              .item
+                                .card.m-0
+                                  .top-dealerbox.text-center
+                                    img.card-img-top(src='../assets/images/dashboard-2/user/1.png' alt='...')
+                                    h6 Kristin Watson
+                                    p China
+                                    a.btn.btn-rounded(href='social-app.html') View More
+                              .item
+                                .card.m-0
+                                  .top-dealerbox.text-center
+                                    img.card-img-top(src='../assets/images/dashboard-2/user/10.png' alt='...')
+                                    h6 Ralph Edwards
+                                    p Denmark
+                                    a.btn.btn-rounded(href='social-app.html') View More
+                              .item
+                                .card.m-0
+                                  .top-dealerbox.text-center
+                                    img.card-img-top(src='../assets/images/dashboard-2/user/11.png' alt='...')
+                                    h6 Annette Black
+                                    p Japan
+                                    a.btn.btn-rounded(href='social-app.html') View More
+
+              .col-xl-5.col-lg-6 
+                .card.recent-orders
+                  .card-header.card-no-border.pb-0 
+                    h3 Latest Sales
+                  .card-body
+                    .table-responsive.custom-scrollbar
+                      table#recent-orders.table.display(style='width:100%')
+                        thead
+                          tr
+                            th
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            th Product Name
+                            th ordered By
+                            th Quantity
+                            th Price
+                        tbody 
+                          tr 
+                            td 
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td 
+                              .d-flex.gap-1 
+                                img(src="../assets/images/dashboard-2/product/5.png", alt="user")
+                                span MacBook Pro
+                            td Kevin Marshal
+                            td 628
+                            td $652
+                          tr 
+                            td 
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td 
+                              .d-flex.gap-1 
+                                img(src="../assets/images/dashboard-2/product/6.png", alt="user")
+                                span Apple watch
+                            td Justion Carter
+                            td 95
+                            td $954
+                          tr 
+                            td 
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td 
+                              .d-flex.gap-1 
+                                img(src="../assets/images/dashboard-2/product/7.png", alt="user")
+                                span Apple headphone
+                            td Angelina Stathom
+                            td 15
+                            td $629
+                          tr 
+                            td 
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td 
+                              .d-flex.gap-1 
+                                img(src="../assets/images/dashboard-2/product/4.png", alt="user")
+                                span Sneakers for men
+                            td John Wick
+                            td 95
+                            td $954
+                          tr 
+                            td 
+                              .form-check
+                                input.form-check-input(type='checkbox' value='')
+                                label.form-check-label
+                            td 
+                              .d-flex.gap-1 
+                                img(src="../assets/images/dashboard-2/product/8.png", alt="user")
+                                span I phone 14 pro
+                            td Aron Marhal
+                            td 21
+                            td $525
+              .col-xl-5.col-xl-50.col-lg-6
+                .card
+                  .card-header.card-no-border.pb-0 
+                    h3 Conversion Rate
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          div
+                            i.icon-settings
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-car
+                    .card-body.conversion-rate
+                      .row
+                        .col-xl-6.col-lg-12.col-md-6.col-sm-6
+                          table.conversion-table
+                            thead 
+                              tr 
+                                th Year
+                                th Customers
+                                th Ternd
+                                th Revenue
+                            tbody 
+                              tr 
+                                td 2021
+                                td 51,696
+                                td 10%
+                                td $123K
+                              tr 
+                                td 2022
+                                td 13,845
+                                td 23%
+                                td $23K
+                              tr 
+                                td 2023
+                                td 32,456
+                                td 31%
+                                td $346K
+                          ul.d-flex
+                            li
+                              h2 34,837
+                              p Regular Customers 
+                              button.btn.bg-light-success.d-flex.gap-1
+                                span.bg-light-success
+                                  svg
+                                    use(href='../assets/svg/icon-sprite.svg#arrow-up')
+                                span.font-success.f-w-600 - 12.32% 
+                            li
+                              h2 +23,684
+                              p New Customers
+                              button.btn.bg-light-secondary.d-flex.gap-1
+                                span.bg-light-secondary
+                                  svg
+                                    use(href='../assets/svg/icon-sprite.svg#arrow-down')
+                                span.font-secondary.f-w-600 - 12.22% 
+                        .col-xl-6.col-md-6.col-sm-6
+                          #rate-chart
+              .col-xl-7.col-xl-50
+                .card.countries-user
+                  .card-header.card-no-border.pb-0 
+                    h3 Top Countries by active users
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          div
+                            i.icon-settings
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body 
+                    .row 
+                      .col-xxl-8.col-xl-100.col-md-6.col-sm-7
+                        #world-map2.jvector-map-height
+                      .col-xxl-4.col-xl-100.col-md-6.col-sm-5.countries-name
+                        .user 
+                          h3 22.837
+                          p.d-flex
+                            span.me-1 Active Users
+                            span.bg-light-success.me-1
+                              svg
+                                use(href='../assets/svg/icon-sprite.svg#arrow-up')
+                            span.font-success - 36.28%
+                        .countries
+                          ul 
+                            li.d-flex.gap-2
+                              img(src="../assets/images/dashboard-2/flag/1.png", alt="user")
+                              .flex-grow-1
+                                h6.f-w-600.mb-1 United States
+                                .progress
+                                  .progress-bar.bg-primary(role='progressbar', style='width: 60%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100') 
+                              span 60%
+                            li.d-flex.gap-2
+                              img(src="../assets/images/dashboard-2/flag/2.png", alt="user")
+                              .flex-grow-1
+                                h6.f-w-600.mb-1 United kingdom
+                                .progress
+                                  .progress-bar.bg-primary(role='progressbar', style='width: 50%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100') 
+                              span 50%
+                            li.d-flex.gap-2
+                              img(src="../assets/images/dashboard-2/flag/3.png", alt="user")
+                              .flex-grow-1
+                                h6.f-w-600.mb-1 Sweden
+                                .progress
+                                  .progress-bar.bg-primary(role='progressbar', style='width: 30%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100') 
+                              span 30%
+                            li.d-flex.gap-2
+                              img(src="../assets/images/dashboard-2/flag/4.png", alt="user")
+                              .flex-grow-1
+                                h6.f-w-600.mb-1 India
+                                .progress
+                                  .progress-bar.bg-primary(role='progressbar', style='width: 80%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100') 
+                              span 80%
+
+         
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files
+    script. 
+      new WOW().init();

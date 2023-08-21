@@ -1,0 +1,167 @@
+- var page_select2          = true;
+- var select2_options       = true;
+- var select2               = true;
+- var page_select3          = true;
+- var theme_customizer      = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+- var height_equal          = true;
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+      include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          .container-fluid
+            .page-title
+              .row
+                .col-12.col-sm-6
+                  h3
+                    | Select2
+                .col-12.col-sm-6
+                  ol.breadcrumb
+                    li.breadcrumb-item
+                      a(href='index.html')                                        
+                        i(data-feather='home')
+                    li.breadcrumb-item Form Widgets
+                    li.breadcrumb-item.active Select2
+          // Container-fluid starts
+          .container-fluid
+            .select2-drpdwn
+              .row
+                // Tagify select2 start
+                .col-md-12
+                  .card 
+                    .card-header 
+                      h3 Single-value select
+                      p.f-m-light.mt-1 
+                        | Use the tagify plugin for drag and sort options available.
+                    .card-body 
+                      form.row.g-3
+                        .col-xl-3.col-sm-6
+                          input.selectMode.alert-light-primary(name='tags-select-mode' placeholder='Please select')
+                        .col-xl-3.col-sm-6
+                          input.selectMode.alert-light-secondary(name='tags-select-value-mode' placeholder='Please select')
+                        .col-xl-3.col-sm-6
+                          input.selectMode.alert-light-info(name='tags-select-v-mode' placeholder='Please select')
+                        .col-xl-3.col-sm-6
+                          input.selectMode.alert-light-warning(name='tags-s-value-mode' placeholder='Please select')
+                .col-sm-6
+                  .card
+                    .card-header
+                      h3 Default select 
+                      p.f-m-light.mt-1 
+                        | Use the tagify plugin for select options and edit.
+                    .card-body
+                      form
+                        input(name='basic' value='tag1, tag2, tag3, tag4 autofocus')
+                .col-sm-6 
+                  .card 
+                    .card-header 
+                      h3 Random suggestions
+                      p.f-m-light.mt-1 
+                        | Use the tagify plugin for select options.
+                    .card-body 
+                      form
+                        input.some_class_name(name='input-custom-dropdown' placeholder='write some tags' value='wool, roxo, sheltos, viho, zeta, koho')
+                .col-sm-6 
+                  .card 
+                    .card-header 
+                      h3 Colors select options
+                      p.f-m-light.mt-1 
+                        | Use the tagify plugin for select colors options.
+                    .card-body 
+                      form
+                        input(name='tags3' value='[{"value":"point"}, {"value":"soft"}, {"value":"horse"}, {"value":"flood"}, {"value":"asset"}]' pattern='^[A-Za-z_✲ ]{1,15}$')
+                .col-sm-6 
+                  .card 
+                    .card-header 
+                      h3 Flags selection
+                      p.f-m-light.mt-1 
+                        | Use the tagify plugin for select flags options.
+                    .card-body 
+                      form
+                        input.countries(name='tags3-1' placeholder='Try to add tags from the list')
+                .col-md-4.col-sm-6
+                  .card.height-equal
+                    .card-header 
+                      h3 Readonly options
+                      p.f-m-light.mt-1 
+                        | Use the tagify plugin for readonly options.
+                    .card-body 
+                      form
+                        input(name='tags4' readonly='' value='tag1, tag 2, another tag')
+                .col-md-4.col-sm-6
+                  .card.height-equal
+                    .card-header 
+                      h3 Read and write options
+                      p.f-m-light.mt-1 
+                        | Use the tagify plugin for read and write options.
+                    .card-body 
+                      form
+                        input.readonlyMix(name='tags-readonly-mix' placeholder='Type something' value='[\
+                        {\
+                        "value"    : "foo",\
+                        "readonly" : true,\
+                        "title"    : "read-only tag"\
+                        },\
+                        {\
+                        "value"    : "bar"\
+                        },\
+                        {\
+                        "value"    : "Locked tag",\
+                        "readonly" : true,\
+                        "title"    : "Another readonly tag"\
+                        }\
+                        ]')
+                .col-md-4.col-sm-12
+                  .card.height-equal
+                    .card-header 
+                      h3 Disabled readonly
+                      p.f-m-light.mt-1 
+                        | Use the tagify plugin for readonly option available.
+                    .card-body 
+                      form
+                        input(name='disabledInput' disabled='' value='tag1, tag 2, another tag')
+                .col-md-6 
+                  .card.height-equal
+                    .card-header 
+                      h3 Movie suggestions
+                      p.f-m-light.mt-1 
+                        | Use the tagify plugin for select movie options.
+                    .card-body 
+                      form
+                        textarea(name='tags2' placeholder='Enter movie names')
+                          | [{&quot;value&quot;:&quot;Hot Sit&quot;}, {&quot;value&quot;:&quot;The Matrix&quot;}]
+                .col-md-6 
+                  .card.height-equal
+                    .card-header 
+                      h3 Customize emails
+                      p.f-m-light.mt-1 
+                        | Use the tagify plugin for select email options.
+                    .card-body 
+                      form
+                        input.customLook(value='pixelstrap.theme@website.com')
+                        button(type='button') +
+                .col-md-12
+                  .card 
+                    .card-header 
+                      h3 Render suggestions list manually
+                      p.f-m-light.mt-1 
+                        | Use the tagify plugin for select random options.
+                    .card-body 
+                      form
+                        input(name='tags-manual-suggestions' placeholder='write some tags')
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files
