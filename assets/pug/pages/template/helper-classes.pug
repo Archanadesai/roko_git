@@ -12,7 +12,7 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -21,14 +21,15 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | Helper Classes
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item Ui Kits
                     li.breadcrumb-item.active Helper Classes
           // Container-fluid starts
@@ -36,7 +37,7 @@ html(lang='en')
             .row
               .col-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 Styles in borders
                     p.f-m-light.mt-1 
                       | Use the different styles of borders like: 
@@ -46,7 +47,7 @@ html(lang='en')
                     .row.g-3
                       .col-xxl-3.col-sm-6
                         .border-wrapper.h-100.alert-light-light.dark-helper
-                          h6.mb-3 Custom border-radius class
+                          h3.mb-3 Custom border-radius class
                           .helper-common-box
                             .helper-box.b-r-0.bg-light.border
                             span .b-r-0
@@ -82,7 +83,7 @@ html(lang='en')
                             span .b-r-10
                       .col-xxl-3.col-sm-6
                         .border-wrapper.h-100.alert-light-light.dark-helper
-                          h6.mb-3 Border color
+                          h3.mb-3 Border color
                           .helper-common-box
                             .helper-box.border-primary.border
                             span .border-primary
@@ -106,7 +107,7 @@ html(lang='en')
                             span .border-dark
                       .col-xxl-3.col-sm-6
                         .border-wrapper.h-100.alert-light-light.dark-helper
-                          h6.mb-3 Border-width
+                          h3.mb-3 Border-width
                           .helper-common-box
                             .helper-box.border-1.border 
                             span .border-1
@@ -139,7 +140,7 @@ html(lang='en')
                             span .border-10 
                       .col-xxl-3.col-sm-6
                         .border-wrapper.alert-light-light.h-100.dark-helper
-                          h6.mb-3 Text colors
+                          h3.mb-3 Text colors
                           .helper-common-box
                             .helper-box.helper-text.border.txt-primary C 
                             span .txt-primary
@@ -166,7 +167,7 @@ html(lang='en')
                             span .txt-light
               .col-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 Borders and displays
                     p.f-m-light.mt-1 
                       | Use border utilities to add or remove an element's borders.
@@ -174,7 +175,7 @@ html(lang='en')
                     .row.g-3
                       .col-xl-4.col-sm-6
                         .border-wrapper.h-100.border
-                          h6.mb-3 Additive border 
+                          h3.mb-3 Additive border 
                           .helper-common-box
                             .helper-box.bg-light.border
                             span .border
@@ -192,7 +193,7 @@ html(lang='en')
                             span .border-end
                       .col-xl-4.col-sm-6
                         .border-wrapper.h-100.border
-                          h6.mb-3 Subtractive border
+                          h3.mb-3 Subtractive border
                           .helper-common-box
                             .helper-box.bg-light.border.border-0 
                             span .border-0
@@ -210,46 +211,46 @@ html(lang='en')
                             span .border-start-0
                       .col-xl-4.col-sm-12
                         .border-wrapper.h-100.border
-                          h6.mb-3 Additive radius
+                          h3.mb-3 Additive radius
                           .helper-common-box
-                            .helper-radius.radius-wrapper.rounded
+                            .helper-radius.bg-light.rounded
                             span .rounded
                           .helper-common-box
-                            .helper-radius.radius-wrapper.rounded-top
+                            .helper-radius.bg-light.rounded-top
                             span .rounded-top
                           .helper-common-box
-                            .helper-radius.radius-wrapper.rounded-end
+                            .helper-radius.bg-light.rounded-end
                             span .rounded-end
                           .helper-common-box
-                            .helper-radius.radius-wrapper.rounded-bottom
+                            .helper-radius.bg-light.rounded-bottom
                             span .rounded-bottom
                           .helper-common-box
-                            .helper-radius.radius-wrapper.rounded-start
+                            .helper-radius.bg-light.rounded-start
                             span .rounded-start
                           .helper-common-box
-                            .helper-radius.radius-wrapper.rounded-pill
+                            .helper-radius.bg-light.rounded-pill
                             span .rounded-pill
                           .helper-common-box
-                            .helper-radius.radius-wrapper.rounded-circle
+                            .helper-radius.bg-light.rounded-circle
                             span .rounded-circle
                           .helper-common-box
-                            .helper-radius.radius-wrapper.rounded-0
+                            .helper-radius.bg-light.rounded-0
                             span .rounded-0 
               .col-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 Background colors 
                     p.f-m-light.mt-1 
                       | Use the 
                       code .bg-* 
                       | and 
                       code .alert-light-* 
-                      | colors in wool theme. Use of any components.
+                      | colors in cuba theme. Use of any components.
                   .card-body
                     .row.g-3
                       .col-xl-4.col-sm-6
                         .border-wrapper.h-100.border
-                          h6.mb-3 Dark background
+                          h3.mb-3 Dark background
                           .helper-common-box
                             .helper-box.bg-primary
                             span .bg-primary 
@@ -276,7 +277,7 @@ html(lang='en')
                             span .bg-light 
                       .col-xl-4.col-sm-6
                         .border-wrapper.h-100.border
-                          h6.mb-3 Light backgrounds
+                          h3.mb-3 Light backgrounds
                           .helper-common-box
                             .helper-box.alert-light-primary 
                             span .alert-light-primary 
@@ -303,7 +304,7 @@ html(lang='en')
                             span .alert-light-light
                       .col-xl-4.col-sm-12
                         .border-wrapper.h-100.border
-                          h6.mb-3 Extended background colors
+                          h3.mb-3 Extended background colors
                           .helper-common-box
                             .helper-box.light-card 
                             span .light-card
@@ -312,7 +313,7 @@ html(lang='en')
                             span .light-background  
               .col-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 Border color
                     p.f-m-light.mt-1 
                       | Use the 
@@ -442,7 +443,7 @@ html(lang='en')
                           span .b-r-light
               .col-xl-6
                 .card.height-equal
-                  .card-header
+                  .card-header.pb-0
                     h3 Images sizes
                     p.f-m-light.mt-1 
                       | Use the width and height of images class like: 
@@ -462,7 +463,7 @@ html(lang='en')
                       img.img-100.img-h-100(src="../assets/images/blog/comment.jpg", alt="img-size-100")                         
               .col-xl-6
                 .card.height-equal
-                  .card-header
+                  .card-header.pb-0
                     h3 Font-style
                     p.f-m-light.mt-1 
                       | Use the font-style like: 
@@ -491,7 +492,7 @@ html(lang='en')
                         |  font-style 
               .col-xl-6
                 .card.height-equal
-                  .card-header
+                  .card-header.pb-0
                     h3 Font weight 
                     p.f-m-light.mt-1 
                       | Use the font-weight classes like: 
@@ -517,7 +518,7 @@ html(lang='en')
                         | You can set bold font weight heading .f-w-900
               .col-xl-6
                 .card.height-equal
-                  .card-header
+                  .card-header.pb-0
                     h3 Text colors
                     p.f-m-light.mt-1 
                       | Use the text color for 
@@ -561,7 +562,7 @@ html(lang='en')
                       |  text used class as .font-dark
               .col-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 Font sizes
                     p.f-m-light.mt-1 
                       | Use the font-size for 
@@ -585,7 +586,7 @@ html(lang='en')
                         .f-22
                           | Font-size .f-22
                       .font-wrapper.border
-                        .f-24
+                      .f-24
                           | Font-size .f-24
                       .font-wrapper.border
                         .f-26

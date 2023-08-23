@@ -15,7 +15,7 @@ html(lang='en')
     include ../../components/taptop
     include ../../components/loader
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -24,15 +24,16 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | Autofill Datatables
 
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item Extension Data Tables
                     li.breadcrumb-item.active Autofill Datatables
           // Container-fluid starts
@@ -41,7 +42,7 @@ html(lang='en')
               .col-sm-12
                 .card
                   .card-header.pb-0.card-no-border
-                    h3 KeyTable integration
+                    h4 Keytable Integration
                     span
                       | If you are looking to emulate the UI of spreadsheet programs such as Excel with DataTables, the combination of KeyTable and AutoFill will take you a long way there!
                   .card-body
@@ -1158,7 +1159,7 @@ html(lang='en')
               .col-sm-12
                 .card
                   .card-header.pb-0.card-no-border
-                    h3.mb-3 Multi-Level Collections
+                    h4.mb-3 Multi-Level Collections
                     span
                       | Keyboard navigation is essential for fast navigation of a table operations and also for good accessibility. Buttons provides the ability to give each button a key binding - i.e. a key combination that when pressed will activate the button's action.
                       | The key binding can be given as a single character if you wish to listen for an unmodified key press, or as an object if you wish it to only be activated when a modifier key such as shift, alt, etc, is pressed.
@@ -1181,7 +1182,7 @@ html(lang='en')
                             td Update
                             td 
                               span.badge.badge-success Resolved
-                            td 2022/04/25
+                            td 2023/04/25
                             td $320,800
                             td 
                               ul.action  
@@ -1197,7 +1198,7 @@ html(lang='en')
                             td Report
                             td 
                               span.badge.badge-danger Pending
-                            td 2022/07/25
+                            td 2023/07/25
                             td $170,750
                             td 
                               ul.action  
@@ -1213,7 +1214,7 @@ html(lang='en')
                             td Update
                             td 
                               span.badge.badge-danger Pending
-                            td 2022/01/12
+                            td 2023/01/12
                             td $86,000
                             td 
                               ul.action  
@@ -1229,7 +1230,7 @@ html(lang='en')
                             td Changes
                             td 
                               span.badge.badge-primary Open
-                            td 2022/03/29
+                            td 2023/03/29
                             td $433,060
                             td 
                               ul.action  
@@ -1245,7 +1246,7 @@ html(lang='en')
                             td Changes
                             td 
                               span.badge.badge-success Resolved
-                            td 2022/11/28
+                            td 2023/11/28
                             td $162,700
                             td 
                               ul.action  
@@ -1257,11 +1258,11 @@ html(lang='en')
                                     i.icon-trash
                           tr
                             td #1005
-                            td wool-Angular
+                            td Roko-Angular
                             td Update
                             td 
                               span.badge.badge-success Resolved
-                            td 2022/12/02
+                            td 2023/12/02
                             td $372,000
                             td 
                               ul.action  
@@ -1277,7 +1278,7 @@ html(lang='en')
                             td Update
                             td 
                               span.badge.badge-danger Pending
-                            td 2022/08/06
+                            td 2023/08/06
                             td $137,500
                             td 
                               ul.action  
@@ -1293,7 +1294,7 @@ html(lang='en')
                             td Testing
                             td 
                               span.badge.badge-danger Pending
-                            td 2021/10/14
+                            td 2023/10/14
                             td $327,900
                             td 
                               ul.action  
@@ -1309,7 +1310,7 @@ html(lang='en')
                             td Testing
                             td 
                               span.badge.badge-success Resolved
-                            td 2021/09/15
+                            td 2023/09/15
                             td $205,500
                             td 
                               ul.action  
@@ -1325,7 +1326,7 @@ html(lang='en')
                             td Update
                             td 
                               span.badge.badge-success Resolved
-                            td 2020/12/13
+                            td 2023/12/13
                             td $103,600
                             td 
                               ul.action  
@@ -1373,7 +1374,7 @@ html(lang='en')
                             td Changes
                             td 
                               span.badge.badge-primary Open
-                            td 2022/10/16
+                            td 2023/10/16
                             td $470,600
                             td 
                               ul.action  
@@ -1389,7 +1390,7 @@ html(lang='en')
                             td Update
                             td 
                               span.badge.badge-success Resolved
-                            td 2022/12/18
+                            td 2023/12/18
                             td $313,500
                             td 
                               ul.action  
@@ -1405,7 +1406,7 @@ html(lang='en')
                             td Update
                             td 
                               span.badge.badge-danger Pending
-                            td 2022/03/17
+                            td 2023/03/17
                             td $385,750
                             td 
                               ul.action  
@@ -1421,7 +1422,7 @@ html(lang='en')
                             td Report
                             td 
                               span.badge.badge-danger Pending
-                            td 2022/11/27
+                            td 2023/11/27
                             td $198,500
                             td 
                               ul.action  
@@ -1437,7 +1438,7 @@ html(lang='en')
                             td Changes
                             td 
                               span.badge.badge-success Resolved
-                            td 2021/06/09
+                            td 2023/06/09
                             td $725,000
                             td 
                               ul.action  
@@ -1453,7 +1454,7 @@ html(lang='en')
                             td Update
                             td 
                               span.badge.badge-danger Pending
-                            td 2022/04/10
+                            td 2023/04/10
                             td $237,500
                             td 
                               ul.action  
@@ -1485,7 +1486,7 @@ html(lang='en')
                             td Update
                             td 
                               span.badge.badge-success Resolved
-                            td 2021/09/26
+                            td 2023/09/26
                             td $217,500
                             td 
                               ul.action  
@@ -1501,7 +1502,7 @@ html(lang='en')
                             td Changes
                             td 
                               span.badge.badge-danger Pending
-                            td 2020/09/03
+                            td 2023/09/03
                             td $345,000
                             td 
                               ul.action  
@@ -1517,7 +1518,7 @@ html(lang='en')
                             td Update
                             td 
                               span.badge.badge-danger Pending
-                            td 2022/06/25
+                            td 2023/06/25
                             td $675,000
                             td 
                               ul.action  
@@ -1533,7 +1534,7 @@ html(lang='en')
                             td Changes
                             td 
                               span.badge.badge-primary Open
-                            td 2022/12/12
+                            td 2023/12/12
                             td $106,450
                             td 
                               ul.action  
@@ -1549,7 +1550,7 @@ html(lang='en')
                             td Testing
                             td 
                               span.badge.badge-success Resolved
-                            td 2022/09/20
+                            td 2023/09/20
                             td $85,600
                             td 
                               ul.action  
@@ -1565,7 +1566,7 @@ html(lang='en')
                             td Update
                             td 
                               span.badge.badge-primary Open
-                            td 2022/10/09
+                            td 2023/10/09
                             td $1,200,000
                             td 
                               ul.action  
@@ -1581,7 +1582,7 @@ html(lang='en')
                             td Testing
                             td 
                               span.badge.badge-danger Pending
-                            td 2020/12/22
+                            td 2023/12/22
                             td $92,575
                             td 
                               ul.action  
@@ -1597,7 +1598,7 @@ html(lang='en')
                             td Update
                             td 
                               span.badge.badge-success Resolved
-                            td 2020/11/14
+                            td 2023/11/14
                             td $357,650
                             td 
                               ul.action  
@@ -1613,7 +1614,7 @@ html(lang='en')
                             td Update
                             td 
                               span.badge.badge-primary Open
-                            td 2020/06/07
+                            td 2023/06/07
                             td $206,850
                             td 
                               ul.action  
@@ -1629,7 +1630,7 @@ html(lang='en')
                             td Changes
                             td 
                               span.badge.badge-danger Pending
-                            td 2022/03/11
+                            td 2023/03/11
                             td $850,000
                             td 
                               ul.action  
@@ -1645,7 +1646,7 @@ html(lang='en')
                             td Update
                             td 
                               span.badge.badge-success Resolved
-                            td 2022/08/14
+                            td 2023/08/14
                             td $163,000
                             td 
                               ul.action  
@@ -1661,7 +1662,7 @@ html(lang='en')
                             td Testing
                             td 
                               span.badge.badge-primary Open
-                            td 2022/06/02
+                            td 2023/06/02
                             td $95,400
                             td 
                               ul.action  
@@ -1673,7 +1674,7 @@ html(lang='en')
                                     i.icon-trash
                           tr
                             td #1035
-                            td wool-Angular
+                            td Roko-Angular
                             td Testing
                             td 
                               span.badge.badge-danger Pending
@@ -1693,7 +1694,7 @@ html(lang='en')
                             td Update
                             td 
                               span.badge.badge-success Resolved
-                            td 2022/05/07
+                            td 2023/05/07
                             td $145,000
                             td 
                               ul.action  
@@ -1709,7 +1710,7 @@ html(lang='en')
                             td Changes
                             td 
                               span.badge.badge-danger Pending
-                            td 2021/10/26
+                            td 2023/10/26
                             td $235,500
                             td 
                               ul.action  
@@ -1725,7 +1726,7 @@ html(lang='en')
                             td Testing
                             td 
                               span.badge.badge-success Resolved
-                            td 2021/03/09
+                            td 2023/03/09
                             td $324,050
                             td 
                               ul.action  
@@ -1821,7 +1822,7 @@ html(lang='en')
                             td Testing
                             td 
                               span.badge.badge-danger Pending
-                            td 2022/09/26
+                            td 2023/09/26
                             td $645,750
                             td 
                               ul.action  
@@ -1833,11 +1834,11 @@ html(lang='en')
                                     i.icon-trash
                           tr
                             td #1045
-                            td wool-Angular
+                            td Roko-Angular
                             td Update
                             td 
                               span.badge.badge-success Resolved
-                            td 2022/02/03
+                            td 2023/02/03
                             td $234,500
                             td 
                               ul.action  
@@ -1853,7 +1854,7 @@ html(lang='en')
                             td Testing
                             td 
                               span.badge.badge-primary Open
-                            td 2022/05/03
+                            td 2023/05/03
                             td $163,500
                             td 
                               ul.action  
@@ -1869,7 +1870,7 @@ html(lang='en')
                             td Update
                             td 
                               span.badge.badge-danger Pending
-                            td 2022/08/19
+                            td 2023/08/19
                             td $139,575
                             td 
                               ul.action  
@@ -1885,7 +1886,7 @@ html(lang='en')
                             td Update
                             td 
                               span.badge.badge-success Resolved
-                            td 2022/08/11
+                            td 2023/08/11
                             td $98,540
                             td 
                               ul.action  
@@ -1917,7 +1918,7 @@ html(lang='en')
                             td Changes
                             td 
                               span.badge.badge-success Resolved
-                            td 2022/04/09
+                            td 2023/04/09
                             td $138,575
                             td 
                               ul.action  
@@ -1933,7 +1934,7 @@ html(lang='en')
                             td Update
                             td 
                               span.badge.badge-success Resolved
-                            td 2022/01/04
+                            td 2023/01/04
                             td $125,250
                             td 
                               ul.action  
@@ -1949,7 +1950,7 @@ html(lang='en')
                             td Testing
                             td 
                               span.badge.badge-primary Open
-                            td 2022/06/01
+                            td 2023/06/01
                             td $115,000
                             td 
                               ul.action  
@@ -1977,11 +1978,11 @@ html(lang='en')
                                     i.icon-trash
                           tr
                             td #1078
-                            td wool-Angular
+                            td Roko-Angular
                             td Changes
                             td 
                               span.badge.badge-success Resolved
-                            td 2021/12/06
+                            td 2023/12/06
                             td $145,600
                             td 
                               ul.action  
@@ -1997,7 +1998,7 @@ html(lang='en')
                             td Update
                             td 
                               span.badge.badge-primary Open
-                            td 2021/03/21
+                            td 2023/03/21
                             td $356,250
                             td 
                               ul.action  
@@ -2029,7 +2030,7 @@ html(lang='en')
                             td Changes
                             td 
                               span.badge.badge-success Resolved
-                            td 2021/07/14
+                            td 2023/07/14
                             td $86,500
                             td 
                               ul.action  
@@ -2061,7 +2062,7 @@ html(lang='en')
                             td Changes
                             td 
                               span.badge.badge-primary Open
-                            td 2021/06/27
+                            td 2023/06/27
                             td $183,000
                             td 
                               ul.action  
@@ -2077,7 +2078,7 @@ html(lang='en')
                             td Update
                             td 
                               span.badge.badge-primary Open
-                            td 2021/01/25
+                            td 2023/01/25
                             td $112,000
                             td 
                               ul.action  
@@ -2099,7 +2100,7 @@ html(lang='en')
               .col-sm-12
                 .card
                   .card-header.pb-0.card-no-border
-                    h3.mb-3 Header and Footer fixed
+                    h4.mb-3 Header and Footer fixed
                     span
                       | When displaying tables with a particularly large amount of data shown on each page, it can be useful to have the table's header and footer fixed to the top or bottom of the scrolling window FixedHeader provides the ability to fix in place both. These are controlled by the options fixedHeader.header and fixedHeader.footer. Either can be optionally enabled, or as is the case in this example, both enabled.
                   .card-body
@@ -2682,7 +2683,7 @@ html(lang='en')
               .col-sm-12
                 .card
                   .card-header.pb-0.card-no-border
-                    h3 HTML5 Export Buttons
+                    h4 HTML5 Export Buttons
                   .card-body
                     .dt-ext.table-responsive.custom-scrollbar
                       table#export-button.display
@@ -3620,7 +3621,7 @@ html(lang='en')
               .col-sm-12
                 .card
                   .card-header.pb-0.card-no-border
-                    h3.mb-3 Immediately Show Hidden Details
+                    h4.mb-3 Immediately Show Hidden Details
                     span
                       | Responsive has the ability to display the details that it has hidden in a variety of different ways. Its default is to allow the end user to toggle the the display by clicking on a row and showing the information in a DataTables child row. At times it can be useful not to require end user interaction to display the hidden data in a responsive manner, which can be done with the childRowImd-flexte display type.
                   .card-body
@@ -4470,7 +4471,7 @@ html(lang='en')
               .col-sm-12
                 .card
                   .card-header.pb-0.card-no-border
-                    h3.mb-3 Full row selection
+                    h4.mb-3 Full row selection
                     span
                       | The rowReorder.selector option provides the ability to define which element in a table row will provide the row reordering handle to the end user. By default only the first cell in the row will trigger the reordering action. This example shows the entire row being able to start the reorder. Simply click and drag anywhere on the row. Additionally, the column that defines the row order is hidden by default, making the table a simple orderable list.
                   .card-body

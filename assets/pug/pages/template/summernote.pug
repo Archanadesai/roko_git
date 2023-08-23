@@ -14,7 +14,7 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -23,15 +23,16 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | Summer Note
 
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item Editors
                     li.breadcrumb-item.active Summer Note
           // Container-fluid starts                    
@@ -39,10 +40,10 @@ html(lang='en')
             .row
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 Default Summer note
                   .card-body
-                    .summernote.custom-scrollbar
+                    .summernote
                       p.text-muted
                         | Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.
                         | There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
@@ -52,7 +53,7 @@ html(lang='en')
                         | suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 Air-mode Summernote
                   .card-body.pt-0
                     .inline-editor
@@ -71,13 +72,13 @@ html(lang='en')
                           |    Integer molestie lorem at massa
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 Hint for words Summernote
                   .card-body
                     .hint2basic
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 Click To Edit Summernote
                   .card-body
                     .click2edit.m-b-30

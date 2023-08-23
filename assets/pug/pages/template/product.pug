@@ -2,8 +2,8 @@
 - var range_slider          = true;
 - var page_range_slider     = true;
 - var touchspin             = true;
-//- - var select2               = true;
-//- - var page_select2          = true;
+- var select2               = true;
+- var page_select2          = true;
 - var product_tab           = true;
 - var owlcarousel           = true;
 - var sidebar               = true;
@@ -27,10 +27,10 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | Product
-                .col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
@@ -80,7 +80,7 @@ html(lang='en')
                             span.line-grid.line-grid-14.bg-primary
                             span.line-grid.line-grid-15.bg-primary
                   .col-md-6.text-sm-end
-                    span.f-w-700.m-r-5 Showing Products 1 - 24 Of 200 Results
+                    span.m-r-5 Showing Products 1 - 24 Of 200 Results
                     .select2-drpdwn-product.select-options.d-inline-block
                       select.form-control.btn-square(name='select')
                         option(value='opt1') Featured
@@ -92,32 +92,32 @@ html(lang='en')
                       .filter-section
                         .card
                           .card-header
-                            h4.mb-0.f-w-600
+                            h6.mb-0
                               | Filters
                               span.pull-right
                                 i.fa.fa-chevron-down.toggle-data
                           .left-filter
                             .card-body.filter-cards-view.animate-chk
                               .product-filter
-                                h4.f-w-600 Category
+                                h3 Category
                                 .checkbox-animated.mt-0
                                   label.d-block(for='edo-ani5')
-                                    input#edo-ani5.radio_animated(type='radio', data-original-title='', title='')
+                                    input#edo-ani5.checkbox_animated(type='checkbox', data-original-title='', title='')
                                     | Man Shirt
                                   label.d-block(for='edo-ani6')
-                                    input#edo-ani6.radio_animated(type='radio', data-original-title='', title='')
+                                    input#edo-ani6.checkbox_animated(type='checkbox', data-original-title='', title='')
                                     | Man Jeans
                                   label.d-block(for='edo-ani7')
-                                    input#edo-ani7.radio_animated(type='radio', data-original-title='', title='')
+                                    input#edo-ani7.checkbox_animated(type='checkbox', data-original-title='', title='')
                                     | Woman Top
                                   label.d-block(for='edo-ani8')
-                                    input#edo-ani8.radio_animated(type='radio', data-original-title='', title='')
+                                    input#edo-ani8.checkbox_animated(type='checkbox', data-original-title='', title='')
                                     | Woman Jeans
                                   label.d-block(for='edo-ani9')
-                                    input#edo-ani9.radio_animated(type='radio', data-original-title='', title='')
+                                    input#edo-ani9.checkbox_animated(type='checkbox', data-original-title='', title='')
                                     | Man T-shirt
                               .product-filter
-                                h4.f-w-600 Brand
+                                h3 Brand
                                 .checkbox-animated.mt-0
                                   label.d-block(for='chk-ani')
                                     input#chk-ani.checkbox_animated(type='checkbox', data-original-title='', title='')
@@ -138,7 +138,7 @@ html(lang='en')
                                     input#chk-ani5.checkbox_animated(type='checkbox', data-original-title='', title='')
                                     | Spykar
                               .product-filter.slider-product
-                                h4.f-w-600 Colors
+                                h3 Colors
                                 .color-selector
                                   ul
                                     li.white
@@ -151,9 +151,9 @@ html(lang='en')
                                     li.blue
                                     li.red
                               .product-filter.pb-0
-                                h4.f-w-600 Price
+                                h3 Price
                                 input#u-range-03(type='text')
-                                h4.f-w-600 New Products
+                                h3 New Products
                               .product-filter.pb-0.new-products
                                 #testimonial.owl-carousel.owl-theme
                                   .item
@@ -260,12 +260,12 @@ html(lang='en')
                                   .product-img.col-lg-6
                                     img.img-fluid(src='../assets/images/ecommerce/01.jpg', alt='')
                                   .product-details.col-lg-6.text-start
-                                    h4 Women's Top
+                                    h3 Women's Top
                                     .product-price
                                       | $50.00 
                                       del $35.00    
                                     .product-view
-                                      h4.f-w-600 Product Details
+                                      h3 Product Details
                                       p.mb-0 Rock Paper Scissors Women Tank Top High Neck Cotton Top Stylish Women Top..
                                     .product-size
                                       ul
@@ -276,7 +276,7 @@ html(lang='en')
                                         li 
                                           button.btn.btn-outline-light(type='button') Xl
                                     .product-qnty
-                                      h4.f-w-600.mb-2 Quantity
+                                      h3 Quantity
                                       fieldset
                                         .input-group
                                           input.touchspin.text-center(type='text', value='5')
@@ -292,7 +292,7 @@ html(lang='en')
                             i.fa.fa-star-o
                             i.fa.fa-star-o
                           a(href='product-page.html')
-                            h4 Women's Top
+                            h3 Women's Top
                           p Regular Flare Fit Women's white Top
                           .product-price
                             | $50.00 
@@ -319,12 +319,12 @@ html(lang='en')
                                   .product-img.col-lg-6
                                     img.img-fluid(src='../assets/images/ecommerce/02.jpg', alt='')
                                   .product-details.col-lg-6.text-start
-                                    h4 Men's Jacket
+                                    h3 Men's Jacket
                                     .product-price
                                       | $45.00 
                                       del $50.00    
                                     .product-view
-                                      h4.f-w-600 Product Details
+                                      h3 Product Details
                                       p.mb-0 Lorate Solid Men's Fashion Full Sleeves Latest Jacket for Men With Button Closure Long Sleeve Casual Torn Lycra Denim Jacket.
                                     .product-size
                                       ul
@@ -335,7 +335,7 @@ html(lang='en')
                                         li 
                                           button.btn.btn-outline-light(type='button') Xl
                                     .product-qnty
-                                      h4.f-w-600.mb-2 Quantity
+                                      h3 Quantity
                                       fieldset
                                         .input-group
                                           input.touchspin.text-center(type='text', value='5')
@@ -351,7 +351,7 @@ html(lang='en')
                             i.fa.fa-star-half-o
                             i.fa.fa-star-o
                           a(href='product-page.html')
-                            h4 Men's Jacket
+                            h3 Men's Jacket
                           p Cotton Blend Men's Blue Jacket
                           .product-price
                             | $45.00 
@@ -377,12 +377,12 @@ html(lang='en')
                                   .product-img.col-lg-6
                                     img.img-fluid(src='../assets/images/ecommerce/03.jpg', alt='')
                                   .product-details.col-lg-6.text-start
-                                    h4 Women's Coat
+                                    h3 Women's Coat
                                     .product-price
                                       | $426.00
                                       del $480.00    
                                     .product-view
-                                      h4.f-w-600 Product Details
+                                      h3 Product Details
                                       p.mb-0 Women's Classic Stretchy All Time Trendy Pleated Skirt Western coat midi Skirt plited Lehenga.
                                     .product-size
                                       ul
@@ -393,7 +393,7 @@ html(lang='en')
                                         li 
                                           button.btn.btn-outline-light(type='button') Xl
                                     .product-qnty
-                                      h4.f-w-600.mb-2 Quantity
+                                      h3 Quantity
                                       fieldset
                                         .input-group
                                           input.touchspin.text-center(type='text', value='5')
@@ -409,7 +409,7 @@ html(lang='en')
                             i.fa.fa-star-o
                             i.fa.fa-star-o
                           a(href='product-page.html')
-                            h4 Women's Coat
+                            h3 Women's Coat
                           p Cotton Blend Women's Coat
                           .product-price
                             |  $426.00
@@ -436,12 +436,12 @@ html(lang='en')
                                   .product-img.col-lg-6
                                     img.img-fluid(src='../assets/images/ecommerce/04.jpg', alt='')
                                   .product-details.col-lg-6.text-start
-                                    h4 Men's Shirt
+                                    h3 Men's Shirt
                                     .product-price
                                       | $26.00
                                       del $35.00    
                                     .product-view
-                                      h4.f-w-600 Product Details
+                                      h3 Product Details
                                       p.mb-0 Glamcci Men's Cotton Blend Printed One Piece Party Jacket
                                     .product-size
                                       ul
@@ -452,7 +452,7 @@ html(lang='en')
                                         li 
                                           button.btn.btn-outline-light(type='button') Xl
                                     .product-qnty
-                                      h4.f-w-600.mb-2 Quantity
+                                      h3 Quantity
                                       fieldset
                                         .input-group
                                           input.touchspin.text-center(type='text', value='5')
@@ -468,7 +468,7 @@ html(lang='en')
                             i.fa.fa-star
                             i.fa.fa-star
                           a(href='product-page.html')
-                            h4 Men's Shirt
+                            h3 Men's Shirt
                           p Cotton Regular Fit Men's Shirt
                           .product-price
                             | $26.00
@@ -494,12 +494,12 @@ html(lang='en')
                                   .product-img.col-lg-6
                                     img.img-fluid(src='../assets/images/ecommerce/05.jpg', alt='')
                                   .product-details.col-lg-6.text-start
-                                    h4 Track Suit
+                                    h3 Track Suit
                                     .product-price
                                       | $20.00
                                       del $25.00    
                                     .product-view
-                                      h4.f-w-600 Product Details
+                                      h3 Product Details
                                       p.mb-0 Glamcci Men's Cotton Blend Printed One Piece Track Suit.
                                     .product-size
                                       ul
@@ -510,7 +510,7 @@ html(lang='en')
                                         li 
                                           button.btn.btn-outline-light(type='button') Xl
                                     .product-qnty
-                                      h4.f-w-600.mb-2 Quantity
+                                      h3 Quantity
                                       fieldset
                                         .input-group
                                           input.touchspin.text-center(type='text', value='5')
@@ -526,7 +526,7 @@ html(lang='en')
                             i.fa.fa-star
                             i.fa.fa-star-o
                           a(href='product-page.html')
-                            h4 Track Suit
+                            h3 Track Suit
                           p Cotton Regular Fit Men's Track Suit
                           .product-price                                           
                             | $20.00 
@@ -554,12 +554,12 @@ html(lang='en')
                                   .product-img.col-lg-6
                                     img.img-fluid(src='../assets/images/ecommerce/06.jpg', alt='')
                                   .product-details.col-lg-6.text-start
-                                    h4 Women's Jacket
+                                    h3 Women's Jacket
                                     .product-price
                                       | $25.00
                                       del $30.00    
                                     .product-view
-                                      h4.f-w-600 Product Details
+                                      h3 Product Details
                                       p.mb-0 Rock Paper Scissors Womens Tank Top High Neck Cotton Top Stylish Women Top..
                                     .product-size
                                       ul
@@ -570,7 +570,7 @@ html(lang='en')
                                         li 
                                           button.btn.btn-outline-light(type='button') Xl
                                     .product-qnty
-                                      h4.f-w-600.mb-2 Quantity
+                                      h3 Quantity
                                       fieldset
                                         .input-group
                                           input.touchspin.text-center(type='text', value='5')
@@ -586,7 +586,7 @@ html(lang='en')
                             i.fa.fa-star-o
                             i.fa.fa-star-o
                           a(href='product-page.html')
-                            h4 Women's Jacket
+                            h3 Women's Jacket
                           p Solid Denim Jacket
                           .product-price
                             | $25.00
@@ -612,12 +612,12 @@ html(lang='en')
                                   .product-img.col-lg-6
                                     img.img-fluid(src='../assets/images/ecommerce/07.jpg', alt='')
                                   .product-details.col-lg-6.text-start
-                                    h4 Denim Jacket
+                                    h3 Denim Jacket
                                     .product-price
                                       | $30.00
                                       del $35.00    
                                     .product-view
-                                      h4.f-w-600 Product Details
+                                      h3 Product Details
                                       p.mb-0 Lorate Solid Men's Fashion Full Sleeves Latest Jacket for Men With Button Closure Long Sleeve Casual Torn Lycra Men Denim Shirt.
                                     .product-size
                                       ul
@@ -628,7 +628,7 @@ html(lang='en')
                                         li 
                                           button.btn.btn-outline-light(type='button') Xl
                                     .product-qnty
-                                      h4.f-w-600.mb-2 Quantity
+                                      h3 Quantity
                                       fieldset
                                         .input-group
                                           input.touchspin.text-center(type='text', value='5')
@@ -644,7 +644,7 @@ html(lang='en')
                             i.fa.fa-star-half-o
                             i.fa.fa-star-o
                           a(href='product-page.html')
-                            h4 Denim Jacket
+                            h3 Denim Jacket
                           p Denim Regular Men's Jacket
                           .product-price
                             | $30.00 
@@ -670,12 +670,12 @@ html(lang='en')
                                   .product-img.col-lg-6
                                     img.img-fluid(src='../assets/images/ecommerce/08.jpg', alt='')
                                   .product-details.col-lg-6.text-start
-                                    h4 Men's Formal shirt
+                                    h3 Men's Formal shirt
                                     .product-price
                                       | $35.00
                                       del $40.00    
                                     .product-view
-                                      h4.f-w-600 Product Details
+                                      h3 Product Details
                                       p.mb-0 Ravaiyaa - Attitude is everything Cotton Men's Formal One Top Shirt.
                                     .product-size
                                       ul
@@ -686,7 +686,7 @@ html(lang='en')
                                         li 
                                           button.btn.btn-outline-light(type='button') Xl
                                     .product-qnty
-                                      h4.f-w-600.mb-2 Quantity
+                                      h3 Quantity
                                       fieldset
                                         .input-group
                                           input.touchspin.text-center(type='text', value='5')
@@ -702,7 +702,7 @@ html(lang='en')
                             i.fa.fa-star-o
                             i.fa.fa-star-o
                           a(href='product-page.html')
-                            h4 Men's Formal shirt
+                            h3 Men's Formal shirt
                           p Regular Men's Denim Shirt.
                           .product-price
                             | $35.00 
@@ -728,12 +728,12 @@ html(lang='en')
                                   .product-img.col-lg-6
                                     img.img-fluid(src='../assets/images/ecommerce/09.jpg', alt='')
                                   .product-details.col-lg-6.text-start
-                                    h4 Woman's Gown
+                                    h3 Woman's Gown
                                     .product-price
                                       | $45.00
                                       del $50.00    
                                     .product-view
-                                      h4.f-w-600 Product Details
+                                      h3 Product Details
                                       p.mb-0 Women Tank Top High Neck Cotton Top Stylish Women Gown..
                                     .product-size
                                       ul
@@ -744,7 +744,7 @@ html(lang='en')
                                         li 
                                           button.btn.btn-outline-light(type='button') Xl
                                     .product-qnty
-                                      h4.f-w-600.mb-2 Quantity
+                                      h3 Quantity
                                       fieldset
                                         .input-group
                                           input.touchspin.text-center(type='text', value='5')
@@ -760,7 +760,7 @@ html(lang='en')
                             i.fa.fa-star
                             i.fa.fa-star-o
                           a(href='product-page.html')
-                            h4 Woman's Gown
+                            h3 Woman's Gown
                           p Woman's Long Gown
                           .product-price
                             | $45.00 
@@ -786,12 +786,12 @@ html(lang='en')
                                   .product-img.col-lg-6
                                     img.img-fluid(src='../assets/images/ecommerce/10.jpg', alt='')
                                   .product-details.col-lg-6.text-start
-                                    h4 Men's Black Suit
+                                    h3 Men's Black Suit
                                     .product-price
                                       | $50.00
                                       del $55.00    
                                     .product-view
-                                      h4.f-w-600 Product Details
+                                      h3 Product Details
                                       p.mb-0 Attitude is everything Cotton Men's Black Suit.
                                     .product-size
                                       ul
@@ -802,7 +802,7 @@ html(lang='en')
                                         li 
                                           button.btn.btn-outline-light(type='button') Xl
                                     .product-qnty
-                                      h4.f-w-600.mb-2 Quantity
+                                      h3 Quantity
                                       fieldset
                                         .input-group
                                           input.touchspin.text-center(type='text', value='5')
@@ -818,7 +818,7 @@ html(lang='en')
                             i.fa.fa-star
                             i.fa.fa-star
                           a(href='product-page.html')
-                            h4 Men's Black Suit
+                            h3 Men's Black Suit
                           p Men's Full Black Suit
                           .product-price
                             | $50.00 
@@ -844,12 +844,12 @@ html(lang='en')
                                   .product-img.col-lg-6
                                     img.img-fluid(src='../assets/images/ecommerce/11.jpg', alt='')
                                   .product-details.col-lg-6.text-start
-                                    h4 Woman's Dress
+                                    h3 Woman's Dress
                                     .product-price
                                       | $60.00
                                       del $65.00    
                                     .product-view
-                                      h4.f-w-600 Product Details
+                                      h3 Product Details
                                       p.mb-0 Tops for Stylish Woman's Dress
                                     .product-size
                                       ul
@@ -860,7 +860,7 @@ html(lang='en')
                                         li 
                                           button.btn.btn-outline-light(type='button') Xl
                                     .product-qnty
-                                      h4.f-w-600.mb-2 Quantity
+                                      h3 Quantity
                                       fieldset
                                         .input-group
                                           input.touchspin.text-center(type='text', value='5')
@@ -876,7 +876,7 @@ html(lang='en')
                             i.fa.fa-star
                             i.fa.fa-star
                           a(href='product-page.html')
-                            h4 Woman's Dress
+                            h3 Woman's Dress
                           p Tops for Stylish Woman's Dress
                           .product-price
                             | $60.00 
@@ -902,12 +902,12 @@ html(lang='en')
                                   .product-img.col-lg-6
                                     img.img-fluid(src='../assets/images/ecommerce/12.jpg', alt='')
                                   .product-details.col-lg-6.text-start
-                                    h4 Slim Fit Plastic Coat
+                                    h3 Slim Fit Plastic Coat
                                     .product-price
                                       | $30.00
                                       del $35.00    
                                     .product-view
-                                      h4.f-w-600 Product Details
+                                      h3 Product Details
                                       p.mb-0 Premier Cropped Skinny Jean
                                     .product-size
                                       ul
@@ -918,7 +918,7 @@ html(lang='en')
                                         li 
                                           button.btn.btn-outline-light(type='button') Xl
                                     .product-qnty
-                                      h4.f-w-600.mb-2 Quantity
+                                      h3 Quantity
                                       fieldset
                                         .input-group
                                           input.touchspin.text-center(type='text', value='5')
@@ -934,7 +934,7 @@ html(lang='en')
                             i.fa.fa-star-o
                             i.fa.fa-star-o
                           a(href='product-page.html')
-                            h4 Slim Fit Plastic Coat
+                            h3 Slim Fit Plastic Coat
                           p Slim Fit Plastic Thunder Coat
                           .product-price
                             | $30.00 
@@ -962,12 +962,12 @@ html(lang='en')
                                   .product-img.col-lg-6
                                     img.img-fluid(src='../assets/images/ecommerce/13.jpg', alt='')
                                   .product-details.col-lg-6.text-start
-                                    h4 Women's Hoodie
+                                    h3 Women's Hoodie
                                     .product-price
                                       | $50.00
                                       del $60.00    
                                     .product-view
-                                      h4.f-w-600 Product Details
+                                      h3 Product Details
                                       p.mb-0 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo.
                                     .product-size
                                       ul
@@ -978,7 +978,7 @@ html(lang='en')
                                         li 
                                           button.btn.btn-outline-light(type='button') Xl
                                     .product-qnty
-                                      h4.f-w-600.mb-2 Quantity
+                                      h3 Quantity
                                       fieldset
                                         .input-group
                                           input.touchspin.text-center(type='text', value='5')
@@ -994,7 +994,7 @@ html(lang='en')
                             i.fa.fa-star
                             i.fa.fa-star-half-o
                           a(href='product-page.html')
-                            h4 Women's Hoodie
+                            h3 Women's Hoodie
                           p Women's Hoodie T-Shirt
                           .product-price
                             | $30.00 
@@ -1020,12 +1020,12 @@ html(lang='en')
                                   .product-img.col-lg-6
                                     img.img-fluid(src='../assets/images/ecommerce/14.jpg', alt='')
                                   .product-details.col-lg-6.text-start
-                                    h4 Men's T-shirt
+                                    h3 Men's T-shirt
                                     .product-price
                                       | $60.00
                                       del $70.00    
                                     .product-view
-                                      h4.f-w-600 Product Details
+                                      h3 Product Details
                                       p.mb-0 Lorate Solid Men's Fashion Full Sleeves Latest Jacket for Men With Button Closure Long Sleeve Casual Torn Lycra Denim Shirt.
                                     .product-size
                                       ul
@@ -1036,7 +1036,7 @@ html(lang='en')
                                         li 
                                           button.btn.btn-outline-light(type='button') Xl
                                     .product-qnty
-                                      h4.f-w-600.mb-2 Quantity
+                                      h3 Quantity
                                       fieldset
                                         .input-group
                                           input.touchspin.text-center(type='text', value='5')
@@ -1052,7 +1052,7 @@ html(lang='en')
                             i.fa.fa-star
                             i.fa.fa-star-half-o
                           a(href='product-page.html')
-                            h4 Men's T-shirt
+                            h3 Men's T-shirt
                           p Men's Denim T-shirt
                           .product-price
                             | $60.00 
@@ -1079,12 +1079,12 @@ html(lang='en')
                                   .product-img.col-lg-6
                                     img.img-fluid(src='../assets/images/ecommerce/15.jpg', alt='')
                                   .product-details.col-lg-6.text-start
-                                    h4 Woman Party Wear
+                                    h3 Woman Party Wear
                                     .product-price
                                       | $57.00
                                       del $60.00    
                                     .product-view
-                                      h4.f-w-600 Product Details
+                                      h3 Product Details
                                       p.mb-0 Stylish Party Wear for women
                                     .product-size
                                       ul
@@ -1095,7 +1095,7 @@ html(lang='en')
                                         li 
                                           button.btn.btn-outline-light(type='button') Xl
                                     .product-qnty
-                                      h4.f-w-600.mb-2 Quantity
+                                      h3 Quantity
                                       fieldset
                                         .input-group
                                           input.touchspin.text-center(type='text', value='5')
@@ -1111,7 +1111,7 @@ html(lang='en')
                             i.fa.fa-star
                             i.fa.fa-star
                           a(href='product-page.html')
-                            h4 Woman Party Wear
+                            h3 Woman Party Wear
                           p Stylish Party Wear for women
                           .product-price
                             | $30.00 
@@ -1137,12 +1137,12 @@ html(lang='en')
                                   .product-img.col-lg-6
                                     img.img-fluid(src='../assets/images/ecommerce/16.jpg', alt='')
                                   .product-details.col-lg-6.text-start
-                                    h4 Woman T-shirt
+                                    h3 Woman T-shirt
                                     .product-price
                                       | $26.00
                                       del $350.00    
                                     .product-view
-                                      h4.f-w-600 Product Details
+                                      h3 Product Details
                                       p.mb-0 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo.
                                     .product-size
                                       ul
@@ -1153,7 +1153,7 @@ html(lang='en')
                                         li 
                                           button.btn.btn-outline-light(type='button') Xl
                                     .product-qnty
-                                      h4.f-w-600.mb-2 Quantity
+                                      h3 Quantity
                                       fieldset
                                         .input-group
                                           input.touchspin.text-center(type='text', value='5')
@@ -1169,7 +1169,7 @@ html(lang='en')
                             i.fa.fa-star
                             i.fa.fa-star
                           a(href='product-page.html')
-                            h4 Dream Beauty Fashion
+                            h3 Dream Beauty Fashion
                           p Tops for Women Stylish
                           .product-price
                             | $30.00 

@@ -7,28 +7,19 @@
   padding: 15px;
   bottom: 0;
   left: 0;
+  margin-left: $sidebar-compact-width;
   transition: 0.5s;
-
   &.footer-dark {
-    background-color: $footer_dark_color;
-
+    background-color: $dark-card-background;
     p {
       color: $white;
     }
   }
-  .footer-icon{
-    width: 22px;
-    height: 22px;
-    stroke: none;
-    vertical-align: -6px;
-  }
 }
-
 .footer-fix {
-  width: 100%;
+  width: calc(100% - $sidebar-compact-width);
   position: fixed;
 }
-
 /**=====================
     5.1 Footer CSS Ends
 ==========================**/

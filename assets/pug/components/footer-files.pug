@@ -53,12 +53,10 @@ if jkanban
 if calendar
   script(src='../assets/js/calendar/fullcalendar.min.js')
   script(src='../assets/js/calendar/fullcalendar-custom.js')
-
-if calendar_basic
-  script(src="../assets/js/calendar/app.js")
-
-if calendar_init    
-  script(src="../assets/js/calendar/inital.js")
+if coustom_calendar
+  script(src='../assets/js/calendar/fullcalender.js')
+  //- script(src='../assets/js/calendar/fullcalendar.min.js')
+  script(src='../assets/js/calendar/custom-calendar.js')
 
 if slick 
   script(src='../assets/js/slick/slick.min.js')
@@ -191,6 +189,14 @@ if datatable_extension
   script(src='../assets/js/datatable/datatable-extension/dataTables.rowReorder.min.js')
   script(src='../assets/js/datatable/datatable-extension/dataTables.scroller.min.js')
   script(src='../assets/js/datatable/datatable-extension/custom.js')
+
+if js_datatables 
+  script(src='../assets/js/js-datatables/simple-datatables@latest.js')
+if custom_list_product
+  script(src='../assets/js/custom-list-product.js')
+if common_chat
+  script(src='../assets/js/common-chat.js')
+
 if date_picker
   script(src='../assets/js/datepicker/date-picker/datepicker.js')
   script(src='../assets/js/datepicker/date-picker/datepicker.en.js')
@@ -225,10 +231,13 @@ if simple_mde
 if summernote
   script(src='../assets/js/editor/summernote/summernote.js')
   script(src='../assets/js/editor/summernote/summernote.custom.js')
+  script(src='../assets/js/editor/summernote/summernote-custom1.js')
 if form_wizard
   script(src='../assets/js/form-wizard/form-wizard.js')
 if form_wizard_four
   script(src='../assets/js/form-wizard/form-wizard-five.js')
+if verification_code 
+  script(src='../assets/js/form-wizard/verification.js')
 if image_upload 
   script(src='../assets/js/form-wizard/image-upload.js')
 if page_feather_icon
@@ -242,18 +251,6 @@ if page_whether_icon
 if image_cropper
   script(src='../assets/js/image-cropper/cropper.js')
   script(src='../assets/js/image-cropper/cropper-main.js')
-if select2
-  script(src='../assets/js/select2/select2.full.min.js')
-if select2_options 
-  script(src='../assets/js/select2/tagify.js')
-  script(src='../assets/js/select2/tagify.polyfills.min.js')
-  script(src='../assets/js/select2/intltelinput.min.js')
-  //- script(src='../assets/js/select2/telephone-input.js')
-  //- script(src='../assets/js/select2/custom-inputsearch.js')
-if page_select2
-  script(src='../assets/js/select2/select2-custom.js')   
-if page_select3 
-  script(src='../assets/js/select2/select3-custom.js') 
 if jsgrid
   script(src='../assets/js/jsgrid/jsgrid.min.js')
   script(src='../assets/js/jsgrid/griddata.js')
@@ -267,9 +264,7 @@ if scrollreveal
   script(src='../assets/js/modernizr.js')
 if pages_crollreveal
   script(src='../assets/js/animation/scroll-reveal/reveal-custom.js')
-if email_pagination 
-  script(src='../assets/js/letter-box/custom-mail-pagination.js')
-  script(src='../assets/js/letter-box/custom-usermail.js')
+
 if range_slider
   script(src='../assets/js/range-slider/ion.rangeSlider.min.js')
 if page_range_slider
@@ -277,6 +272,15 @@ if page_range_slider
 if rating
   script(src='../assets/js/rating/jquery.barrating.js')
   script(src='../assets/js/rating/rating-script.js')
+if emoji_rating
+  script(src='../assets/js/rating/emoji_rating.js')
+if emoji_bar 
+  script(src='../assets/js/emoji-js/uikit.min.js')
+  script(src='../assets/js/emoji-js/custom-emoji.js')
+  script(src='../assets/js/emoji-js/custom-emojis.js')
+if js_rating
+  script(src='../assets/js/rating/custom-rating.js')
+
 if scrollable
   script(src='../assets/js/scrollable/perfect-scrollbar.min.js')
   script(src='../assets/js/scrollable/scrollable-custom.js')
@@ -296,6 +300,23 @@ if owlcarousel
   script(src='../assets/js/owlcarousel/owl.carousel.js')
 if page_owlcarousel
   script(src='../assets/js/owlcarousel/owl-custom.js')
+if select2 
+  script(src='../assets/js/select2/select2.full.min.js')
+if select2_options 
+  script(src='../assets/js/select2/tagify.js')
+  script(src='../assets/js/select2/tagify.polyfills.min.js')
+  script(src='../assets/js/select2/intltelinput.min.js')
+if custom_select2
+  script(src='../assets/js/select2/telephone-input.js')
+  script(src='../assets/js/select2/custom-inputsearch.js')
+if page_select2
+  script(src='../assets/js/select2/select2-custom.js')
+if page_select3 
+  script(src='../assets/js/select2/select3-custom.js')
+
+if page_select4
+  script(src='../assets/js/add-product/select4-custom.js')
+
 if tour
   script(src='../assets/js/tour/intro.js')
   script(src='../assets/js/tour/intro-init.js')
@@ -316,41 +337,42 @@ if page_vector_map
   script(src='../assets/js/vector-map/map-vector.js')
 if chart_widget
   script(src='../assets/js/chart-widget.js')
-if comapct_menu
-  script(src='../assets/js/comapct-menu.js')
-if compact_small_button
-  script(src='../assets/js/compact-small-button.js')
+
 if countdown
   script(src='../assets/js/countdown.js')
+
 if timer_down 
   script(src='../assets/js/timer.js')
 if dashboard_2
   script(src='../assets/js/dashboard/dashboard_2.js')
+if dashboard_3
+  script(src='../assets/js/dashboard/dashboard_3.js')
 if ecommerce
   script(src='../assets/js/ecommerce.js')
 if email_app
   script(src='../assets/js/email-app.js')
+if email_pagination 
+  script(src='../assets/js/letter-box/custom-mail-pagination.js')
+  script(src='../assets/js/letter-box/custom-usermail.js')
+if editors 
+  script(src='../assets/js/editors/quill.js')
+if editors1 
+  script(src='../assets/js/editors/custom-quill.js')
+
+if editors2 
+  script(src='../assets/js/custom-add-product.js')
+
 if form_validation_custom
   script(src='../assets/js/form-validation-custom.js')
-if page_select4
-  script(src='../assets/js/add-product/select4-custom.js')
 if filepond 
   script(src='../assets/js/filepond/filepond-plugin-image-preview.js')
   script(src='../assets/js/filepond/filepond-plugin-file-rename.js')
   script(src='../assets/js/filepond/filepond-plugin-image-transform.js')
   script(src='../assets/js/filepond/filepond.js')
   script(src='../assets/js/filepond/custom-filepond.js')
-if editors 
-  script(src='../assets/js/editors/quill.js')
-if editors1 
-  script(src='../assets/js/editors/custom-quill.js')
-if editors2 
-  script(src='../assets/js/custom-add-product.js')
 if contact_page
   script(src='../assets/js/bookmark/jquery.validate.min.js')
   script(src='../assets/js/contacts/custom.js')
-if task_page
-  script(src='../assets/js/task/custom.js')
 if general_widget
   script(src='../assets/js/general-widget.js')
 if height_equal
@@ -369,8 +391,6 @@ if print
   script(src='../assets/js/print.js')
 if product_list
   script(src='../assets/js/product-list-custom.js')
-if radial_chart_tooltip
-  script(src='../assets/js/radial-chart-tooltip.js')
 if support_ticket_custom
   script(src='../assets/js/support-ticket-custom.js')
 if tooltip
@@ -394,11 +414,6 @@ if landing_sticky
   script(src='../assets/js/landing.js')
 if jarallax_libs
   script(src='../assets/js/jarallax_libs/libs.min.js')
-if scrollpy_landing
-  script(src='../assets/js/scrollpy_landing.js')
-if psanimated
-  script(src='../assets/js/psanimated/psanimated.min.js')
-  script(src='../assets/js/psanimated/bodymovin.min.js')
 if alert 
   script(src='../assets/js/alert.js')
 
@@ -480,8 +495,6 @@ if  theme_customizer
 - var dragable              = false
 - var ace_editor            = false
 - var form_wizard           = false
-- var form_wizard_two       = false
-- var form_wizard_three     = false
 - var form_wizard_four      = false
 - var page_feather_icon     = false
 - var page_flag_icon        = false

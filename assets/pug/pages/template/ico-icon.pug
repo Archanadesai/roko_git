@@ -14,7 +14,7 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -23,14 +23,15 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | ICO Icon
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item Ui Kits
                     li.breadcrumb-item.active ICO Icon
           // Container-fluid starts
@@ -38,7 +39,7 @@ html(lang='en')
             .row
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Abstract
                     span New
                   .card-body
@@ -195,7 +196,7 @@ html(lang='en')
                         | woman-bird
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Animal
                   .card-body
                     .row.icon-lists
@@ -504,7 +505,7 @@ html(lang='en')
                         | animal-zebra
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Brand
                   .card-body
                     .row.icon-lists
@@ -1140,7 +1141,7 @@ html(lang='en')
                         | social-envato
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Business
                   .card-body
                     .row.icon-lists
@@ -1242,7 +1243,7 @@ html(lang='en')
                         | wheel
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Chart
                   .card-body
                     .row.icon-lists
@@ -1284,7 +1285,7 @@ html(lang='en')
                         | chart-radar-graph
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Construction
                   .card-body
                     .row.icon-lists
@@ -1464,7 +1465,7 @@ html(lang='en')
                         | wrench
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Currency
                   .card-body
                     .row.icon-lists
@@ -1770,7 +1771,7 @@ html(lang='en')
                         | cur-yen-true
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Device
                   .card-body
                     .row.icon-lists
@@ -1881,7 +1882,7 @@ html(lang='en')
                         | xbox-360
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Directional
                   .card-body
                     .row.icon-lists
@@ -2235,7 +2236,7 @@ html(lang='en')
                         | thin-up
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Education
                   .card-body
                     .row.icon-lists
@@ -2343,7 +2344,7 @@ html(lang='en')
                         | university
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Emoticon
                   .card-body
                     .row.icon-lists
@@ -2409,7 +2410,7 @@ html(lang='en')
                         | emo-worried
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 File Type
                   .card-body
                     .row.icon-lists
@@ -2535,7 +2536,7 @@ html(lang='en')
                         | file-zip
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Food
                   .card-body
                     .row.icon-lists
@@ -2832,7 +2833,7 @@ html(lang='en')
                         | wheat
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Kids & Toys
                   .card-body
                     .row.icon-lists
@@ -2901,7 +2902,7 @@ html(lang='en')
                         | unique-idea
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Law
                   .card-body
                     .row.icon-lists
@@ -3018,7 +3019,7 @@ html(lang='en')
                         | thief-alt
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Mathematical
                   .card-body
                     .row.icon-lists
@@ -3147,7 +3148,7 @@ html(lang='en')
                         | square-root
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Medical
                   .card-body
                     .row.icon-lists
@@ -3297,7 +3298,7 @@ html(lang='en')
                         | xray
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Mobile UI
                   .card-body
                     .row.icon-lists
@@ -3585,7 +3586,7 @@ html(lang='en')
                         | ui-zoom-out
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Multimedia
                   .card-body
                     .row.icon-lists
@@ -3690,7 +3691,7 @@ html(lang='en')
                         | youtube-play
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Payment
                   .card-body
                     .row.icon-lists
@@ -3837,7 +3838,7 @@ html(lang='en')
                         | western-union-alt
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Person
                   .card-body
                     .row.icon-lists
@@ -3939,7 +3940,7 @@ html(lang='en')
                         | woman-in-glasses
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Search
                   .card-body
                     .row.icon-lists
@@ -3978,7 +3979,7 @@ html(lang='en')
                         | user-search
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Social
                   .card-body
                     .row.icon-lists
@@ -4320,7 +4321,7 @@ html(lang='en')
                         | social-zencart
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Sport
                   .card-body
                     .row.icon-lists
@@ -4593,7 +4594,7 @@ html(lang='en')
                         | win-trophy
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Text Editor
                   .card-body
                     .row.icon-lists
@@ -4752,7 +4753,7 @@ html(lang='en')
                         | unlink
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Transport
                   .card-body
                     .row.icon-lists
@@ -4920,7 +4921,7 @@ html(lang='en')
                         | yacht
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Travel
                   .card-body
                     .row.icon-lists
@@ -4974,7 +4975,7 @@ html(lang='en')
                         | travelling
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Weather
                   .card-body
                     .row.icon-lists
@@ -5223,7 +5224,7 @@ html(lang='en')
                         | windy-thunder-raining
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Web Application
                   .card-body
                     .row.icon-lists
@@ -6544,5 +6545,5 @@ html(lang='en')
                 .form-inline
                   .form-group
                     input#input_copy.inp-val.form-control.m-r-10(type='text', value='', readonly='readonly')
-                    button.btn.btn-primary.notification(onclick='myFunction()') Copy text    
+                    button.btn.btn-primary.notification(onclick='myFunction()') Copy text
     include ../../components/footer-files

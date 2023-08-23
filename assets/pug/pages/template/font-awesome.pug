@@ -14,7 +14,7 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -23,15 +23,16 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | Font Awesome Icon
 
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item Icons
                     li.breadcrumb-item.active Font Awesome Icon
           // Container-fluid starts
@@ -39,7 +40,7 @@ html(lang='en')
             .row
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0
                       span 20
                       |  Icons
@@ -107,7 +108,7 @@ html(lang='en')
                         | fa fa-usb
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Currency Icons
                   .card-body
                     .row.icon-lists
@@ -187,7 +188,7 @@ html(lang='en')
                         span.text-muted (alias)
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Web App Icons
                   .card-body
                     .row.icon-lists
@@ -1109,7 +1110,7 @@ html(lang='en')
                         |  fa-wrench
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Spinner Icons
                   .card-body
                     .row.icon-lists
@@ -1131,7 +1132,7 @@ html(lang='en')
                         |  fa-spinner
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Form Control Icons
                   .card-body
                     .row.icon-lists
@@ -1170,7 +1171,7 @@ html(lang='en')
                         |  fa-square-o
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Text Editor Icons
                   .card-body
                     .row.icon-lists
@@ -1332,7 +1333,7 @@ html(lang='en')
                         span.text-muted (alias)
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Directional Icons
                   .card-body
                     .row.icon-lists
@@ -1498,7 +1499,7 @@ html(lang='en')
                         span.text-muted (alias)
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Video Player Icons
                   .card-body
                     .row.icon-lists
@@ -1552,7 +1553,7 @@ html(lang='en')
                         |  fa-youtube-play
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Brand Icons
                   .card-body
                     .row.icon-lists
@@ -1817,7 +1818,7 @@ html(lang='en')
                         |  fa-youtube-square
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Medical Icons
                   .card-body
                     .row.icon-lists

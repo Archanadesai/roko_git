@@ -1,4 +1,5 @@
-Chart.defaults.global = {
+(function () {
+  Chart.defaults.global = {
     animation: true,
     animationSteps: 60,
     animationEasing: "easeOutIn",
@@ -27,7 +28,7 @@ Chart.defaults.global = {
     tooltipFontStyle: "normal",
     tooltipFontColor: "#fff",
     tooltipTitleFontSize: 16,
-    TitleFontStyle : "Raleway",
+    TitleFontStyle: "Raleway",
     tooltipTitleFontStyle: "bold",
     tooltipTitleFontColor: "#ffffff",
     tooltipYPadding: 10,
@@ -35,28 +36,31 @@ Chart.defaults.global = {
     tooltipCaretSize: 8,
     tooltipCornerRadius: 6,
     tooltipXOffset: 5,
-    onAnimationProgress: function() {},
-    onAnimationComplete: function() {}
-};
-var barData = {
+    onAnimationProgress: function () {},
+    onAnimationComplete: function () {},
+  };
+  var barData = {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
-    datasets: [{
+    datasets: [
+      {
         label: "My First dataset",
         fillColor: "rgba(115, 102 ,255, 0.4)",
-        strokeColor: woolAdminConfig.primary,
+        strokeColor: RokoAdminConfig.primary,
         highlightFill: "rgba(115, 102 ,255, 0.6)",
-        highlightStroke: woolAdminConfig.primary ,
-        data: [35, 59, 80, 81, 56, 55, 40]
-    }, {
+        highlightStroke: RokoAdminConfig.primary,
+        data: [35, 59, 80, 81, 56, 55, 40],
+      },
+      {
         label: "My Second dataset",
         fillColor: "rgba(247, 49, 100, 0.4)",
-        strokeColor: woolAdminConfig.secondary ,
+        strokeColor: RokoAdminConfig.secondary,
         highlightFill: "rgba(247, 49, 100, 0.6)",
-        highlightStroke: woolAdminConfig.secondary,
-        data: [28, 48, 40, 19, 86, 27, 90]
-    }]
-};
-var barOptions = {
+        highlightStroke: RokoAdminConfig.secondary,
+        data: [28, 48, 40, 19, 86, 27, 90],
+      },
+    ],
+  };
+  var barOptions = {
     scaleBeginAtZero: true,
     scaleShowGridLines: true,
     scaleGridLineColor: "rgba(0,0,0,0.1)",
@@ -67,38 +71,42 @@ var barOptions = {
     barStrokeWidth: 2,
     barValueSpacing: 5,
     barDatasetSpacing: 1,
-};
-var barCtx = document.getElementById("myBarGraph").getContext("2d");
-var myBarChart = new Chart(barCtx).Bar(barData, barOptions);
-var polarData = [
+  };
+  var barCtx = document.getElementById("myBarGraph").getContext("2d");
+  var myBarChart = new Chart(barCtx).Bar(barData, barOptions);
+  var polarData = [
     {
-        value: 300,
-        color: woolAdminConfig.primary,
-        highlight: woolAdminConfig.primary,
-        label: "Yellow"
-    }, {
-        value: 50,
-        color: "#f8d62b",
-        highlight: "#f8d62b",
-        label: "Sky"
-    }, {
-        value: 100,
-        color: "#51bb25",
-        highlight: "#333",
-        label: "Black"
-    }, {
-        value: 40,
-        color: "#a927f9",
-        highlight: "#a927f9",
-        label: "Grey"
-    }, {
-        value: 120,
-        color: woolAdminConfig.secondary ,
-        highlight: woolAdminConfig.secondary ,
-        label: "Dark Grey"
-    }
-];
-var polarOptions = {
+      value: 300,
+      color: RokoAdminConfig.primary,
+      highlight: RokoAdminConfig.primary,
+      label: "Yellow",
+    },
+    {
+      value: 50,
+      color: "#f8d62b",
+      highlight: "#f8d62b",
+      label: "Sky",
+    },
+    {
+      value: 100,
+      color: "#51bb25",
+      highlight: "#333",
+      label: "Black",
+    },
+    {
+      value: 40,
+      color: "#a927f9",
+      highlight: "#a927f9",
+      label: "Grey",
+    },
+    {
+      value: 120,
+      color: RokoAdminConfig.secondary,
+      highlight: RokoAdminConfig.secondary,
+      label: "Dark Grey",
+    },
+  ];
+  var polarOptions = {
     scaleShowLabelBackdrop: true,
     scaleBackdropColor: "rgba(255,255,255,0.75)",
     scaleBeginAtZero: true,
@@ -112,33 +120,37 @@ var polarOptions = {
     animationEasing: "easeOutBounce",
     animateRotate: true,
     animateScale: false,
-    legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
-};
-var polarCtx = document.getElementById("myPolarGraph").getContext("2d");
-var myPolarChart = new Chart(polarCtx).PolarArea(polarData, polarOptions);
-var lineGraphData = {
+    legendTemplate:
+      '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>',
+  };
+  var polarCtx = document.getElementById("myPolarGraph").getContext("2d");
+  var myPolarChart = new Chart(polarCtx).PolarArea(polarData, polarOptions);
+  var lineGraphData = {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
-    datasets: [{
+    datasets: [
+      {
         label: "My First dataset",
         fillColor: "rgba(115, 102 ,255, 0.3)",
-        strokeColor: woolAdminConfig.primary ,
-        pointColor: woolAdminConfig.primary ,
+        strokeColor: RokoAdminConfig.primary,
+        pointColor: RokoAdminConfig.primary,
         pointStrokeColor: "#fff",
         pointHighlightFill: "#fff",
         pointHighlightStroke: "#000",
-        data: [10, 59, 80, 81, 56, 55, 40]
-    }, {
+        data: [10, 59, 80, 81, 56, 55, 40],
+      },
+      {
         label: "My Second dataset",
         fillColor: "rgba(247, 49, 100, 0.3)",
-        strokeColor: woolAdminConfig.secondary ,
-        pointColor: woolAdminConfig.secondary ,
+        strokeColor: RokoAdminConfig.secondary,
+        pointColor: RokoAdminConfig.secondary,
         pointStrokeColor: "#fff",
         pointHighlightFill: "#000",
-        pointHighlightStroke: woolAdminConfig.secondary,
-        data: [28, 48, 40, 19, 86, 27, 90]
-    }]
-};
-var lineGraphOptions = {
+        pointHighlightStroke: RokoAdminConfig.secondary,
+        data: [28, 48, 40, 19, 86, 27, 90],
+      },
+    ],
+  };
+  var lineGraphOptions = {
     scaleShowGridLines: true,
     scaleGridLineColor: "rgba(0,0,0,.05)",
     scaleGridLineWidth: 1,
@@ -153,24 +165,27 @@ var lineGraphOptions = {
     datasetStroke: true,
     datasetStrokeWidth: 2,
     datasetFill: true,
-    legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
-};
-var lineCtx = document.getElementById("myGraph").getContext("2d");
-var myLineCharts = new Chart(lineCtx).Line(lineGraphData, lineGraphOptions);
-var radarData = {
+    legendTemplate:
+      '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<datasets.length; i++){%><li><span style="background-color:<%=datasets[i].strokeColor%>"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>',
+  };
+  var lineCtx = document.getElementById("myGraph").getContext("2d");
+  var myLineCharts = new Chart(lineCtx).Line(lineGraphData, lineGraphOptions);
+  var radarData = {
     labels: ["Ford", "Chevy", "Toyota", "Honda", "Mazda"],
-    datasets: [{
+    datasets: [
+      {
         label: "My First dataset",
         fillColor: "rgba(115, 102 ,255, 0.4)",
-        strokeColor: woolAdminConfig.primary,
-        pointColor: woolAdminConfig.primary,
-        pointStrokeColor: woolAdminConfig.primary,
-        pointHighlightFill: woolAdminConfig.primary ,
+        strokeColor: RokoAdminConfig.primary,
+        pointColor: RokoAdminConfig.primary,
+        pointStrokeColor: RokoAdminConfig.primary,
+        pointHighlightFill: RokoAdminConfig.primary,
         pointHighlightStroke: "rgba(115, 102 ,255, 0.4)",
-        data: [12, 3, 5, 18, 7]
-    }]
-};
-var radarOptions = {
+        data: [12, 3, 5, 18, 7],
+      },
+    ],
+  };
+  var radarOptions = {
     scaleShowGridLines: true,
     scaleGridLineColor: "rgba(0,0,0,.2)",
     scaleGridLineWidth: 1,
@@ -185,31 +200,32 @@ var radarOptions = {
     datasetStroke: true,
     datasetStrokeWidth: 2,
     datasetFill: true,
-    legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
-};
-var radarCtx = document.getElementById("myRadarGraph").getContext("2d");
-var myRadarChart = new Chart(radarCtx).Radar(radarData, radarOptions);
-var pieData = [
+    legendTemplate:
+      '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<datasets.length; i++){%><li><span style="background-color:<%=datasets[i].strokeColor%>"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>',
+  };
+  var radarCtx = document.getElementById("myRadarGraph").getContext("2d");
+  var myRadarChart = new Chart(radarCtx).Radar(radarData, radarOptions);
+  var pieData = [
     {
-        value: 300,
-        color: "#ab8ce4",
-        highlight: "#ab8ce4",
-        label: "Primary"
+      value: 300,
+      color: "#ab8ce4",
+      highlight: "#ab8ce4",
+      label: "Primary",
     },
     {
-        value: 50,
-        color: "#5391CA",
-        highlight: "#5391CA",
-        label: "Secondary"
+      value: 50,
+      color: "#FF6150",
+      highlight: "#FF6150",
+      label: "Secondary",
     },
     {
-        value: 100,
-        color: "#FF5370",
-        highlight: "#FF5370",
-        label: "Danger"
-    }
-];
-var pieOptions = {
+      value: 100,
+      color: "#FF5370",
+      highlight: "#FF5370",
+      label: "Danger",
+    },
+  ];
+  var pieOptions = {
     segmentShowStroke: true,
     segmentStrokeColor: "#fff",
     segmentStrokeWidth: 2,
@@ -218,31 +234,31 @@ var pieOptions = {
     animationEasing: "easeOutBounce",
     animateRotate: true,
     animateScale: false,
-    legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
-};
+    legendTemplate:
+      '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>',
+  };
 
-
-var doughnutData = [
+  var doughnutData = [
     {
-        value: 300,
-        color: woolAdminConfig.primary ,
-        highlight: woolAdminConfig.primary ,
-        label: "Primary"
+      value: 300,
+      color: RokoAdminConfig.primary,
+      highlight: RokoAdminConfig.primary,
+      label: "Primary",
     },
     {
-        value: 50,
-        color: woolAdminConfig.secondary ,
-        highlight: woolAdminConfig.secondary ,
-        label: "Secondary"
+      value: 50,
+      color: RokoAdminConfig.secondary,
+      highlight: RokoAdminConfig.secondary,
+      label: "Secondary",
     },
     {
-        value: 100,
-        color: "#51bb25",
-        highlight: "#51bb25",
-        label: "Success"
-    }
-];
-var doughnutOptions = {
+      value: 100,
+      color: "#51bb25",
+      highlight: "#51bb25",
+      label: "Success",
+    },
+  ];
+  var doughnutOptions = {
     segmentShowStroke: true,
     segmentStrokeColor: "#fff",
     segmentStrokeWidth: 2,
@@ -251,35 +267,44 @@ var doughnutOptions = {
     animationEasing: "easeOutBounce",
     animateRotate: true,
     animateScale: false,
-    legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
-};
-var doughnutCtx = document.getElementById("myDoughnutGraph").getContext("2d");
-var myDoughnutChart = new Chart(doughnutCtx).Doughnut(doughnutData, doughnutOptions);
-var myLineChart = {
-    labels: ["","10", "20", "30", "40", "50", "60", "70", "80"],
-    datasets: [{
+    legendTemplate:
+      '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>',
+  };
+  var doughnutCtx = document.getElementById("myDoughnutGraph").getContext("2d");
+  var myDoughnutChart = new Chart(doughnutCtx).Doughnut(
+    doughnutData,
+    doughnutOptions
+  );
+  var myLineChart = {
+    labels: ["", "10", "20", "30", "40", "50", "60", "70", "80"],
+    datasets: [
+      {
         fillColor: "rgba(81, 187, 37, 0.2)",
         strokeColor: "#51bb25",
         pointColor: "#51bb25",
-        data: [10, 20, 40, 30, 0, 20, 10, 30, 10]
-    },{
+        data: [10, 20, 40, 30, 0, 20, 10, 30, 10],
+      },
+      {
         fillColor: "rgba(247, 49, 100, 0.2)",
-        strokeColor: woolAdminConfig.secondary ,
-        pointColor: woolAdminConfig.secondary ,
-        data: [20, 40, 10, 20, 40, 30, 40, 10, 20]
-    }, {
+        strokeColor: RokoAdminConfig.secondary,
+        pointColor: RokoAdminConfig.secondary,
+        data: [20, 40, 10, 20, 40, 30, 40, 10, 20],
+      },
+      {
         fillColor: "rgba(115, 102 ,255, 0.2)",
-        strokeColor: woolAdminConfig.primary ,
-        pointColor: woolAdminConfig.primary ,
-        data: [60, 10, 40, 30, 80, 30, 20, 90, 0]
-    }]
-}
-var ctx = document.getElementById("myLineCharts").getContext("2d");
-var LineChartDemo = new Chart(ctx).Line(myLineChart, {
+        strokeColor: RokoAdminConfig.primary,
+        pointColor: RokoAdminConfig.primary,
+        data: [60, 10, 40, 30, 80, 30, 20, 90, 0],
+      },
+    ],
+  };
+  var ctx = document.getElementById("myLineCharts").getContext("2d");
+  var LineChartDemo = new Chart(ctx).Line(myLineChart, {
     pointDotRadius: 2,
     pointDotStrokeWidth: 5,
     pointDotStrokeColor: "#ffffff",
     bezierCurve: false,
     scaleShowVerticalLines: false,
-    scaleGridLineColor: "#eeeeee"
-});
+    scaleGridLineColor: "#eeeeee",
+  });
+})();

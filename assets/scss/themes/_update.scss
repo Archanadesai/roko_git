@@ -1,34 +1,14 @@
 /**=====================
   4.3 Update CSS Start
 ==========================**/
-
-
 @import "utils/variables";
-
 // jsgrid css
 .jsgrid-filter-row {
-
     select,
     input {
         padding: 6px 10px;
         border: 1px solid $horizontal-border-color;
         background: $white;
-    }
-}
-.form-control {
-    &:focus {
-        box-shadow: 0 0 0 0.25rem rgba($primary-color, 0.2);
-    }
-}
-.dark-accordion {
-    color: $dark-all-font-color;
-}
-.toast-container {
-    position: unset;
-}
-.pswp__caption__center {
-    > h4 {
-        color: $white;
     }
 }
 // popover
@@ -37,62 +17,27 @@
     border: none;
     -webkit-box-shadow: 0 0 20px rgba($primary-color, 0.1);
     box-shadow: 0 0 20px rgba($primary-color, 0.1);
-
     .popover-header {
         background-color: $theme-medium-color;
         color: $primary-color;
         border-bottom: none;
     }
-
     .popover-body {
         color: rgba(43, 43, 43, 0.7);
     }
 }
-span.twitter-typeahead {
-    .league-name {
-      font-size: 16px;
-      padding: 6px 10px 0;
-    }
-  
-    .tt-menu {
-      float: left;
-      width: 100%;
-      min-width: 10rem;
-      margin: 0.125rem 0 0;
-      font-size: 1rem;
-      color: #212529;
-      text-align: left;
-      list-style: none;
-      background-color: $white;
-      background-clip: padding-box;
-      border-radius: 0.25rem;
-      -webkit-box-shadow: 0 0 20px rgba(89, 102, 122, 0.1);
-      box-shadow: 0 0 20px rgba(89, 102, 122, 0.1);
-      border: none;
-      padding: 0;
-    }
-  
-    .tt-suggestion {
-      color: $dark-editor-document;
-      opacity: 0.6;
-      font-size: 13px;
-      padding: 6px 12px;
-      border-top: 1px solid $light-semi-gray;
-      background: $white;
-      cursor: pointer;
-  
-      &:hover,
-      &:focus {
+.dropdown-menu.show {
+    background-color: $white;
+    z-index: 2;
+}
+.toast-container {
+    position: unset;
+}
+.animate-widget {
+    .p-25 {
         background-color: $white;
-      }
-  
-      &.active,
-      &:active {
-        color: $white;
-        background-color: var(--theme-deafult);
-      }
     }
-  }
+}
 // tooltip css start
 .tooltip {
     &.bs-tooltip-top {
@@ -102,7 +47,6 @@ span.twitter-typeahead {
             }
         }
     }
-
     &.bs-tooltip-bottom {
         .tooltip-arrow {
             &:before {
@@ -111,7 +55,6 @@ span.twitter-typeahead {
             }
         }
     }
-
     &.bs-tooltip-start {
         .tooltip-arrow {
             &:before {
@@ -120,7 +63,6 @@ span.twitter-typeahead {
             }
         }
     }
-
     &.bs-tooltip-end {
         .tooltip-arrow {
             &:before {
@@ -129,21 +71,17 @@ span.twitter-typeahead {
             }
         }
     }
-
     .tooltip-inner {
         background-color: $theme-medium-color;
         color: $primary-color;
     }
-
     .tooltip-arrow {
         &:before {
             border-top-color: $theme-medium-color;
         }
     }
 }
-
 // tooltip css end
-
 // dropdown css start
 .dropdown-basic {
     .dropdown {
@@ -155,12 +93,10 @@ span.twitter-typeahead {
                 font-size: 13px;
                 border-top: 1px solid $light-semi-gray;
                 background: $white;
-
                 &:hover {
                     background-color: $white;
                 }
             }
-
             .dropdown-header {
                 padding: 8px 16px;
                 font-weight: 400;
@@ -169,14 +105,12 @@ span.twitter-typeahead {
             }
         }
     }
-
     .dropup {
         .dropup-content {
             top: auto;
         }
     }
 }
-
 // dropdown css end
 // accordian css start
 .default-according {
@@ -187,74 +121,68 @@ span.twitter-typeahead {
             border-radius: 0;
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
-
             &.bg-primary,
             &.bg-secondary {
                 .btn {
                     border-color: $transparent-color;
                 }
             }
-
             i {
                 position: initial;
                 font-size: 20px;
                 display: inline-block;
                 vertical-align: text-bottom;
                 margin-right: 5px;
-
                 [dir="rtl"] & {
                     margin-right: unset;
                     margin-left: 5px;
                 }
             }
-
             h5 {
                 margin-top: 0;
             }
-
             .btn-link {
                 padding: 12px 20px;
                 width: 100%;
                 text-align: left;
                 letter-spacing: 0.7px;
-                border: 1px solid $light-semi-gray;
                 border-radius: 0;
                 border-top-left-radius: 5px;
                 border-top-right-radius: 5px;
-
                 [dir="rtl"] & {
                     text-align: right;
                 }
-
                 @media (max-width: 575px) {
                     padding: 12px 15px;
                 }
             }
         }
-
         .card-body {
             padding: 15px 20px;
             line-height: 22px;
             font-size: 14px;
-            border-color: $light-semi-gray;
+            border: none;
             border-radius: 0;
             border-bottom-left-radius: 5px;
             border-bottom-right-radius: 5px;
-            color: $theme-body-sub-title-color;
+            color: $dark-color;
         }
     }
 }
-.collapse-horizontal  {
+.icon-dropdown {
+    .dropdown-toggle {
+        border: none;
+    }
+}
+.collapse-horizontal {
     .card-body {
         width: 240px;
     }
 }
 // accordian css end
-
 // tab-bootstrap css start
 .nav-tabs {
     border-bottom-color: $light-semi-gray;
-
     .nav-bottom {
         .nav-item {
             .nav-link.active {
@@ -263,7 +191,6 @@ span.twitter-typeahead {
         }
     }
 }
-
 .nav-tabs {
     .nav-item {
         &.show {
@@ -272,15 +199,12 @@ span.twitter-typeahead {
             }
         }
     }
-
     .nav-link {
         color: $dark-color;
-
         &.active {
             font-weight: 500;
         }
     }
-
     &.nav-bottom {
         .nav-item {
             .nav-link {
@@ -291,14 +215,12 @@ span.twitter-typeahead {
         }
     }
 }
-
 .dropdown-menu {
     -webkit-box-shadow: 0 0 20px rgba(89, 102, 122, 0.1);
     box-shadow: 0 0 20px rgba(89, 102, 122, 0.1);
     border: none;
     padding: 0;
     z-index: 1;
-
     .dropdown-item {
         color: #2b2b2b;
         opacity: 0.6;
@@ -306,7 +228,6 @@ span.twitter-typeahead {
         padding: 6px 12px;
         border-top: 1px solid $light-semi-gray;
         background: $white;
-
         &:hover {
             background-color: $white;
         }
@@ -314,15 +235,20 @@ span.twitter-typeahead {
             border-top: none;
         }
     }
-
     .dropdown-divider {
         margin: 0;
         border-top: 1px solid #cccccc;
     }
 }
-
+.blockquote {
+    > :last-child {
+      margin-top: 0;
+    }
+}
+.modal-content {
+    background-color: $white;
+}
 // tab-bootstrap css end
-
 .border-tab {
     .nav-tabs {
         .nav-item {
@@ -330,11 +256,9 @@ span.twitter-typeahead {
                 &.active {
                     border-bottom: 2px solid $primary-color;
                 }
-
                 &.show {
                     border-bottom: 2px solid $primary-color;
                 }
-
                 &:focus {
                     border-bottom: 2px solid $primary-color;
                 }
@@ -342,23 +266,11 @@ span.twitter-typeahead {
         }
     }
 }
-
-.tabbed-card {
-    .nav-tabs {
-        .nav-item {
-            .nav-link {
-                top: 17px;
-            }
-        }
-    }
-}
-
 .timeliny {
     .timeliny-dot::before {
         font-size: $btn-lg-font-size;
     }
 }
-
 .component {
     .input-group {
         .btn {
@@ -367,28 +279,24 @@ span.twitter-typeahead {
         }
     }
 }
-
 .login-card {
     .login-main {
         .theme-form {
             label {
                 font-size: $body-font-size;
             }
-
             .show-hide {
                 top: 50%;
             }
         }
     }
 }
-
 // faq css start
 .faq-accordion {
     .card {
         .btn-link {
             svg {
                 margin-left: 20px;
-
                 @media (max-width: 575.98px) {
                     margin-left: 10px;
                 }
@@ -396,21 +304,18 @@ span.twitter-typeahead {
         }
     }
 }
-
 // faq css end
 .job-filter {
     .faq-form {
         .form-control {
             font-size: 14px;
         }
-
         .search-icon {
             width: 16px;
             height: 16px;
         }
     }
 }
-
 // editor css
 .note-btn-group {
     .dropdown-toggle  {
@@ -421,30 +326,23 @@ span.twitter-typeahead {
             }
         }
     }
-    
 }
-
-
 // owl-carousel css
-
 .carousel {
     .carousel-indicators {
         margin-bottom: 3px;
     }
 }
-
 .mouse-wheel {
     .owl-stage-outer {
         .owl-stage {
             width: 5600px !important;
-
             .owl-item {
                 width: 225.333px !important;
             }
         }
     }
 }
-
 .carousel-item {
     .carousel-caption {
         width: 100%;
@@ -454,26 +352,20 @@ span.twitter-typeahead {
         padding: 26px 10px;
         background-color: rgba($dark-card-background, 0.51);
     }
-
     .carousel-opacity {
         background-color: rgba($light-color, 0.51);
     }
 }
-
 .carousel {
     .carousel-control-prev-icon {
         width: calc(23px + (32 - 23) * ((100vw - 320px) / (1920 - 320)));
         height: calc(23px + (32 - 23) * ((100vw - 320px) / (1920 - 320)));
     }
-
     .carousel-control-next-icon {
         width: calc(23px + (32 - 23) * ((100vw - 320px) / (1920 - 320)));
         height: calc(23px + (32 - 23) * ((100vw - 320px) / (1920 - 320)));
-
     }
 }
-
-
 // Rating 
 .rating-header {
     h4 {
@@ -482,7 +374,6 @@ span.twitter-typeahead {
         }
     }
 }
-
 // Animated modal
 .animate-img {
     .animate-widget {
@@ -494,13 +385,11 @@ span.twitter-typeahead {
         }
     }
 }
-
 .modal-popup {
     &.modal {
         top: 20%;
         left: 50%;
         transform: translate(-50%, 0);
-
         .modal-dialog {
             .theme-close {
                 width: calc(25px + (40 - 25) * ((100vw - 320px) / (1920 - 320)));
@@ -510,7 +399,6 @@ span.twitter-typeahead {
         }
     }
 }
-
 .animated-modal {
     .form-select {
         @media (max-width:442px) {
@@ -518,14 +406,12 @@ span.twitter-typeahead {
         }
     }
 }
-
 // TO-DO scss
 .task-container {
     .badge {
         line-height: 13px;
     }
 }
-
 // starter kit
 .starter-main {
     .alert-primary {
@@ -533,11 +419,9 @@ span.twitter-typeahead {
             padding: 13px 20px 13px 65px;
             border-color: $primary-color;
             color: $dark-color;
-
             [dir="rtl"] & {
                 padding: 13px 65px 13px 20px;
             }
-
             &:before {
                 content: "";
                 position: absolute;
@@ -547,13 +431,11 @@ span.twitter-typeahead {
                 border-left: 7px solid $primary-color;
                 border-top: 7px solid transparent;
                 border-bottom: 7px solid transparent;
-
                 [dir="rtl"] & {
                     border-right: 7px solid $primary-color;
                     border-left: unset;
                 }
             }
-
             i {
                 padding: 17px 20px;
                 display: flex;
@@ -565,7 +447,6 @@ span.twitter-typeahead {
                 left: 0;
                 top: 0;
                 height: 100%;
-
                 [dir="rtl"] & {
                     right: 0;
                     left: unset;
@@ -574,13 +455,6 @@ span.twitter-typeahead {
         }
     }
 }
-
-// map-js 
-.map-z-index {
-    z-index: 1;
-}
-
-
 /**=====================
     4.3 Update CSS Ends
 ==========================**/

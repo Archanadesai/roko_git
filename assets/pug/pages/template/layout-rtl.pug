@@ -2,19 +2,19 @@
 - var clipboard             = true;
 - var customcard            = true;
 - var theme_customizer      = true;
+- var tooltip               = true;
 - var sidebar               = true;
 - var slick                 = true;
 - var header_slider         = true;
 - var animate               = true;
 - var scrollbar             = true;
-
 doctype html
 html(lang='en', dir='rtl')
   include ../../components/header-files
   body.rtl
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -23,15 +23,15 @@ html(lang='en', dir='rtl')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
-                  h4
+                .col-sm-6.ps-0
+                  h3
                     | RTL Layout
-
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item Page Layout
                     li.breadcrumb-item.active  RTL Layout
           // Container-fluid starts
@@ -39,7 +39,7 @@ html(lang='en', dir='rtl')
             .row
               .col-sm-12
                 .card.alert.alert-primary(role='alert')
-                  h3 Tip!
+                  h5 Tip!
                   p Add the dir="rtl" to the html tag to get this layout.
               .col-sm-12
                 .card
@@ -61,14 +61,14 @@ html(lang='en', dir='rtl')
                         li
                           i.icofont.icofont-error.close-card
                   .card-body
-                    h3.f-w-600 Step 1
+                    h5 Step 1
                     p On this layout, First of all you have to add the class rtl attribute in body tag
-                    h3.f-w-600 Step 2
+                    h5 Step 2
                     p Contents are change right to left from left to right respectively
-                    h3.f-w-600 Step 3
+                    h5 Step 3
                     p
                       | when you want to change spacing left to right at that right left spacing you have to unset css and apply right spacing in css
-                    h3.f-w-600 Step 4
+                    h5 Step 4
                     p
                       | Sometimes js are not change directly with text-align css,so that time you have to copy js and change the class as rtl="true".
                     .code-box-copy
@@ -89,7 +89,7 @@ html(lang='en', dir='rtl')
                           | &lt;/div&gt;
                           | &lt;!-- Cod Box Copy end --&gt;
                   .card-footer
-                    h5.mb-0.f-w-600 Card Footer
+                    h6.mb-0 Card Footer
           // Container-fluid Ends
         include ../../components/footer
     include ../../components/footer-files

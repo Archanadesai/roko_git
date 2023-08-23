@@ -1,11 +1,13 @@
 - var theme_customizer      = true;
+- var morrischart           = true;
 - var apex                  = true;
 - var apexmoment            = true;
 - var dashboard_default     = true;
-- var datatable             = true;
+- var owlcarousel           = true;
+- var page_owlcarousel      = true;
 - var page_datatable        = true;
-- var page_datatable_select = true;
-- var datatable_select      = true;
+- var datatable             = true;
+- var page_datatable1       = true;
 - var notify                = true;
 - var animate               = true;
 - var typeahead             = true;
@@ -15,10 +17,7 @@
 - var wow                   = true;
 - var slick                 = true;
 - var header_slider         = true;
-- var clipboard             = true;
-- var customcard            = true;
 - var height_equal          = true;
-
 doctype html
 html(lang='en')
   include ../../components/header-files
@@ -26,7 +25,7 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -35,733 +34,645 @@ html(lang='en')
           .container-fluid         
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.p-0
                   h3
-                    | Crypto Dashboard
-                .col-12.col-sm-6
+                    | Default Dashboard 
+                .col-sm-6.p-0
                   ol.breadcrumb
                     li.breadcrumb-item
-                      a(href='index.html')                                        
-                        i(data-feather='home')
+                      a(href='index.html')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item Dashboard
-                    li.breadcrumb-item.active Crypto      
+                    li.breadcrumb-item.active Default      
           // Container-fluid starts
-          .container-fluid.dashboard_default
-            .row.widget-grid
-              .col-xl-4.col-lg-4.col-md-6.proorder-xl-1.proorder-lg-1
-                .card.total-earning
-                  .card-header.card-no-border.pb-0
-                    .d-flex
-                      .badge.badge-rounded.animation
-                        svg.bit-icon
-                          use(href='../assets/svg/icon-sprite.svg#bit-icon')
-                      .flex-grow-1
-                        h5 $20.790
-                        p.d-flex
-                          span.bg-light-secondary.me-2
+          .container-fluid.default-dashboard
+            .row
+              .col-xxl-4.col-xl-100.box-col-12.ps-4.pe-4.left-background
+                .row.bg-light.h-100.p-3.pt-4.pb-4
+                  .col-12.col-xl-50.box-col-6
+                    .card.welcome-card
+                      .card-body
+                        .d-flex 
+                          .flex-grow-1 
+                            h1 Hello, Ramirez
+                            p Welcome back! Let's start from where you left.
+                            a.btn(href="user-profile.html") View Profile
+                          .flex-shrink-0  
+                            img(src='../assets/images/dashboard/welcome.png' alt="")
+                  .col-12.col-xl-50.box-col-6
+                    .row 
+                      .col-12.col-lg-12.col-md-6.box-col-12
+                        .card.total-earning
+                          .card-body
+                            .row 
+                              .col-sm-7.box-col-7
+                                .d-flex
+                                  h3.font-primary Total Earning
+                                h5 $20.790
+                                span + 16.06% than last week
+                              .col-sm-5.box-col-5.p-0
+                                #income-chart
+                      .col-12.col-lg-12.col-md-6.box-col-12
+                        .card.total-earning
+                          .card-body.pb-0
+                            .row 
+                              .col-sm-7.box-col-7
+                                .d-flex
+                                  h3.font-primary Total Expense
+                                h5 $4,683.90
+                                span + 10.34% than last week
+                              .col-sm-5.box-col-5.p-0
+                                #expense-chart
+                  .col-xl-12.col-xl-50.col-md-6.box-col-6
+                    .card.news-update
+                      .card-header.pb-0
+                        .header-top
+                          h4 News & Update
+                          .dropdown.icon-dropdown
+                            button#userdropdown.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                              i.icon-more-alt
+                            .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown')
+                              a.dropdown-item(href='#') Weekly
+                              a.dropdown-item(href='#') Monthly
+                              a.dropdown-item(href='#') Yearly
+                      .card-body
+                        .d-flex.align-items-center.pt-0
+                          img(src='../assets/images/dashboard/1.jpg' alt="")
+                          .flex-grow-1.ms-3
+                            a(href="social-app.html")
+                              h5 Indonesian Navy Lauds Mental Perseverance of Teenager...
+                              span Today's News Headlines, Breaking...
+                          .flex-shrink-0 
+                            button.btn 10 Min ago 
+                        .d-flex.align-items-center
+                          img(src='../assets/images/dashboard/2.jpg' alt="")
+                          .flex-grow-1.ms-3
+                            a(href="social-app.html")
+                              h5 Why now may be the 'golden age' for Southeast asia start-ups...
+                              span Check out the latest news from...
+                          .flex-shrink-0 
+                            button.btn 2 Min ago 
+                        .d-flex.align-items-center
+                          img(src='../assets/images/dashboard/3.jpg' alt="")
+                          .flex-grow-1.ms-3
+                            a(href="social-app.html")
+                              h5 China's renewed crypto crackdown wipes nearly $400...
+                              span Technology and indian business news...
+                          .flex-shrink-0 
+                            button.btn 14 Min ago 
+                        .d-flex.align-items-center
+                          img(src='../assets/images/dashboard/4.jpg' alt="")
+                          .flex-grow-1.ms-3
+                            a(href="social-app.html")
+                              h5 Indonesian Navy Lauds Mental Perseverance of Teenager...
+                              span Today's News Headlines, Breaking...
+                          .flex-shrink-0 
+                            button.btn 17 Min ago 
+                  .col-xl-12.col-xl-50.col-md-6.box-col-6
+                    .card.product-chart.mb-0
+                      .card-header.pb-0
+                        .header-top
+                          h4 Product Stock
+                          .dropdown.icon-dropdown
+                            button#userdropdown1.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                              i.icon-more-alt
+                            .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown1')
+                              a.dropdown-item(href='#') Weekly
+                              a.dropdown-item(href='#') Monthly
+                              a.dropdown-item(href='#') Yearly
+                      .card-body.pb-0
+                        .d-flex
+                          h2.me-2 ($1,23,456)
+                          span Total Product Stock
+                        .product-chart
+                          .shap-block
+                            .rounded-shap.animate-bg-secondary
+                              i
+                              i
+                          #product-chart
+              .col-xl-8.col-xl-100.box-col-12
+                .row 
+                  .col-xxl-8.col-xl-100.box-col-12.proorder-xl-1
+                    .card
+                      .card-header.card-no-border.pb-0
+                        .header-top
+                          h4 Recent Order
+                          .dropdown.icon-dropdown
+                            button#userdropdown2.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                              i.icon-more-alt
+                            .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown2')
+                              a.dropdown-item(href='#') Weekly
+                              a.dropdown-item(href='#') Monthly
+                              a.dropdown-item(href='#') Yearly
+                      .card-body.pt-0.recent
+                        .table-responsive.custom-scrollbar
+                          table#resent-order.table.display(style='width:100%')
+                            thead
+                              tr
+                                th
+                                  .form-check
+                                    input.form-check-input(type='checkbox' value='')
+                                    label.form-check-label
+                                th Customers name
+                                th Order Date
+                                th items Name
+                                th Price
+                                th Status  
+                            tbody
+                                tr
+                                  td
+                                    .form-check
+                                      input.form-check-input(type='checkbox' value='')
+                                      label.form-check-label
+                                  td
+                                    .d-flex
+                                      .flex-shrink-0
+                                        img(src='../assets/images/dashboard/user/1.png' alt="")
+                                      .flex-grow-1.ms-2
+                                        a(href="user-profile.html")
+                                          h6 Elle Amberson
+                                          span #Gh3649K
+                                  td 
+                                    h6 15 Nov, 2022
+                                    span 02:45 PM
+                                  td Wood Chair
+                                  td $152
+                                  td 
+                                    button.btn.bg-light-primary.txt-primary Paid
+                                tr
+                                  td
+                                    .form-check
+                                      input.form-check-input(type='checkbox' value='')
+                                      label.form-check-label
+                                  td
+                                    .d-flex
+                                      .flex-shrink-0
+                                        img(src='../assets/images/dashboard/user/2.png' alt="")
+                                      .flex-grow-1.ms-2
+                                        a(href="user-profile.html")
+                                          h6 Anna Catmire
+                                          span #A5647KB
+                                  td 
+                                    h6 25 Nov, 2022
+                                    span 01:24 PM
+                                  td Men Sneakers
+                                  td $652
+                                  td  
+                                    button.btn.bg-light-secondary.txt-secondary Pending
+                                tr
+                                  td
+                                    .form-check
+                                      input.form-check-input(type='checkbox' value='')
+                                      label.form-check-label
+                                  td
+                                    .d-flex
+                                      .flex-shrink-0
+                                        img(src='../assets/images/dashboard/user/3.png' alt="")
+                                      .flex-grow-1.ms-2
+                                        a(href="user-profile.html")
+                                          h6 Laura Dagson
+                                          span #KO093M
+                                  td 
+                                    h6 26 Nov, 2022
+                                    span 12:34 PM
+                                  td Tree Stylish 
+                                  td $256
+                                  td 
+                                    button.btn.bg-light-primary.txt-primary Paid
+                                tr
+                                  td
+                                    .form-check
+                                      input.form-check-input(type='checkbox' value='')
+                                      label.form-check-label
+                                  td
+                                    .d-flex
+                                      .flex-shrink-0
+                                        img(src='../assets/images/dashboard/user/4.png' alt="")
+                                      .flex-grow-1.ms-2
+                                        a(href="user-profile.html")
+                                          h6 Rachel Green
+                                          span #KMG403
+                                  td 
+                                    h6 28 Nov, 2022
+                                    span 10:27 PM
+                                  td Mi Watch
+                                  td $659
+                                  td 
+                                    button.btn.bg-light-danger.txt-danger Overdue
+                  .col-xl-4.col-xl-50.col-md-6.box-col-6.proorder-xl-6
+                    .card.sales
+                      .card-header.card-no-border.pb-0
+                        .header-top
+                          h4 Sales Statistic
+                          .dropdown.icon-dropdown
+                            button#userdropdown3.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                              i.icon-more-alt
+                            .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown3')
+                              a.dropdown-item(href='#') Weekly
+                              a.dropdown-item(href='#') Monthly
+                              a.dropdown-item(href='#') Yearly
+                      .card-body
+                        #sales-chart
+                        .d-flex
+                          .flex-shrink-0.me-2
+                            span.bg-primary
+                          .flex-grow-1.me-2
+                            h5 View Count 
+                              strong 340k
+                          .flex-shrink-0.me-2
+                            span.bg-light-primary
+                          .flex-grow-1
+                            h5 View Count 
+                              strong 340k
+                        p Keep up info updated to increase the number of ionteractions
+                        button.btn See more
+                  .col-xxl-3.col-xl-50.col-sm-6.proorder-xl-2
+                    .card.since
+                      .card-body
+                        .customer-card.d-flex.b-l-primary.border-2
+                          div.ms-3
+                            h3.mt-1 Customers
+                            h5.mt-1 1.485
+                          .dashboard-user.bg-light-primary
+                            span
                             svg
-                              use(href='../assets/svg/icon-sprite.svg#arrow-down')
-                          span.font-secondary.me-2 - 36.28%
-                          span Since last month
-                  .card-body.p-0
-                    div 
-                      #income-chart    
-              .col-xl-4.col-lg-4.col-md-6.proorder-xl-2.proorder-lg-2
-                .card.total-earning
-                  .card-header.card-no-border.pb-0
-                    .d-flex
-                      .badge.badge-rounded.font-success.animation
-                        svg.ethereum-icon
-                          use(href='../assets/svg/icon-sprite.svg#ethereum')
-                      .flex-grow-1
-                        h5 $20.790
-                        p.d-flex
-                          span.bg-light-success.me-2
+                              use(href='../assets/svg/icon-sprite.svg#male')
+                        .customer.mt-2
+                          span.me-1
                             svg
                               use(href='../assets/svg/icon-sprite.svg#arrow-up')
-                          span.font-success.me-2 + 23.28%
-                          span Since last month
-                  .card-body.p-0
-                    div 
-                      #ethereumchart 
-              .col-xl-4.col-lg-4.proorder-xl-3.proorder-lg-3
-                .card.total-earning
-                  .card-header.card-no-border.pb-0
-                    .d-flex
-                      .badge.badge-rounded.animation
-                        svg.litecoin-icon
-                          use(href='../assets/svg/icon-sprite.svg#litecoin')
-                      .flex-grow-1
-                        h5 $20.790
-                        p.d-flex
-                          span.bg-light-secondary.me-2
+                          span.font-success.me-2 + 4.6%
+                          span Since last Week
+                  .col-xxl-3.col-xl-50.col-sm-6.proorder-xl-3
+                    .card.since
+                      .card-body.money
+                        .customer-card.d-flex.b-l-secondary.border-2
+                          div.ms-3
+                            h3.mt-1 Revenue
+                            h5.mt-1 $5.873
+                          .dashboard-user.bg-light-secondary
+                            span
+                            svg
+                              use(href='../assets/svg/icon-sprite.svg#money')
+                        .customer.mt-2
+                          span.me-1
+                            svg
+                              use(href='../assets/svg/icon-sprite.svg#arrow-up')
+                          span.font-success.me-2 + 3.10%
+                          span Since last Week
+                  .col-xxl-3.col-xl-50.col-sm-6.proorder-xl-4
+                    .card.since 
+                      .card-body.profit
+                        .customer-card.d-flex.b-l-danger.border-2
+                          div.ms-3
+                            h3.mt-1 Profit
+                            h5.mt-1 70%
+                          .dashboard-user.bg-light-danger
+                            span
+                            svg
+                              use(href='../assets/svg/icon-sprite.svg#profile')
+                        .customer.mt-2
+                          span.me-1
                             svg
                               use(href='../assets/svg/icon-sprite.svg#arrow-down')
-                          span.font-secondary.me-2 - 36.28%
-                          span Since last month
-                  .card-body.p-0
-                    div 
-                      #litecoinchart     
-              .col-xxl-6.col-xl-7.box-col-7.proorder-xl-4.proorder-lg-4
-                .card.activeorder
-                  .card-header.card-no-border.pb-0 
-                    h3 Active Order
-                  .card-body
-                    .table-responsive.custom-scrollbar
-                      table#active-order.table.display(style='width:100%')
-                        thead
-                          tr
-                            th
-                              .form-check
-                                input.form-check-input(type='checkbox' value='')  
-                                label.form-check-label
-                            th Date
-                            th Type
-                            th Customer
-                            th Price
-                            th Usd   
-                            th Status
-                        tbody
-                          tr
-                            td
-                              .form-check
-                                input.form-check-input(type='checkbox' value='')
-                                label.form-check-label
-                            td
+                          span.font-danger.me-2 + 2.3%
+                          span Since last Week
+                  .col-xxl-3.col-xl-50.col-sm-6.proorder-xl-5
+                    .card.since 
+                      .card-body.invoice-profit
+                        .customer-card.d-flex.b-l-success.border-2
+                          div.ms-3
+                            h3.mt-1 Invoices
+                            h5.mt-1 1.256
+                          .dashboard-user.bg-light-success
+                            span
+                            svg
+                              use(href='../assets/svg/icon-sprite.svg#invoice')
+                        .customer.mt-2
+                          span.me-1
+                            svg
+                              use(href='../assets/svg/icon-sprite.svg#arrow-up')
+                          span.font-success.me-2 + 6.3%
+                          span Since last Week
+                  .col-xxl-3.col-xl-50.col-md-6.box-col-6.proorder-xl-7
+                    .card.review-slider
+                      .card-header.card-no-border.pb-0
+                        .header-top
+                          h4 Review
+                          .dropdown.icon-dropdown
+                            button#userdropdown4.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                              i.icon-more-alt
+                            .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown4')
+                              a.dropdown-item(href='#') Weekly
+                              a.dropdown-item(href='#') Monthly
+                              a.dropdown-item(href='#') Yearly
+                      .card-body
+                        #owl-carousel-dashboard.owl-carousel.owl-theme
+                          .review
+                            div 
+                              img.img-fluid(src='../assets/images/dashboard/user/14.png', alt='')
+                              .review-content 
+                                h2 John Connor
                               .d-flex
-                                .flex-grow-1
-                                  a(href="payment-details.html")
-                                    h6.f-w-600 May 5,2023
-                                    span 01:08 PM
-                            td 
-                              button.btn.type Buy
-                            td 
-                              .user-details.customers
+                                h5 4.3
+                                p.pull-right.ms-2.me-2.mb-0.mt-0
+                                  i.fa.fa-star.font-secondary
+                                .flex-grow-1 
+                                  h5 136
+                              p “Best  Product i’ve been seen on market, best price, best quality! Overall Amazing!!!”
+                          .review
+                            .review
+                              div 
+                                img.img-fluid(src='../assets/images/dashboard/user/14.png', alt='')
+                                .review-content 
+                                  h2 Paul Miller
+                                .d-flex
+                                  h5 5.6
+                                  p.pull-right.ms-2.me-2.mb-0.mt-0
+                                    i.fa.fa-star.font-secondary
+                                  .flex-grow-1 
+                                    h5 120
+                                p “Best  Product i’ve been seen on market, best price, best quality! Overall Amazing!!!”
+                          .review
+                            .review
+                              div 
+                                img.img-fluid(src='../assets/images/dashboard/user/14.png', alt='')
+                                .review-content 
+                                  h2 Alen Lee
+                                .d-flex
+                                  h5 6.3
+                                  p.pull-right.ms-2.me-2.mb-0.mt-0
+                                    i.fa.fa-star.font-secondary
+                                  .flex-grow-1 
+                                    h5 140
+                                p “Best  Product i’ve been seen on market, best price, best quality! Overall Amazing!!!”
+                  .col-xxl-9.col-xl-100.box-col-12.proorder-xl-8
+                    .card.sales.overview
+                      .card-header.card-no-border.pb-0
+                        .header-top
+                          h4 Sales Overview
+                          .dropdown.icon-dropdown
+                            button#userdropdown5.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                              i.icon-more-alt
+                            .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown5')
+                              a.dropdown-item(href='#') Weekly
+                              a.dropdown-item(href='#') Monthly
+                              a.dropdown-item(href='#') Yearly
+                      .card-body.p-0 
+                        .sales-chart
+                          .shap-2
+                            .rounded-shap.animate-bg-secondary
+                              i
+                              i
+                          .shap-2
+                            .rounded-shap.animate-bg-secondary
+                              i
+                              i
+                          .shap-2
+                            .rounded-shap.animate-bg-secondary
+                              i
+                              i
+                          .shap-2
+                            .rounded-shap.animate-bg-secondary
+                              i
+                              i
+                          #sales-overview
+                  .row.proorder-xl-9
+                    .col-xl-8.col-xl-100.col-md-12
+                      .row 
+                        .col-xxl-7.col-xl-50.col-md-6
+                          .card
+                            .card-header.card-no-border.pb-0
+                              .header-top
+                                h4 Active Tasks
+                                .dropdown.icon-dropdown
+                                  button#userdropdown6.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                    i.icon-more-alt
+                                  .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown6')
+                                    a.dropdown-item(href='#') Weekly
+                                    a.dropdown-item(href='#') Monthly
+                                    a.dropdown-item(href='#') Yearly
+                            .card-body.active-task
+                              ul
+                                li.d-flex.pt-0
+                                  .flex-shrink-0
+                                    .form-check
+                                      input.form-check-input(type='checkbox' value='')
+                                      label.form-check-label
+                                  .flex-grow-1 
+                                    a(href="to-do.html")
+                                      h5 Regina Cooper
+                                    p Create userflow social application design
+                                  span.delete-option 
+                                    a(href="#")
+                                      svg.remove
+                                        use(href='../assets/svg/icon-sprite.svg#Delete')
+                                li.d-flex  
+                                  .flex-shrink-0
+                                    .form-check
+                                      input.form-check-input(type='checkbox' value='')
+                                      label.form-check-label
+                                  .flex-grow-1 
+                                    a(href="to-do.html")
+                                      h5 Install Appointment
+                                    p Homepage design for slimmuch product
+                                  span.delete-option 
+                                    a(href="#")
+                                      svg.remove
+                                        use(href='../assets/svg/icon-sprite.svg#Delete')
+                                li.d-flex  
+                                  .flex-shrink-0
+                                    .form-check
+                                      input.form-check-input(type='checkbox' value='')
+                                      label.form-check-label
+                                  .flex-grow-1 
+                                    a(href="to-do.html")
+                                      h5 Regina Cooper
+                                    p Interactive prototype design - web design
+                                  span.delete-option 
+                                    a(href="#")
+                                      svg.remove
+                                        use(href='../assets/svg/icon-sprite.svg#Delete')
+                                li.d-flex  
+                                  .flex-shrink-0
+                                    .form-check
+                                      input.form-check-input(type='checkbox' value='')
+                                      label.form-check-label
+                                  .flex-grow-1 
+                                    a(href="to-do.html")
+                                      h5 Regina Cooper
+                                    p Create Application design for topbuzz
+                                  span.delete-option 
+                                    a(href="#")
+                                      svg.remove
+                                        use(href='../assets/svg/icon-sprite.svg#Delete')
+                        .col-xxl-5.col-xl-50.col-md-6
+                          .card
+                            .card-header.card-no-border.pb-0
+                              .header-top
+                                h4 Total Investment
+                                .dropdown.icon-dropdown
+                                  button#userdropdown7.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                    i.icon-more-alt
+                                  .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown7')
+                                    a.dropdown-item(href='#') Weekly
+                                    a.dropdown-item(href='#') Monthly
+                                    a.dropdown-item(href='#') Yearly
+                            .card-body.p-0.pb-3.pt-3
+                              .investment-card
+                                #Investment-chart
                                 ul 
-                                  li.d-inline-block
-                                    img.rounded-circle(src="../assets/images/dashboard/user/1.png", alt="user")
-                                  li.d-inline-block
-                                    img.rounded-circle(src="../assets/images/dashboard/user/2.png", alt="user")
-                                  li.d-inline-block
-                                    img.rounded-circle(src="../assets/images/dashboard/user/3.png", alt="user")
-                            td 12600.66
-                            td $ 7521.56
-                            td 
-                              .order 
-                                p Done
-                          tr
-                            td
-                              .form-check
-                                input.form-check-input(type='checkbox' value='')
-                                label.form-check-label
-                            td
-                              .d-flex
-                                .flex-grow-1
-                                  a(href="payment-details.html")
-                                    h6.f-w-600 March 23,2023
-                                    span 01:24 PM
-                            td 
-                              button.btn.type Sell
-                            td 
-                              .user-details.customers
+                                  li
+                                    h5 Total
+                                    span $ 5,8272
+                                  li  
+                                    h5 Monthly 
+                                    span $ 6,2456
+                                  li 
+                                    h5 Daily 
+                                    span $ 5,8704
+                        .col-xxl-12
+                          .card.leads
+                            .card-header.card-no-border.pb-0
+                              .header-top
+                                h4 Leads Status
+                                .dropdown.icon-dropdown
+                                  button#userdropdown8.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                    i.icon-more-alt
+                                  .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown8')
+                                    a.dropdown-item(href='#') Weekly
+                                    a.dropdown-item(href='#') Monthly
+                                    a.dropdown-item(href='#') Yearly
+                            .card-body
+                              .lead-status
                                 ul 
-                                  li.d-inline-block
-                                    img.rounded-circle(src="../assets/images/dashboard/user/4.png", alt="user")
-                                  li.d-inline-block
-                                    img.rounded-circle(src="../assets/images/dashboard/user/1.png", alt="user")
-                                  li.d-inline-block
-                                    img.rounded-circle(src="../assets/images/dashboard/user/5.png", alt="user")
-                                  li.d-inline-block
-                                    .light-card
-                                      span.f-w-600 6+
-                            td 6513.85
-                            td $ 9512.12
-                            td 
-                              .order 
-                                p Pending
-                          tr
-                            td
-                              .form-check
-                                input.form-check-input(type='checkbox' value='')
-                                label.form-check-label
-                            td
-                              .d-flex
-                                .flex-grow-1
-                                  a(href="payment-details.html")
-                                    h6.f-w-600 Sep 14,2023
-                                    span 05:32 PM
-                            td 
-                              button.btn.type Buy
-                            td 
-                              .user-details.customers
+                                  li Customers
+                                  li.border-3.b-l-primary Lena Smith
+                                  li.border-3.b-l-secondary Nicol Green
+                                  li.border-3.b-l-danger.mb-0 Tom Taylor
                                 ul 
-                                  li.d-inline-block
-                                    img.rounded-circle(src="../assets/images/dashboard/user/6.png", alt="user")
-                                  li.d-inline-block
-                                    img.rounded-circle(src="../assets/images/dashboard/user/7.png", alt="user")
-                            td 6591.85
-                            td $ 3215.41
-                            td 
-                              .order 
-                                p Done
-                          tr
-                            td
-                              .form-check
-                                input.form-check-input(type='checkbox' value='')
-                                label.form-check-label
-                            td
-                              .d-flex
-                                .flex-grow-1
-                                  a(href="payment-details.html")
-                                    h6.f-w-600 Jun 5,2023
-                                    span 23:90 PM
-                            td 
-                              button.btn.type Sell
-                            td 
-                              .user-details.customers
+                                  li Last Contacted
+                                  li June 14, 2023
+                                  li June 16, 2023
+                                  li.mb-0 June 18, 2023
                                 ul 
-                                  li.d-inline-block
-                                    img.rounded-circle(src="../assets/images/dashboard/user/8.png", alt="user")
-                                  li.d-inline-block
-                                    img.rounded-circle(src="../assets/images/dashboard/user/9.png", alt="user")
-                                  li.d-inline-block
-                                    img.rounded-circle(src="../assets/images/dashboard/user/1.png", alt="user")
-                                  li.d-inline-block
-                                    .light-card
-                                      span.f-w-600 5+
-                            td 9512.95
-                            td $ 9514.35
-                            td 
-                              .order 
-                                p In Progress
-              .col-xxl-3.col-xl-6.box-col-6.col-lg-6.col-md-6.proorder-xl-8.proorder-lg-5
-                .card.buysell-section 
-                  .card-header.card-no-border.pb-0
-                    ul#pills-tab.nav.nav-pills.nav-primary(role='tablist')
-                      li.nav-item
-                        a#pills-aboutus-tab.nav-link.active(data-bs-toggle='pill' href='#pills-aboutus' role='tab' aria-controls='pills-aboutus' aria-selected='true')
-                          | Buy
-                      li.nav-item.sell-tab
-                        a#pills-contactus-tab.nav-link(data-bs-toggle='pill' href='#pills-contactus' role='tab' aria-controls='pills-contactus' aria-selected='false') Sell
-                    .card-header-right
-                      ul.list-unstyled.card-option
-                        li
-                          div
-                            i.icon-settings
-                        li
-                          i.view-html.fa.fa-code
-                        li
-                          i.icofont.icofont-maximize.full-card
-                        li
-                          i.icofont.icofont-minus.minimize-card
-                        li
-                          i.icofont.icofont-refresh.reload-card
-                        li
-                          i.icofont.icofont-error.close-card
-                  .card-body 
-                    #pills-tabContent.tab-content
-                      #pills-aboutus.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='pills-aboutus-tab')
-                        div.from-buy.mb-4
-                          p BTC 
-                          label(for="money")  Volume:
-                          input.form-control(type='text', placeholder='Min 0.001', id='money')   
-                        div.from-buy.price-content
-                          p BTC 
-                          label(for="money1")  Price:
-                          input.form-control(type='text', placeholder='$7487,385' , id='money1')  
-                        div.from-buy.amount
-                          label(for="money2")  Amount:
-                          input.form-control(type='text', placeholder='Buy Amount', id='money2')    
-                        a(href="pricing.html").btn.btn-primary.btn-lg Buy Now
-                      #pills-contactus.tab-pane.fade(role='tabpanel' aria-labelledby='pills-contactus-tab')
-                        div.from-buy.mb-4
-                          p BTC 
-                          label(for="money3")  Volume:
-                          input.form-control(type='text', placeholder='Min 0.001', id='money3')   
-                        div.from-buy.price-content
-                          p BTC 
-                          label(for="money4")  Price:
-                          input.form-control(type='text', placeholder='$7487,385', id='money4')  
-                        div.from-buy.amount
-                          label(for="money5")  Amount:
-                          input.form-control(type='text', placeholder='Buy Amount', id='money5')   
-                        a(href="pricing.html").btn.btn-primary.btn-lg Sell Coins
-              .col-xxl-3.col-xl-5.box-col-5.col-lg-6.col-md-6.proorder-xl-5.proorder-lg-6 
-                .card.live-price
-                  .card-header.card-no-border.pb-0 
-                    h3 Live Prices
-                    .card-header-right
-                      ul.list-unstyled.card-option
-                        li
-                          div
-                            i.icon-settings
-                        li
-                          i.view-html.fa.fa-code
-                        li
-                          i.icofont.icofont-maximize.full-card
-                        li
-                          i.icofont.icofont-minus.minimize-card
-                        li
-                          i.icofont.icofont-refresh.reload-card
-                        li
-                          i.icofont.icofont-error.close-card
-                  .card-body
-                    .table-responsive.custom-scrollbar
-                      table.table.display(style='width:100%')
-                        tbody
-                          tr 
-                            td 
-                              .d-flex.gap-2
-                                .flex-shrink-0
-                                  svg.animation
-                                    use(href='../assets/svg/icon-sprite.svg#bit-icon')
-                                .flex-grow-1
-                                  h6.f-w-600 Bitcoin
-                                  p BTC
-                            td 
-                              #priceChart1
-                            td 
-                              .flex-grow-1
-                                h6.f-w-600 $20,512
-                                p +0,20%      
-                          tr 
-                            td 
-                              .d-flex.gap-2
-                                .flex-shrink-0
-                                  svg.animation
-                                    use(href='../assets/svg/icon-sprite.svg#ethereum')
-                                .flex-grow-1
-                                  h6.f-w-600 Ethereum
-                                  p ETH
-                            td 
-                              #priceChart2
-                            td 
-                              .flex-grow-1
-                                h6.f-w-600 $26,838
-                                p -0,16%
-                          tr 
-                            td 
-                              .d-flex.gap-2
-                                .flex-shrink-0
-                                  svg.animation
-                                    use(href='../assets/svg/icon-sprite.svg#monero')
-                                .flex-grow-1
-                                  h6.f-w-600 Monero
-                                  p XMR
-                            td 
-                              #priceChart3
-                            td 
-                              .flex-grow-1
-                                h6.f-w-600 $28,738
-                                p +0,23%
-                          tr 
-                            td 
-                              .d-flex.gap-2
-                                .flex-shrink-0
-                                  svg.animation
-                                    use(href='../assets/svg/icon-sprite.svg#litecoin')
-                                .flex-grow-1
-                                  h6.f-w-600 Litecoin
-                                  p LTC
-                            td 
-                              #priceChart4
-                            td 
-                              .flex-grow-1
-                                h6.f-w-600 $22,222
-                                p -0,12%
-                          tr 
-                            td 
-                              .d-flex.gap-2
-                                .flex-shrink-0
-                                  svg.animation
-                                    use(href='../assets/svg/icon-sprite.svg#bit-icon')
-                                .flex-grow-1
-                                  h6.f-w-600 Bitcoin
-                                  p BTC
-                            td 
-                              #priceChart5
-                            td 
-                              .flex-grow-1
-                                h6.f-w-600 $22,512
-                                p +0,20%  
-
-              .col-xl-6.proorder-xl-6.proorder-lg-7
-                .card.recent-activities
-                  .card-header.card-no-border.pb-0 
-                    h3 Recent Trading Activities
-                  .card-body
-                    .table-responsive.custom-scrollbar
-                      table#recent-trading.table.display(style='width:100%')
-                        thead
-                          tr
-                            th
-                              .form-check
-                                input.form-check-input(type='checkbox' value='')
-                                label.form-check-label
-                            th Name and type
-                            th Customer
-                            th ID and Status
-                            th Volume
-                        tbody
-                          tr
-                            td
-                              .form-check
-                                input.form-check-input(type='checkbox' value='')
-                                label.form-check-label
-                            td
-                              .d-flex.gap-2
-                                .flex-shrink-0
-                                  svg.animation
-                                    use(href='../assets/svg/icon-sprite.svg#sent')
-                                .flex-grow-1
-                                  a(href="letter-box.html")
-                                    h6.f-w-600 Sent LTC
-                                    p To Coinbase
-                            td 
-                              h6.f-w-600 May 5,2023
-                              p 01:08 PM
-                            td 
-                              .d-flex.gap-2
-                                p.m-0 6212
-                                .progress
-                                  .progress-bar.bg-primary(role='progressbar', style='width: 70%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100')
-                            td 
-                                h6.f-w-600 0.00512 BTC
-                                p -220 USD
-                          tr
-                            td
-                              .form-check
-                                input.form-check-input(type='checkbox' value='')
-                                label.form-check-label
-                            td
-                              .d-flex.gap-2
-                                .flex-shrink-0
-                                  svg.animation
-                                    use(href='../assets/svg/icon-sprite.svg#Buy')
-                                .flex-grow-1
-                                  a(href="letter-box.html")
-                                    h6.f-w-600 Bought LTC
-                                    p Using USD Account
-                            td 
-                              h6.f-w-600 March 3,2023 
-                              p 01:24 PM
-                            td 
-                              .d-flex.gap-2
-                                p.m-0 2512
-                                .progress
-                                  .progress-bar.bg-secondary(role='progressbar', style='width: 40%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100')
-                            td 
-                                h6.f-w-600 0.00365 ETH
-                                p 500 USD
-                          tr
-                            td
-                              .form-check
-                                input.form-check-input(type='checkbox' value='')
-                                label.form-check-label
-                            td
-                              .d-flex.gap-2
-                                .flex-shrink-0
-                                  svg.animation
-                                    use(href='../assets/svg/icon-sprite.svg#download')
-                                .flex-grow-1
-                                  a(href="letter-box.html")
-                                    h6.f-w-600 Received BTC
-                                    p From Exodus
-                            td 
-                              h6.f-w-600 Sep 8,2023
-                              p 05:32 PM
-                            td 
-                              .d-flex.gap-2
-                                p.m-0 9546
-                                .progress
-                                  .progress-bar.bg-info(role='progressbar', style='width: 70%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100')
-                            td 
-                                h6.f-w-600 0.00956 BTC
-                                p 500 USD
-                          tr
-                            td
-                              .form-check
-                                input.form-check-input(type='checkbox' value='')
-                                label.form-check-label
-                            td
-                              .d-flex.gap-2
-                                .flex-shrink-0
-                                  svg.animation
-                                    use(href='../assets/svg/icon-sprite.svg#arrow-action')
-                                .flex-grow-1
-                                  a(href="letter-box.html")
-                                    h6.f-w-600 Sent DOGE
-                                    p To Binance
-                            td 
-                              h6.f-w-600 May 5,2023
-                              p 23:90 PM
-                            td 
-                              .d-flex.gap-2
-                                p.m-0 3548
-                                .progress
-                                  .progress-bar.bg-info(role='progressbar', style='width: 40%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100')
-                            td 
-                                h6.f-w-600 0.00856 LTC
-                                p 500 USD
-              .col-xl-6.proorder-xl-7.proorder-lg-8 
-                .card.market-overview
-                  .card-header.card-no-border.pb-0
-                    h3 Market Overview  
-                  .card-body 
-                    #market-stickchart          
-              .col-xxl-3.col-xl-6.box-col-6.col-lg-6.proorder-xl-9.proorder-lg-9.col-md-6
-                .card.contact-details
-                  .card-header.card-no-border.pb-0 
-                    h3 Contact Details
-                    .card-header-right
-                      ul.list-unstyled.card-option
-                        li
-                          div
-                            i.icon-settings
-                        li
-                          i.view-html.fa.fa-code
-                        li
-                          i.icofont.icofont-maximize.full-card
-                        li
-                          i.icofont.icofont-minus.minimize-card
-                        li
-                          i.icofont.icofont-refresh.reload-card
-                        li
-                          i.icofont.icofont-error.close-car
-                  .card-body
-                    .d-flex
-                      span.f-w-600 Amount BTC
-                      span.f-w-700 1,3000000
-                    h4 Recent Contact
-                    ul
-                      li 
-                        img(src="../assets/images/dashboard/user/10.png", alt="user")
-                        p.f-w-600.m-0 Olivia
-                        span @olivia
-                        .active-status.active-online
-                      li 
-                        img(src="../assets/images/dashboard/user/11.png", alt="user")
-                        p.f-w-600.m-0 Gilbert
-                        span @gilbert
-                        .active-status.active-online
-                      li 
-                        img(src="../assets/images/dashboard/user/12.png", alt="user")
-                        p.f-w-600.m-0 Emma
-                        span @emma
-                        .active-status.active-online
-                      li 
-                        img(src="../assets/images/dashboard/user/13.png", alt="user")
-                        p.f-w-600.m-0 Helena
-                        span @helena
-                        .active-status.active-online
-                      li 
-                        img(src="../assets/images/dashboard/user/14.png", alt="user")
-                        p.f-w-600.m-0 Jessica
-                        span @jessica   
-                        .active-status.active-online   
-              .col-xl-6.proorder-xl-10.col-lg-6.proorder-lg-11.col-lg-12
-                .card.progress-show 
-                  .card-header.card-no-border.pb-0
-                    .d-flex   
-                      .d-flex
-                        h3 Our Distributed
-                        p 4,562,737 CIC
-                      .d-flex 
-                        h3 Our Contributed
-                        p 3798 ETH   70 VTH
-                  .card-body
-                    .progress-widget
-                      .progress.sm-progress-bar.progress-animate
-                        .progress-gradient-primary(role='progressbar' style='width: 65%' aria-valuenow='75' aria-valuemin='0' aria-valuemax='100')
-                          span.animate-circle
-                          span.tool-tip 3.5   
-                          svg
-                            use(href='../assets/svg/icon-sprite.svg#arrow')
-                      div.progress-range
-                        span $10
-                        span $5M
-              .col-xxl-3.col-xl-6.box-col-6.proorder-xl-11.proorder-lg-10.col-lg-6.col-md-6 
-                .card.main-balance
-                  .card-header.card-no-border.pb-0
-                    h3 Balance
-                    .card-header-right
-                      ul.list-unstyled.card-option
-                        li
-                          div
-                            i.icon-settings
-                        li
-                          i.view-html.fa.fa-code
-                        li
-                          i.icofont.icofont-maximize.full-card
-                        li
-                          i.icofont.icofont-minus.minimize-card
-                        li
-                          i.icofont.icofont-refresh.reload-card
-                        li
-                          i.icofont.icofont-error.close-card
-                  .card-body
-                    p.m-0.f-w-600 Main Balance
-                    h3 $10,843,372
-                    .progress.bg-light-primary
-                      .progress-bar.bg-primary(role='progressbar', style='width: 45%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100')
-                    .d-flex.balance-holder 
-                      .flex-grow-1 
-                        p.m-0 Card Holder
-                        h5 Rara Avis
-                      .d-flex 
-                        i.icon-more-alt 
-                        i.icon-more-alt 
-                        i.icon-more-alt 
-                        P.m-0 1234 
-                    .balance-limit
-                      .d-flex.gap-2
-                        .d-flex.limit-balance-title.gap-2
-                          h5 50%
-                          .limit-balance
-                            h5 Main Limits
-                            p $200 / from $2000
-                        .d-flex.seconds-balance-title.gap-2
-                          h5 74%
-                          .limit-balance
-                            h5 Seconds
-                            p $500 / from $3000
-              .col-xl-6.proorder-xl-12.proorder-lg-12 
-                .card.market-chart
-                  .card-header.card-no-border.pb-0
-                    .header-top
-                      h3 Live Market Cap
-                      .dropdown
-                        button#dropdownMenuButton4.btn.dropdown-toggle.yearly(type='button', data-bs-toggle='dropdown', aria-expanded='false')
-                          | Yearly
-                        .dropdown-menu.dropdown-menu-end(aria-labelledby='dropdownMenuButton4')
-                          a.dropdown-item(href='#') Today
-                          a.dropdown-item(href='#') Tomorrow
-                          a.dropdown-item(href='#') Yesterday
-                  .card-body 
-                    #liveMarkCapBoxChart           
-              .col-xl-6.proorder-xl-13.proorder-lg-13 
-                .card.coins-table
-                  .card-header.card-no-border.pb-0
-                    h3 Popular Coins
-                    .card-header-right
-                      ul.simple-wrapper#myTab.nav.nav-pills(role='tablist')
-                        li.nav-item
-                          a#home-tab.nav-link(data-bs-toggle='tab' href='#home' role='tab'  aria-selected='true') Home
-                        li.nav-item
-                          a#profile-tabs.nav-link(data-bs-toggle='tab' href='#profile' role='tab'  aria-selected='false') Profile
-                        li.nav-item
-                          a#contact-tab.nav-link.active(data-bs-toggle='tab' href='#contact' role='tab'  aria-selected='false') Contact
-                  .card-body
-                    .table-responsive.custom-scrollbar
-                      table#coins-table.table.display(style='width:100%')
-                        thead
-                          tr
-                            th
-                              .form-check
-                                input.form-check-input(type='checkbox' value='')
-                                label.form-check-label
-                            th Name
-                            th Price
-                            th.text-center 24h%
-                            th.text-center 7d%
-                            th Market Cap
-                            th Volume(24h)
-                        tbody
-                          tr
-                            td
-                              .form-check
-                                input.form-check-input(type='checkbox' value='')
-                                label.form-check-label
-                            td 
-                              .d-flex.gap-2
-                                .flex-shrink-0
-                                  svg.fill-primary.animation
-                                    use(href='../assets/svg/icon-sprite.svg#bit-icon')
-                                a(href="pricing.html")
-                                  p Bitcoin BTC
-                            td 
-                              p $40,651.64
-                            td.font-secondary 
-                              span -0.02%
-                            td 
-                              span -0.02%
-                            td $512,651,64,954
-                            td 
-                              p.m-0 $512,651,64
-                              span 567,389 BTC
-                          tr
-                            td
-                              .form-check
-                                input.form-check-input(type='checkbox' value='')
-                                label.form-check-label
-                            td 
-                              .d-flex.gap-2
-                                .flex-shrink-0
-                                  svg.fill-secondary.animation
-                                    use(href='../assets/svg/icon-sprite.svg#ethereum')
-                                a(href="pricing.html")
-                                  p Ethereum ETH
-                            td 
-                              p $20,651.45
-                            td.font-secondary 
-                              span -4.33%
-                            td.font-primary 
-                              span -4.33%
-                            td $651,695,15,156
-                            td 
-                              p.m-0 $512,651,64
-                              span 567,389 ETH
-                          tr
-                            td
-                              .form-check
-                                input.form-check-input(type='checkbox' value='')
-                                label.form-check-label
-                            td 
-                              .d-flex.gap-2
-                                .flex-shrink-0
-                                  svg.animation
-                                    use(href='../assets/svg/icon-sprite.svg#monero')
-                                a(href="pricing.html")
-                                  p Monero XMR
-                            td 
-                              p $92,365.02
-                            td 
-                              span +0.01%
-                            td  
-                              span +0.01%
-                            td $952,354,65,951
-                            td 
-                              p.m-0 $512,651,64
-                              span 567,389 XMR
-                          tr
-                            td
-                              .form-check
-                                input.form-check-input(type='checkbox' value='')
-                                label.form-check-label
-                            td 
-                              .d-flex.gap-2
-                                .flex-shrink-0
-                                  svg.fill-primary.animation
-                                    use(href='../assets/svg/icon-sprite.svg#litecoin')
-                                a(href="pricing.html")
-                                  p Litecoin LTC
-                            td 
-                              p $91,365.21
-                            td 
-                              span +9.80%
-                            td.font-primary 
-                              span +9.80%
-                            td $951,561,12,698
-                            td 
-                              p.m-0 $512,651,64
-                              span 567,389 LTC
-
-
-
-
-
-
-
+                                  li Sales Rep
+                                  li 
+                                    img(src="../assets/images/dashboard/user/2.png", alt="")
+                                    | Paul Miller
+                                  li 
+                                    img(src="../assets/images/dashboard/user/1.png", alt="")
+                                    | Alen Lee
+                                  li.mb-0 
+                                    img(src="../assets/images/dashboard/user/3.png", alt="")
+                                    | Lucy White
+                                ul 
+                                  li Status
+                                  li.bg-light-primary.font-primary Deal Won
+                                  li.bg-light-secondary.font-secondary Intro Call
+                                  li.bg-light-danger.font-danger.mb-0 Stuck
+                                ul 
+                                  li Deal Value
+                                  li $ 200.2k
+                                  li $210k
+                                  li.mb-0 $70k
+                    .col-xl-4.col-xl-100.col-md-12.pe-0
+                      .row 
+                        .col-xl-12.col-md-6
+                          .card
+                            .card-header.card-no-border.pb-0
+                              .header-top
+                                h4 Notifications
+                                .dropdown.icon-dropdown
+                                  button#userdropdown9.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                    i.icon-more-alt
+                                  .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown9')
+                                    a.dropdown-item(href='#') Weekly
+                                    a.dropdown-item(href='#') Monthly
+                                    a.dropdown-item(href='#') Yearly
+                            .card-body
+                              ul.notification-box
+                                li.d-flex  
+                                  .flex-shrink-0
+                                    img(src="../assets/images/dashboard/user/15.png", alt="")
+                                  .flex-grow-1 
+                                    a(href="private-chat.html")
+                                      h5 Paul Svensson invite you Prototyping
+                                    p 05 April, 2023 | 03:00 PM
+                                  .dropdown.icon-dropdown
+                                    button#userdropdown10.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                      i.icon-more-alt
+                                    .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown10')
+                                      a.dropdown-item(href='#') Weekly
+                                      a.dropdown-item(href='#') Monthly
+                                      a.dropdown-item(href='#') Yearly
+                                li.d-flex  
+                                  .flex-shrink-0
+                                    img(src="../assets/images/dashboard/user/16.png", alt="")
+                                  .flex-grow-1 
+                                    a(href="private-chat.html")
+                                      h5 Adam Nolan mentioned you in UX Basics
+                                    p 04 April, 2023 | 05:00 PM
+                                  .dropdown.icon-dropdown
+                                    button#userdropdown11.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                      i.icon-more-alt
+                                    .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown11')
+                                      a.dropdown-item(href='#') Weekly
+                                      a.dropdown-item(href='#') Monthly
+                                      a.dropdown-item(href='#') Yearly
+                                li.d-flex  
+                                  .flex-shrink-0
+                                    img(src="../assets/images/dashboard/user/17.png", alt="")
+                                  .flex-grow-1 
+                                    a(href="private-chat.html")
+                                      h5 Paul Morgan Commented in UI Design
+                                    p 05 April, 2023 | 02:00 PM
+                                  .dropdown.icon-dropdown
+                                    button#userdropdown12.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                      i.icon-more-alt
+                                    .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown12')
+                                      a.dropdown-item(href='#') Weekly
+                                      a.dropdown-item(href='#') Monthly
+                                      a.dropdown-item(href='#') Yearly
+                                li.d-flex  
+                                  .flex-shrink-0
+                                    img(src="../assets/images/dashboard/user/18.png", alt="")
+                                  .flex-grow-1 
+                                    a(href="private-chat.html")
+                                      h5 Robert Babinski Said nothing important
+                                    p 01 April, 2023 | 06:00 PM
+                                  .dropdown.icon-dropdown
+                                    button#userdropdown13.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                      i.icon-more-alt
+                                    .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown13')
+                                      a.dropdown-item(href='#') Weekly
+                                      a.dropdown-item(href='#') Monthly
+                                      a.dropdown-item(href='#') Yearly
+                        .col-xl-12.col-md-6.pe-0
+                          .card.statistics
+                            .card-header.card-no-border.pb-0
+                              .header-top
+                                h4 Statistics
+                                .dropdown.icon-dropdown
+                                  button#userdropdown14.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                    i.icon-more-alt
+                                  .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown14')
+                                    a.dropdown-item(href='#') Weekly
+                                    a.dropdown-item(href='#') Monthly
+                                    a.dropdown-item(href='#') Yearly
+                            .card-body
+                              .d-flex 
+                                .flex-shrink-0 
+                                  h4 Weekly Target
+                                  span 25% achieved
+                                  .progress
+                                    .progress-bar.bg-primary(role='progressbar', style='width: 50%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100')
+                                .flex-grow-1 
+                                  h4 Montly Target
+                                  span 40% achieved
+                                  .progress
+                                    .progress-bar.bg-secondary(role='progressbar', style='width: 85%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100')
           // Container-fluid Ends
         include ../../components/footer        
     include ../../components/footer-files

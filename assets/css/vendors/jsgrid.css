@@ -226,7 +226,7 @@
 }
 
 .jsgrid-cell {
-  border: 1px solid #f3f3f3;
+  border: 1px solid #f4f4f4;
 }
 
 .jsgrid-invalid input {
@@ -387,6 +387,13 @@
 }
 .jsgrid-filter-row > .jsgrid-cell:last-child {
   border-right: none;
+}
+
+.jsgrid-filter-row .jsgrid-cell .jsgrid-button.jsgrid-search-button {
+  background-position: 0px -294px;
+}
+.jsgrid-filter-row .jsgrid-cell .jsgrid-button.jsgrid-clear-filter-button {
+  background-position: 0 -38px;
 }
 
 .jsgrid-insert-row > .jsgrid-cell {

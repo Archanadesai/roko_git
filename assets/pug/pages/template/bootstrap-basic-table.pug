@@ -11,7 +11,7 @@ html(lang='en')
     include ../../components/taptop
     include ../../components/loader
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -20,14 +20,15 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | Bootstrap Basic Tables
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item Bootstrap Tables
                     li.breadcrumb-item.active Bootstrap Basic Tables
           // Container-fluid starts
@@ -156,7 +157,7 @@ html(lang='en')
                           td Tokyo
                           td Accountant
                           td $2100.00	
-                          td 21/01/2022		
+                          td 21/01/2023		
                           td 20	
                         tr
                           th(scope='row') 2
@@ -165,7 +166,7 @@ html(lang='en')
                           td London	
                           td CEO
                           td $1420.00		
-                          td 14/02/2022			
+                          td 14/02/2023			
                           td 22
                         tr
                           th(scope='row') 3
@@ -174,7 +175,7 @@ html(lang='en')
                           td New York	
                           td Software Engineer	
                           td $1340.00		
-                          td 04/06/2022		
+                          td 04/06/2023		
                           td 18	
                         tr
                           th(scope='row') 4
@@ -183,7 +184,7 @@ html(lang='en')
                           td France	
                           td Pre-sale Support	
                           td $3400.00		
-                          td 10/08/2022			
+                          td 10/08/2023			
                           td 25	
                         tr
                           th(scope='row') 5
@@ -192,7 +193,7 @@ html(lang='en')
                           td Los Angeles	
                           td Senior Developer	
                           td $3500.00	
-                          td 23/07/2022		
+                          td 23/07/2023		
                           td 28	
               .col-sm-12
                 .card
@@ -206,7 +207,7 @@ html(lang='en')
                       |  , Solid border Use a class
                       code .border-solid .table
                       | class.
-                  .table-responsive.signal-table.custom-scrollbar
+                  .table-responsive.custom-scrollbar.signal-table
                     table.table.table-hover
                       thead
                         tr
@@ -474,12 +475,12 @@ html(lang='en')
                     h3 Breckpoint Specific
                     span
                       | Use  
-                      code .table-responsive"❴-sm|-md|-lg|-xl|-xxl❵"
+                      code .table-responsive.custom-scrollbar"❴-sm|-md|-lg|-xl|-xxl❵"
                       |  functions like a heading for a table. It helps users with screen readers to find a table and understand what it’s about and decide if they want to read it.
                   .card-block.row
                     .col-sm-12.col-lg-12.col-xl-12
                       .table-responsive.custom-scrollbar
-                        table.table.table-responsive-sm
+                        table.table.table-responsive.custom-scrollbar-sm
                           thead
                             tr
                               th(scope='col') Id
@@ -517,7 +518,7 @@ html(lang='en')
                     h3 Responsive Tables With Light Background
                     span
                       | A 
-                      code .table-responsive , .table-light
+                      code .table-responsive.custom-scrollbar ,.light-card
                       |  inside table element.
                   .card-block.row
                     .col-sm-12.col-lg-12.col-xl-12
@@ -541,7 +542,7 @@ html(lang='en')
                               td Pixel@efo.com	
                               td +91 7874226671	
                               td Mark Jecno	
-                              td 12/07/2022	
+                              td 12/07/2023	
                               td $2315.00	
                               td.font-danger Pending
                               td 75%
@@ -551,7 +552,7 @@ html(lang='en')
                               td Strap@google.com	
                               td +91 8347855785	
                               td Elana John	
-                              td 23/08/2022	
+                              td 23/08/2023	
                               td $4125.00	
                               td.font-danger Pending	
                               td 45%
@@ -561,7 +562,7 @@ html(lang='en')
                               td Pixelstrap@gmail.com	
                               td +91 635609347	
                               td John Deo
-                              td 15/04/2022	
+                              td 15/04/2023	
                               td $6123.00	
                               td.font-success Done
                               td 100%
@@ -599,21 +600,21 @@ html(lang='en')
                             tr
                               th(scope='row') 1
                               td Mark Jecno	
-                              td 22/08/2022	
+                              td 22/08/2023	
                               td.font-danger On leave	
                               td 0
                               td 29/30
                             tr
                               th(scope='row') 2
                               td Elana Robbert	
-                              td 21/08/2022	
+                              td 21/08/2023	
                               td.font-success Present
                               td 10
                               td 30/30
                             tr
                               th(scope='row') 3
                               td John Deo	
-                              td 18/08/2022
+                              td 18/08/2023
                               td.font-danger On leave	
                               td 8
                               td 28/30

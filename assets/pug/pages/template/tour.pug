@@ -12,7 +12,7 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -21,14 +21,15 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | Tour
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item Bonus Ui
                     li.breadcrumb-item.active Tour
           // Container-fluid starts
@@ -41,9 +42,9 @@ html(lang='en')
                     .cardheader
                     .user-image
                       .avatar
-                        img(alt='', src='../assets/images/user/7.jpg', data-intro='This is wool profile')
+                        img(alt='', src='../assets/images/user/7.jpg', data-intro='This is Roko profile')
                       .icon-wrapper
-                        i.icofont.icofont-pencil-alt-5(data-intro='Change wool profile image here')
+                        i.icofont.icofont-pencil-alt-5(data-intro='Change Roko profile image here')
                     .info
                       .row.g-3(data-intro='This is your profile details')
                         .col-sm-6.col-xl-4.order-sm-1.order-xl-0
@@ -141,7 +142,7 @@ html(lang='en')
                             .float-sm-end
                               small 3 min ago
                       hr
-                      h4.pb-3 Wonderful piece that successfully conveys the magnificence of the mountains and the natural world.
+                      h3.pb-3 Wonderful piece that successfully conveys the magnificence of the mountains and the natural world.
                       p.block-ellipsis
                         | English Romantic painter, printer, and watercolourist 
                         em.txt-danger William C. Jennings

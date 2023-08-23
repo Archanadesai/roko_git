@@ -12,7 +12,7 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -21,14 +21,15 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | Creative Card
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item  Bonus Ui
                     li.breadcrumb-item.active Creative Card
           // Container-fluid starts
@@ -36,7 +37,7 @@ html(lang='en')
             .row
               .col-12.col-md-6
                 .card
-                  .card-header.border-l-primary
+                  .card-header.pb-0.border-l-primary
                     h3 Border Left
                     p.mt-1.f-m-light
                       | Use the class of
@@ -56,7 +57,7 @@ html(lang='en')
                       | (954) 357-7760
               .col-12.col-md-6
                 .card
-                  .card-header.border-r-secondary
+                  .card-header.pb-0.border-r-secondary
                     h3 Border Right
                     p.mt-1.f-m-light
                       | Use the class of
@@ -70,7 +71,7 @@ html(lang='en')
                       input#exampleFormControlInput1.form-control(type='email' placeholder='youremail@gmail.com')
               .col-12.col-md-6
                 .card
-                  .card-header.border-t-danger
+                  .card-header.pb-0.border-t-danger
                     h3 Border Top
                     p.mt-1.f-m-light
                       | Use the class of
@@ -94,9 +95,9 @@ html(lang='en')
                       | A navigation bar is a particularly important feature because it allows visitors to quickly and easily find
                       em.txt-danger  important pages on your website
                       |  , like your blog, product pages, pricing, contact info, and documentation. This improves the chances of visitors browsing your site longer, which can boost your page views and reduce your bounce rate.
-              .col-xxl-4.col-md-6
+              .col-xxl-4.col-md-4
                 .card.height-equal
-                  .card-header.border-l-primary.border-3
+                  .card-header.pb-0.border-l-primary.border-3
                     h3 Border Primary State
                     p.mt-1.f-m-light
                       | Use the class of
@@ -115,9 +116,9 @@ html(lang='en')
                       a.list-group-item.list-group-item-action(href='javascript:void(0)')
                         img.rounded-circle(src='../assets/images/user/5.jpg', alt='user')
                         | Bryan A. Owens
-              .col-xxl-4.col-md-6
+              .col-xxl-4.col-md-4
                 .card.height-equal
-                  .card-header.border-l-warning.border-3
+                  .card-header.pb-0.border-l-warning.border-3
                     h3 Border Warning State
                     p.mt-1.f-m-light
                       | Use the class of
@@ -131,9 +132,9 @@ html(lang='en')
                       li.list-group-item.txt-danger.fw-bold Solve your problem with us
                       li.list-group-item.txt-success.fw-bold Certified Professionals
                       li.list-group-item.txt-warning.fw-bold Growth-Driven 
-              .col-xxl-4.col-12
+              .col-xxl-4.col-4
                 .card.height-equal
-                  .card-header.border-l-secondary.border-2
+                  .card-header.pb-0.border-l-secondary.border-2
                     h3 Border Secondary State
                     p.mt-1.f-m-light
                       | Use the class of

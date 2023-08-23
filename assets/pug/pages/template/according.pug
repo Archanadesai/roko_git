@@ -15,7 +15,7 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-sidebar.compact-small.material-icon
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -24,22 +24,23 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-12.col-sm-6.p-0
                   h3
                     | Accordion
-                .col-12.col-sm-6
+                .col-12.col-sm-6.p-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#breadcrumb-home')
                     li.breadcrumb-item Ui Kits
                     li.breadcrumb-item.active Accordion
           // Container-fluid starts
           .container-fluid
             .row
               .col-sm-12.col-xl-6
-                .card.height-equal
-                  .card-header
+                .card
+                  .card-header.pb-0
                     h3 Simple accordion
                     p.f-m-light.mt-1
                       | Click the accordions below to expand/collapse the accordion content.
@@ -65,7 +66,7 @@ html(lang='en')
                     #simpleaccordion.accordion.dark-accordion
                       .accordion-item
                         h2#headingOne.accordion-header
-                          button.accordion-button.collapsed.bg-light-primary.txt-primary.active(type='button' data-bs-toggle='collapse' data-bs-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne')
+                          button.accordion-button.collapsed.bg-light-primary.font-primary.active(type='button' data-bs-toggle='collapse' data-bs-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne')
                             | What do web designers do?
                             i.svg-color(data-feather='chevron-down')
                         #collapseOne.accordion-collapse.collapse.show(aria-labelledby='headingOne' data-bs-parent='#simpleaccordion')
@@ -76,7 +77,7 @@ html(lang='en')
                               |  of a website or webpage and promotes accessibility for all potential users. This process involves organizing content and images across a series of pages and integrating applications and other interactive elements.
                       .accordion-item
                         h2#headingTwo.accordion-header
-                          button.accordion-button.collapsed.bg-light-primary.txt-primary.active(type='button' data-bs-toggle='collapse' data-bs-target='#collapseTwo' aria-expanded='false' aria-controls='collapseTwo')
+                          button.accordion-button.collapsed.bg-light-primary.font-primary.active(type='button' data-bs-toggle='collapse' data-bs-target='#collapseTwo' aria-expanded='false' aria-controls='collapseTwo')
                             | What is the use of web design?
                             i.svg-color(data-feather='chevron-down')
                         #collapseTwo.accordion-collapse.collapse(aria-labelledby='headingTwo' data-bs-parent='#simpleaccordion')
@@ -92,7 +93,7 @@ html(lang='en')
                               | Increasing the number of items sold or acquiring more active customers are objectives of a compelling website. As web design reaches targeted customers and search engines, it helps the business make conversions on their site and improve its sales.
                       .accordion-item
                         h2#headingThree.accordion-header
-                          button.accordion-button.collapsed.bg-light-primary.txt-primary.active(type='button' data-bs-toggle='collapse' data-bs-target='#collapseThree' aria-expanded='false' aria-controls='collapseThree')
+                          button.accordion-button.collapsed.bg-light-primary.font-primary.active(type='button' data-bs-toggle='collapse' data-bs-target='#collapseThree' aria-expanded='false' aria-controls='collapseThree')
                             | What are the elements of web design?
                             i.svg-color(data-feather='chevron-down')
                         #collapseThree.accordion-collapse.collapse(aria-labelledby='headingThree' data-bs-parent='#simpleaccordion')
@@ -162,8 +163,8 @@ html(lang='en')
                           | &lt;/div&gt;
                           | &lt;/div&gt;
               .col-sm-12.col-xl-6
-                .card.height-equal
-                  .card-header
+                .card
+                  .card-header.pb-0
                     h3 Flush accordion
                     p.f-m-light.mt-1
                       | Add 
@@ -190,7 +191,7 @@ html(lang='en')
                     #accordionFlushExample.accordion.accordion-flush.dark-accordion
                       .accordion-item
                         h2#flush-headingOne.accordion-header
-                          button.accordion-button.collapsed.txt-success.bg-light-success.active(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseOne' aria-expanded='false' aria-controls='flush-collapseOne')
+                          button.accordion-button.collapsed.text-success.bg-light-success.active(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseOne' aria-expanded='false' aria-controls='flush-collapseOne')
                             | What is bootstrap?
                         #flush-collapseOne.accordion-collapse.collapse.show(aria-labelledby='flush-headingOne' data-bs-parent='#accordionFlushExample')
                           .accordion-body
@@ -199,7 +200,7 @@ html(lang='en')
                               li --> It is absolutely free to download and use.
                       .accordion-item
                         h2#flush-headingTwo.accordion-header
-                          button.accordion-button.collapsed.txt-success.bg-light-success(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseTwo' aria-expanded='false' aria-controls='flush-collapseTwo')
+                          button.accordion-button.collapsed.text-success.bg-light-success(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseTwo' aria-expanded='false' aria-controls='flush-collapseTwo')
                             | Why Should You Use Bootstrap?
                         #flush-collapseTwo.accordion-collapse.collapse(aria-labelledby='flush-headingTwo' data-bs-parent='#accordionFlushExample')
                           .accordion-body
@@ -210,7 +211,7 @@ html(lang='en')
                               li To increase the site's page load time, Bootstrap minifies the CSS and JavaScript files. Additionally, Bootstrap maintains consistency across the syntax between websites and developers, which is ideal for team-based projects.
                       .accordion-item
                         h2#flush-headingThree.accordion-header
-                          button.accordion-button.collapsed.txt-success.bg-light-success(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseThree' aria-expanded='false' aria-controls='flush-collapseThree')
+                          button.accordion-button.collapsed.text-success.bg-light-success(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseThree' aria-expanded='false' aria-controls='flush-collapseThree')
                             | Bootstrap Image System
                         #flush-collapseThree.accordion-collapse.collapse(aria-labelledby='flush-headingThree' data-bs-parent='#accordionFlushExample')
                           .accordion-body
@@ -270,7 +271,7 @@ html(lang='en')
                           | &lt;/div&gt;
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 Multiple collapse accordion
                     p.f-m-light.mt-1
                       | A 
@@ -301,11 +302,11 @@ html(lang='en')
                     .row
                       .col-xl-6
                         #multiCollapseExample1.collapse.multi-collapse.dark-accordion
-                          .card.card-body.mt-3.mb-0.collapse-wrapper.bg-light-primary.text-dark
+                          .card.card-body.mt-3.mb-0.collapse-wrapper.bg-light-primary
                             | The collapse JavaScript plugin is used to show and hide content. Buttons or anchors are used as triggers that are mapped to specific elements you toggle. Collapsing an element will animate the height from it's current value to 0. Given how CSS handles animations, you cannot use padding on a .collapse element. Instead, use the class as an independent wrapping element.
                       .col-xl-6
                         #multiCollapseExample2.collapse.multi-collapse.dark-accordion
-                          .card.card-body.mt-3.mb-0.collapse-wrapper.bg-light-warning.text-dark
+                          .card.card-body.mt-3.mb-0.collapse-wrapper.bg-light-warning
                             | This is the first item's accordion body. It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables.
                     .code-box-copy
                       button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#multiple-according', title='Copy')
@@ -329,7 +330,7 @@ html(lang='en')
                           | &lt;/div&gt;
               .col-xl-6.col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 With icons accordion
                     p.f-m-light.mt-1
                       | Use the 
@@ -447,7 +448,7 @@ html(lang='en')
                           | &lt;/div&gt;
               .col-xl-6.col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 Outline accordion 
                     p.f-m-light.mt-1 
                       | make custom 
@@ -570,7 +571,7 @@ html(lang='en')
                           | &lt;/div&gt;
               .col-md-6.col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 Horizontal accordion
                     p.f-m-light.mt-1
                       | Add the 
@@ -598,7 +599,7 @@ html(lang='en')
                     .row 
                       .col-sm-5
                         #collapseWidthExample.collapse.collapse-horizontal.mt-3
-                          .card.card-body.bg-light-secondary.accordion-h-space.mb-0
+                          .card.card-body.bg-secondary-light.accordion-h-space.mb-0
                             | The collapse plugin also supports horizontal collapsing. Add the .collapse-horizontal modifier class to transition the width instead of height and set a width on the immediate child element. Feel free to write your own custom Sass, use inline styles, or use our width utilities.
                     .code-box-copy
                       button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#horizontal-according', title='Copy')
@@ -617,7 +618,7 @@ html(lang='en')
                           | &lt;/div&gt; 
               .col-md-6.col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 Collapse accordion
                     p.f-m-light.mt-1
                       | you can also use a link with the href attribute

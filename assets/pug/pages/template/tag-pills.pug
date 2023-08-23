@@ -15,7 +15,7 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -24,14 +24,15 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | Tag & Pills
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item  Ui Kits
                     li.breadcrumb-item.active Tag & Pills
           // Container-fluid starts
@@ -39,8 +40,8 @@ html(lang='en')
             .row
               .col-sm-12.col-xl-6
                 .card
-                  .card-header
-                    h3 Badges contextual variations
+                  .card-header.pb-0
+                    h3 Badges Contextual Variations
                     p.f-m-light.mt-1 
                       | Use the
                       code .badge 
@@ -86,8 +87,8 @@ html(lang='en')
                             | &lt;span class="badge badge-dark tag-pills-sm-mb"&gt;Dark&lt;/span&gt;
               .col-sm-12.col-xl-6
                 .card
-                  .card-header
-                    h3 Pills contextual variations
+                  .card-header.pb-0
+                    h3 Pills Contextual Variations
                     p.f-m-light.mt-1 
                       | Use the 
                       code .rounded-pill
@@ -135,8 +136,8 @@ html(lang='en')
                               | &lt;span class="badge rounded-pill badge-dark tag-pills-sm-mb"&gt;Dark&lt;/span&gt;
               .col-sm-12.col-xl-6
                 .card
-                  .card-header
-                    h3 Number of badge 
+                  .card-header.pb-0
+                    h3 Number of Badge 
                     p.f-m-light.mt-1 
                       | Use the 
                       code .badge
@@ -182,8 +183,8 @@ html(lang='en')
                               | &lt;a class="badge badge-dark" href="#"&gt;8&lt;/a&gt;
               .col-sm-12.col-xl-6
                 .card
-                  .card-header
-                    h3 Number of pills tags
+                  .card-header.pb-0
+                    h3 Number of Pills Tags
                     p.f-m-light.mt-1 
                       | Use the 
                       code .rounded-circle
@@ -231,8 +232,8 @@ html(lang='en')
                               | &lt;span class="badge rounded-circle badge-p-space badge-dark"&gt;8&lt;/span&gt;
               .col-sm-12.col-xl-6
                 .card
-                  .card-header
-                    h3 Badge tags with icons
+                  .card-header.pb-0
+                    h3 Badge Tags With Icons
                     p.f-m-light.mt-1 
                       | Use the 
                       code .badge 
@@ -286,8 +287,8 @@ html(lang='en')
                               | &lt;a class="badge badge-dark" href="#"&gt;&lt;i data-feather="mail"&gt;&lt;/i&gt;&lt;/a&gt;
               .col-sm-12.col-xl-6
                 .card
-                  .card-header
-                    h3 Rounded pills with icons
+                  .card-header.pb-0
+                    h3 Rounded Pills With Icons
                     p.f-m-light.mt-1 
                       | Use the 
                       code .rounded-pill
@@ -342,15 +343,15 @@ html(lang='en')
                               | &lt;a class="badge rounded-circle p-2 badge-light text-dark" href="#"&gt;&lt;i data-feather="heart"&gt;&lt;/i&gt;&lt;/a&gt;
                               | &lt;a class="badge rounded-circle p-2 badge-dark" href="#"&gt;&lt;i data-feather="mail"&gt;&lt;/i&gt;&lt;/a&gt;
               .col-sm-12.col-xl-6
-                .card.height-equal
-                  .card-header
-                    h3 Badge headings example
+                .card
+                  .card-header.pb-0
+                    h3 Badge Headings Example
                     p.f-m-light.mt-1 
-                      | All html headings, 
+                      | All html headings,
                       code &lt;h1&gt;
-                      |  through 
+                      | through 
                       code &lt;h6&gt;
-                      |  , are available in 
+                      | , are available in 
                       code .badge 
                       | tags.
                     .card-header-right
@@ -369,22 +370,22 @@ html(lang='en')
                         li
                           i.icofont.icofont-error.close-card
                   .card-body
-                      h1.badge-heading
+                      h1.pb-2.d-flex.gap-2.flex-wrap
                         | Badge Heading 1
                         span.badge.badge-primary Latest
-                      h2.badge-heading
+                      h2.pb-2.d-flex.gap-2.flex-wrap
                         | Badge Heading 2
                         span.badge.badge-secondary Trending
-                      h3.badge-heading
+                      h3.pb-2.d-flex.gap-2.flex-wrap
                         | Badge Heading 3
                         span.badge.badge-success Checkout
-                      h4.badge-heading
+                      h3.pb-2.d-flex.gap-2.flex-wrap
                         | Badge Heading 4
                         span.badge.badge-warning Inbox
-                      h5.badge-heading
+                      h5.pb-2.d-flex.gap-2.flex-wrap
                         | Badge Heading 5
                         span.badge.badge-danger Login
-                      h6.badge-heading.pb-0
+                      h6.pb-2.d-flex.gap-2.flex-wrap
                         | Badge Heading 6
                         span.badge.badge-dark Logout
                       .code-box-copy
@@ -393,16 +394,16 @@ html(lang='en')
                           pre
                             code.language-html#badge-headings
                               | &lt;!--You can use headings with .badge class.--&gt;
-                              | &lt;h1 class="badge-heading"&gt;Badge Heading 1&lt;span class="badge badge-primary"&gt;Latest&lt;/span&gt;&lt;/h1&gt;
-                              | &lt;h2 class="badge-heading"&gt;Badge Heading 2&lt;span class="badge badge-secondary"&gt;Trending&lt;/span&gt;&lt;/h2&gt;
-                              | &lt;h3 class="badge-heading"&gt;Badge Heading 3&lt;span class="badge badge-success"&gt;Checkout&lt;/span&gt;&lt;/h3&gt;
-                              | &lt;h4 class="badge-heading"&gt;Badge Heading 4&lt;span class="badge badge-warning"&gt;Inbox&lt;/span&gt;&lt;/h4&gt;
-                              | &lt;h5 class="badge-heading"&gt;Badge Heading 5&lt;span class="badge badge-danger"&gt;Login&lt;/span&gt;&lt;/h5&gt;
-                              | &lt;h6 class="badge-heading pb-0"&gt;Badge Heading 6&lt;span class="badge badge-dark"&gt;Logout&lt;/span&gt;&lt;/h6&gt;
+                              | &lt;h1 class="pb-2 d-flex gap-2 flex-wrap"&gt;Badge Heading 1&lt;span class="badge badge-primary"&gt;Latest&lt;/span&gt;&lt;/h1&gt;
+                              | &lt;h2 class="pb-2 d-flex gap-2 flex-wrap"&gt;Badge Heading 2&lt;span class="badge badge-secondary"&gt;Trending&lt;/span&gt;&lt;/h2&gt;
+                              | &lt;h3 class="pb-2 d-flex gap-2 flex-wrap"&gt;Badge Heading 3&lt;span class="badge badge-success"&gt;Checkout&lt;/span&gt;&lt;/h3&gt;
+                              | &lt;h3 class="pb-2 d-flex gap-2 flex-wrap"&gt;Badge Heading 4&lt;span class="badge badge-warning"&gt;Inbox&lt;/span&gt;&lt;/h3&gt;
+                              | &lt;h5 class="pb-2 d-flex gap-2 flex-wrap"&gt;Badge Heading 5&lt;span class="badge badge-danger"&gt;Login&lt;/span&gt;&lt;/h5&gt;
+                              | &lt;h6 class="pb-2 d-flex gap-2 flex-wrap"&gt;Badge Heading 6&lt;span class="badge badge-dark"&gt;Logout&lt;/span&gt;&lt;/h6&gt;
               .col-sm-12.col-xl-6
-                .card.height-equal
-                  .card-header
-                    h3 Badges as part buttons
+                .card
+                  .card-header.pb-0
+                    h3 Badges As Part Buttons
                     p.f-m-light.mt-1 
                       code .badge
                       |  can be used as part of 
@@ -430,7 +431,7 @@ html(lang='en')
                         span.badge.rounded-circle.btn-p-space.badge-light.text-dark.ms-2
                           i(data-feather='mail')
                       button.btn.btn-secondary.d-flex.align-items-center(type='button')
-                        | Notifications 
+                        | notifications 
                         span.badge.rounded-circle.btn-p-space.badge-light.text-dark.ms-2
                           i(data-feather='bell')
                       button.btn.btn-success.d-flex.align-items-center(type='button')
@@ -453,10 +454,10 @@ html(lang='en')
                               | &lt;!--You can use badge-* class with any icons used.(badge-icons/headings).--&gt;
                               | &lt;div class="badge-spacing flex-column align-items-start"&gt;
                               | &lt;button class="btn btn-primary d-flex align-items-center" type="button"&gt;Messages &lt;span class="badge rounded-circle btn-p-space badge-light text-dark ms-2"&gt;&lt;i data-feather="mail"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/button&gt;
-                              | &lt;button class="btn btn-secondary d-flex align-items-center" type="button"&gt;Notifications &lt;span class="badge rounded-circle btn-p-space badge-light text-dark ms-2"&gt;&lt;i data-feather="bell"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/button&gt;
+                              | &lt;button class="btn btn-secondary d-flex align-items-center" type="button"&gt;notifications &lt;span class="badge rounded-circle btn-p-space badge-light text-dark ms-2"&gt;&lt;i data-feather="bell"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/button&gt;
                               | &lt;button class="btn btn-success d-flex align-items-center" type="button"&gt;Update available &lt;span class="badge rounded-circle btn-p-space badge-light text-dark ms-2"&gt;&lt;i data-feather="settings"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/button&gt;
                               | &lt;button class="btn btn-info d-flex align-items-center" type="button"&gt;Playing Now &lt;span class="badge rounded-circle btn-p-space badge-light text-dark ms-2"&gt;&lt;i data-feather="music"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/button&gt;
                               | &lt;button class="btn btn-warning text-dark d-flex align-items-center" type="button"&gt;1.2 GB Used &lt;span class="badge rounded-circle btn-p-space badge-light text-dark ms-2"&gt;&lt;i data-feather="alert-triangle"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/button&gt;
-          // Container-fluid Ends
+        // Container-fluid Ends
         include ../../components/footer
-      include ../../components/footer-files   
+    include ../../components/footer-files

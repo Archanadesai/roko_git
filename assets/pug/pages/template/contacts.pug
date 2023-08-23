@@ -17,7 +17,7 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -26,21 +26,22 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | Contacts
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item Apps
                     li.breadcrumb-item.active Contacts
           // Container-fluid starts
           .container-fluid
             .email-wrap.bookmark-wrap
               .row
-                .col-xl-3.box-col-6
+                .col-xl-3.box-col-3
                   .md-sidebar
                     a.btn.btn-primary.md-sidebar-toggle(href='javascript:void(0)') contact filter
                     .md-sidebar-aside.job-left-aside.custom-scrollbar
@@ -52,18 +53,18 @@ html(lang='en')
                                 .media-size-email
                                   img.me-3.rounded-circle(src='../assets/images/user/user.png', alt='')
                                 .flex-grow-1
-                                  h4.f-w-600 MARK JENCO
+                                  h3 MARK JENCO
                                   p Markjecno@gmail.com
                               ul.nav.main-menu(role='tablist').contact-options
                                 li.nav-item
-                                  button.badge-light-primary.btn-block.btn-mail.w-100(type='button', data-bs-toggle='modal', data-bs-target='#exampleModal')
+                                  button.badge-light-primary.btn-block.txt-primary.btn-mail.w-100(type='button', data-bs-toggle='modal', data-bs-target='#exampleModal')
                                     i.me-2(data-feather='users')
                                     |  New Contacts
                                   #exampleModal.modal.fade.modal-bookmark(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
                                     .modal-dialog.modal-lg(role='document')
                                       .modal-content
                                         .modal-header
-                                          h4#exampleModalLabel.modal-title Add Contact
+                                          h3#exampleModalLabel.modal-title Add Contact
                                           button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
                                         .modal-body
                                           form#bookmark-form.form-bookmark.needs-validation(novalidate='')
@@ -106,7 +107,7 @@ html(lang='en')
                                     .modal-dialog(role='document')
                                       .modal-content
                                         .modal-header
-                                          h4#exampleModalLabel1.modal-title Add Category
+                                          h3#exampleModalLabel1.modal-title Add Category
                                           button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
                                         .modal-body
                                           form.form-bookmark
@@ -137,7 +138,7 @@ html(lang='en')
                                 li
                                   a(href="#")
                                     span.title Holidays
-                .col-xl-9.col-md-12.box-col-12
+                .col-xl-9.col-md-12.box-col-80
                   .email-right-aside.bookmark-tabcontent.contacts-tabs
                     .card.email-body.radius-left
                       .ps-0
@@ -145,7 +146,7 @@ html(lang='en')
                           #pills-personal.tab-pane.fade.active.show(role='tabpanel', aria-labelledby='pills-personal-tab')
                             .card.mb-0
                               .card-header.d-flex
-                                h4 Personal
+                                h3 Personal
                                 span.f-14.pull-right.mt-0 5 Contacts
                               .card-body.p-0
                                 .row.list-persons#addcon
@@ -155,7 +156,7 @@ html(lang='en')
                                         .d-flex
                                           img.img-50.img-fluid.m-r-20.rounded-circle.update_img_0(src='../assets/images/user/2.png' alt='')
                                           .flex-grow-1
-                                            h4 
+                                            h3 
                                               span.first_name_0 Bucky 
                                               span.last_name_0 Barnes
                                             p.email_add_0 barnes@gmail.com
@@ -163,7 +164,7 @@ html(lang='en')
                                         .d-flex
                                           img.img-50.img-fluid.m-r-20.rounded-circle.update_img_1(src='../assets/images/user/8.jpg' alt='')
                                           .flex-grow-1
-                                            h4 
+                                            h3 
                                               span.first_name_1 Comeren 
                                               span.last_name_1 Diaz
                                             p.email_add_1 comeren@gmail.com
@@ -171,7 +172,7 @@ html(lang='en')
                                         .d-flex
                                           img.img-50.img-fluid.m-r-20.rounded-circle.update_img_2(src='../assets/images/user/1.jpg' alt='')
                                           .flex-grow-1
-                                            h4 
+                                            h3 
                                               span.first_name_2 Issa 
                                               span.last_name_2 Bell
                                             p.email_add_2 issabell@gmail.com
@@ -179,7 +180,7 @@ html(lang='en')
                                         .d-flex
                                           img.img-50.img-fluid.m-r-20.rounded-circle.update_img_3(src='../assets/images/user/14.png' alt='')
                                           .flex-grow-1
-                                            h4 
+                                            h3 
                                               span.first_name_3 Andew 
                                               span.last_name_3 Jon
                                             p.email_add_3 andewjon@gmail.com
@@ -187,7 +188,7 @@ html(lang='en')
                                         .d-flex
                                           img.img-50.img-fluid.m-r-20.rounded-circle.update_img_4(src='../assets/images/user/5.jpg' alt='')
                                           .flex-grow-1
-                                            h4 
+                                            h3 
                                               span.first_name_4 Jason 
                                               span.last_name_4 Borne
                                             p.email_add_4 jasonb@gmail.com
@@ -195,7 +196,7 @@ html(lang='en')
                                         .d-flex
                                           img.img-50.img-fluid.m-r-20.rounded-circle.update_img_5(src='../assets/images/avtar/11.jpg' alt='')
                                           .flex-grow-1
-                                            h4 
+                                            h3 
                                               span.first_name_5 Monty 
                                               span.last_name_5 Carlo
                                             p.email_add_5 monty@gmail.com
@@ -203,7 +204,7 @@ html(lang='en')
                                         .d-flex
                                           img.img-50.img-fluid.m-r-20.rounded-circle.update_img_6(src='../assets/images/avtar/16.jpg' alt='')
                                           .flex-grow-1
-                                            h4 
+                                            h3 
                                               span.first_name_6 Brock 
                                               span.last_name_6 Lee
                                             p.email_add_6 lee@gmail.com
@@ -215,7 +216,7 @@ html(lang='en')
                                             img.img-100.img-fluid.m-r-20.rounded-circle.update_img_0(src='../assets/images/user/2.png' alt='')
                                             input.updateimg(type='file', name='img', onchange='readURL(this,0)') 
                                             .flex-grow-1.mt-0
-                                              h4
+                                              h3
                                                 span.first_name_0 Bucky 
                                                 span.last_name_0 Barnes
                                               p.email_add_0 barnes@gmail.com
@@ -229,7 +230,7 @@ html(lang='en')
                                                 li
                                                   a(href='#', onclick='printContact(0)', data-bs-toggle='modal', data-bs-target='#printModal') Print
                                           .email-general
-                                            h4.mb-3.f-w-600 General
+                                            h3.mb-3 General
                                             ul
                                               li Name 
                                                 span.font-primary.first_name_0 Bucky
@@ -258,7 +259,7 @@ html(lang='en')
                                             img.img-100.img-fluid.m-r-20.rounded-circle.update_img_1(src='../assets/images/user/8.jpg' alt='')
                                             input.updateimg(type='file', name='img', onchange='readURL(this,1)')
                                             .flex-grow-1.mt-0
-                                              h4
+                                              h3
                                                 span.first_name_1 Comeren 
                                                 span.last_name_1 Diaz
                                               p.email_add_1 comeren@gmail.com
@@ -272,7 +273,7 @@ html(lang='en')
                                                 li
                                                   a(href='#', onclick='printContact(1)', data-bs-toggle='modal', data-bs-target='#printModal') Print
                                           .email-general
-                                            h4.mb-3 General
+                                            h3.mb-3 General
                                             ul
                                               li Name 
                                                 span.font-primary.first_name_1 Comeren
@@ -301,7 +302,7 @@ html(lang='en')
                                             img.img-100.img-fluid.m-r-20.rounded-circle.update_img_2(src='../assets/images/user/1.jpg' alt='')
                                             input.updateimg(type='file', name='img', onchange='readURL(this,2)')
                                             .flex-grow-1.mt-0
-                                              h4 
+                                              h3 
                                                 span.first_name_2 Issa 
                                                 span.last_name_2 Bell
                                               p.email_add_2 issabell@gmail.com
@@ -315,7 +316,7 @@ html(lang='en')
                                                 li
                                                   a(href='#', onclick='printContact(2)', data-bs-toggle='modal', data-bs-target='#printModal') Print
                                           .email-general
-                                            h4.mb-3 General
+                                            h3.mb-3 General
                                             ul
                                               li Name 
                                                 span.font-primary.first_name_2 Issa
@@ -344,7 +345,7 @@ html(lang='en')
                                             img.img-100.img-fluid.m-r-20.rounded-circle.update_img_3(src='../assets/images/user/14.png' alt='')
                                             input.updateimg(type='file', name='img', onchange='readURL(this,3)')
                                             .flex-grow-1.mt-0
-                                              h4 
+                                              h3 
                                                 span.first_name_3 Andew 
                                                 span.last_name_3 Jon
                                               p.email_add_3 andewjon@gmail.com
@@ -358,7 +359,7 @@ html(lang='en')
                                                 li
                                                   a(href='#', onclick='printContact(3)', data-bs-toggle='modal', data-bs-target='#printModal') Print
                                           .email-general
-                                            h4.mb-3 General
+                                            h3.mb-3 General
                                             ul
                                               li Name 
                                                 span.font-primary.first_name_3 Andew
@@ -387,7 +388,7 @@ html(lang='en')
                                             img.img-100.img-fluid.m-r-20.rounded-circle.update_img_4(src='../assets/images/user/5.jpg' alt='')
                                             input.updateimg(type='file', name='img', onchange='readURL(this,4)')
                                             .flex-grow-1.mt-0
-                                              h4 
+                                              h3 
                                                 span.first_name_4 Jason 
                                                 span.last_name_4 Borne
                                               p.email_add_4 jasonb@gmail.com
@@ -401,7 +402,7 @@ html(lang='en')
                                                 li
                                                   a(href='#', onclick='printContact(4)', data-bs-toggle='modal', data-bs-target='#printModal') Print
                                           .email-general
-                                            h4.mb-3 General
+                                            h3.mb-3 General
                                             ul
                                               li Name 
                                                 span.font-primary.first_name_4 Jason
@@ -430,7 +431,7 @@ html(lang='en')
                                             img.img-100.img-fluid.m-r-20.rounded-circle.update_img_5(src='../assets/images/avtar/11.jpg' alt='')
                                             input.updateimg(type='file', name='img', onchange='readURL(this,5)')
                                             .flex-grow-1.mt-0
-                                              h4 
+                                              h3 
                                                 span.first_name_5 Monty  
                                                 span.last_name_5 Carlo
                                               p.email_add_5 monty@gmail.com
@@ -444,7 +445,7 @@ html(lang='en')
                                                 li
                                                   a(href='#', onclick='printContact(5)', data-bs-toggle='modal', data-bs-target='#printModal') Print
                                           .email-general
-                                            h4.mb-3 General
+                                            h3.mb-3 General
                                             ul
                                               li Name 
                                                 span.font-primary.first_name_5 Monty
@@ -473,7 +474,7 @@ html(lang='en')
                                             img.img-100.img-fluid.m-r-20.rounded-circle.update_img_6(src='../assets/images/avtar/16.jpg' alt='')
                                             input.updateimg(type='file', name='img', onchange='readURL(this,6)')
                                             .flex-grow-1.mt-0
-                                              h4 
+                                              h3 
                                                 span.first_name_6 Brock 
                                                 span.last_name_6 Lee
                                               p.email_add_6 lee@gmail.com
@@ -487,7 +488,7 @@ html(lang='en')
                                                 li
                                                   a(href='#', onclick='printContact(6)', data-bs-toggle='modal', data-bs-target='#printModal') Print
                                           .email-general
-                                            h4.mb-3 General
+                                            h3.mb-3 General
                                             ul
                                               li Name 
                                                 span.font-primary.first_name_6 Brock
@@ -640,7 +641,7 @@ html(lang='en')
                           #pills-organization.fade.tab-pane(role='tabpanel', aria-labelledby='pills-organization')
                             .card.mb-0
                               .card-header.d-flex
-                                h4 Organization
+                                h3 Organization
                                 span.f-14.pull-right.mt-0 10 Contacts
                               .card-body.p-0
                                 .row.list-persons
@@ -650,25 +651,25 @@ html(lang='en')
                                         .d-flex
                                           img.img-50.img-fluid.m-r-20.rounded-circle(src='../assets/images/user/user.png' alt='')
                                           .flex-grow-1
-                                            h4 Mark jecno
+                                            h3 Mark jecno
                                             p markjecno@gmail.com
                                       a#v-pills-iduser1-tab.nav-link(data-bs-toggle='pill', href='#v-pills-iduser1', role='tab', aria-controls='v-pills-iduser1', aria-selected='false') 
                                         .d-flex
                                           img.img-50.img-fluid.m-r-20.rounded-circle(src='../assets/images/user/3.jpg' alt='')
                                           .flex-grow-1
-                                            h4 Jason Borne
+                                            h3 Jason Borne
                                             p jasonb@gmail.com
                                       a#v-pills-iduser2-tab.nav-link(data-bs-toggle='pill', href='#v-pills-iduser2', role='tab', aria-controls='v-pills-iduser2', aria-selected='false')
                                         .d-flex
                                           img.img-50.img-fluid.m-r-20.rounded-circle(src='../assets/images/user/4.jpg' alt='')
                                           .flex-grow-1
-                                            h4 Sarah Loren
+                                            h3 Sarah Loren
                                             p barnes@gmail.com
                                       a#v-pills-iduser3-tab.nav-link(data-bs-toggle='pill', href='#v-pills-iduser3', role='tab', aria-controls='v-pills-iduser3', aria-selected='false')
                                         .d-flex
                                           img.img-50.img-fluid.m-r-20.rounded-circle(src='../assets/images/user/10.jpg' alt='')
                                           .flex-grow-1
-                                            h4 Andew Jon
+                                            h3 Andew Jon
                                             p andrewj@gmail.com
                                   .col-xl-8.xl-50.col-md-7
                                     #v-pills-tabContent1.tab-content
@@ -677,7 +678,7 @@ html(lang='en')
                                           .d-flex
                                             img.img-100.img-fluid.m-r-20.rounded-circle.update_img_5(src='../assets/images/user/user.png' alt='')
                                             .flex-grow-1.mt-0
-                                              h4
+                                              h3
                                                 span.first_name_5 Mark 
                                                 span.last_name_5 jecno
                                               p.email_add_5 markjecno@gmail.com
@@ -685,11 +686,11 @@ html(lang='en')
                                                 li
                                                   a(href='#', onclick='printContact(5)', data-bs-toggle='modal', data-bs-target='#printModal') Print
                                           .email-general
-                                            h4 General
+                                            h3 General
                                             p Email Address: 
                                               span.font-primary.email_add_5 markjecno@gmail.com
                                             .gender
-                                              h4 Personal
+                                              h3 Personal
                                               p Gender: 
                                                 span Male
                                       #v-pills-iduser1.tab-pane.fade(role='tabpanel', aria-labelledby='v-pills-iduser1-tab')
@@ -697,7 +698,7 @@ html(lang='en')
                                           .d-flex
                                             img.img-100.img-fluid.m-r-20.rounded-circle.update_img_6(src='../assets/images/user/3.jpg' alt='')
                                             .flex-grow-1.mt-0
-                                              h4
+                                              h3
                                                 span.first_name_6 Jason 
                                                 span.last_name_6 Borne
                                               p.email_add_6 jasonb@gmail.com
@@ -705,11 +706,11 @@ html(lang='en')
                                                 li
                                                   a(href='#', onclick='printContact(6)', data-bs-toggle='modal', data-bs-target='#printModal') Print
                                           .email-general
-                                            h4 General
+                                            h3 General
                                             p Email Address: 
                                               span.font-primary.email_add_6 jasonb@gmail.com
                                             .gender
-                                              h4 Personal
+                                              h3 Personal
                                               p Gender: 
                                                 span Male
                                       #v-pills-iduser2.tab-pane.fade(role='tabpanel', aria-labelledby='v-pills-iduser2-tab')
@@ -717,7 +718,7 @@ html(lang='en')
                                           .d-flex
                                             img.img-100.img-fluid.m-r-20.rounded-circle.update_img_7(src='../assets/images/user/4.jpg' alt='')
                                             .flex-grow-1.mt-0
-                                              h4 
+                                              h3 
                                                 span.first_name_7 Sarah 
                                                 span.last_name_7 Loren
                                               p.email_add_7 barnes@gmail.com
@@ -725,11 +726,11 @@ html(lang='en')
                                                 li
                                                   a(href='#', onclick='printContact(7)', data-bs-toggle='modal', data-bs-target='#printModal') Print
                                           .email-general
-                                            h4 General
+                                            h3 General
                                             p Email Address: 
                                               span.font-primary.email_add_7 barnes@gmail.com
                                             .gender
-                                              h4 Personal
+                                              h3 Personal
                                               p Gender: 
                                                 span Female
                                       #v-pills-iduser3.tab-pane.fade(role='tabpanel', aria-labelledby='v-pills-iduser3-tab')
@@ -737,7 +738,7 @@ html(lang='en')
                                           .d-flex
                                             img.img-100.img-fluid.m-r-20.rounded-circle.update_img_8(src='../assets/images/user/10.jpg' alt='')
                                             .flex-grow-1.mt-0
-                                              h4 
+                                              h3 
                                                 span.first_name_8 Andew 
                                                 span.last_name_8 Jon
                                               p.email_add_8 andrewj@gmail.com
@@ -745,16 +746,16 @@ html(lang='en')
                                                 li
                                                   a(href='#', onclick='printContact(8)', data-bs-toggle='modal', data-bs-target='#printModal') Print
                                           .email-general
-                                            h4 General
+                                            h3 General
                                             p Email Address: 
                                               span.font-primary.email_add_8 andrewj@gmail.com
                                             .gender
-                                              h4 Personal
+                                              h3 Personal
                                               p Gender: 
                                                 span Female
                           #right-history
-                            .modal-header.p-l-20.p-r-20
-                              h4.modal-title.w-100 Contact History
+                            .modal-header.p-20
+                              h3.modal-title.w-100 Contact History
                                 span.pull-right
                                   a.closehistory(href='#')
                                     i.icofont.icofont-close
@@ -765,26 +766,26 @@ html(lang='en')
                               .d-flex
                                 i.icofont.icofont-star.me-3
                                 .flex-grow-1.mt-0
-                                  h4.mt-0 Contact Created
+                                  h3.mt-0 Contact Created
                                   p.mb-0 Contact is created via mail
-                                  span.f-12 Sep 10, 2019 4:00
+                                  span.f-12 Sep 10, 2023 4:00
                           #printModal.modal.fade.modal-bookmark(tabindex='-1', role='dialog', aria-hidden='true')
                             .modal-dialog.modal-dialog-centered(role='document')
                               .modal-content
                                 .modal-header
-                                  h4.modal-title Print preview
+                                  h3.modal-title Print preview
                                   button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
                                 .modal-body.list-persons
                                   .profile-mail.pt-0#DivIdToPrint
-                                    .d-flex
+                                    .d-flex.align-items-center
                                       img.img-100.img-fluid.m-r-20.rounded-circle#updateimg(src='../assets/images/user/2.png' alt='')
                                       .flex-grow-1.mt-0
-                                        h4
+                                        h3
                                           span#printname Bucky 
                                           span#printlast Barnes
                                         p#printmail barnes@gmail.com
                                     .email-general
-                                      h4 General
+                                      h3 General
                                       p Email Address: 
                                         span.font-primary#mailadd barnes@gmail.com   
                                   button.btn.btn-secondary#btnPrint(type='button',  onclick='printDiv();') Print

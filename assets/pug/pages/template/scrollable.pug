@@ -13,7 +13,7 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -22,14 +22,15 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | Scrollable
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item Bonus Ui
                     li.breadcrumb-item.active Scrollable
           // Container-fluid starts
@@ -37,7 +38,7 @@ html(lang='en')
             .row
               .col-xl-6 
                 .card 
-                  .card-header 
+                  .card-header.pb-0
                     h3.mb-0 Custom Scrollbar
                     p.f-m-light.mt-1
                       | Used 
@@ -47,7 +48,7 @@ html(lang='en')
                       | through design scrollbar.
                   .card-body 
                     .vertical-scroll.scroll-demo
-                      h5.pb-2 Custom Scrollbar 
+                      h3.pb-2 Custom Scrollbar 
                       p
                         | I'm quite interested in learning more about 
                         em.txt-danger custom scrollbars
@@ -64,7 +65,7 @@ html(lang='en')
                         |  . Additionally, it might alter when you work on a website that is global and operates in both left-to-right and right-to-left orientations.
               .col-xl-6
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 Small Size Scrollbar
                     p.f-m-light.mt-1  
                       | Use the 
@@ -74,7 +75,7 @@ html(lang='en')
                     .scroll-bar-wrap
                       .scrollbar-margins.large-margin.scroll-demo.pe-0
                         .margin-scrollbar
-                          h5.pb-2 Solution for Business Transformation
+                          h3.pb-2 Solution for Business Transformation
                         p   
                           | The Business Transformation Solution programme is a 
                           em.txt-danger multi-level engagement program
@@ -86,7 +87,7 @@ html(lang='en')
                           |  , "Business Foundation & Management", which was tried and true for Indian business conditions while drawing inspiration from other successful global SME Business Management techniques.
               .col-xxl-4.col-md-6
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 Badges Scrollbar
                     p.f-m-light.mt-1
                       | Use the
@@ -135,7 +136,7 @@ html(lang='en')
                           span.badge.bg-primary.text-white.rounded-pill.p-2 Social
               .col-xxl-4.col-md-6
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 Profile Scrollable
                     p.f-m-light.mt-1  
                       | Use the 
@@ -172,7 +173,7 @@ html(lang='en')
                           | Betty K. Curtis
               .col-xxl-4.col-md-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 Scrollable Content
                     p.f-m-light.mt-1 
                       | Use the 
@@ -187,61 +188,61 @@ html(lang='en')
                               .list-wrapper.gap-0
                                   img.list-img(src="../assets/images/user/9.jpg", alt="profile")
                                   .list-content 
-                                    h6 Molly Boake
+                                    h3 Molly Boake
                                     p MollyBoake@rhyta.com
                                     small 5 days ago
                           a.list-group-item.list-group-item-action.list-hover-primary(href='#')
                               .list-wrapper.gap-0
                                   img.list-img(src="../assets/images/user/10.jpg", alt="profile")
                                   .list-content 
-                                    h6 Gabrielle Fahey
+                                    h3 Gabrielle Fahey
                                     p GabrielleFahey@dayrep.com
                                     small.text-muted 10 days ago
                           a.list-group-item.list-group-item-action.list-hover-primary(href='#')
                               .list-wrapper.gap-0
                                   img.list-img(src="../assets/images/user/2.jpg", alt="profile")
                                   .list-content 
-                                    h6 Lucinda Moseley
+                                    h3 Lucinda Moseley
                                     p LucindaMoseley@teleworm.us
                                     small.text-muted 3 days ago
                           a.list-group-item.list-group-item-action.list-hover-primary(href='#')
                               .list-wrapper.gap-0
                                   img.list-img(src="../assets/images/user/12.png", alt="profile")
                                   .list-content 
-                                    h6 Francis K. Henriques
+                                    h3 Francis K. Henriques
                                     p FrancisKHenriques@teleworm.us
                                     small.text-muted 2 days ago
                           a.list-group-item.list-group-item-action.list-hover-primary(href='#')
                               .list-wrapper.gap-0
                                   img.list-img(src="../assets/images/user/14.png", alt="profile")
                                   .list-content 
-                                    h6 Jose A. Seay
+                                    h3 Jose A. Seay
                                     p JoseASeay@rhyta.com
                                     small.text-muted 15 days ago
                           a.list-group-item.list-group-item-action.list-hover-primary(href='#')
                               .list-wrapper.gap-0
                                   img.list-img(src="../assets/images/user/3.jpg", alt="profile")
                                   .list-content 
-                                    h6 Phil F. Cunningham
+                                    h3 Phil F. Cunningham
                                     p PhilFCunningham@dayrep.com
                                     small.text-muted 6 days ago
                           a.list-group-item.list-group-item-action.list-hover-primary(href='#')
                               .list-wrapper.gap-0
                                   img.list-img(src="../assets/images/user/7.jpg", alt="profile")
                                   .list-content 
-                                    h6 Richard E. Johnson
+                                    h3 Richard E. Johnson
                                     p RichardEJohnson@teleworm.us
                                     small.text-muted 20 days ago
                           a.list-group-item.list-group-item-action.list-hover-primary(href='#')
                               .list-wrapper.gap-0
                                   img.list-img(src="../assets/images/user/2.png", alt="profile")
                                   .list-content 
-                                    h6 Lawrence L. Nash
+                                    h3 Lawrence L. Nash
                                     p LawrenceLNash@jourrapide.com
                                     small.text-muted 8 days ago
               .col-xl-6
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 Horizontal Scrollbar 
                     p.f-m-light.mt-1
                       | Use the 
@@ -271,7 +272,7 @@ html(lang='en')
                               img.img-fluid(src="../assets/images/scrollbar/fashion6.jpg", alt="girl")
               .col-xl-6
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 Both Side Visible Scrollbar
                     p.f-m-light.mt-1
                       | Use the 
@@ -302,7 +303,7 @@ html(lang='en')
                                 br
                                 | --> Launch...
                             .col-sm-3
-                              h6.pb-2 Latest trends 
+                              h3.pb-2 Latest trends 
                               p 
                                 | You should stay current with all the most recent advances in the business whether you operate as a freelance web designer or for an agency or design studio. You may be sure you're constantly providing the most intelligent and original design solutions by doing this.
                               p
@@ -310,7 +311,7 @@ html(lang='en')
                               .visible-wrapper 
                                 img(src="../assets/images/email/3.jpg", alt="office")
                             .col-sm-3
-                              h6.pb-2 The best UX designer
+                              h3.pb-2 The best UX designer
                               p
                                 | The internet is teeming with free resources, no matter what stage of your UX journey you're in, and UX design blogs should be your first point of call. The abundance of blogs available, though, can be somewhat of a double-edged sword because there are so many to choose from. How do you decide which blogs are actually worthwhile reading?
                               p
@@ -325,7 +326,7 @@ html(lang='en')
                               p 
                                 | If you already work in the UX field, the Inside Design blog has all the information you need to expand your knowledge, especially if you're interested in streamlining your UX teams and procedures and getting a better understanding of the whole product design and development process. This is an excellent location to keep an eye out for the most recent UX trends, tools, resources, and events because they are always adding new stuff.
                             .col-sm-3
-                              h6.pb-2 How to make best website ideas 
+                              h3.pb-2 How to make best website ideas 
                               .visible-wrapper 
                                 img(src="../assets/images/banner/3.jpg", alt="website")
                               p.pt-3

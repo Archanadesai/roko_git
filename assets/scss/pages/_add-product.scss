@@ -51,18 +51,18 @@
                     background-color: unset;
                     color: unset;
                     .nav-rounded {
-                        border: 1px solid var(--theme-deafult);
+                        border: 1px solid var(--theme-default);
                         .product-icons {
-                            background-color: var(--theme-deafult) !important;
+                            background-color: var(--theme-default) !important;
                             svg {
                                 stroke: var(--white);
                             }
                         }
                     }
                     .product-tab-content {
-                        h5 {
-                            color: var(--theme-deafult);
-                            font-weight: 600;
+                        h6 {
+                            color: var(--theme-default);
+                            font-weight: 500;
                         }
                     }
                 }
@@ -120,18 +120,18 @@
             }
             &:hover {
                 .nav-rounded {
-                    border: 1px solid var(--theme-deafult);
+                    border: 1px solid var(--theme-default);
                     .product-icons {
                         background-color: var(--light-shade-primary, 1);
                         svg {
-                            stroke: var(--theme-deafult);
+                            stroke: var(--theme-default);
                             animation: tada 1.5s ease infinite;
                         }
                     }
                 }
                 .product-tab-content {
                     h6 {
-                        color: var(--theme-deafult);
+                        color: var(--theme-default);
                     }
                 }
             }
@@ -279,7 +279,7 @@
     }
     .btn {
         border: 1px solid var(--recent-dashed-border);
-        color: $theme-font-color;
+        color: var(--chart-text-color);
         font-weight: 500;
         @media (max-width:1400px) {
             padding: 6px 16px;
@@ -289,7 +289,7 @@
         }
         &:hover,
         &:active {
-            background-color: var(--theme-deafult);
+            background-color: var(--theme-default);
             color: $light;
             svg {
                 stroke: $light;
@@ -323,9 +323,6 @@
         margin-top: 4px;
         li {
             max-width: 200px;
-            width: 100%;
-            padding: 12px;
-            height: unset;
             .form-check-input {
                 border-radius: 5px;
                 background-color: var(--light-background);
@@ -338,11 +335,11 @@
                 }
                 &:checked {
                     background-color: var(--light-background);
-                    border: 1px solid var(--theme-deafult);
+                    border: 1px solid var(--theme-default);
                     border-radius: 5px;
                     ~.form-check-label {
                         span {
-                            color: var(--theme-deafult);
+                            color: var(--theme-default);
                             position: relative;
                         }
                     }
@@ -364,7 +361,7 @@
                         transition: all 0.3S ease-in-out;
                         &:active,
                         &.active {
-                            border-bottom: 2px solid var(--theme-deafult);
+                            border-bottom: 2px solid var(--theme-default);
                             color: var(--body-font-color);
                             transition: all 0.3S ease-in-out;
                         }
@@ -380,10 +377,10 @@
         .form-check {
             .form-check-input {
                 &:checked {
-                    background-color: var(--theme-deafult);
+                    background-color: var(--theme-default);
                 }
                 &:valid {
-                    border-color: var(--theme-deafult);
+                    border-color: var(--theme-default);
                     ~ {
                         .form-check-label {
                             color: rgba($theme-body-sub-title-color, 0.8);
@@ -472,7 +469,6 @@
         svg {
             width: 17px;
             height: 17px;
-            color: var(--chart-text-color);
         }
     }
     a {
@@ -698,7 +694,7 @@
             &.datatable-hidden {
                 visibility: visible;
                 a {
-                    color: var(--theme-deafult);
+                    color: var(--theme-default);
                     font-weight: 500;
                     // font-size: 18px;
                     opacity: 1;
@@ -707,7 +703,7 @@
         }
         .datatable-active {
             .datatable-pagination-list-item-link {
-                background-color: var(--theme-deafult);
+                background-color: var(--theme-default);
                 color: var(--white);
             }
         }

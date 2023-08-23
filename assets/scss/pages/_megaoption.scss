@@ -6,7 +6,7 @@
 	display: flex;
 
 	.card {
-		border: 1px solid #f3f3f3;
+		border: 1px solid #f4f4f4;
 		box-shadow: $card-box-shadow;
 	}
 
@@ -21,6 +21,11 @@
 	.d-flex {
 		.radio {
 			margin-left: 3px;
+
+			[dir="rtl"] & {
+				margin-right: 3px;
+				margin-left: unset;
+			}
 		}
 	}
 }
@@ -57,7 +62,7 @@
 	flex-wrap: wrap;
 
 	.card {
-		border: 1px solid #f3f3f3;
+		border: 1px solid #f4f4f4;
 		box-shadow: $card-box-shadow;
 	}
 
@@ -100,6 +105,7 @@
 .rating-star-wrapper {
 	color: #797979;
 }
+
 .card-wrapper {
 	.payment-wrapper {
 		display: flex;
@@ -127,34 +133,8 @@
 
 		}
 	}
-}.card-wrapper {
-	.payment-wrapper {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding-bottom: 8px;
-		margin-bottom: 16px;
-		border-bottom: 1px solid var(--chart-dashed-border);
-
-		&:last-child {
-			padding-bottom: 0;
-			margin-bottom: 0;
-			border-bottom: unset;
-		}
-
-		.payment-second {
-			img {
-				width: 50px;
-			}
-
-			.mega-icons {
-				width: 20px;
-				height: 20px;
-			}
-
-		}
-	}
 }
+
 // Custom checkbox
 .main-upgrade {
 	margin: 0 auto;
@@ -248,6 +228,65 @@
 	}
 
 }
+
+.megaoptions-border-space-sm {
+	.d-flex {
+		.radio {
+			label {
+				padding-left: 18px;
+
+				[dir="rtl"] & {
+					padding-left: unset;
+					padding-right: 18px;
+
+				}
+			}
+		}
+
+		.flex-grow-1 {
+			.list-behavior-1 {
+				@media (min-width:618px) and (max-width:1199px) {
+					flex-direction: row;
+					gap: 18px;
+				}
+
+				@media (max-width:618px) {
+					flex-direction: column;
+					gap: 12px;
+				}
+
+				.flex-grow-1 {
+					margin-top: -6px;
+
+					@media (max-width:618px) {
+						margin-left: 0px;
+
+						[dir="rtl"] & {
+							margin-left: unset;
+							margin-right: 0;
+
+						}
+					}
+				}
+
+				&:first-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+
+.megaoption-space,
+.megaoptions-border-space-sm {
+	.badge {
+		&.pull-right {
+			margin-bottom: 12px;
+		}
+	}
+}
+
 /**=====================
     3.30 Megaoption CSS Ends
 ==========================**/

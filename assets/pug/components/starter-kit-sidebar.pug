@@ -4,12 +4,10 @@
   div
     .logo-wrapper
       a(href='index.html')
-        img.img-fluid.for-light(src='../assets/images/logo/logo-1.png', alt='')
-        img.img-fluid.for-dark(src='../assets/images/logo/logo-dark.png', alt='')
-      .back-btn
-        i.fa.fa-angle-left
+        img.img-fluid(src='../assets/images/logo/logo.png', alt='')
       .toggle-sidebar
-        i.status_toggle.middle(data-feather='grid').sidebar-toggle 
+        svg.sidebar-toggle 
+          use(href='../assets/svg/icon-sprite.svg#toggle-icon')
     .logo-icon-wrapper
       a(href="index.html")
         img.img-fluid(src='../assets/images/logo/logo-icon.png', alt='')
@@ -33,51 +31,47 @@
                 use(href='../assets/svg/icon-sprite.svg#stroke-home')
               svg.fill-icon
                 use(href='../assets/svg/icon-sprite.svg#fill-home')
-              span Dashboard
-          li.sidebar-list
+              span Dashboard 
+          li.mega-menu.sidebar-list
             i.fa.fa-thumb-tack
             a.sidebar-link.sidebar-title(href='#')
               svg.stroke-icon
-                use(href='../assets/svg/icon-sprite.svg#stroke-starter-kit')
+                use(href='../assets/svg/icon-sprite.svg#stroke-others')
               svg.fill-icon
-                use(href='../assets/svg/icon-sprite.svg#fill-starter-kit')
-              span Starter kit
-            ul.sidebar-submenu
-              li
-                a.submenu-title(href='#')
-                  | color version
-                  span.sub-arrow
-                    i.fa.fa-chevron-right
-                ul.nav-sub-childmenu.submenu-content
-                  li
-                    a(href='index.html') Layout Light
-                  li
-                    a(href='layout-dark.html') Layout Dark
-              li      
-                a.submenu-title(href='#')
-                  | Page layout
-                  span.sub-arrow
-                    i.fa.fa-chevron-right
-                ul.nav-sub-childmenu.submenu-content
-                  li
-                    a(href='boxed.html') Boxed
-                  li
-                    a(href='layout-rtl.html') RTL
-              li
-                a(href='hide-on-scroll.html')
-                  span Hide menu on Scroll
-              li      
-                a.submenu-title(href='#')
-                  | Footers
-                  span.sub-arrow
-                    i.fa.fa-chevron-right
-                ul.nav-sub-childmenu.submenu-content
-                  li
-                    a(href='footer-light.html') Footer Light
-                  li
-                    a(href='footer-dark.html') Footer Dark
-                  li
-                    a(href='footer-fixed.html') Footer Fixed
+                use(href='../assets/svg/icon-sprite.svg#fill-others')
+              span Others
+            .mega-menu-container.menu-content
+              .container-fluid
+                .row
+                  .col.mega-box
+                    .link-section
+                      .submenu-title
+                        h5 Stater-kit
+                      ul.submenu-content.opensubmegamenu
+                        li
+                          a(href='index.html') Layout Light
+                        li
+                          a(href='layout-dark.html') Layout Dark
+                  .col.mega-box
+                    .link-section
+                      .submenu-title
+                        h5 Page Layout
+                      ul.submenu-content.opensubmegamenu
+                        li
+                          a(href='boxed.html') Boxed
+                        li
+                          a(href='layout-rtl.html') RTL
+                  .col.mega-box
+                    .link-section
+                      .submenu-title
+                        h5 Footers
+                      ul.submenu-content.opensubmegamenu
+                        li
+                          a(href='footer-light.html') Footer Light
+                        li
+                          a(href='footer-dark.html') Footer Dark
+                        li
+                          a(href='footer-fixed.html') Footer Fixed
           li.sidebar-list
             i.fa.fa-thumb-tack
             a.sidebar-link.sidebar-title(href='https://support.pixelstrap.com/portal/en/signin', target='_blank')
@@ -88,7 +82,7 @@
               span Raise Support
           li.sidebar-list
             i.fa.fa-thumb-tack
-            a.sidebar-link.sidebar-title(href='https://docs.pixelstrap.com/wool/html/document/', target='_blank')
+            a.sidebar-link.sidebar-title(href='https://docs.pixelstrap.com/Roko/html/document/', target='_blank')
               svg.stroke-icon
                 use(href='../assets/svg/icon-sprite.svg#stroke-form')
               svg.fill-icon

@@ -15,7 +15,7 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -24,14 +24,15 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | Tooltip
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item Ui Kits
                     li.breadcrumb-item.active Tooltip
           // Container-fluid starts
@@ -39,8 +40,8 @@ html(lang='en')
             .row
               .col-sm-12
                 .card
-                  .card-header
-                    h3 Basic tooltip
+                  .card-header.pb-0
+                    h3 Basic Tooltip
                     p.f-m-light.mt-1 
                       | Use the 
                       code data-bs-title
@@ -61,12 +62,12 @@ html(lang='en')
                         li
                           i.icofont.icofont-refresh.reload-card
                         li
-                          i.icofont.icofont-error.close-card  
+                          i.icofont.icofont-error.close-card
                   .card-body
                     button.example-popover.btn.btn-primary.mb-0.me-0(type='button', data-container='body', data-bs-toggle='tooltip', data-bs-placement='top', title='Surprise!!! Thank you for hovering...')
                       | It's magic please hover me... 
-                    h5.mb-1.py-4.pb-0 Inline Tooltip Content
-                    p.mb-0
+                    h3.mb-1.py-4.pb-0 Inline Tooltip Content
+                    p 
                       | Here, is some content about tooltips that you can set the
                       a.txt-primary.fw-bold(data-bs-toggle='tooltip' data-bs-placement='top' data-bs-title='tooltip' data-bs-original-title='popover text')   tooltip
                       |   inside the content with help of tooltip and also you can add
@@ -80,15 +81,15 @@ html(lang='en')
                           code.language-html#tooltip
                             | &lt;!--You can use attribute (data-bs-target='tooltip') to  used tooltips.--&gt;
                             | &lt;button class="example-popover btn btn-primary mb-0 me-0" type="button" data-container="body" data-bs-toggle="tooltip" data-bs-placement="top" title="Surprise!!! Thank you for hovering..."&gt;It's magic please hover me... &lt;/button&gt;
-                            | &lt;h5 class="mb-1 py-4 pb-0"&gt;Inline Tooltip Content&lt;/h5&gt;
+                            | &lt;h3 class="mb-1 py-4 pb-0"&gt;Inline Tooltip Content&lt;/h3&gt;
                             | &lt;p&gt;
                             |    Here, is some content about tooltips that you can set the&lt;a class="txt-primary fw-bold" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="tooltip" data-bs-original-title="popover text"&gt; tooltip&lt;/a&gt; inside the content with help of tooltip and also you can add
                             | &lt;button class="btn btn-success text-white border-0 px-3 py-1 me-0 mb-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="button"&gt;button &lt;/button&gt; .Tooltips helps you to add more and more content. A tooltip is often used to specify extra information about something when the user moves the mouse pointer over an element
                             | &lt;/p&gt;
               .col-md-6
                 .card
-                  .card-header
-                    h3 Colored tooltip 
+                  .card-header.pb-0
+                    h3 Colored Tooltip 
                     p.f-m-light.mt-1 
                       | Use the 
                       code btn- *
@@ -109,18 +110,18 @@ html(lang='en')
                         li
                           i.icofont.icofont-refresh.reload-card
                         li
-                          i.icofont.icofont-error.close-card  
+                          i.icofont.icofont-error.close-card
                   .card-body 
                     .common-flex
-                      button.mb-0.me-0.btn.btn-primary(data-bs-toggle='tooltip' data-bs-placement='top' data-bs-title='Primary')
+                      button.mb-0.me-0.btn.btn-primary(type='button' data-bs-toggle='tooltip' data-bs-placement='top' data-bs-title='Primary')
                         | Primary
-                      button.mb-0.me-0.btn.btn-secondary(data-bs-toggle='tooltip' data-bs-placement='top' data-bs-title='Secondary')
+                      button.mb-0.me-0.btn.btn-secondary(type=' button' data-bs-toggle='tooltip' data-bs-placement='top' data-bs-title='Secondary')
                         | Secondary
-                      button.mb-0.me-0.btn.btn-success(data-bs-toggle='tooltip' data-bs-placement='top' data-bs-title='Success')
+                      button.mb-0.me-0.btn.btn-success(type='button' data-bs-toggle='tooltip' data-bs-placement='top' data-bs-title='Success')
                         | Success
-                      button.mb-0.me-0.btn.btn-warning.text-black(data-bs-toggle='tooltip' data-bs-placement='top' data-bs-title='Warning')
+                      button.mb-0.me-0.btn.btn-warning.text-black(type='button' data-bs-toggle='tooltip' data-bs-placement='top' data-bs-title='Warning')
                         | Warning
-                      button.mb-0.me-0.btn.btn-danger(data-bs-toggle='tooltip' data-bs-placement='top' data-bs-title='Danger')
+                      button.mb-0.me-0.btn.btn-danger(type='button' data-bs-toggle='tooltip' data-bs-placement='top' data-bs-title='Danger')
                         | Danger
                       .code-box-copy
                           button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#colored-tooltip', title='Copy')
@@ -135,8 +136,8 @@ html(lang='en')
                               | &lt;button class="mb-0 me-0 btn btn-danger" type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Danger"&gt;Danger&lt;/button&gt;
               .col-md-6
                 .card
-                  .card-header
-                    h3 Tooltip  directions
+                  .card-header.pb-0
+                    h3 Tooltip  Directions
                     p.f-m-light.mt-1 
                       | Use the 
                       code btn-*
@@ -157,7 +158,7 @@ html(lang='en')
                         li
                           i.icofont.icofont-refresh.reload-card
                         li
-                          i.icofont.icofont-error.close-card  
+                          i.icofont.icofont-error.close-card
                   .card-body 
                     .common-flex
                       button.btn.btn-primary.mb-0.me-0(type='button', data-bs-toggle='tooltip', data-bs-placement='top', title='Tooltip on top')
@@ -180,8 +181,8 @@ html(lang='en')
                                 | &lt;button class="btn btn-warning mb-0 me-0" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left"&gt;Tooltip on left&lt;/button&gt;
               .col-md-6
                 .card
-                  .card-header
-                    h3 HTML elements with hover effect
+                  .card-header.pb-0
+                    h3 HTML Elements With Hover Effect
                     p.f-m-light.mt-1 
                       | Use the 
                       code bg-*-light
@@ -202,7 +203,7 @@ html(lang='en')
                         li
                           i.icofont.icofont-refresh.reload-card
                         li
-                          i.icofont.icofont-error.close-card  
+                          i.icofont.icofont-error.close-card
                   .card-body 
                     .common-flex
                       button.btn.bg-primary.mb-0.me-0(type='button' data-bs-toggle='tooltip' data-bs-html='true' data-bs-placement='top' data-bs-title='<em>Thank</em> <u>you</u>')
@@ -225,8 +226,8 @@ html(lang='en')
                                 | &lt;button class="btn bg-info mb-0 me-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true" data-bs-title="&amp;lt;b&amp;gt;Thank&amp;lt;/b&amp;gt; &amp;lt;em&amp;gt;you&amp;lt;/em&amp;gt;"&gt;Coming soon&lt;/button&gt;
               .col-md-6
                 .card
-                  .card-header
-                    h3 Filled tooltip
+                  .card-header.pb-0
+                    h3 Filled Tooltip
                     p.f-m-light.mt-1 
                       | Tooltip in hover effect through fill dark color.
                       code [.btn-outline-*]
@@ -247,7 +248,7 @@ html(lang='en')
                         li
                           i.icofont.icofont-refresh.reload-card
                         li
-                          i.icofont.icofont-error.close-card  
+                          i.icofont.icofont-error.close-card
                   .card-body.fill-tooltip 
                     .common-flex
                       button.btn.btn-outline-primary.mb-0.me-0(type='button' data-bs-toggle='tooltip' data-bs-html='true' data-bs-placement='top' data-bs-title='Tooltip Primary')

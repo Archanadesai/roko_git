@@ -13,7 +13,7 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -22,14 +22,15 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | ACE Code Editor 
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item Editors
                     li.breadcrumb-item.active  ACE Code Editor 
           // Container-fluid starts
@@ -37,10 +38,10 @@ html(lang='en')
             .row
               .col-xl-6
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 Javascript Mode
                   .card-body
-                    #editor.ace-editor.custom-scrollbar
+                    #editor.ace-editor
                       | /* Sample JavaScript edit source */
                       | // Define a module
                       | var app = angular.module('app', ['ui.bootstrap']);
@@ -61,16 +62,16 @@ html(lang='en')
                       | /* End of sample edit source */
               .col-xl-6
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 Html Mode
                   .card-body
-                    #html-editor.ace-editor.custom-scrollbar
+                    #html-editor.ace-editor
                       | &lt;!--Page header start--&gt;
                       | &lt;div class="page-header"&gt;
                       | &lt;div class="row"&gt;
                       | &lt;div class="col-xl-6"&gt;
                       | &lt;h3&gt;Ace Text editor&lt;/h3&gt;
-                      | &lt;small&gt;wool Admin panel&lt;/small&gt;
+                      | &lt;small&gt;Roko Admin panel&lt;/small&gt;
                       | &lt;/div&gt;
                       | &lt;div class="col-xl-6"&gt;
                       | &lt;ol class="breadcrumb pull-right"&gt;
@@ -87,10 +88,10 @@ html(lang='en')
                       | &lt;!--Page header end--&gt;
               .col-xl-6
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 css Mode
                   .card-body
-                    #css-editor.ace-editor.custom-scrollbar
+                    #css-editor.ace-editor
                       | .text-layer
                       | {
                       | font: 12px Monaco, "Courier New", monospace;
@@ -127,10 +128,10 @@ html(lang='en')
                       | }
               .col-xl-6
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 php Mode
                   .card-body
-                    #php-editor.ace-editor.custom-scrollbar
+                    #php-editor.ace-editor
                       | &lt;?php
                       | function nfact($n) {
                       | if ($n == 0) {

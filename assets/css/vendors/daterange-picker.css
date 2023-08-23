@@ -6,7 +6,7 @@
   width: 278px;
   padding: 4px;
   margin-top: 1px;
-  font-family: "Nunito Sans", sans-serif, sans-serif;
+  font-family: Outfit, sans-serif;
   top: 100px;
   left: 20px;
   box-shadow: 0 4px 14px rgba(174, 197, 231, 0.5);
@@ -23,7 +23,7 @@
   top: -7px;
   border-right: 7px solid transparent;
   border-left: 7px solid transparent;
-  border-bottom: 7px solid var(--theme-deafult);
+  border-bottom: 7px solid var(--theme-default);
 }
 .daterangepicker:after {
   top: -6px;
@@ -116,7 +116,7 @@
 }
 .daterangepicker td.available:hover, .daterangepicker th.available:hover {
   border-color: transparent;
-  background-color: var(--theme-deafult);
+  background-color: var(--theme-default);
   color: #fff;
 }
 .daterangepicker td.week, .daterangepicker th.week {
@@ -190,7 +190,7 @@
   width: 100%;
 }
 .daterangepicker .input-mini.active {
-  border: 1px solid var(--theme-deafult);
+  border: 1px solid var(--theme-default);
   border-radius: 4px;
 }
 .daterangepicker .daterangepicker_input {

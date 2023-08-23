@@ -1,11 +1,11 @@
-(function ($) {
-var primary = localStorage.getItem("primary") || '#7366ff';
-var secondary = localStorage.getItem("secondary") || '#FF8575';
+(function () {
+  var primary = localStorage.getItem("primary") || "#795EBD";
+  var secondary = localStorage.getItem("secondary") || "#F07EB5";
 
-window.woolAdminConfig = {
-	// Theme Primary Color
-	primary: primary,
-	// theme secondary color
-	secondary: secondary,
-};
-})(jQuery);
+  window.RokoAdminConfig = {
+    // Theme Primary Color
+    primary: primary,
+    // theme secondary color
+    secondary: secondary,
+  };
+})();

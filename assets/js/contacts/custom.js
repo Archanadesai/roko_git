@@ -9,7 +9,7 @@ function submitContact() {
 			var tablist = '	<a class="contact-tab-'+index_var+' nav-link active" id="v-pills-user-tab" data-toggle="pill" onclick="activeDiv('+index_var+')" href="#v-pills-user" role="tab" aria-controls="v-pills-user" aria-selected="true" data-original-title="" title="">\
 			                <div class="media">\
 				                <img class="img-50 img-fluid m-r-20 rounded-circle update_img_0" src="../assets/images/user/user.png" alt="" data-original-title="" title="">\
-				                <div class="flex-grow-1">\
+				                <div class="media-body">\
 				                    <h6>\
 					                    <span class="first_name_'+index_var+'">'+firstname+'</span>\
 					                    <span class="last_name_'+index_var+'">'+lastname+'</span></h6>\
@@ -22,7 +22,7 @@ function submitContact() {
 		                  <div class="media">\
 		                  <img class="img-100 img-fluid m-r-20 rounded-circle update_img_0" src="../assets/images/user/user.png" alt="" data-original-title="" title="">\
 		                    <input class="updateimg" type="file" name="img" onchange="readURL(this,0)" data-original-title="" title="">\
-		                    <div class="flex-grow-1 mt-0">\
+		                    <div class="media-body mt-0">\
 		                      <h5>\
 		                      <span class="first_name_'+index_var+'">'+firstname+'</span>\
 		                      <span class="last_name_'+index_var+'">'+lastname+'</span></h5>\

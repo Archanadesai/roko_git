@@ -6,7 +6,7 @@ html(lang='en')
     body
         include ../../components/taptop
         // page-wrapper Start
-        #pageWrapper.page-wrapper.compact-wrapper.modern-type
+        #pageWrapper.page-wrapper.compact-wrapper
             // Page Body Start
             .container-fluid.p-0
               .comingsoon.auth-bg-video
@@ -15,18 +15,18 @@ html(lang='en')
                 .comingsoon-inner.text-center
                   img(src='../assets/images/logo/logo-1.png', alt='')
                   h5 WE ARE COMING SOON
-                  #clockdiv.countdown
+                  #clock-arrival.countdown(data-hours="1" data-minutes="2" data-seconds="3")
                     ul
                       li
-                        span#days.time
+                        span.days.time
                         span.title days
                       li
-                        span#hours.time
+                        span.hours.time
                         span.title Hours
                       li
-                        span#minutes.time
+                        span.minutes.time
                         span.title Minutes
                       li
-                        span#seconds.time
+                        span.seconds.time
                         span.title Seconds
         include ../../components/footer-files

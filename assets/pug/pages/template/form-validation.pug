@@ -14,7 +14,7 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -23,14 +23,15 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | Validation Form
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item  Form Controls
                     li.breadcrumb-item.active  Validation Forms
           // Container-fluid starts
@@ -38,7 +39,7 @@ html(lang='en')
             .row
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 Tooltip form validation
                     p.f-m-light.mt-1 
                       | If your form layout allows it, you can swap the 
@@ -91,7 +92,7 @@ html(lang='en')
                         button.btn.btn-primary(type='submit') Submit form
               .col-xl-6
                 .card.height-equal
-                  .card-header
+                  .card-header.pb-0
                     h3 Browser defaults
                     p.f-m-light.mt-1 
                       | Not interested in custom validation feedback messages or writing JavaScript to change form behaviors? Depending on your browser and OS,While these feedback styles cannot be styled with CSS, you can still customize the feedback text through JavaScript.
@@ -99,13 +100,13 @@ html(lang='en')
                     form.row.g-3
                       .col-12 
                         label.form-label(for='first-name') First name
-                        input#first-name.form-control(type='text' placeholder='First name' aria-label='First name')
+                        input#first-name.form-control(type='text' placeholder='First name' aria-label='First name' required)
                       .col-12
                         label.form-label(for='exampleFormControlInput1') Email address
-                        input#exampleFormControlInput1.form-control(type='email' placeholder='name@example.com')
+                        input#exampleFormControlInput1.form-control(type='email' placeholder='pesamof475@saeoil.com' required)
                       .col-12 
                         label.col-sm-12.col-form-label(for='inputPassword2') Password
-                        input#inputPassword2.form-control(type='password')
+                        input#inputPassword2.form-control(type='password' required)
                       .col-12 
                         label.form-label(for='validationDefault04') State
                         select#validationDefault04.form-select(required='')
@@ -116,21 +117,21 @@ html(lang='en')
                           option U.S
                       .col-12 
                         label.form-label(for='formFile') Choose file
-                        input#formFile.form-control(type='file')
+                        input#formFile.form-control(type='file' required)
                       .col-12 
                         .card-wrapper.border.rounded-3.checkbox-checked
-                          h6.sub-title.fw-bold Select your payment method
+                          h6.sub-title Select your payment method
                           .radio-form
                             .form-check
-                              input#flexRadioDefault1.form-check-input(type='radio' name='flexRadioDefault')
+                              input#flexRadioDefault1.form-check-input(type='radio' name='flexRadioDefault' required='')
                               label.form-check-label(for='flexRadioDefault1')
                                 | Visa
                             .form-check
-                              input#flexRadioDefault2.form-check-input(type='radio' name='flexRadioDefault' checked='')
+                              input#flexRadioDefault2.form-check-input(type='radio' name='flexRadioDefault' checked='' required='')
                               label.form-check-label(for='flexRadioDefault2')
                                 | MasterCard
                             .form-check
-                              input#flexRadioDefault3.form-check-input(type='radio' name='flexRadioDefault' checked='')
+                              input#flexRadioDefault3.form-check-input(type='radio' name='flexRadioDefault' checked='' required='')
                               label.form-check-label(for='flexRadioDefault3')
                                 | Paypal
                       .col-12 
@@ -142,13 +143,13 @@ html(lang='en')
                           | I agree to the policies
                       .col-12 
                         .form-check.form-switch
-                          input#flexSwitchCheckDefault.form-check-input(type='checkbox' role='switch')
+                          input#flexSwitchCheckDefault.form-check-input(type='checkbox' role='switch' required)
                           label.form-check-label(for='flexSwitchCheckDefault') Are you sure above information are true
                       .col-12
                         button.btn.btn-primary(type='submit') Submit
               .col-xl-6
                 .card.height-equal
-                  .card-header
+                  .card-header.pb-0
                     h3 Validation form
                     p.f-m-light.mt-1
                       | Custom feedback styles apply custom colors, borders, focus styles, and background icons to better communicate feedback.Background icons for 
@@ -199,7 +200,7 @@ html(lang='en')
                           | Looks's Good!
                       .col-12 
                         .card-wrapper.border.rounded-3.checkbox-checked
-                          h6.sub-title.fw-bold Select your payment method
+                          h6.sub-title Select your payment method
                           .radio-form
                             .form-check
                               input#validationFormCheck25.form-check-input(type='radio' name='radio-stacked' required='')
@@ -210,7 +211,7 @@ html(lang='en')
                       .col-12 
                         select.form-select(required='' aria-label='select example')
                           option(value='') Select Your Favorite Pixelstrap theme
-                          option(value='1') wool
+                          option(value='1') Roko
                           option(value='2') Tivo
                           option(value='3') Wingo
                         .invalid-feedback Invalid select feedback

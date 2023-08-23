@@ -14,7 +14,7 @@ html(lang='en')
   body.box-layout
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type.box-layout
+    #pageWrapper.page-wrapper.compact-wrapper.box-layout
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -23,14 +23,15 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | Box Layout
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item Page Layout
                     li.breadcrumb-item.active Box Layout
           // Container-fluid starts
@@ -38,7 +39,7 @@ html(lang='en')
             .row
               .col-sm-12
                 .card.alert.alert-primary(role='alert')
-                  h3.alert-heading Tip!
+                  h4.alert-heading Tip!
                   p
                     | Add class="box-layout" attribute to get this layout. The boxed layout is helpful when working on
                     | large screens because it prevents the site from stretching very wide.
@@ -61,9 +62,8 @@ html(lang='en')
                           i.icofont.icofont-refresh.reload-card
                         li
                           i.icofont.icofont-error.close-card
-                    .card
                   .card-body
-                    span.f-w-500 Start creating your amazing application!
+                    span Start creating your amazing application!
                     .code-box-copy
                       button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#example-head', title='Copy')
                         i.icofont.icofont-copy-alt
@@ -76,7 +76,7 @@ html(lang='en')
                           | &lt;/div&gt;
                           | &lt;!-- Cod Box Copy end --&gt;
                   .card-footer
-                    h5.mb-0.f-w-600 Card Footer
+                    h6.mb-0 Card Footer
           // Container-fluid Ends
         include ../../components/footer
     include ../../components/footer-files

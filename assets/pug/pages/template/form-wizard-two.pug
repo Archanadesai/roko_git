@@ -37,7 +37,7 @@ html(lang='en')
               .col-sm-12 
                .card
                   .card-header
-                    h3 Custom horizontal wizard
+                    h4 Custom horizontal wizard
                   .card-body
                     .horizontal-wizard-wrapper
                       .row.g-3
@@ -48,25 +48,25 @@ html(lang='en')
                                   .stroke-icon-wizard
                                     i.fa.fa-user
                                   .horizontal-wizard-content 
-                                    h4 Personal info
+                                    h6 Personal info
                               a#bank-wizard-tab.nav-link(data-bs-toggle='pill' href='#bank-wizard' role='tab' aria-controls='bank-wizard' aria-selected='false') 
                                 .horizontal-wizard
                                   .stroke-icon-wizard
                                     i.fa.fa-chain-broken
                                   .horizontal-wizard-content 
-                                    h4 Connect bank account
+                                    h6 Connect bank account
                               a#inquiry-wizard-tab.nav-link(data-bs-toggle='pill' href='#inquiry-wizard' role='tab' aria-controls='inquiry-wizard' aria-selected='false') 
                                 .horizontal-wizard
                                   .stroke-icon-wizard
                                     i.fa.fa-group
                                   .horizontal-wizard-content 
-                                    h4 Inquiries
+                                    h6 Inquiries
                               a#successful-wizard-tab.nav-link(data-bs-toggle='pill' href='#successful-wizard' role='tab' aria-controls='successful-wizard' aria-selected='false') 
                                 .horizontal-wizard
                                   .stroke-icon-wizard
                                     i.fa.fa-group
                                   .horizontal-wizard-content 
-                                    h4 Completed 
+                                    h6 Completed 
                         .col-12 
                           #horizontal-wizard-tabContent.tab-content.dark-field
                             #wizard-info.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='wizard-info-tab')
@@ -86,7 +86,7 @@ html(lang='en')
                                 .col-xl-4.col-12
                                   label.form-label(for='customEmail') Email
                                     span.txt-danger *
-                                  input#customEmail.form-control(type='email' required='' placeholder='dunzo@example.com')
+                                  input#customEmail.form-control(type='email' required='' placeholder='Roko@example.com')
                                   .valid-feedback
                                     | Looks good!
                                 .col-xl-5.col-sm-4
@@ -132,7 +132,7 @@ html(lang='en')
                                   .valid-feedback
                                     | Looks good!
                                 .col-12 
-                                  h3 Choose from these popular banks
+                                  h6 Choose from these popular banks
                                   .bank-selection
                                     .form-check.radio.radio-primary.ps-0
                                       ul.radio-wrapper
@@ -212,12 +212,12 @@ html(lang='en')
                                   button.btn.btn-primary Continue 
                             #successful-wizard.tab-pane.fade(role='tabpanel' aria-labelledby='successful-wizard-tab')
                               .form-completed
-                                img(src="../assets/images/gif/dashboard/successful.gif", alt="successful")
+                                img(src="../assets/images/gif/dashboard-8/successful.gif", alt="successful")
                                 h6 Successfully Completed
               .col-sm-12 
                .card
                   .card-header
-                    h3 Business vertical wizard
+                    h4 Business vertical wizard
                   .card-body
                     .horizontal-wizard-wrapper.vertical-options.vertical-variations
                       .row.g-3
@@ -228,37 +228,37 @@ html(lang='en')
                                   .stroke-icon-wizard
                                     span 1
                                   .horizontal-wizard-content 
-                                    h5 Choose account
+                                    h6 Choose account
                               a#bank-n-wizard-tab.nav-link(data-bs-toggle='pill' href='#bank-n-wizard' role='tab' aria-controls='bank-n-wizard' aria-selected='false') 
                                 .horizontal-wizard
                                   .stroke-icon-wizard
                                     span 2
                                   .horizontal-wizard-content 
-                                    h5 Business settings
+                                    h6 Business settings
                               a#inquiry-n-wizard-tab.nav-link(data-bs-toggle='pill' href='#inquiry-n-wizard' role='tab' aria-controls='inquiry-n-wizard' aria-selected='false') 
                                 .horizontal-wizard
                                   .stroke-icon-wizard
                                     span 3
                                   .horizontal-wizard-content 
-                                    h5 Contact details
+                                    h6 Contact details
                               a#pay-n-wizard-tab.nav-link(data-bs-toggle='pill' href='#pay-n-wizard' role='tab' aria-controls='pay-n-wizard' aria-selected='false') 
                                 .horizontal-wizard
                                   .stroke-icon-wizard
                                     span 4
                                   .horizontal-wizard-content 
-                                    h5 Pay details
+                                    h6 Pay details
                               a#successful-n-wizard-tab.nav-link(data-bs-toggle='pill' href='#successful-n-wizard' role='tab' aria-controls='successful-n-wizard' aria-selected='false') 
                                 .horizontal-wizard
                                   .stroke-icon-wizard
                                     span 5
                                   .horizontal-wizard-content 
-                                    h5 Completed
+                                    h6 Completed
                         .col-xl-9
                           #vertical-n-wizard-tabContent.tab-content.dark-field
                             #wizard-n-info.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='wizard-n-info-tab')
                               form.row.g-3.needs-validation(novalidate='')
                                 .col-12
-                                  h4 Select the type of account
+                                  h5 Select the type of account
                                   p It has long been known that distracting information on a page will lose a reader's attention.
                                 .col-12 
                                   .form-check.radio.radio-primary.ps-0.select-account
@@ -298,7 +298,7 @@ html(lang='en')
                                   section.main-upgrade
                                     div
                                       i.fa.fa-rocket
-                                      h4.mb-2
+                                      h5.mb-2
                                         | Select team size with 
                                         span.txt-primary projects
                                       p.text-muted.mb-2 Agile teams are cross-functional and made up of 5-11 on a regular basis team member.
@@ -313,7 +313,7 @@ html(lang='en')
                                         input(type='checkbox')
                                         div.custom--mega-checkbox
                                           ul.d-flex.flex-column
-                                            li dunzo
+                                            li Roko
                                             li.txt-primary 4-5 Members 
                                       .selection-box
                                         input(type='checkbox')
@@ -333,7 +333,7 @@ html(lang='en')
                             #inquiry-n-wizard.tab-pane.fade(role='tabpanel' aria-labelledby='inquiry-n-wizard-tab')
                               form.row.g-3.needs-validation(novalidate='')
                                 .col-12
-                                  h4 Contact details
+                                  h6 Contact details
                                   p Please visit the documentation page if you require further information.
                                 .col-sm-6
                                   label.form-label(for='validationCustom-select') Organization Name
@@ -425,12 +425,12 @@ html(lang='en')
                                   button.btn.btn-primary Continue 
                             #successful-n-wizard.tab-pane.fade(role='tabpanel' aria-labelledby='successful-n-wizard-tab')
                               .form-completed
-                                img(src="../assets/images/gif/dashboard/successful.gif", alt="successful")
+                                img(src="../assets/images/gif/dashboard-8/successful.gif", alt="successful")
                                 h6 Successfully Completed       
               .col-sm-12 
                .card
                   .card-header
-                    h3 Custom vertical wizard
+                    h4 Custom vertical wizard
                   .card-body
                     .horizontal-wizard-wrapper.vertical-options
                       .row.g-3
@@ -441,25 +441,25 @@ html(lang='en')
                                   .stroke-icon-wizard
                                     i.fa.fa-user
                                   .horizontal-wizard-content 
-                                    h4 Personal info
+                                    h6 Personal info
                               a#bank-v-wizard-tab.nav-link(data-bs-toggle='pill' href='#bank-v-wizard' role='tab' aria-controls='bank-v-wizard' aria-selected='false') 
                                 .horizontal-wizard
                                   .stroke-icon-wizard
                                     i.fa.fa-chain-broken
                                   .horizontal-wizard-content 
-                                    h4 Connect bank account
+                                    h6 Connect bank account
                               a#inquiry-v-wizard-tab.nav-link(data-bs-toggle='pill' href='#inquiry-v-wizard' role='tab' aria-controls='inquiry-v-wizard' aria-selected='false') 
                                 .horizontal-wizard
                                   .stroke-icon-wizard
                                     i.fa.fa-group
                                   .horizontal-wizard-content 
-                                    h4 Inquiries
+                                    h6 Inquiries
                               a#successful-v-wizard-tab.nav-link(data-bs-toggle='pill' href='#successful-v-wizard' role='tab' aria-controls='successful-v-wizard' aria-selected='false') 
                                 .horizontal-wizard
                                   .stroke-icon-wizard
                                     i.fa.fa-group
                                   .horizontal-wizard-content 
-                                    h4 Completed 
+                                    h6 Completed 
                         .col-md-9
                           #vertical-wizard-tabContent.tab-content.dark-field
                             #wizard-v-info.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='wizard-v-info-tab')
@@ -479,7 +479,7 @@ html(lang='en')
                                 .col-xxl-4.col-md-6
                                   label.form-label(for='validation-email-wizard') Email
                                     span.txt-danger *
-                                  input#validation-email-wizard.form-control(type='email' required='' placeholder='dunzo@example.com')
+                                  input#validation-email-wizard.form-control(type='email' required='' placeholder='Roko@example.com')
                                   .valid-feedback
                                     | Looks good!
                                 .col-xxl-5.col-md-6
@@ -525,7 +525,7 @@ html(lang='en')
                                   .valid-feedback
                                     | Looks good!
                                 .col-12 
-                                  h4 Choose from these popular banks
+                                  h6 Choose from these popular banks
                                   .bank-selection
                                     .form-check.radio.radio-primary.ps-0
                                       ul.radio-wrapper
@@ -605,12 +605,12 @@ html(lang='en')
                                   button.btn.btn-primary Continue 
                             #successful-v-wizard.tab-pane.fade(role='tabpanel' aria-labelledby='successful-v-wizard-tab')
                               .form-completed
-                                img(src="../assets/images/gif/dashboard/successful.gif", alt="successful")
+                                img(src="../assets/images/gif/dashboard-8/successful.gif", alt="successful")
                                 h6 Successfully Completed          
               .col-sm-12 
                .card
                   .card-header
-                    h3 Business horizontal wizard
+                    h4 Business horizontal wizard
                   .card-body
                     .horizontal-wizard-wrapper.vertical-variations
                       .row.g-3
@@ -621,37 +621,37 @@ html(lang='en')
                                   .stroke-icon-wizard
                                     span 1
                                   .horizontal-wizard-content 
-                                    h5 Choose account
+                                    h6 Choose account
                               a#business-bank-wizard-tab.nav-link(data-bs-toggle='pill' href='#business-bank-wizard' role='tab' aria-controls='business-bank-wizard' aria-selected='false') 
                                 .horizontal-wizard
                                   .stroke-icon-wizard
                                     span 2
                                   .horizontal-wizard-content 
-                                    h5 Business settings
+                                    h6 Business settings
                               a#business-inquiry-wizard-tab.nav-link(data-bs-toggle='pill' href='#business-inquiry-wizard' role='tab' aria-controls='business-inquiry-wizard' aria-selected='false') 
                                 .horizontal-wizard
                                   .stroke-icon-wizard
                                     span 3
                                   .horizontal-wizard-content 
-                                    h5 Contact details
+                                    h6 Contact details
                               a#business-pay-wizard-tab.nav-link(data-bs-toggle='pill' href='#business-pay-wizard' role='tab' aria-controls='business-pay-wizard' aria-selected='false') 
                                 .horizontal-wizard
                                   .stroke-icon-wizard
                                     span 4
                                   .horizontal-wizard-content 
-                                    h5 Pay details
+                                    h6 Pay details
                               a#business-successful-wizard-tab.nav-link(data-bs-toggle='pill' href='#business-successful-wizard' role='tab' aria-controls='business-successful-wizard' aria-selected='false') 
                                 .horizontal-wizard
                                   .stroke-icon-wizard
                                     span 5
                                   .horizontal-wizard-content 
-                                    h5 Completed
+                                    h6 Completed
                         .col-12
                           #business-n-wizard-tabContent.tab-content.dark-field
                             #business-n-info.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='business-n-info-tab')
                               form.row.g-3.needs-validation(novalidate='')
                                 .col-12
-                                  h4 Select the type of account
+                                  h5 Select the type of account
                                   p It has long been known that distracting information on a page will lose a reader's attention.
                                 .col-12 
                                   .form-check.radio.radio-primary.ps-0.select-account
@@ -707,7 +707,7 @@ html(lang='en')
                                         input(type='checkbox')
                                         div.custom--mega-checkbox
                                           ul.d-flex.flex-column
-                                            li dunzo
+                                            li Roko
                                             li.txt-primary 4-5 Members 
                                       .selection-box
                                         input(type='checkbox')
@@ -819,7 +819,7 @@ html(lang='en')
                                   button.btn.btn-primary Continue 
                             #business-successful-wizard.tab-pane.fade(role='tabpanel' aria-labelledby='business-successful-wizard-tab')
                               .form-completed
-                                img(src="../assets/images/gif/dashboard/successful.gif", alt="successful")
+                                img(src="../assets/images/gif/dashboard-8/successful.gif", alt="successful")
                                 h6 Successfully Completed 
           // Container-fluid Ends
         include ../../components/footer

@@ -16,7 +16,7 @@ html(lang='en')
     include ../../components/taptop
     // page-wrapper Start
 
-    #pageWrapper.page-wrapper.compact-sidebar.compact-small.material-icon
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -25,22 +25,22 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | Bookmarks
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
                         svg.stroke-icon
-                          use(href='../assets/svg/icon-sprite.svg#breadcrumb-home')
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item Apps
                     li.breadcrumb-item.active Bookmarks
           // Container-fluid starts
           .container-fluid
             .email-wrap.bookmark-wrap
               .row
-                .col-xl-3.box-col-4e
+                .col-xl-3.box-col-3
                   .md-sidebar
                     a.btn.btn-primary.md-sidebar-toggle(href='javascript:void(0)') bookmark filter
                     .md-sidebar-aside.job-left-aside.custom-scrollbar
@@ -48,19 +48,19 @@ html(lang='en')
                         .card
                           .card-body
                             .email-app-sidebar.left-bookmark
-                              .d-flex
+                              .d-flex.align-items-center
                                 .media-size-email
                                   img.me-3.rounded-circle(src='../assets/images/user/user.png', alt='')
                                 .flex-grow-1
-                                  h4.f-w-700 MARK JENCO
+                                  h3 MARK JENCO
                                   p Markjecno@gmail.com
                               ul.nav.main-menu(role='tablist')
                                 li.nav-item
-                                  button.badge-light-primary.btn-block.btn-mail.w-100(type='button', data-bs-toggle='modal', data-bs-target='#exampleModal')
+                                  button.badge-light-primary.btn-block.btn-mail.txt-primary.w-100(type='button', data-bs-toggle='modal', data-bs-target='#exampleModal')
                                     i.me-2(data-feather='bookmark')
                                     |  New Bookmark
                                 li.nav-item
-                                  span.main-title.f-w-700
+                                  span.main-title
                                     |  Views
                                 li
                                   a#pills-created-tab(data-bs-toggle='pill', href='#pills-created', role='tab', aria-controls='pills-created', aria-selected='true')
@@ -81,7 +81,7 @@ html(lang='en')
                                 li
                                   hr
                                 li
-                                  span.main-title.f-w-700
+                                  span.main-title
                                     |  Tags
                                     span.pull-right
                                       a(href='#', data-bs-toggle='modal', data-bs-target='#createtag')
@@ -110,14 +110,14 @@ html(lang='en')
                                   a#pills-orgenization-tab.show(data-bs-toggle='pill', href='#pills-orgenization', role='tab', aria-controls='pills-orgenization-tab', aria-selected='false')
                                     span.title
                                       |  Orgenization
-                .col-xl-9.col-md-12.box-col-8
+                .col-xl-9.col-md-12.box-col-80
                   .email-right-aside.bookmark-tabcontent
                     .card.email-body.radius-left
                       .ps-0
                         .tab-content
                           #pills-created.tab-pane.fade.active.show(role='tabpanel', aria-labelledby='pills-created-tab')
                             .card.mb-0
-                              .card-header.d-flex.card-no-border.pb-0
+                              .card-header.d-flex.pb-0
                                 h3.mb-0 Created by me
                                 ul
                                   li
@@ -220,7 +220,7 @@ html(lang='en')
                                                     a(href='#')
                                                       i(data-feather='tag')
                                               .content-general
-                                                p.desc_2 cuba is beautifully crafted, clean and modern designed admin theme
+                                                p.desc_2 Cuba is beautifully crafted, clean and modern designed admin theme
                                                 span.collection_2 Fs
                                     .col-xxl-3.col-md-4.col-ed-4
                                       .card.card-with-border.bookmark-card.o-hidden
@@ -369,7 +369,7 @@ html(lang='en')
                                           .desciption-data
                                             .title-bookmark
                                               h3.title_0 Admin Template
-                                              p.weburl_0 http://admin.pixelstrap.com/cuba/ltr/landing-page.html
+                                              p.weburl_0 http://admin.pixelstrap.com/Cuba/ltr/landing-page.html
                                               .hover-block
                                                 ul
                                                   li
@@ -388,7 +388,7 @@ html(lang='en')
                                                     a(href='#')
                                                       i(data-feather='tag')
                                               .content-general
-                                                p.desc_0 cuba is beautifully crafted, clean and modern designed admin theme with 6 different demos and light - dark versions.
+                                                p.desc_0 Cuba is beautifully crafted, clean and modern designed admin theme with 6 different demos and light - dark versions.
                                                 span.collection_0 General
                                     .col-xxl-3.col-md-4.col-ed-4
                                       .card.card-with-border.bookmark-card.o-hidden
@@ -450,7 +450,7 @@ html(lang='en')
                                                     a(href='#')
                                                       i(data-feather='tag')
                                               .content-general
-                                                p.desc_2 cuba is beautifully crafted, clean and modern designed admin theme
+                                                p.desc_2 Cuba is beautifully crafted, clean and modern designed admin theme
                                                 span.collection_2 Fs
                                     .col-xxl-3.col-md-4.col-ed-4
                                       .card.card-with-border.bookmark-card.o-hidden
@@ -633,21 +633,21 @@ html(lang='en')
                             .modal-dialog.modal-lg(role='document')
                               .modal-content
                                 .modal-header
-                                  h5.modal-title Edit Bookmark
+                                  h3.modal-title Edit Bookmark
                                   button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
                                 .modal-body
                                   form.form-bookmark.needs-validation(novalidate='')
                                     .row.g-2
                                       .mb-3.mt-0.col-md-12
                                         label Web Url
-                                        input.form-control#editurl(type='text', required='', autocomplete='off', value='http://admin.pixelstrap.com/cuba/ltr/landing-page.html')
+                                        input.form-control#editurl(type='text', required='', autocomplete='off', value='http://admin.pixelstrap.com/Cuba/ltr/landing-page.html')
                                       .mb-3.mt-0.col-md-12
                                         label Title
                                         input.form-control#edittitle(type='text', required='', autocomplete='off', value='Admin Template')
                                       .mb-3.mt-0.col-md-12
                                         label Description
                                         textarea.form-control#editdesc(required='', autocomplete='off')
-                                          | cuba is beautifully crafted, clean and modern designed admin theme with 6 different demos and light - dark versions.
+                                          | Cuba is beautifully crafted, clean and modern designed admin theme with 6 different demos and light - dark versions.
                                       .mb-3.mt-0.col-md-6
                                         label Group
                                         select.js-example-basic-single
@@ -663,7 +663,7 @@ html(lang='en')
                             .modal-dialog.modal-lg(role='document')
                               .modal-content
                                 .modal-header
-                                  h5.modal-title Create Tag
+                                  h3.modal-title Create Tag
                                   button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
                                 .modal-body
                                   form.form-bookmark.needs-validation(novalidate='')
@@ -673,14 +673,14 @@ html(lang='en')
                                         input.form-control(type='text', required='', autocomplete='off')
                                       .mb-3.mt-0.col-md-12
                                         label Tag color
-                                        input.form-color.d-block(type='color', value='#6271EB')
+                                        input.form-color.d-block(type='color', value='#795EBD')
                                     button.btn.btn-secondary(type='button') Save
                                     button.btn.btn-primary(type='button', data-bs-dismiss='modal') Cancel
                           #exampleModal.modal.fade.modal-bookmark(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
                               .modal-dialog.modal-lg(role='document')
                                 .modal-content
                                   .modal-header
-                                    h5#exampleModalLabel.modal-title Add Bookmark
+                                    h3#exampleModalLabel.modal-title Add Bookmark
                                     button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
                                   .modal-body
                                     form.form-bookmark#bookmark-form.needs-validation(novalidate='')

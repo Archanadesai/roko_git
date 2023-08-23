@@ -9,21 +9,21 @@
     height: 16px;
     cursor: pointer;
   }
-  .flex-grow-1{
-    .price{
-      border: none;
-      padding: 0px;
-    }
-  }
   .btn {
     line-height: 13px;
   }
   .d-flex {
     border: 1px solid $light-background;
     border-radius: 10px;
-    padding: 15px 10px;
+    padding: 15px 0 15px 15px;
     width: 100%;
     position: relative;
+  }
+  .price {
+    &.d-flex {
+      border: none !important;
+      padding: 0;
+    }
   }
   .rating {
     color: #ffaf45;
@@ -31,16 +31,15 @@
   }
   .product-name {
     a {
-      color: rgba($black , 0.9);
+      color: gray;
     }
     h6 {
       margin-bottom: 0;
-      font-weight: 700;
     }
   }
   .btn {
     position: absolute;
-    right: 8px;
+    right: 15px;
     bottom: 15px;
   }
 }
@@ -72,7 +71,6 @@
       border-radius: 5px;
       overflow: hidden;
       input {
-        font-size: 13px;
         width: 44px;
         max-width: 44px;
         background-color: transparent;
@@ -85,9 +83,6 @@
         border-radius: 5px;
         border: 1px solid $light-gray;
         overflow: hidden;
-        input{
-          font-size: 13px;
-        }
       }
       .btn {
         background-color: transparent;

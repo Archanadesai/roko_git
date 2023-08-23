@@ -21,7 +21,6 @@
         }
 
         .btn-link {
-
             &:focus,
             &:hover {
                 text-decoration: none;
@@ -30,7 +29,7 @@
 
         .card-header {
             padding: $according-card-header-padding;
-            border: $card-border-color;
+            border: $card-border;
 
             i {
                 position: absolute;
@@ -45,7 +44,7 @@
         }
 
         .card-body {
-            border: $card-border-color;
+            border: $card-border;
             border-top: none;
         }
     }
@@ -186,7 +185,6 @@ $accordion-light-color: $light-primary,
 .accordion-border {
     .accordion-item {
         border: 0;
-        background-color: transparent;
     }
 }
 

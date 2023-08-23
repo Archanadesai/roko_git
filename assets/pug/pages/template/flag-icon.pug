@@ -14,7 +14,7 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -23,15 +23,15 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | Flag Icons
-
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item Icons
                     li.breadcrumb-item.active Flag Icons
           // Container-fluid starts
@@ -39,7 +39,7 @@ html(lang='en')
             .row
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Flag Icons
                   .card-body
                     .row.icon-lists.flag-icons
@@ -342,7 +342,7 @@ html(lang='en')
                           i.flag-icon.flag-icon-cu
                           .flex-grow-1.align-self-center
                             h5 CU
-                            h6.mt-0 wool Flag
+                            h6.mt-0 Roko Flag
                       .col-12.col-sm-6.col-xl-4
                         .d-flex
                           i.flag-icon.flag-icon-cv
@@ -738,7 +738,7 @@ html(lang='en')
                           i.flag-icon.flag-icon-km
                           .flex-grow-1.align-self-center
                             h5 KM
-                            h6.mt-0 Comoros Flag
+                            h6.mt-0 Rokoros Flag
                       .col-12.col-sm-6.col-xl-4
                         .d-flex
                           i.flag-icon.flag-icon-kn

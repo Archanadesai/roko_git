@@ -2,8 +2,8 @@
    2.20 List CSS Start
 ==========================**/
 .list-group-item.active {
-	background-color: $primary-color;
-	border-color: $primary-color;
+	background-color: var(--theme-default);
+	border-color: var(--theme-default);
 }
 
 .list-group {
@@ -115,12 +115,42 @@ $list-light-color: $light-primary,
 
 .list-behavior-1 {
 	@media (max-width: 1199px) {
-		flex-direction: column;
 		gap: 12px;
+	}
+
+	@media (max-width:575px) {
+		&:first-child {
+			margin-bottom: 14px;
+		}
+	}
+
+	img {
+		@media (max-width:1999px) {
+			height: 86px;
+		}
+
+		@media (max-width:992px) {
+			height: 70px;
+		}
 	}
 
 	.flex-grow-1 {
 		margin-left: 16px;
+
+		@media (max-width:1199px) {
+			margin-left: 0;
+
+			p {
+				display: block;
+				display: -webkit-box;
+				max-width: 100%;
+				margin: 0 auto;
+				-webkit-line-clamp: 3;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+		}
 
 		[dir="rtl"] & {
 			margin-right: 16px;
@@ -129,17 +159,18 @@ $list-light-color: $light-primary,
 	}
 }
 
-.list-behavior-2 {
-	@media (max-width: 1199px) {
-		display: none;
-	}
+.list-behaviors {
+	>div:nth-child(even) {
+		.flex-grow-1 {
+			order: -1;
+			margin-left: unset;
+			margin-right: 16px;
 
-	.flex-grow-1 {
-		margin-right: 16px;
-
-		[dir="rtl"] & {
-			margin-left: 16px;
-			margin-right: unset;
+			@media (max-width:1199px) {
+				margin-left: 0;
+				margin-right: 0;
+				order: unset;
+			}
 		}
 	}
 }
@@ -160,6 +191,41 @@ $list-light-color: $light-primary,
 				margin-right: unset;
 			}
 		}
+	}
+}
+
+
+.contact-profile {
+	@media (max-width:1216px) {
+		background-color: unset;
+
+		&.list-light-dark {
+			&:hover {
+				background-color: unset;
+			}
+		}
+	}
+}
+
+
+.badge-list {
+	.list-group-item {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: wrap;
+
+		div {
+			margin-right: auto;
+			margin-left: 8px;
+
+			[dir="rtl"] & {
+				margin-left: auto;
+				margin-right: 8px;
+			}
+
+		}
+
 	}
 }
 

@@ -12,7 +12,7 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -21,14 +21,15 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | Mega Options
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item Form Controls
                     li.breadcrumb-item.active Mega options
           // Container-fluid starts
@@ -36,7 +37,7 @@ html(lang='en')
             .row
               .col-12 
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 Variation radio
                     p.f-m-light.mt-1 
                       | Use the 
@@ -46,7 +47,7 @@ html(lang='en')
                     .row.g-3
                       .col-xl-4.col-md-6
                         .card-wrapper.border.rounded-3.h-100.checkbox-checked
-                          h6.sub-title.fw-bold Select your payment method
+                          h6.sub-title Select your payment method
                           .payment-wrapper
                             .payment-first
                               .form-check.radio.radio-primary
@@ -81,7 +82,7 @@ html(lang='en')
                               img.img-fluid(src="../assets/images/ecommerce/visa.png", alt="card")
                       .col-xl-4.col-md-6
                         .card-wrapper.border.rounded-3.h-100.checkbox-checked
-                          h6.sub-title.fw-bold What are the most important things to learn about web design?
+                          h6.sub-title What are the most important things to learn about web design?
                           .payment-wrapper
                             .payment-first
                               .form-check.radio.radio-primary
@@ -108,7 +109,7 @@ html(lang='en')
                                   | D. Above the all 
                       .col-xl-4
                         .card-wrapper.border.rounded-3.h-100.checkbox-checked
-                          h6.sub-title.fw-bold Radios With Creative Options & SVG Icons
+                          h6.sub-title Radios With Creative Options & SVG Icons
                           .payment-wrapper
                             .payment-first
                               .form-check.radio.radio-primary
@@ -147,7 +148,7 @@ html(lang='en')
                                 use(href='../assets/svg/icon-sprite.svg#stroke-email')
               .col-sm-12 
                 .card 
-                  .card-header 
+                  .card-header.pb-0 
                     h3 Variation checkbox 
                     p.f-m-light.mt-1 
                       | We can create any creative design by using 
@@ -155,9 +156,9 @@ html(lang='en')
                       | attribute.
                   .card-body 
                     .row.g-3
-                      .col-xl-4.col-md-6
-                        .card-wrapper.border.rounded-3
-                          h6.sub-title.fw-bold Which of the following activities do you enjoy doing in your free time?
+                      .col-xl-4.col-md-5
+                        .card-wrapper.border.rounded-3.h-100.checkbox-checked
+                          h6.sub-title Which of the following activities do you enjoy doing in your free time?
                           .payment-wrapper
                             .payment-first
                               .form-check.checkbox.checkbox-success
@@ -188,46 +189,43 @@ html(lang='en')
                                 input#check-e.form-check-input(type='checkbox')
                                 label.form-check-label.mb-0(for='check-e')
                                   | Painting/Drawing
-                      .col-xl-8.col-md-6
+                      .col-xl-8.col-md-7
                         .card-wrapper.border.rounded-3.h-100.checkbox-checked
                           section.main-upgrade
-                            i.fa.fa-rocket
-                            h6.mb-2
-                              | It&apos;s time to 
-                              span.txt-primary upgrade
-                            p.text-muted.mb-2 Select the theme that best suits your requirements, and you're ready to go!
+                            div 
+                              i.fa.fa-rocket
+                              h5.mb-2
+                                | It&apos;s time to 
+                                span.txt-primary upgrade
+                              p.text-muted.mb-2 Select the theme that best suits your requirements, and you're ready to go!
                             .variation-box
                               .selection-box
                                 input#feature1(type='checkbox')
                                 div.custom--mega-checkbox
                                   ul.d-flex.flex-column
-                                    li Tivo
-                                    li.txt-danger 60 Sales
-                                    li + $18
+                                    li Voxo
+                                    li.txt-primary 270 Sales
                               .selection-box
                                 input#feature2(type='checkbox')
                                 div.custom--mega-checkbox
                                   ul.d-flex.flex-column
-                                    li wool
-                                    li.txt-danger 4.6K Sales
-                                    li + $16
+                                    li Roko
+                                    li.txt-primary 4.8K Sales
                               .selection-box
                                 input#feature3(type='checkbox')
                                 div.custom--mega-checkbox
                                   ul.d-flex.flex-column
                                     li Multikart 
-                                    li.txt-danger 2.5k Sales
-                                    li + $24
+                                    li.txt-primary 2.6k Sales
                               .selection-box
                                 input#feature4(type='checkbox' checked='')
                                 div.custom--mega-checkbox
                                   ul.d-flex.flex-column
                                     li Viho
-                                    li.txt-danger 2k Sales
-                                    li + $29
-              .col-sm-12.col-xxl-6.box-col-12
+                                    li.txt-primary 2k Sales
+              .col-sm-12.col-xxl-6.box-col-6
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 Default style
                     p.f-m-light.mt-1 
                       | This option is show by default you don't need to add any extra class.
@@ -259,9 +257,9 @@ html(lang='en')
                   .card-footer.text-end
                     button.btn.btn-primary.m-r-15(type='submit') Submit
                     button.btn.btn-light(type='submit') Cancel
-              .col-sm-12.col-xxl-6.box-col-12
+              .col-sm-12.col-xxl-6.box-col-6
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 Without borders style
                     p.f-m-light.mt-1 
                       | By adding 
@@ -296,10 +294,10 @@ html(lang='en')
                                     span Plans for 2 years projects offered to new clients.
                   .card-footer.text-end
                     button.btn.btn-warning.m-r-15(type='submit') Submit
-                    button.btn.bg-light-warning(type='submit') Cancel
-              .col-sm-12.col-xxl-6.box-col-12
+                    button.btn.list-light-warning(type='submit') Cancel
+              .col-sm-12.col-xxl-6.box-col-6
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 Solid border style
                     p.f-m-light.mt-1 
                       | Use the 
@@ -339,9 +337,9 @@ html(lang='en')
                   .card-footer.text-end
                     button.btn.btn-primary.m-r-15(type='submit') Submit
                     button.btn.btn-light(type='submit') Cancel
-              .col-sm-12.col-xxl-6.box-col-12
+              .col-sm-12.col-xxl-6.box-col-6
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 Offer style border
                     p.f-m-light.mt-1 
                       | Use the 
@@ -380,10 +378,10 @@ html(lang='en')
                                           | Flowers have long been used to express feelings and sentiments, and each bloom has its own distinct significance. For instance, while daisies signify innocence and purity.
                   .card-footer.text-end
                     button.btn.btn-success.m-r-15(type='submit') Submit
-                    button.btn.bg-light-success(type='submit') Cancel
+                    button.btn.list-light-success(type='submit') Cancel
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 Inline style
                     p.f-m-light.mt-1 
                       | For Create inline megaoption add 
@@ -438,10 +436,10 @@ html(lang='en')
                                     span Estimated 15 Day Shipping ( Duties end taxes may be due upon delivery )
                   .card-footer.text-end
                     button.btn.btn-warning.m-r-15(type='submit') Submit
-                    button.btn.bg-light-warning(type='submit') Cancel
+                    button.btn.list-light-warning(type='submit') Cancel
               .col-sm-12.col-xxl-6.box-col-12
                 .card.height-equal
-                  .card-header
+                  .card-header.pb-0
                     h3 Vertical style
                     p.f-m-light.mt-1
                       | vertical style in mega-options. Use the 
@@ -538,7 +536,7 @@ html(lang='en')
               
               .col-sm-12.col-xxl-6.box-col-12
                 .card.height-equal
-                  .card-header
+                  .card-header.pb-0
                     h3 Horizontal style
                     p.f-m-light.mt-1
                       | horizontal style in mega-options. Use the 
@@ -598,7 +596,7 @@ html(lang='en')
                                 label.form-check-label.mb-0.w-100(for='radio33')
                                   span.flex-grow-1
                                     span.mt-0.mega-title-badge
-                                      | Wool
+                                      | Tivo
                                       span.badge.badge-info.pull-right.digits 150 INR
                                     span.rating-star-wrapper
                                       i.icofont.icofont-star.txt-warning

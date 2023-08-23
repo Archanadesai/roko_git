@@ -14,7 +14,7 @@ html(lang='en')
   body.dark-only
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -23,15 +23,15 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | Layout Dark
-
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item Page Layout
                     li.breadcrumb-item.active  Layout Dark
           // Container-fluid starts
@@ -45,7 +45,7 @@ html(lang='en')
               .col-sm-12
                 .card
                   .card-header
-                    h5 Title
+                    h3 Title
                     .card-header-right
                       ul.list-unstyled.card-option
                         li

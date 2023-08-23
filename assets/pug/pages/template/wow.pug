@@ -16,7 +16,7 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -25,14 +25,15 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | Wow Animation
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item Animation
                     li.breadcrumb-item.active Wow Animation
           // Container-fluid starts
@@ -40,7 +41,7 @@ html(lang='en')
             .row
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0.pb-0
                     h3 WOW Example animation
                   .card-body
                     #aniimated-thumbnials.row.gallery.grid.my-gallery(itemscope='')
@@ -213,7 +214,7 @@ html(lang='en')
                           .pswp__caption
                             .pswp__caption__center
                 .card
-                  .card-header.wow-title
+                  .card-header.pb-0.wow-title
                     h3
                       span.badge.badge-primary.rounded-pill.me-2 1
                       | Setup wow.js
@@ -225,7 +226,7 @@ html(lang='en')
                           span
                             | &lt;link rel="stylesheet" href="css/animate.css" &gt;
                 .card
-                  .card-header.wow-title
+                  .card-header.pb-0.wow-title
                     h3
                       span.badge.badge-primary.rounded-pill.me-2 2
                       | Link and activate wow.js
@@ -234,19 +235,19 @@ html(lang='en')
                       .line
                         | &lt; script src="js/wow.min.js" &gt; &lt; /script &gt; <br />&lt; script &gt; <br /><code>  WOW.init();</code><br />&lt; /script &gt;
                 .card
-                  .card-header.wow-title
+                  .card-header.pb-0.wow-title
                     h3
                       span.badge.badge-primary.rounded-pill.me-2 3
                       | Make an element revealable
                     span (You can change this CSS class in the WOW settings to avoid name conflicts.)
                   .card-body
-                    h6.text-muted
+                    h4.text-muted
                       | Add the CSS class .wow to a HTML element: it will be invisible until the user scrolls to reveal it.
                     div
                       .line
                         | &lt; div class="wow" &gt; <br /><code>Content to Reveal Here</code><br />&lt; /div &gt;
                 .card
-                  .card-header.wow-title
+                  .card-header.pb-0.wow-title
                     h3
                       span.badge.badge-primary.rounded-pill.me-2 4
                       | Choose the animation style
@@ -257,7 +258,7 @@ html(lang='en')
                       .line
                         | &lt; div class="wow bounceInUp" &gt; <br /><code>Content to Reveal Here</code><br />&lt; /div &gt;
                 .card
-                  .card-header.wow-title
+                  .card-header.pb-0.wow-title
                     h3
                       span.badge.badge-success.rounded-pill.me-2 Extra
                       | Advance Options
@@ -277,11 +278,11 @@ html(lang='en')
                           strong data-wow-iteration: 
                           | Number of times the animation is repeated
                           br
-                        pre.mb-0.custom-scrollbar
+                        pre.mb-0
                           | &lt;section class="wow slideInLeft" data-wow-duration="2s" data-wow-delay="5s"&gt;<br /> &lt;/section&gt;<br /> &lt;section class="wow slideInRight" data-wow-offset="10" data-wow-iteration="10"&gt;<br /> &lt;/section&gt;
 
                 .card
-                  .card-header.wow-title
+                  .card-header.pb-0.wow-title
                     h3
                       span.badge.badge-danger.rounded-pill.me-2 Settings
                       | Customize Settings
@@ -305,7 +306,7 @@ html(lang='en')
                         p
                           strong live: 
                           | consatantly check for new WOW elements on the page.
-                        pre.mb-0.custom-scrollbar
+                        pre.mb-0
                           | wow = new WOW(<br /> {<br /> boxClass: 'wow', // default<br /> animateClass: 'animated', // default<br /> offset: 0, // default<br /> mobile: true, // default<br /> live: true // default<br /> }<br /> )<br /> wow.init();                    
                         // Page Body Ends                   
                         // Container-fluid Ends

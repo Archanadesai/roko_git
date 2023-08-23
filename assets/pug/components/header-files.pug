@@ -3,16 +3,17 @@ head
   meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
   meta(http-equiv='X-UA-Compatible', content='IE=edge')
   meta(name='viewport', content='width=device-width, initial-scale=1.0')
-  meta(name='description', content='wool admin is super flexible, powerful, clean & modern responsive bootstrap 5 admin template with unlimited possibilities.')
-  meta(name='keywords', content='admin template, wool admin template, dashboard template, flat admin template, responsive admin template, web app')
+  meta(name='description', content='Roko admin is super flexible, powerful, clean & modern responsive bootstrap 5 admin template with unlimited possibilities.')
+  meta(name='keywords', content='admin template, Roko admin template, dashboard template, flat admin template, responsive admin template, web app')
   meta(name='author', content='pixelstrap')
   link(rel='icon', href='../assets/images/favicon.png', type='image/x-icon')
   link(rel='shortcut icon', href='../assets/images/favicon.png', type='image/x-icon')
-  title wool - Premium Admin Template
+  title Roko - Premium Admin Template
   // Google font
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Nunito+Sans:wght@200;300;400;600;700;800;900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400;500;600&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap' rel='stylesheet')
+
   if landing_font 
     link(rel='preconnect' href='https://fonts.googleapis.com')
     link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
@@ -43,6 +44,12 @@ head
     link(rel='stylesheet', type='text/css', href='../assets/css/vendors/jquery-ui.css')
   if scrollbar        
     link(rel='stylesheet', type='text/css', href='../assets/css/vendors/scrollbar.css') 
+  if editors
+    //- link(rel='stylesheet', type='text/css', href='../assets/css/vendors/quill.min.css') 
+    link(rel='stylesheet', type='text/css', href='../assets/css/vendors/quill.snow.css') 
+
+
+
   if jsgrid
     link(rel='stylesheet', type='text/css', href='../assets/css/vendors/jsgrid.css')
   if animate
@@ -63,19 +70,25 @@ head
     link(rel='stylesheet', type='text/css', href='../assets/css/vendors/date-time-picker.css')
   if datatable_extension
     link(rel='stylesheet', type='text/css', href='../assets/css/vendors/datatable-extension.css')
+  
+  if js_datatables 
+    link(rel='stylesheet', type='text/css', href='../assets/css/vendors/js-datatables/style.css')
+
+  if select2 
+    link(rel='stylesheet', type='text/css', href='../assets/css/vendors/select2.css')
   if select2_options 
     link(rel='stylesheet', type='text/css', href='../assets/css/vendors/intltelinput.min.css')
     link(rel='stylesheet', type='text/css', href='../assets/css/vendors/tagify.css')
   if date_picker
     link(rel='stylesheet', type='text/css', href='../assets/css/vendors/date-picker.css')
-  if editors
-    link(rel='stylesheet', type='text/css', href='../assets/css/vendors/quill.snow.css') 
   if flatpickr 
     link(rel="stylesheet",  type='text/css' href='../assets/css/vendors/flatpickr/flatpickr.min.css')
   if date_rangepicker
     link(rel='stylesheet', type='text/css', href='../assets/css/vendors/daterange-picker.css')
   if dropzone
     link(rel='stylesheet', type='text/css', href='../assets/css/vendors/dropzone.css')
+  if typehead2 
+    link(rel='stylesheet', type='text/css', href='../assets/css/vendors/autoComplete.min.css')
   if filepond
     link(rel='stylesheet', type='text/css', href='../assets/css/vendors/filepond.css')
     link(rel='stylesheet', type='text/css', href='../assets/css/vendors/filepond-plugin-image-preview.css')
@@ -93,6 +106,7 @@ head
     link(rel='stylesheet', type='text/css', href='../assets/css/vendors/rating.css')
   if scrollable
     link(rel='stylesheet', type='text/css', href='../assets/css/vendors/scrollable.css')
+  
   if simple_mde
     link(rel='stylesheet', type='text/css', href='../assets/css/vendors/simple-mde.css')
   if summernote
@@ -101,8 +115,6 @@ head
     link(rel='stylesheet', type='text/css', href='../assets/css/vendors/svg-icon.css')
   if sweetalert2
     link(rel='stylesheet', type='text/css', href='../assets/css/vendors/sweetalert2.css')
-  if select2
-    link(rel='stylesheet', type='text/css', href='../assets/css/vendors/select2.css')
   if time_picker
     link(rel='stylesheet', type='text/css', href='../assets/css/vendors/timepicker.css')
   if todo
@@ -119,6 +131,8 @@ head
     link(rel='stylesheet', type='text/css', href='../assets/css/vendors/leaflet.css')
   if documents 
     link(rel='stylesheet', type='text/css', href='../assets/css/document.css')
+  if coustom_calendar
+    link(rel='stylesheet', type='text/css', href='../assets/css/vendors/fullcalender.css')
   // Plugins css Ends
 
   // Bootstrap css

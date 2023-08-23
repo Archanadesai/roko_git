@@ -12,7 +12,7 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -21,21 +21,22 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | Learning List
 
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item Learning
                     li.breadcrumb-item.active Learning List
           // Container-fluid starts
           .container-fluid
             .row
-              .col-xl-9.xl-60.order-xl-0.order-1.box-col-12
+              .col-xxl-9.col-xl-8.box-col-8
                 .row
                   .col-xl-12
                     .card
@@ -46,15 +47,15 @@ html(lang='en')
                           .blog-details
                             .blog-date
                               span 05
-                              |  January 2022
-                            h6 Java Language 
+                              |  January 2023
+                            h3 Java Language 
                             .blog-bottom-content
                               ul.blog-social
                                 li by: Paige Turner
                                 li 15 Hits
                               hr
                               p.mt-0
-                                | inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit.
+                                | Java is an object-oriented programming language. Sun Microsystems first released Java in the year 1995. It is popularly used for developing Java applications in data centers, laptops, cell phones, game consoles, and scientific supercomputers. There are multiple websites and applications which will not work if Java is not installed.
                   .col-xl-12
                     .card
                       .blog-box.blog-list.row
@@ -64,15 +65,15 @@ html(lang='en')
                           .blog-details
                             .blog-date
                               span 10
-                              |  March 2022
-                            h6 Web Development 
+                              |  March 2023
+                            h3 Web Development 
                             .blog-bottom-content
                               ul.blog-social
                                 li by: Petey Cruiser
                                 li 34 Hits
                               hr
                               p.mt-0
-                                | inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit.
+                                | Web development is the work involved in developing a website for the Internet or an intranet (a private network).Web development can range from developing a simple single static page of plain text to complex web applications, electronic businesses, and social network services, and many more such applications and websites are being created every day.
                   .col-xl-4.xl-50.col-sm-6.box-col-6
                     .card
                       .blog-box.blog-grid.text-center.product-box
@@ -86,11 +87,11 @@ html(lang='en')
                                 i.icon-import
                         .blog-details-main
                           ul.blog-social
-                            li 9 April 2018
+                            li 9 April 2023
                             li by: Admin
                             li 0 Hits
                           hr
-                          h6.blog-bottom-details Perspiciatis unde omnis iste natus error sit.Dummy text
+                          h6.blog-bottom-details This course is designed to start you on a path toward future studies in web development and design.
                   .col-xl-4.xl-50.col-sm-6.box-col-6
                     .card
                       .blog-box.blog-grid.text-center.product-box
@@ -104,11 +105,11 @@ html(lang='en')
                                 i.icon-import
                         .blog-details-main
                           ul.blog-social
-                            li 9 April 2018
+                            li 9 April 2023
                             li by: Admin
                             li 0 Hits
                           hr
-                          h6.blog-bottom-details Perspiciatis unde omnis iste natus error sit.Dummy text
+                          h6.blog-bottom-details A Web Designing course belongs to the field of Computer Science and IT. It enables students to learn
                   .col-xl-4.xl-50.col-sm-6.box-col-6
                     .card
                       .blog-box.blog-grid.text-center.product-box
@@ -122,11 +123,11 @@ html(lang='en')
                                 i.icon-import
                         .blog-details-main
                           ul.blog-social
-                            li 9 April 2018
+                            li 9 April 2023
                             li by: Admin
                             li 0 Hits
                           hr
-                          h6.blog-bottom-details Perspiciatis unde omnis iste natus error sit.Dummy text
+                          h6.blog-bottom-details User interface design (UI) is the design for machines and software, such as mobile devices, computers.
                   .col-xl-4.xl-50.col-sm-6.box-col-6
                     .card
                       .blog-box.blog-grid.text-center.product-box
@@ -140,11 +141,11 @@ html(lang='en')
                                 i.icon-import
                         .blog-details-main
                           ul.blog-social
-                            li 9 April 2018
+                            li 9 April 2023
                             li by: Admin
                             li 0 Hits
                           hr
-                          h6.blog-bottom-details Perspiciatis unde omnis iste natus error sit.Dummy text
+                          h6.blog-bottom-details Spoken English Courses are pursued by candidates from all levels to improve their communication skills.
                   .col-xl-4.xl-50.col-sm-6.box-col-6
                     .card
                       .blog-box.blog-grid.text-center.product-box
@@ -158,11 +159,11 @@ html(lang='en')
                                 i.icon-import
                         .blog-details-main
                           ul.blog-social
-                            li 9 April 2018
+                            li 9 April 2023
                             li by: Admin
                             li 0 Hits
                           hr
-                          h6.blog-bottom-details Perspiciatis unde omnis iste natus error sit.Dummy text
+                          h6.blog-bottom-details This course is designed to start you on a path toward future studies in web development and design.
                   .col-xl-4.xl-50.col-sm-6.box-col-6
                     .card
                       .blog-box.blog-grid.text-center.product-box
@@ -176,12 +177,12 @@ html(lang='en')
                                 i.icon-import
                         .blog-details-main
                           ul.blog-social
-                            li 9 April 2018
+                            li 9 April 2023
                             li by: Admin
                             li 0 Hits
                           hr
-                          h6.blog-bottom-details Perspiciatis unde omnis iste natus error sit.Dummy text
-              .col-xl-3.xl-40.box-col-12.learning-filter
+                          h6.blog-bottom-details A Web Development course belongs to the field of Computer Science and IT. It enables students to learn
+              .col-xxl-3.col-xl-4.box-col-4e
                 .md-sidebar
                   a.btn.btn-primary.email-aside-toggle.md-sidebar-toggle Learning filter
                   .md-sidebar-aside.job-sidebar
@@ -294,7 +295,7 @@ html(lang='en')
                                     span.f-w-600 UX Development
                                     span.d-block
                                       | Course By 
-                                      a(href='#')   Development Team
+                                      a(href='#')  Development Team
                                     span.d-block
                                       i.fa.fa-star.font-warning
                                       i.fa.fa-star.font-warning

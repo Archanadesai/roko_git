@@ -11,7 +11,7 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -20,14 +20,15 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | Table Components
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item Bootstrap Tables
                     li.breadcrumb-item.active Table Components
           // Container-fluid starts                    
@@ -37,7 +38,7 @@ html(lang='en')
               .col-sm-12
                 .card
                   .card-header
-                    h5 UI Components
+                    h3 UI Components
                   div
                     .card-block.row
                       .col-sm-12.col-lg-12.col-xl-12
@@ -117,7 +118,7 @@ html(lang='en')
               .col-sm-12
                 .card
                   .card-header
-                    h5 Alerts
+                    h3 Alerts
                   div
                     .card-block.row
                       .col-sm-12.col-lg-12.col-xl-12
@@ -201,7 +202,7 @@ html(lang='en')
               .col-sm-12
                 .card
                   .card-header
-                    h5 Progressbar
+                    h3 Progressbar
                   div
                     .card-block.row
                       .col-sm-12.col-lg-12.col-xl-12
@@ -243,7 +244,7 @@ html(lang='en')
               .col-sm-12
                 .card
                   .card-header
-                    h5 Checkbox
+                    h3 Checkbox
                   div
                     .card-block.row
                       .col-sm-12.col-lg-12.col-xl-12
@@ -330,7 +331,7 @@ html(lang='en')
               .col-sm-12
                 .card
                   .card-header
-                    h5 Radio Buttons
+                    h3 Radio Buttons
                   div
                     .card-block.row
                       .col-sm-12.col-lg-12.col-xl-12
@@ -407,7 +408,7 @@ html(lang='en')
               .col-sm-12
                 .card
                   .card-header
-                    h5 Select 
+                    h3 Select 
                   div
                     .card-block.row
                       .col-sm-12.col-lg-12.col-xl-12
@@ -479,7 +480,7 @@ html(lang='en')
               .col-sm-12
                 .card
                   .card-header
-                    h5 Input
+                    h3 Input
                   div
                     .card-block.row
                       .col-sm-12.col-lg-12.col-xl-12
@@ -507,7 +508,7 @@ html(lang='en')
               .col-sm-12
                 .card
                   .card-header
-                    h5 Badges
+                    h3 Badges
                   div
                     .card-block.row
                       .col-sm-12.col-lg-12.col-xl-12
@@ -543,7 +544,7 @@ html(lang='en')
               .col-sm-12
                 .card
                   .card-header
-                    h5 Tooltip Triggers
+                    h3 Tooltip Triggers
                   div
                     .card-block.row
                       .col-sm-12.col-lg-12.col-xl-12
@@ -580,7 +581,7 @@ html(lang='en')
               .col-sm-12
                 .card
                   .card-header
-                    h5 SWITCH
+                    h3 Switch
                   div
                     .card-block.row
                       .col-sm-12.col-lg-12.col-xl-12

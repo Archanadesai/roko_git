@@ -22,10 +22,10 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | Two Factor
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
@@ -40,14 +40,14 @@ html(lang='en')
                 .card
                   .card-body.authentication-body
                     .authentication-wrapper
-                      h3 Two-factor authentication
+                      h4 Two-factor authentication
                       p Click on the authentication button below and scan the QR code
                       img(src="../assets/images/forms/qr-scan.png", alt="qr-scan")
                     #exampleModalToggle.modal.fade(aria-hidden='true' aria-labelledby='exampleModalToggle' tabindex='-1')
                       .modal-dialog.modal-dialog-centered
                         .modal-content
                           .modal-header
-                            h3#exampleModalLongTitle.modal-title Two-factor authentication
+                            h5#exampleModalLongTitle.modal-title Two-factor authentication
                             button.btn-close.py-0(type='button', data-bs-dismiss='modal', aria-label='Close')
                           .modal-body
                             .modal-toggle-wrapper
@@ -76,7 +76,7 @@ html(lang='en')
                       .modal-dialog.modal-dialog-centered
                         .modal-content
                           .modal-header
-                            h3#exampleModalLongTitle1.modal-title Scan QR code
+                            h5#exampleModalLongTitle1.modal-title Scan QR code
                             button.btn-close.py-0(type='button', data-bs-dismiss='modal', aria-label='Close')
                           .modal-body.main-qr-code
                             .modal-toggle-wrapper
@@ -90,7 +90,7 @@ html(lang='en')
                                     i.fa.fa-exclamation-triangle
                                     div
                                       span If your qr code is not working then enter this code in your input field.
-                                      span.f-w-600 TYU78DE29OLAAWCVNTYFGESWQ31098QW
+                                      span.f-w-500 TYU78DE29OLAAWCVNTYFGESWQ31098QW
                                     button.btn-close(type='button', data-bs-dismiss='alert', aria-label='Close')
                               form.needs-validation(novalidate='')
                                 input#AccountName.form-control(type='text' required='' placeholder="Enter QR Code")
@@ -109,7 +109,7 @@ html(lang='en')
                               .authenticate
                                 img.img-fluid(src="../assets/images/forms/email.png", alt="")
                             .col-xxl-8.box-col-7
-                              h3 Email verification
+                              h4 Email verification
                               p A verification code has been sent to your email. This code will be valid for 15 minutes.
                               .input-group.mb-3
                                 input.form-control(type='text' placeholder="Please enter the code here" aria-label="basic-addon2" aria-describedby='basic-addon2')
@@ -117,13 +117,13 @@ html(lang='en')
                       .col-md-6
                         .card-wrapper.border.rounded-3.h-100
                           .authenticate
-                            h3 Verification code
+                            h4 Verification code
                             img.img-fluid(src="../assets/images/forms/authenticate.png", alt="authenticate")
                             span We've sent a verification code to
                             span +91********70
                             form.row
                               .col 
-                                h3 Your OTP Code here:
+                                h5 Your OTP Code here:
                               .col.otp-generate
                                 input.form-control.code-input(type="text" maxlength="1" pattern="[0-9]" required)
                                 input.form-control.code-input(type="text" maxlength="1" pattern="[0-9]" required)

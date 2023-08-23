@@ -27,7 +27,7 @@
       }
     }
     h4 {
-      font-weight: 600;
+      font-weight: 500;
       padding-bottom: 15px;
       margin-bottom: 15px;
       border-bottom: 1px solid #eee;
@@ -105,6 +105,13 @@
 .badge {
   &.pull-right {
     padding-top: 6px;
+  }
+}
+.knowledgebase {
+  .bg-primary {
+    .card-body {
+      background-color: transparent;
+    }
   }
 }
 /**=====================

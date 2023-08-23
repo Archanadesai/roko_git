@@ -7,7 +7,7 @@
 // │ Licensed under the MIT (https://github.com/DmitryBaranovskiy/raphael/blob/master/license.txt) license.│ \\
 // └───────────────────────────────────────────────────────────────────────────────────────────────────────┘ \\
 
-(function webpackwoolModuleDefinition(root, factory) {
+(function webpackRokoModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
 	else if(typeof define === 'function' && define.amd)
@@ -3159,7 +3159,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     |     paper.circle(10 + 15 * i, 10, 10)
 	     |          .attr({fill: "#000"})
 	     |          .data("i", i)
-	     |          .on("click", function (){
+	     |          .click(function () {
 	     |             alert(this.data("i"));
 	     |          });
 	     | }

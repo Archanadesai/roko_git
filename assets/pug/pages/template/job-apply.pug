@@ -14,13 +14,13 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
         include ../../components/sidebar
         .page-body
-          .container-fluid 
+          .container-fluid
             .page-title
               .row
                 .col-sm-6.ps-0
@@ -31,13 +31,14 @@ html(lang='en')
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item Job Search
                     li.breadcrumb-item.active Apply
           // Container-fluid starts
           .container-fluid
             .row
-              .col-xxl-3.col-xl-4.box-col-4
+              .col-xxl-3.col-xl-4.box-col-4e
                 .md-sidebar
                   a.btn.btn-primary.email-aside-toggle.md-sidebar-toggle Job filter
                   .md-sidebar-aside.job-sidebar
@@ -176,14 +177,14 @@ html(lang='en')
                                   input#chk-ani26.checkbox_animated(type='checkbox')
                                   |                           Angular.js
                               button.btn.btn-block.btn-primary.text-center(type='button') All Skills
-              .col-xxl-9.col-xl-8.box-col-9
+              .col-xxl-9.col-xl-8.box-col-8
                 .card
                   .job-search
                     .card-body.pb-0
                       .d-flex
                         img.img-40.img-fluid.m-r-20(src='../assets/images/job-search/1.jpg', alt='')
                         .flex-grow-1
-                          h6.f-w-700
+                          h3.f-w-600
                             a(href='#') UI Designer
                             span.pull-right
                               button.btn.btn-primary(type='button')
@@ -199,7 +200,7 @@ html(lang='en')
                               i.fa.fa-star.font-warning
                               i.fa.fa-star.font-warning
                       .job-description
-                        h6.mb-0 Personal Details 
+                        h3.mb-0 Personal Details 
                         form.form.theme-form
                           .row
                             .col
@@ -324,7 +325,7 @@ html(lang='en')
                               .mb-3
                                 label.form-label(for='exampleFormControlInput4') Phone Number:
                                 input#exampleFormControlInput4.form-control(type='email', placeholder='Enter Phone no.')
-                        h6.mb-0 Your Education
+                        h3.mb-0 Your Education
                         form.form.theme-form
                           .row
                             .col-xl-6.xl-100
@@ -361,7 +362,7 @@ html(lang='en')
                                   | Specialization:
                                   span.font-danger *
                                 input#exampleFormControlInput6.form-control(type='email', placeholder='Enter specialization')
-                        h6.mb-0 Your Experience
+                        h3.mb-0 Your Experience
                         form.form.theme-form
                           .row
                             .col-xl-6.xl-100
@@ -399,7 +400,7 @@ html(lang='en')
                                   | Company Name:
                                   span.font-danger *
                                 input#exampleFormControlInput8.form-control(type='email', placeholder='Enter Company Name')
-                        h6.mb-0 Upload Your Files
+                        h3.mb-0 Upload Your Files
                         form.form.theme-form
                           .row
                             .col

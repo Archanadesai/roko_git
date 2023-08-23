@@ -6,6 +6,7 @@
 - var header_slider         = true;
 - var animate               = true;
 - var scrollbar             = true;
+- var height_equal          = true;
 doctype html
 html(lang='en')
   include ../../components/header-files
@@ -13,7 +14,7 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -22,14 +23,15 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | Clipboard
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item Form Widgets
                     li.breadcrumb-item.active Clipboard
           // Container-fluid starts
@@ -37,11 +39,11 @@ html(lang='en')
             .row
               .col-sm-12.col-md-6
                 .card
-                  .card-header
-                    h3 Clipboard On Text input
+                  .card-header.pb-0
+                    h3 Clipboard on text input
                   .card-body
                     .clipboaard-container
-                      p.card-description Cut/copy from text input
+                      p.f-16 Cut/copy from text input
                       input#clipboardExample1.form-control(type='text', placeholder='type some text to copy / cut')
                       .mt-3.text-end
                         button.btn.btn-primary.btn-clipboard(type='button', data-clipboard-action='copy', data-clipboard-target='#clipboardExample1')
@@ -52,11 +54,11 @@ html(lang='en')
                           |  Cut
               .col-sm-12.col-md-6
                 .card
-                  .card-header
-                    h3 Clipboard On textarea
+                  .card-header.pb-0
+                    h3 Clipboard on textarea
                   .card-body
                     .clipboaard-container
-                      p.card-description Cut/copy from textarea
+                      p.f-16 Cut/copy from textarea
                       textarea#clipboardExample2.form-control.f-14(rows='1', spellcheck='false')
                         | A web designer must always enhance their work since creating websites is a creative effort. Therefore, a web designer must be more imaginative to produce exceptional results. Blogs about web design assist web designers in learning about new technologies, offer lessons, news, direction for a freebie, and much more. These blogs allow web designers to stay creative and improve their abilities. Therefore, advice from web design blogs is required to improve your business.
                       .mt-3.text-end
@@ -67,34 +69,34 @@ html(lang='en')
                           i.fa.fa-cut
                           |  Cut
               .col-sm-12.col-md-6
-                .card
-                  .card-header
-                    h3 Clipboard On Paragraph
+                .card.height-equal
+                  .card-header.pb-0
+                    h3 Clipboard on paragraph
                   .card-body
                     .clipboaard-container
-                      p.card-description Copy from Paragraph
+                      p.f-16 Copy from paragraph
                       h6#clipboardExample3.border.rounded.card-body.f-w-300
                         | On that day, hopes and dreams were crushed.
-                        | Even though it should have been anticipated, it nonetheless
-                        | surprised me. The warning indicators have been disregarded in favour of the slim chance that it would actually occur. From a hopeful prospect, it had evolved into an unquestionable conviction that it must be fate. That was up until it wasn't,
-                        | at which point all of the aspirations and dreams collapsed.
+                        |  Even though it should have been anticipated, it nonetheless
+                        |  surprised me. The warning indicators have been disregarded in favour of the slim chance that it would actually occur. From a hopeful prospect, it had evolved into an unquestionable conviction that it must be fate. That was up until it wasn't,
+                        |  at which point all of the aspirations and dreams collapsed.
                       .mt-3.text-end
                         button.btn.btn-info.btn-clipboard(type='button', data-clipboard-action='copy', data-clipboard-target='#clipboardExample3')
                           i.fa.fa-copy
                           |  Copy
               .col-sm-12.col-md-6
-                .card
-                  .card-header
-                    h3 Copy Portion From paragraph
+                .card.height-equal
+                  .card-header.pb-0
+                    h3 Copy portion from paragraph
                   .card-body
                     .clipboaard-container
-                      p.card-description Copy Portion From Paragraph
+                      p.f-16 Copy portion from paragraph
                       h6.border.rounded.card-body.f-w-300
                         span#clipboardExample4.bg-primary.text-white.p-1 Web design is the process of creating websites 
                         | that are visible online. Take a website design course to learn how to 
                         | create an appealing and responsive website. In the discipline of web design,
-                        | there are degree, diploma, postgraduate degree, and certificate programmes.
-                        | A web designer is responsible for a website's look, feel, and occasionally even content.                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        |  there are degree, diploma, postgraduate degree, and certificate programmes.
+                        |  A web designer is responsible for a website's look, feel, and occasionally even content.
                       .mt-3.text-end
                         button.btn.btn-secondary.btn-clipboard(type='button', data-clipboard-action='copy', data-clipboard-target='#clipboardExample4')
                           i.fa.fa-copy

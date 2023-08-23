@@ -1,4 +1,3 @@
-(function ($) {
 /**
  * Super simple wysiwyg editor v0.8.10
  * https://summernote.org
@@ -7321,4 +7320,4 @@ $$1.summernote = $$1.extend($$1.summernote, {
 });
 
 })));
-})(jQuery);
+

@@ -4,21 +4,15 @@
 //colors
 .clockpicker-canvas {
   line {
-    stroke: var(--theme-deafult);
+    stroke: var(--theme-default);
   }
 }
 .clockpicker-canvas-fg,
 .clockpicker-canvas-bearing {
-  fill: var(--theme-deafult);
+  fill: var(--theme-default);
 }
 .datepicker {
   z-index: 99;
-  width: 100%;
-  background-color: unset;
-  box-shadow: none;
-}
-.datepicker--cell-day {
-  height: 49px;
 }
 .datepicker--day-name {
   color: $primary-color;
@@ -29,18 +23,21 @@
     color: $black;
     border-radius: 5px;
     font-weight: bold;
-    border: 2px solid var(--theme-deafult);
+    border: 2px solid var(--theme-default);
   }
   &.-focus- {
-    background: var(--theme-deafult);
+    background: var(--theme-default);
     color: $white;
   }
   &.-selected- {
-    background: var(--theme-deafult) !important;
+    background: var(--theme-default) !important;
   }
   &-day {
     width: 14.2857142857%;
   }
+}
+.datepicker--cell-day {
+  height: 45px;
 }
 .datepickers-container,
 .bootstrap-datetimepicker-widget {
@@ -54,7 +51,7 @@
     line-height: 1.3;
   }
 }
-// timepicker css
+// timepicker
 .clockpicker-popover {
   border: none;
   box-shadow: $card-box-shadow;
@@ -72,7 +69,7 @@
     background-color: lighten($primary-color, 38%);
   }
 }
-// calendar css
+// calendar
 .calendar-basic {
   .md-sidebar-aside {
     background-color: $white;
@@ -88,8 +85,8 @@
     }
     .fc-h-event {
       padding: 12px;
-      background-color: var(--theme-deafult);
-      border: 1px solid var(--theme-deafult);
+      background-color: var(--theme-default);
+      border: 1px solid var(--theme-default);
       +.fc-h-event {
         margin-top: 10px;
       }
@@ -134,7 +131,7 @@
 }
 .fc-event-dragging {
   padding: 10px;
-  background-color: var(--theme-deafult);
+  background-color: var(--theme-default);
 }
 .fc {
   .fc-toolbar {
@@ -147,7 +144,7 @@
     }
   }
 }
-// Date-picker flatpickr
+// flatpickr
 .main-inline-calender {
   &.input-group {
     flex-direction: column;
@@ -186,14 +183,19 @@
     }
   }
 }
+.datepicker-inline {
+  .datepicker {
+    width: 100%;
+  }
+}
 .flatpickr-day {
   &.selected,
   .endRange {
-    background-color: var(--theme-deafult);
-    border-color: var(--theme-deafult);
+    background-color: var(--theme-default);
+    border-color: var(--theme-default);
     &:hover {
-      background-color: var(--theme-deafult);
-      border-color: var(--theme-deafult);
+      background-color: var(--theme-default);
+      border-color: var(--theme-default);
     }
   }
 }
@@ -233,10 +235,6 @@
       font-size: 14px;
     }
   }
-}
-.input-group> :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
 }
 .timepicker-wrapper {
   .row {

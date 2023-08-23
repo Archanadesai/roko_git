@@ -14,7 +14,7 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -23,15 +23,16 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | Themify icon
 
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item Icons
                     li.breadcrumb-item.active Themify icon
           // Container-fluid starts
@@ -39,7 +40,7 @@ html(lang='en')
             .row
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Arrows & Direction Icons
                   .card-body
                     .row.icon-lists
@@ -144,7 +145,7 @@ html(lang='en')
                         |  icon-exchange-vertical
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Web App Icons
                   .card-body
                     .row.icon-lists
@@ -720,7 +721,7 @@ html(lang='en')
                         |  icon-rss-alt
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Control Icons
                   .card-body
                     .row.icon-lists
@@ -759,7 +760,7 @@ html(lang='en')
                         |  icon-control-eject
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Text Editor
                   .card-body
                     .row.icon-lists
@@ -807,7 +808,7 @@ html(lang='en')
                         |  icon-quote-left
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3.m-b-0 Brand Icons
                   .card-body
                     .row.icon-lists

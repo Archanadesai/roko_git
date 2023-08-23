@@ -1,4 +1,3 @@
-"use strict";
 setTimeout(function () {
   (function ($) {
     "use strict";

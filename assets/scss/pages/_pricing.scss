@@ -48,7 +48,7 @@
   &:before,
   &:after {
     content: "";
-    background-color: var(--theme-deafult);
+    background-color: var(--theme-default);
     width: 300px;
     height: 300px;
     border-radius: 50%;
@@ -64,7 +64,7 @@
 
 .pricingtable {
   &:after {
-    background-color: var(--theme-deafult);
+    background-color: var(--theme-default);
     height: 300px;
     width: 300px;
     top: auto;
@@ -81,7 +81,7 @@
 
   .price-value {
     color: $white;
-    background-color: var(--theme-deafult);
+    background-color: var(--theme-default);
     width: 130px;
     height: 130px;
     padding: 45px 0 0;
@@ -121,7 +121,7 @@
 
       &:before {
         content: "\f00c";
-        color: var(--theme-deafult);
+        color: var(--theme-default);
         font-family: FontAwesome;
         text-align: center;
         width: 20px;

@@ -44,7 +44,7 @@ html(lang='en')
                     p.f-m-light.mt-1 
                       | Fill up your details and proceed next steps.
                   .card-body.basic-wizard.important-validation
-                    #stepper1.stepper-horizontal.custom-scrollbar
+                    #stepper1.stepper-horizontal
                       .stepper-one.stepper.step.editing.active
                         .step-circle
                           span 1
@@ -75,7 +75,7 @@ html(lang='en')
                         .col-sm-6
                           label.form-label(for='email-basic-wizard') Email
                             span.txt-danger *
-                          input#email-basic-wizard.form-control(type='email' required='' placeholder='dunzo@gmail.com')
+                          input#email-basic-wizard.form-control(type='email' required='' placeholder='cuba@gmail.com')
                         .col-sm-6
                           label.form-label(for='firstnamewizard') First Name
                             span.txt-danger *
@@ -118,7 +118,7 @@ html(lang='en')
                         .col-sm-6
                           label.form-label(for='email-basic') LinkedIn
                             span.txt-danger *
-                          input#email-basic.form-control(type='url' required='' placeholder='https://linkedIn.com/dunzo')
+                          input#email-basic.form-control(type='url' required='' placeholder='https://linkedIn.com/cuba')
                           .invalid-feedback
                             | Please enter your valid link
                           .valid-feedback 
@@ -126,7 +126,7 @@ html(lang='en')
                         .col-sm-6
                           label.form-label(for='validationCustom996') Github
                             span.txt-danger *
-                          input#validationCustom996.form-control(type='url' required='' placeholder='https://github.com/dunzo')
+                          input#validationCustom996.form-control(type='url' required='' placeholder='https://github.com/cuba')
                           .invalid-feedback
                             | Please enter your valid link
                           .valid-feedback 
@@ -156,11 +156,11 @@ html(lang='en')
                       form.stepper-four.row.g-3.needs-validation(novalidate='')
                         .col-12.m-0
                           .successful-form
-                            img.img-fluid(src="../assets/images/gif/dashboard/successful.gif", alt="successful")
-                            h6 Congratulations 
+                            img.img-fluid(src="../assets/images/gif/dashboard-8/successful.gif", alt="successful")
+                            h3 Congratulations 
                             p Well done! You have successfully completed. 
                     .wizard-footer.d-flex.gap-2.justify-content-end
-                      button#backbtn.btn.bg-light-primary(onclick='backStep()')  Back
+                      button#backbtn.btn.alert-light-primary(onclick='backStep()')  Back
                       button#nextbtn.btn.btn-primary(onclick='nextStep()') Next
               .col-xl-6
                 .card.height-equal
@@ -179,7 +179,7 @@ html(lang='en')
                           .col-sm-6
                             label.form-label(for='student-email-wizard') Email
                               span.txt-danger *
-                            input#student-email-wizard.form-control(type='email' required='' placeholder='dunzo@gmail.com')
+                            input#student-email-wizard.form-control(type='email' required='' placeholder='cuba@gmail.com')
                           .col-12
                             label.col-sm-12.form-label(for='password-wizard') Password
                               span.txt-danger *
@@ -197,10 +197,10 @@ html(lang='en')
                                 label(for='imageUpload')
                               .avatar-preview
                                 #image
-                            h6 Add Profile
+                            h3 Add Profile
                           .col-12
                             label.form-label(for='exampleFormControlInput1') Portfolio URL
-                            input#exampleFormControlInput1.form-control(type='url' placeholder='https://dunzo')
+                            input#exampleFormControlInput1.form-control(type='url' placeholder='https://cuba')
                           .col-12 
                             label.form-label(for='projectDescription') Project Description
                             textarea#projectDescription.form-control(rows='2')
@@ -254,21 +254,21 @@ html(lang='en')
                                   .stroke-icon-wizard
                                     i.fa.fa-user
                                   .vertical-wizard-content 
-                                    h5 Your Info
+                                    h3 Your Info
                                     p Add your details 
                               a#wizard-cart-tab.nav-link(data-bs-toggle='pill' href='#wizard-cart' role='tab' aria-controls='wizard-cart' aria-selected='false') 
                                 .vertical-wizard
                                   .stroke-icon-wizard
                                     i.fa.fa-chain-broken
                                   .vertical-wizard-content 
-                                    h5 Cart Info
+                                    h3 Cart Info
                                     p Add your a/c details
                               a#wizard-banking-tab.nav-link(data-bs-toggle='pill' href='#wizard-banking' role='tab' aria-controls='wizard-banking' aria-selected='false') 
                                 .vertical-wizard
                                   .stroke-icon-wizard
                                     i.fa.fa-group
                                   .vertical-wizard-content 
-                                    h5 Net Banking
+                                    h3 Net Banking
                                     p Choose your bank
                         .col-xxl-9.col-xl-8.col-12
                             #wizard-tabContent.tab-content
@@ -289,7 +289,7 @@ html(lang='en')
                                   .col-xxl-4.col-sm-6
                                     label.form-label(for='validationemail-b') Email
                                       span.txt-danger *
-                                    input#validationemail-b.form-control(type='email' required='' placeholder='dunzo@example.com')
+                                    input#validationemail-b.form-control(type='email' required='' placeholder='cuba@example.com')
                                     .valid-feedback
                                       | Looks good!
                                   .col-xxl-5.col-sm-6
@@ -324,7 +324,7 @@ html(lang='en')
                                 form.row.g-3.needs-validation.custom-input(novalidate='')
                                   .col-xxl-6
                                     .card-wrapper.border.rounded-3.checkbox-checked
-                                      h6.sub-title Select your payment method
+                                      h3.sub-title Select your payment method
                                       .radio-form
                                         .form-check
                                           input#flexRadioDefault1.form-check-input(type='radio' name='flexRadioDefault-a')
@@ -394,7 +394,7 @@ html(lang='en')
                                             i.svg-color(data-feather='chevron-down')
                                         #collapseOne-a.accordion-collapse.collapse(aria-labelledby='headingOne-a' data-bs-parent='#accordionExample-a')
                                           .accordion-body.weight-title.card-wrapper
-                                            h6.sub-title.f-14 SELECT YOUR BANK
+                                            h3.sub-title.f-14 SELECT YOUR BANK
                                             .row.choose-bank
                                               .col-sm-6
                                                 .form-check.radio.radio-primary
@@ -422,6 +422,7 @@ html(lang='en')
                                                   input#flexRadioDefault-u.form-check-input(type='radio' name='flexRadioDefault-v')
                                                   label.form-check-label(for='flexRadioDefault-u')
                                                     | HDFC Bank
+                                form.row.g-3.needs-validation(novalidate='')    
                                   .col-12 
                                     textarea#validationTextarea24.form-control(placeholder='Your Feedback' required='')
                                     .invalid-feedback
@@ -473,7 +474,7 @@ html(lang='en')
                                       h3 Finish
                             #cart-options-tabContent.tab-content.dark-field.shipping-content
                               #bill-wizard.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='bill-wizard-tab')
-                                h6 Billing Information 
+                                h3 Billing Information 
                                 p.f-light
                                   | Fill up the following information 
                                 form.row.g-3.needs-validation(novalidate='')
@@ -497,7 +498,7 @@ html(lang='en')
                                   .col-sm-6
                                     label.form-label(for='customEmail') Email
                                       span.txt-danger *
-                                    input#customEmail.form-control(type='email' required='' placeholder='dunzo@example.com')
+                                    input#customEmail.form-control(type='email' required='' placeholder='cuba@example.com')
                                     .valid-feedback
                                       | Looks good!
                                   .col-12 
@@ -537,11 +538,11 @@ html(lang='en')
                                     button.btn.btn-primary Proceed to Next
                                       i.fa.fa-truck.proceed-next.pe-2
                               #ship-wizard.tab-pane.fade.shipping-wizard(role='tabpanel' aria-labelledby='ship-wizard-tab')
-                                h6 Shipping Information
+                                h3 Shipping Information
                                 p.f-light
                                   | Fill up the following information to send you the order
                                 .shipping-title
-                                  h6.mb-2 Saved Address
+                                  h3.mb-2 Saved Address
                                   button.btn.btn-primary(type='button', data-bs-toggle='modal', data-bs-target='#exampleModalgetbootstrap', data-whatever='@getbootstrap') 
                                     i.fa.fa-plus-square.f-20
                                   #exampleModalgetbootstrap.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalgetbootstrap', aria-hidden='true')
@@ -586,7 +587,7 @@ html(lang='en')
                                             i.fa.fa-pencil
                                             i.fa.fa-trash-o
                                       .shipping-address
-                                        h6 Filomena Green 
+                                        h3 Filomena Green 
                                         span Address: 
                                           | 2211 Fruitville Rd, Sarasota, Florida, US 34237
                                         span Contact: 
@@ -603,12 +604,12 @@ html(lang='en')
                                             i.fa.fa-pencil
                                             i.fa.fa-trash-o
                                       .shipping-address
-                                        h6 Ms. Ila Runte DDS
+                                        h3 Ms. Ila Runte DDS
                                         span Address: 
                                           | 1531 E 23rd St S, Independence, Mississippi, US 64055
                                         span Contact: 
                                           | (816) 252-4500
-                                h6.mt-4.mb-2 Shipping Method
+                                h3.mt-4.mb-2 Shipping Method
                                 .row.shipping-method.g-3
                                   .col-sm-6
                                     .card-wrapper.border.rounded-3.h-100.light-card
@@ -629,7 +630,7 @@ html(lang='en')
                                     button.btn.btn-primary Proceed to Next
                                       i.fa.fa-truck.proceed-next.pe-2
                               #payment-wizard.tab-pane.fade.shipping-wizard(role='tabpanel' aria-labelledby='payment-wizard-tab')
-                                h6 Payment Information
+                                h3 Payment Information
                                 p.f-light
                                   | Fill up the following information to send you the order
                                 .payment-info-wrapper
@@ -639,7 +640,7 @@ html(lang='en')
                                         div
                                           .form-check.radio.radio-primary
                                             input#shipping-choose5.form-check-input(type='radio' name='radio3' value='option1' checked='')
-                                            label.form-check-label.mb-0.f-w-500(for='shipping-choose5')
+                                            label.form-check-label.mb-0.f-w-600(for='shipping-choose5')
                                               | Paypal
                                           p You will be taken to the paypal website to finish your transaction safely
                                         div 
@@ -651,7 +652,7 @@ html(lang='en')
                                           div
                                             .form-check.radio.radio-primary
                                               input#shipping-choose6.form-check-input(type='radio' name='radio3' value='option1')
-                                              label.form-check-label.mb-0.f-w-500(for='shipping-choose6')
+                                              label.form-check-label.mb-0.f-w-600(for='shipping-choose6')
                                                 | Credit Card
                                             P Transferring money securely through your bank account. Mastercard, Visa, Discover, and Stripe are all accepted
                                           div 
@@ -697,7 +698,7 @@ html(lang='en')
                                         div
                                           .form-check.radio.radio-primary
                                             input#shipping-choose7.form-check-input(type='radio' name='radio3' value='option1')
-                                            label.form-check-label.mb-0.f-w-500(for='shipping-choose7')
+                                            label.form-check-label.mb-0.f-w-600(for='shipping-choose7')
                                               | Cash On Delivery
                                           p After your order is delivered, make a cash payment
                                         div 
@@ -707,15 +708,15 @@ html(lang='en')
                                         i.fa.fa-truck.proceed-next.pe-2
                               #finish-wizard.tab-pane.fade.shipping-wizard.finish-wizard1(role='tabpanel' aria-labelledby='finish-wizard-tab')
                                 .order-confirm
-                                  img(src="../assets/images/gif/dashboard/successful.gif", alt="popper")
+                                  img(src="../assets/images/gif/dashboard-8/successful.gif", alt="popper")
                                   h5 Thank you! Your order is confirmed.
                                   p.mb-0 An email with your order's specifics will be sent to you as order confirmation.
-                                  p.text-center.f-w-500.mt-2 Order ID: 
+                                  p.text-center.f-w-600.mt-2 Order ID: 
                                     a.text-decoration-underline(href="javascript:void(0)") GE34598 
                           .col-xl-4 
                             .shipping-info
-                              h4 Current Cart 
-                              .overflow-auto.custom-scrollbar
+                              h5 Current Cart 
+                              .overflow-auto
                                 table.table.table-striped
                                   thead
                                     tr
@@ -728,7 +729,7 @@ html(lang='en')
                                          img(src="../assets/images/product/13.png", alt="t-shirt")
                                       td 
                                         div 
-                                          h6 T-shirt 
+                                          h3 T-shirt 
                                           span $98 * 2
                                       td
                                         p $400
@@ -737,7 +738,7 @@ html(lang='en')
                                          img(src="../assets/images/email-template/4.png", alt="headphone")
                                       td 
                                         div 
-                                          h6 Headphone
+                                          h3 i Phone
                                           span $4*2
                                       td 
                                         p $450
@@ -746,7 +747,7 @@ html(lang='en')
                                          img(src="../assets/images/product/2.png", alt="headphone")
                                       td 
                                         div 
-                                          h6 T-shirt 
+                                          h3 T-shirt 
                                           span $10 * 2
                                       td 
                                         p $234
@@ -755,7 +756,7 @@ html(lang='en')
                                          img(src="../assets/images/dashboard-2/product/2.png", alt="headphone")
                                       td 
                                         div 
-                                          h6 Chairs
+                                          h3 Chairs
                                           span $98 * 2
                                       td 
                                         p $200

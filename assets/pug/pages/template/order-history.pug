@@ -14,7 +14,7 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-sidebar.compact-small.material-icon
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -23,16 +23,16 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6.p-0
+                .col-sm-6.ps-0
                   h3
                     | Recent Orders
 
-                .col-12.col-sm-6.p-0
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
                         svg.stroke-icon
-                          use(href='../assets/svg/icon-sprite.svg#breadcrumb-home')
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item Ecommerce
                     li.breadcrumb-item.active  Recent Orders
           // Container-fluid starts
@@ -40,203 +40,8 @@ html(lang='en')
             .row
               .col-sm-12
                 .card
-                  .card-header.card-no-border.pb-0
-                    h3 New Orders
-                  .card-body
-                    .row.g-sm-4.g-3
-                      .col-xl-4.col-md-6
-                        .prooduct-details-box                                  
-                          .d-flex
-                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-6.png', alt='#')
-                            .flex-grow-1.ms-3
-                              .product-name
-                                h6
-                                  a(href='#') Women Top
-                              .rating
-                                i.fa.fa-star
-                                i.fa.fa-star
-                                i.fa.fa-star
-                                i.fa.fa-star
-                                i.fa.fa-star
-                              .price.d-flex 
-                                .text-muted Price
-                                | : 210$
-                              .avaiabilty
-                                .text-success In stock
-                              a.btn.btn-primary.btn-xs(href="#") Processing
-                              i.close(data-feather='x')
-                      .col-xl-4.col-md-6
-                        .prooduct-details-box 
-                          .d-flex
-                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-5.png', alt='#')
-                            .flex-grow-1.ms-3
-                              .product-name
-                                h6
-                                  a(href='#')  Women Shorts
-                              .rating
-                                i.fa.fa-star
-                                i.fa.fa-star
-                                i.fa.fa-star
-                                i.fa.fa-star
-                                i.fa.fa-star
-                              .price.d-flex 
-                                .text-muted Price
-                                | : 210$
-                              .avaiabilty
-                                .text-success In stock
-                              a.btn.btn-primary.btn-xs(href="#") Processing
-                              i.close(data-feather='x')
-                      .col-xl-4.col-md-6
-                        .prooduct-details-box 
-                          .d-flex
-                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-4.png', alt='#')
-                            .flex-grow-1.ms-3
-                              .product-name
-                                h6
-                                  a(href='#') Cyclamen  
-                              .rating 
-                                i.fa.fa-star
-                                i.fa.fa-star
-                                i.fa.fa-star
-                                i.fa.fa-star
-                                i.fa.fa-star
-                              .price.d-flex 
-                                .text-muted Price
-                                | : 210$
-                              .avaiabilty
-                                .text-success In stock
-                              a.btn.btn-primary.btn-xs(href="#") Processing
-                              i.close(data-feather='x')
-                      .col-xl-4.col-md-6
-                        .prooduct-details-box 
-                          .d-flex
-                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-3.png', alt='#')
-                            .flex-grow-1.ms-3
-                              .product-name
-                                h6
-                                  a(href='#') Men Solid Denim jacket
-                              .rating
-                                i.fa.fa-star
-                                i.fa.fa-star
-                                i.fa.fa-star
-                                i.fa.fa-star
-                                i.fa.fa-star
-                              .price.d-flex 
-                                .text-muted Price
-                                | : 210$
-                              .avaiabilty
-                                .text-success In stock
-                              a.btn.btn-primary.btn-xs(href="#") Processing
-                              i.close(data-feather='x')
-                      .col-xl-4.col-md-6
-                        .prooduct-details-box 
-                          .d-flex
-                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-2.png', alt='#')
-                            .flex-grow-1.ms-3
-                              .product-name
-                                h6
-                                  a(href='#') Blue shirt
-                              .rating
-                                i.fa.fa-star
-                                i.fa.fa-star
-                                i.fa.fa-star
-                                i.fa.fa-star
-                                i.fa.fa-star
-                              .price.d-flex 
-                                .text-muted Price
-                                | : 210$
-                              .avaiabilty
-                                .text-success In stock
-                              a.btn.btn-primary.btn-xs(href="#") Processing
-                              i.close(data-feather='x')
-                      .col-xl-4.col-md-6
-                        .prooduct-details-box 
-                          .d-flex
-                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-1.png', alt='#')
-                            .flex-grow-1.ms-3
-                              .product-name
-                                h6
-                                  a(href='#') red shirt
-                              .rating
-                                i.fa.fa-star
-                                i.fa.fa-star
-                                i.fa.fa-star
-                                i.fa.fa-star
-                                i.fa.fa-star
-                              .price.d-flex 
-                                .text-muted Price
-                                | : 210$
-                              .avaiabilty
-                                .text-success In stock
-                              a.btn.btn-primary.btn-xs(href="#") Processing
-                              i.close(data-feather='x')
-                      .col-xl-4.col-md-6
-                        .prooduct-details-box 
-                          .d-flex
-                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-1.png', alt='#')
-                            .flex-grow-1.ms-3
-                              .product-name
-                                h6
-                                  a(href='#') Red shirt
-                              .rating
-                                i.fa.fa-star
-                                i.fa.fa-star
-                                i.fa.fa-star
-                                i.fa.fa-star
-                                i.fa.fa-star
-                              .price.d-flex 
-                                .text-muted Price
-                                | : 210$
-                              .avaiabilty
-                                .text-success In stock
-                              a.btn.btn-primary.btn-xs(href="#") Processing
-                              i.close(data-feather='x')
-                      .col-xl-4.col-md-6
-                        .prooduct-details-box                                  
-                          .d-flex
-                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-6.png', alt='#')
-                            .flex-grow-1.ms-3
-                              .product-name
-                                h6
-                                  a(href='#') Women Top
-                              .rating
-                                i.fa.fa-star
-                                i.fa.fa-star
-                                i.fa.fa-star
-                                i.fa.fa-star
-                                i.fa.fa-star
-                              .price.d-flex 
-                                .text-muted Price
-                                | : 210$
-                              .avaiabilty
-                                .text-success In stock
-                              a.btn.btn-primary.btn-xs(href="#") Processing
-                              i.close(data-feather='x')
-                      .col-xl-4.col-md-6
-                        .prooduct-details-box 
-                          .d-flex
-                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-5.png', alt='#')
-                            .flex-grow-1.ms-3
-                              .product-name
-                                h6
-                                  a(href='#') Women shorts
-                              .rating
-                                i.fa.fa-star
-                                i.fa.fa-star
-                                i.fa.fa-star
-                                i.fa.fa-star
-                                i.fa.fa-star
-                              .price.d-flex 
-                                .text-muted Price
-                                | : 210$
-                              .avaiabilty
-                                .text-success In stock
-                              a.btn.btn-primary.btn-xs(href="#") Processing
-                              i.close(data-feather='x')
-
-                .card
-                  .card-header.card-no-border.pb-0
-                    h3 Shipped Orders
+                  .card-header
+                    h5 New Orders
                   .card-body
                     .row.g-sm-4.g-3
                       .col-xxl-4.col-md-6
@@ -254,7 +59,202 @@ html(lang='en')
                                 i.fa.fa-star
                                 i.fa.fa-star
                               .price.d-flex 
-                                .text-muted Price
+                                .text-muted.me-2 Price
+                                | : 210$
+                              .avaiabilty
+                                .text-success In stock
+                              a.btn.btn-primary.btn-xs(href="#") Processing
+                              i.close(data-feather='x')
+                      .col-xxl-4.col-md-6
+                        .prooduct-details-box 
+                          .d-flex
+                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-5.png', alt='#')
+                            .flex-grow-1.ms-3
+                              .product-name
+                                h6
+                                  a(href='#')  Women Shorts
+                              .rating
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                              .price.d-flex 
+                                .text-muted.me-2 Price
+                                | : 210$
+                              .avaiabilty
+                                .text-success In stock
+                              a.btn.btn-primary.btn-xs(href="#") Processing
+                              i.close(data-feather='x')
+                      .col-xxl-4.col-md-6
+                        .prooduct-details-box 
+                          .d-flex
+                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-4.png', alt='#')
+                            .flex-grow-1.ms-3
+                              .product-name
+                                h6
+                                  a(href='#') Cyclamen  
+                              .rating 
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                              .price.d-flex 
+                                .text-muted.me-2 Price
+                                | : 210$
+                              .avaiabilty
+                                .text-success In stock
+                              a.btn.btn-primary.btn-xs(href="#") Processing
+                              i.close(data-feather='x')
+                      .col-xxl-4.col-md-6
+                        .prooduct-details-box 
+                          .d-flex
+                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-3.png', alt='#')
+                            .flex-grow-1.ms-3
+                              .product-name
+                                h6
+                                  a(href='#') Men Solid Denim jacket
+                              .rating
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                              .price.d-flex 
+                                .text-muted.me-2 Price
+                                | : 210$
+                              .avaiabilty
+                                .text-success In stock
+                              a.btn.btn-primary.btn-xs(href="#") Processing
+                              i.close(data-feather='x')
+                      .col-xxl-4.col-md-6
+                        .prooduct-details-box 
+                          .d-flex
+                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-2.png', alt='#')
+                            .flex-grow-1.ms-3
+                              .product-name
+                                h6
+                                  a(href='#') Blue shirt
+                              .rating
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                              .price.d-flex 
+                                .text-muted.me-2 Price
+                                | : 210$
+                              .avaiabilty
+                                .text-success In stock
+                              a.btn.btn-primary.btn-xs(href="#") Processing
+                              i.close(data-feather='x')
+                      .col-xxl-4.col-md-6
+                        .prooduct-details-box 
+                          .d-flex
+                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-1.png', alt='#')
+                            .flex-grow-1.ms-3
+                              .product-name
+                                h6
+                                  a(href='#') red shirt
+                              .rating
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                              .price.d-flex 
+                                .text-muted.me-2 Price
+                                | : 210$
+                              .avaiabilty
+                                .text-success In stock
+                              a.btn.btn-primary.btn-xs(href="#") Processing
+                              i.close(data-feather='x')
+                      .col-xxl-4.col-md-6
+                        .prooduct-details-box 
+                          .d-flex
+                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-1.png', alt='#')
+                            .flex-grow-1.ms-3
+                              .product-name
+                                h6
+                                  a(href='#') Red shirt
+                              .rating
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                              .price.d-flex 
+                                .text-muted.me-2 Price
+                                | : 210$
+                              .avaiabilty
+                                .text-success In stock
+                              a.btn.btn-primary.btn-xs(href="#") Processing
+                              i.close(data-feather='x')
+                      .col-xxl-4.col-md-6
+                        .prooduct-details-box                                  
+                          .d-flex
+                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-6.png', alt='#')
+                            .flex-grow-1.ms-3
+                              .product-name
+                                h6
+                                  a(href='#') Women Top
+                              .rating
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                              .price.d-flex 
+                                .text-muted.me-2 Price
+                                | : 210$
+                              .avaiabilty
+                                .text-success In stock
+                              a.btn.btn-primary.btn-xs(href="#") Processing
+                              i.close(data-feather='x')
+                      .col-xxl-4.col-md-6
+                        .prooduct-details-box 
+                          .d-flex
+                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-5.png', alt='#')
+                            .flex-grow-1.ms-3
+                              .product-name
+                                h6
+                                  a(href='#') Women shorts
+                              .rating
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                              .price.d-flex 
+                                .text-muted.me-2 Price
+                                | : 210$
+                              .avaiabilty
+                                .text-success In stock
+                              a.btn.btn-primary.btn-xs(href="#") Processing
+                              i.close(data-feather='x')
+
+                .card
+                  .card-header
+                    h5 Shipped Orders
+                  .card-body
+                    .row.g-sm-4.g-3
+                      .col-xxl-4.col-md-6
+                        .prooduct-details-box                                  
+                          .d-flex
+                            img.align-self-center.img-fluid.img-60(src='../assets/images/ecommerce/product-table-6.png', alt='#')
+                            .flex-grow-1.ms-3
+                              .product-name
+                                h6
+                                  a(href='#') Women Top
+                              .rating
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                              .price.d-flex 
+                                .text-muted.me-2 Price
                                 | : 210$
                               .avaiabilty
                                 .text-success In stock
@@ -275,7 +275,7 @@ html(lang='en')
                                 i.fa.fa-star
                                 i.fa.fa-star
                               .price.d-flex 
-                                .text-muted Price
+                                .text-muted.me-2 Price
                                 | : 210$
                               .avaiabilty
                                 .text-success In stock
@@ -296,7 +296,7 @@ html(lang='en')
                                 i.fa.fa-star
                                 i.fa.fa-star
                               .price.d-flex 
-                                .text-muted Price
+                                .text-muted.me-2 Price
                                 | : 210$
                               .avaiabilty
                                 .text-success In stock
@@ -317,7 +317,7 @@ html(lang='en')
                                 i.fa.fa-star
                                 i.fa.fa-star
                               .price.d-flex 
-                                .text-muted Price
+                                .text-muted.me-2 Price
                                 | : 210$
                               .avaiabilty
                                 .text-success In stock
@@ -338,7 +338,7 @@ html(lang='en')
                                 i.fa.fa-star
                                 i.fa.fa-star
                               .price.d-flex 
-                                .text-muted Price
+                                .text-muted.me-2 Price
                                 | : 210$
                               .avaiabilty
                                 .text-success In stock
@@ -359,7 +359,7 @@ html(lang='en')
                                 i.fa.fa-star
                                 i.fa.fa-star
                               .price.d-flex 
-                                .text-muted Price
+                                .text-muted.me-2 Price
                                 | : 210$
                               .avaiabilty
                                 .text-success In stock
@@ -380,7 +380,7 @@ html(lang='en')
                                 i.fa.fa-star
                                 i.fa.fa-star
                               .price.d-flex 
-                                .text-muted Price
+                                .text-muted.me-2 Price
                                 | : 210$
                               .avaiabilty
                                 .text-success In stock
@@ -401,7 +401,7 @@ html(lang='en')
                                 i.fa.fa-star
                                 i.fa.fa-star
                               .price.d-flex 
-                                .text-muted Price
+                                .text-muted.me-2 Price
                                 | : 210$
                               .avaiabilty
                                 .text-success In stock
@@ -422,15 +422,15 @@ html(lang='en')
                                 i.fa.fa-star
                                 i.fa.fa-star
                               .price.d-flex 
-                                .text-muted Price
+                                .text-muted.me-2 Price
                                 | : 210$
                               .avaiabilty
                                 .text-success In stock
                               a.btn.btn-success.btn-xs(href="#") Shipped
                               i.close(data-feather='x')
                 .card
-                  .card-header.card-no-border.pb-0
-                    h3 Cancelled Orders
+                  .card-header
+                    h5 Cancelled Orders
                   .card-body
                     .row.g-sm-4.g-3
                       .col-xxl-4.col-md-6
@@ -448,7 +448,7 @@ html(lang='en')
                                 i.fa.fa-star
                                 i.fa.fa-star
                               .price.d-flex 
-                                .text-muted Price
+                                .text-muted.me-2 Price
                                 | : 210$
                               .avaiabilty
                                 .text-success In stock
@@ -469,7 +469,7 @@ html(lang='en')
                                 i.fa.fa-star
                                 i.fa.fa-star
                               .price.d-flex 
-                                .text-muted Price
+                                .text-muted.me-2 Price
                                 | : 210$
                               .avaiabilty
                                 .text-success In stock
@@ -490,7 +490,7 @@ html(lang='en')
                                 i.fa.fa-star
                                 i.fa.fa-star
                               .price.d-flex 
-                                .text-muted Price
+                                .text-muted.me-2 Price
                                 | : 210$
                               .avaiabilty
                                 .text-success In stock
@@ -511,7 +511,7 @@ html(lang='en')
                                 i.fa.fa-star
                                 i.fa.fa-star
                               .price.d-flex 
-                                .text-muted Price
+                                .text-muted.me-2 Price
                                 | : 210$
                               .avaiabilty
                                 .text-success In stock
@@ -532,7 +532,7 @@ html(lang='en')
                                 i.fa.fa-star
                                 i.fa.fa-star
                               .price.d-flex 
-                                .text-muted Price
+                                .text-muted.me-2 Price
                                 | : 210$
                               .avaiabilty
                                 .text-success In stock
@@ -553,7 +553,7 @@ html(lang='en')
                                 i.fa.fa-star
                                 i.fa.fa-star
                               .price.d-flex 
-                                .text-muted Price
+                                .text-muted.me-2 Price
                                 | : 210$
                               .avaiabilty
                                 .text-success In stock
@@ -574,7 +574,7 @@ html(lang='en')
                                 i.fa.fa-star
                                 i.fa.fa-star
                               .price.d-flex 
-                                .text-muted Price
+                                .text-muted.me-2 Price
                                 | : 210$
                               .avaiabilty
                                 .text-success In stock
@@ -595,7 +595,7 @@ html(lang='en')
                                 i.fa.fa-star
                                 i.fa.fa-star
                               .price.d-flex 
-                                .text-muted Price
+                                .text-muted.me-2 Price
                                 | : 210$
                               .avaiabilty
                                 .text-success In stock
@@ -616,7 +616,7 @@ html(lang='en')
                                 i.fa.fa-star
                                 i.fa.fa-star
                               .price.d-flex 
-                                .text-muted Price
+                                .text-muted.me-2 Price
                                 | : 210$
                               .avaiabilty
                                 .text-success In stock
@@ -624,8 +624,8 @@ html(lang='en')
                               i.close(data-feather='x')
               .col-sm-12
                 .card
-                  .card-header.card-no-border.pb-0
-                    h3 Datatable order history
+                  .card-header
+                    h5 Datatable order history
                   .card-body
                     .order-history.table-responsive.custom-scrollbar
                       table#basic-1.table.table-bordernone.display
@@ -678,7 +678,7 @@ html(lang='en')
                               img.img-fluid.img-30(src='../assets/images/product/4.png', alt='#')
                             td
                               .product-name
-                                a(href='#') Men shoes
+                                a(href='#') Man shoes
                                 .order-process
                                   span.order-process-circle
                                   | Processing

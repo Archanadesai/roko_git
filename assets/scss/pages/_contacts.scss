@@ -3,7 +3,7 @@
 ==========================**/
 .alert-contactadd {
   background-color: $white;
-  border: 1px solid var(--theme-deafult);
+  border: 1px solid var(--theme-default);
   width: 12%;
   padding: 10px;
 }
@@ -57,7 +57,7 @@
     padding: 30px 0;
   }
 
-  .media {
+  .d-flex {
     padding: 30px 15px;
     border-top: 1px solid $light-color;
 
@@ -124,7 +124,7 @@
       border-radius: 3px;
       padding-left: 40px !important;
       padding: 0;
-      color: var(--theme-deafult);
+      color: var(--theme-default);
       font-weight: 500;
     }
   }
@@ -132,7 +132,7 @@
 
 .list-persons {
   p {
-    font-family: $font-nunito-sans, $font-serif;
+    font-family: $font-roboto, $font-serif;
   }
 
   .profile-mail {
@@ -162,15 +162,6 @@
               padding-left: 10px;
               margin-left: 5px;
               border-left: 2px solid $light-color;
-
-              [dir="rtl"] & {
-                padding-left: unset;
-                padding-right: 10px;
-                margin-left: unset;
-                margin-right: 5px;
-                border-left: unset;
-                border-right: 1px solid #f5f6f9;
-              }
             }
           }
         }
@@ -216,9 +207,7 @@
   .nav-pills {
     border-right: 1px solid $light-color;
     height: 100%;
-    [dir="rtl"] & {
-      border-left: 1px solid $light-color;
-    }
+
     .nav-link,
     .show {
 
@@ -233,7 +222,7 @@
       color: $theme-body-font-color;
       padding: 0;
 
-      .media {
+      .d-flex {
         .img-50 {
           height: 50px;
         }
@@ -314,7 +303,7 @@
   }
 
   .contacts-tabs {
-    .media {
+    .d-flex {
       img {
         &.m-r-20 {
           margin-right: 15px;
@@ -323,7 +312,7 @@
     }
 
     .nav-pills {
-      .media {
+      .d-flex {
         padding: 15px;
       }
     }
@@ -342,7 +331,7 @@
 
     .nav-pills {
       .nav-link {
-        .media {
+        .d-flex {
           .flex-grow-1 {
             text-align: left;
           }
@@ -401,13 +390,27 @@
         }
       }
 
-      .media {
+      .d-flex {
         display: block;
 
         img {
           height: 80px;
           width: 80px !important;
           margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+
+.dark-contact {
+  .nav {
+    .nav-link {
+      .d-flex {
+        .flex-grow-1 {
+          h6 {
+            color: var(--body-font-color);
+          }
         }
       }
     }

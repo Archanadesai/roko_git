@@ -10,7 +10,7 @@
 		height: 10px;
 		width: 10px;
 		margin: 0 2px;
-		background-color: var(--theme-default);
+		background-color: $primary-color;
 		border: none;
 		border-radius: 50%;
 		display: inline-block;
@@ -39,9 +39,9 @@
 		.btn {
 			float: right;
 			margin: 0 5px;
-			background-color: #e3e0ff ;
-			border-color: #e3e0ff !important;
-			color: var(--theme-default);
+			background-color: rgba($primary-color, 0.2) !important;
+			border-color: rgba($primary-color, 0.2) !important;
+			color: $primary-color;
 		}
 		.buttonDisabled {
 			color: $semi-dark;
@@ -51,11 +51,11 @@
 		}
 	}
 	.step-container {
-		background: #f8f9fe;
+		background: rgba($primary-color, 0.02);
 		position: relative;
 		margin: 0;
 		padding: 0;
-		border: 0 solid #e8ebf2;
+		border: 0 solid rgba($primary-color, 0.2);
 		overflow: hidden;
 		clear: right;
 		width: 70%;
@@ -171,7 +171,7 @@
 				position: absolute;
 				left: 0;
 				top: 6px;
-				width: 60px;
+				width: 50px;
 				display: flex;
 				align-items: center;
 				justify-content: center;
@@ -207,7 +207,7 @@
 				&.done {
 					h4 {
 						color: $white;
-						background: var(--theme-default);
+						background: $primary-color;
 						&:before {
 							font-size: 12px;
 							position: absolute;
@@ -216,7 +216,7 @@
 							content: "\e64c";
 							font-family: 'themify';
 							background-color: $white;
-							color: var(--theme-default);
+							color: $primary-color;
 							border-radius: 15px;
 							padding: 2px;
 							border: 1px solid;
@@ -305,8 +305,8 @@
 			background-color: unset;
 			.vertical-wizard {
 				.stroke-icon-wizard {
-					background-color: var(--theme-default);
-					border: 1px solid var(--theme-default);
+					background-color: $primary-color;
+					border: 1px solid $primary-color;
 					i {
 						color: $white;
 						font-size: 18px;
@@ -322,7 +322,7 @@
 				}
 				.vertical-wizard-content {
 					h6 {
-						color: var(--theme-default);
+						color: $primary-color;
 					}
 				}
 			}
@@ -397,7 +397,7 @@
 				.step-circle {
 					background: var(--white);
 					border-color: $theme-body-sub-title-color;
-					color: var(--theme-default);
+					color: $primary-color;
 				}
 			}
 			.step-title {
@@ -442,8 +442,8 @@
 				}
 			}
 			&.done .step-bar-right {
-				background-color: var(--theme-default);
-				border-color: var(--theme-default);
+				background-color: $primary-color;
+				border-color: $primary-color;
 				z-index: 3;
 				width: 100%;
 			}
@@ -559,12 +559,8 @@
 					&:active,
 					&.active {
 						.horizontal-wizard {
-							.horizontal-wizard-content {
-								h4 {
-									color: $white;
-									transition: all 0.3s ease;
-								}
-							}
+							color: var(--white);
+							transition: all 0.3s ease;
 							.stroke-icon-wizard {
 								i {
 									color: var(--white);
@@ -819,7 +815,7 @@
 				&.active {
 					i {
 						background-color: rgba($white, 0.8);
-						color: var(--theme-default);
+						color: $primary-color;
 						transition: all 0.3s ease-in-out;
 					}
 					h3 {
@@ -849,8 +845,8 @@
 						height: calc(30px + (40 - 30) * ((100vw - 1200px) / (1920 - 1200)));
 					}
 				}
-				h3 {
-					color: var(--theme-default);
+				h6 {
+					color: $primary-color;
 				}
 			}
 		}
@@ -925,7 +921,7 @@
 						border: 0;
 						padding: 0 28px;
 						i {
-							color: var(--theme-default);
+							color: $primary-color;
 						}
 					}
 				}
@@ -940,7 +936,7 @@
 						gap: 12px;
 						i {
 							font-size: 16px;
-							color: var(--theme-default);
+							color: $primary-color;
 						}
 					}
 				}
@@ -1040,7 +1036,7 @@
 				border-radius: 100%;
 				background: var(--light-bg);
 				border: 1px solid transparent;
-				box-shadow: 0px 2px 4px 0px rgba($black, 0.12);
+				box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
 				cursor: pointer;
 				font-weight: normal;
 				transition: all 0.2s ease-in-out;
@@ -1067,7 +1063,7 @@
 			position: relative;
 			border-radius: 100%;
 			border: 6px solid #F8F8F8;
-			box-shadow: 0px 2px 4px 0px rgba($black, 0.1);
+			box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 			margin: auto;
 			>div {
 				background-image: url('../images/forms/user.png');

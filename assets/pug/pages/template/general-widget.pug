@@ -4,6 +4,8 @@
 - var apex                  = true;
 - var general_widget        = true;
 - var sidebar               = true;
+- var owlcarousel           = true;
+- var page_owlcarousel      = true;
 - var slick                 = true;
 - var header_slider         = true;
 - var animate               = true;
@@ -25,7 +27,7 @@ html(lang='en')
             .page-title
               .row
                 .col-sm-6.ps-0
-                  h4
+                  h3
                     | General
                 .col-sm-6.pe-0
                   ol.breadcrumb
@@ -36,430 +38,585 @@ html(lang='en')
                     li.breadcrumb-item Widgets
                     li.breadcrumb-item.active General
           // Container-fluid starts
-          .container-fluid
+          .container-fluid.general-widget
             .row
-              .col-sm-4.col-xxl-2 
-                .currency-widget.warning.height-equal.widget-currency
-                  .d-flex
-                    .currency-icon-widget 
-                      svg
-                        use(href='../assets/svg/icon-sprite.svg#beta')
-                    div 
-                      h4 Bitcoin 
-                        span.f-light BTC
-                  .card 
-                    .card-body.d-flex
-                      .currency-chart-wrap
-                        #currency-chart 
-                      .bg-light-warning.text-center 
-                        h4.mb-sm-0 $21,43
-                        span.f-12.f-w-500.font-warning
-                          i.me-1(data-feather="trending-up")
-                          | +50%
-              .col-sm-4.col-xxl-2 
-                .currency-widget.primary.height-equal.widget-currency
-                  .d-flex
-                    .currency-icon-widget 
-                      svg
-                        use(href='../assets/svg/icon-sprite.svg#eth')
-                    div 
-                      h4 Ethereum 
-                        span.f-light ETC
-                  .card 
-                    .card-body.d-flex
-                      .currency-chart-wrap
-                        #currency-chart2
-                      .bg-light-primary.text-center 
-                        h4.mb-0 $7,450
-                        span.f-12.f-w-500.font-primary
-                          i.me-1(data-feather="trending-up") 
-                          | +35%
-              .col-sm-4.col-xxl-2 
-                .currency-widget.success.height-equal.widget-currency
-                  .d-flex
-                    .currency-icon-widget 
-                      svg
-                        use(href='../assets/svg/icon-sprite.svg#ltc')
-                    div 
-                      h4 Leave Travel 
-                        span.f-light LTC
-                  .card 
-                    .card-body.d-flex
-                      .currency-chart-wrap
-                        #currency-chart3
-                      .bg-light-success.text-center 
-                        h4.mb-0 $2,198
-                        span.f-12.f-w-500.font-success
-                          i.me-1(data-feather="trending-up") 
-                          | +73%
-              .col-xxl-3.col-sm-6 
-                .card.height-equal.radial-height
-                  .card-body.radial-progress-card 
-                    div 
-                      h4.mb-0 Average Sales Per Day
-                      .sale-details 
-                        h4.font-primary.mb-0 45,908
-                        span.f-12.f-light.f-w-500
-                          i(data-feather="arrow-up")
-                          | +5.7%
-                      p.f-light  The point of using Lorem Ipsum
-                    .radial-chart-wrap 
-                      #radial-chart 
-              .col-xxl-3.col-sm-6 
-                .card.height-equal.radial-height
-                  .card-body.radial-progress-card 
-                    div 
-                      h4.mb-0 Average Profit Per Day
-                      .sale-details 
-                        h4.font-primary.mb-0 89.6%
-                        span.f-12.f-light.f-w-500
-                          i(data-feather="arrow-up")
-                          | +2.7%
-                      p.f-light  The point of using Lorem Ipsum
-                    .radial-chart-wrap 
-                      #radial-chart1
-              .col-sm-6.col-xl-3.col-lg-6.box-col-6 
-                .card.widget-1
-                  .card-body 
-                    .widget-content
-                      .widget-round.secondary
-                        .bg-round
-                          svg.svg-fill
-                            use(href='../assets/svg/icon-sprite.svg#cart') 
-                          svg.half-circle.svg-fill
-                            use(href='../assets/svg/icon-sprite.svg#halfcircle')
-                      div 
-                        h4 10,000
-                        span.f-light Purchase
-                    div.font-secondary.f-w-500
-                      i.icon-arrow-up.icon-rotate.me-1
-                      span +50%
-              .col-sm-6.col-xl-3.col-lg-6.box-col-6 
-                .card.widget-1
-                  .card-body 
-                    .widget-content
-                      .widget-round.primary
-                        .bg-round
-                          svg.svg-fill
-                            use(href='../assets/svg/icon-sprite.svg#tag') 
-                          svg.half-circle.svg-fill
-                            use(href='../assets/svg/icon-sprite.svg#halfcircle')
-                      div 
-                        h4 4,200
-                        span.f-light Sales
-                    div.font-primary.f-w-500
-                      i.icon-arrow-up.icon-rotate.me-1
-                      span +70%
-              .col-sm-6.col-xl-3.col-lg-6.box-col-6 
-                .card.widget-1
-                  .card-body 
-                    .widget-content
-                      .widget-round.warning
-                        .bg-round
-                          svg.svg-fill
-                            use(href='../assets/svg/icon-sprite.svg#return-box') 
-                          svg.half-circle.svg-fill
-                            use(href='../assets/svg/icon-sprite.svg#halfcircle')
-                      div 
-                        h4 7000
-                        span.f-light Sales return
-                    div.font-warning.f-w-500
-                      i.icon-arrow-down.icon-rotate.me-1
-                      span -20%
-              .col-sm-6.col-xl-3.col-lg-6.box-col-6 
-                .card.widget-1
-                  .card-body 
-                    .widget-content
-                      .widget-round.success
-                        .bg-round
-                          svg.svg-fill
-                            use(href='../assets/svg/icon-sprite.svg#rate') 
-                          svg.half-circle.svg-fill
-                            use(href='../assets/svg/icon-sprite.svg#halfcircle')
-                      div 
-                        h4 5700
-                        span.f-light Purchase rate
-                    div.font-success.f-w-500
-                      i.icon-arrow-up.icon-rotate.me-1
-                      span +70%
-              .col-xxl-3.col-xl-4.col-md-6.box-col-6
+              .col-xl-4.col-lg-4.col-md-6
+                .card.web-card
+                  .card-body
+                    .d-flex
+                      .header-top
+                        .mobile-app.bg-light-primary
+                          span
+                          svg
+                            use(href='../assets/svg/icon-sprite.svg#improvement')
+                        .flex-grow-1 
+                          h4 Web & mobile app
+                          span Dribble Presentation
+                      .dropdown.icon-dropdown
+                        button#userdropdown.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          i.icon-more-alt
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown')
+                          a.dropdown-item(href='#') Weekly
+                          a.dropdown-item(href='#') Monthly
+                          a.dropdown-item(href='#') Yearly 
+                    .comment
+                      ul 
+                        li 
+                          svg
+                            use(href='../assets/svg/icon-sprite.svg#calendar')
+                          span June 18,2023
+                        li 
+                          svg
+                            use(href='../assets/svg/icon-sprite.svg#message')
+                          span 18
+                        li 
+                          svg
+                            use(href='../assets/svg/icon-sprite.svg#link')
+                          span 08
+                    .flex-shrink-0 
+                      .user-details.customers
+                        ul 
+                          li.d-inline-block
+                            img(src="../assets/images/dashboard-3/user/1.png", alt="user")
+                          li.d-inline-block
+                            img(src="../assets/images/dashboard-3/user/2.png", alt="user")
+                          li.d-inline-block
+                            img(src="../assets/images/dashboard-3/user/3.png", alt="user")
+                      .progress-value 
+                        span Progress
+                          span 70%
+                        .progress
+                          .progress-bar.bg-primary(role='progressbar', style='width: 70%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100')
+              .col-xl-4.col-lg-4.col-md-6
+                .card.web-card
+                  .card-body
+                    .d-flex.nft-card
+                      .header-top
+                        .mobile-app.bg-light-success
+                          span
+                          svg
+                            use(href='../assets/svg/icon-sprite.svg#NFT')
+                        .flex-grow-1 
+                          h4 NFT website design
+                          span Pinterest Promotion
+                      .dropdown.icon-dropdown
+                        button#userdropdown1.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          i.icon-more-alt
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown1')
+                          a.dropdown-item(href='#') Weekly
+                          a.dropdown-item(href='#') Monthly
+                          a.dropdown-item(href='#') Yearly 
+                    .comment
+                      ul 
+                        li 
+                          svg
+                            use(href='../assets/svg/icon-sprite.svg#calendar')
+                          span June 15,2023
+                        li 
+                          svg
+                            use(href='../assets/svg/icon-sprite.svg#message')
+                          span 20
+                        li 
+                          svg
+                            use(href='../assets/svg/icon-sprite.svg#link')
+                          span 10
+                    .flex-shrink-0 
+                      .user-details.customers
+                        ul 
+                          li.d-inline-block
+                            img(src="../assets/images/dashboard-3/user/8.png", alt="user")
+                          li.d-inline-block
+                            img(src="../assets/images/dashboard-3/user/4.png", alt="user")
+                          li.d-inline-block
+                            img(src="../assets/images/dashboard-3/user/7.png", alt="user")
+                      .progress-value 
+                        span Progress
+                          span 60%
+                        .progress
+                          .progress-bar.bg-success(role='progressbar', style='width: 60%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100')
+              .col-xl-4.col-lg-4.col-md-12
+                .card.web-card
+                  .card-body
+                    .d-flex.twitter-card
+                      .header-top
+                        .mobile-app.bg-light-danger
+                          span
+                          svg
+                            use(href='../assets/svg/icon-sprite.svg#management')
+                        .flex-grow-1 
+                          h4 Project dashboard
+                          span Twitter Marketing
+                      .dropdown.icon-dropdown
+                        button#userdropdown2.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          i.icon-more-alt
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown2')
+                          a.dropdown-item(href='#') Weekly
+                          a.dropdown-item(href='#') Monthly
+                          a.dropdown-item(href='#') Yearly 
+                    .comment
+                      ul 
+                        li 
+                          svg
+                            use(href='../assets/svg/icon-sprite.svg#calendar')
+                          span June 25,2023
+                        li 
+                          svg
+                            use(href='../assets/svg/icon-sprite.svg#message')
+                          span 30
+                        li 
+                          svg
+                            use(href='../assets/svg/icon-sprite.svg#link')
+                          span 12
+                    .flex-shrink-0 
+                      .user-details.customers
+                        ul 
+                          li.d-inline-block
+                            img(src="../assets/images/dashboard-3/user/9.png", alt="user")
+                          li.d-inline-block
+                            img(src="../assets/images/dashboard-3/user/5.png", alt="user")
+                          li.d-inline-block
+                            img(src="../assets/images/dashboard-3/user/6.png", alt="user")
+                      .progress-value 
+                        span Progress
+                          span 50%
+                        .progress
+                          .progress-bar.bg-danger(role='progressbar', style='width: 50%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100')
+              .col-xl-3.col-xl-50.box-col-6
+                .card.categories-chart
+                  .card-header.pb-0
+                    .header-top
+                      h4 Categories by Sales
+                      .dropdown.icon-dropdown
+                        button#userdropdown2.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          i.icon-more-alt
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown2')
+                          a.dropdown-item(href='#') Weekly
+                          a.dropdown-item(href='#') Monthly
+                          a.dropdown-item(href='#') Yearly
+                    .row.mt-2
+                      .col-6.p-0
+                        #Categories-chart-1
+                      .col-6.categories-sales
+                        .d-flex.gap-2  
+                          .flex-shrink-0
+                            span.bg-primary 
+                          .flex-grow-1 
+                            h6 Income
+                          h5 $21,654
+                        .d-flex.gap-2  
+                          .flex-shrink-0
+                            span.bg-secondary 
+                          .flex-grow-1 
+                            h6 Visitors
+                          h5 $62,842
+                        .d-flex.gap-2  
+                          .flex-shrink-0
+                            span.bg-danger 
+                          .flex-grow-1 
+                            h6 Expense
+                          h5 $37,210
+                  .card-body.p-0
+                    .total-earn
+                      h2 $3,512,201
+                      h6 Total Earned
+                    #Earned-chart-1.earned
+              .col-xl-6.col-lg-6
+                .card
+                  .card-header.pb-0
+                    .header-top
+                      h4 Project Created
+                      .dropdown.icon-dropdown
+                        button#userdropdown6.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          i.icon-more-alt
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown6')
+                          a.dropdown-item(href='#') Weekly
+                          a.dropdown-item(href='#') Monthly
+                          a.dropdown-item(href='#') Yearly
+                  .card-body.p-0
+                    #revenuegrowth-1 
+              .col-xl-3.col-xl-40.col-lg-4.col-md-12.box-col-4
+                .card.budget-card
+                  .card-header.pb-0
+                    .header-top
+                      h4 Budget
+                      .dropdown.icon-dropdown
+                        button#userdropdown5.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          i.icon-more-alt
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown5')
+                          a.dropdown-item(href='#') Weekly
+                          a.dropdown-item(href='#') Monthly
+                          a.dropdown-item(href='#') Yearly
+                  .card-body.pb-0
+                    .budget-spent
+                      span Budget Spent
+                      h2 $ 65,847.00
+                    a(href="learning-list-view.html") 
+                      .d-flex 
+                        .design-score.bg-light-primary
+                          svg
+                            use(href='../assets/svg/icon-sprite.svg#design')
+                        .flex-grow-1
+                          h6 Design
+                          span $ 35,842.00
+                        .flex-shrink-0 
+                          .design-menu 
+                            i.fa.fa-angle-right
+                    a(href="learning-list-view.html") 
+                      .d-flex 
+                        .design-score.bg-light-secondary
+                          svg.ms-1
+                            use(href='../assets/svg/icon-sprite.svg#development')
+                        .flex-grow-1
+                          h6 Development
+                          span $ 5,647.00
+                        .flex-shrink-0 
+                          .design-menu 
+                            i.fa.fa-angle-right
+                    a(href="learning-list-view.html") 
+                      .d-flex 
+                        .design-score.bg-light-danger
+                          svg.mt-2
+                            use(href='../assets/svg/icon-sprite.svg#other')
+                        .flex-grow-1
+                          h6 Others
+                          span $ 3,237.00
+                        .flex-shrink-0 
+                          .design-menu 
+                            i.fa.fa-angle-right
+                  .card-body.p-0
+                    #budget-chart-1.budget-chart  
+              .col-xl-6.col-xl-70.box-col-8e
                 .row 
-                  .col-sm-12
-                    .card.course-box.widget-course
-                      .card-body 
-                        .course-widget 
-                          .course-icon 
-                            svg.fill-icon
-                              use(href='../assets/svg/icon-sprite.svg#course-1')
-                          div 
-                            h4.mb-0 100+
-                            span.f-light Completed Courses
-                            a.btn.btn-light(href="learning-list-view.html").f-light View course
-                              span.ms-2 
-                                svg.fill-icon.f-light
-                                  use(href='../assets/svg/icon-sprite.svg#arrowright')
-                      ul.square-group
-                        li.square-1.warning
-                        li.square-1.primary
-                        li.square-2.warning1
-                        li.square-3.danger
-                        li.square-4.light
-                        li.square-5.warning
-                        li.square-6.success
-                        li.square-7.success
-                  .col-sm-12
-                    .card.course-box.widget-course 
-                      .card-body 
-                        .course-widget 
-                          .course-icon.warning 
-                            svg.fill-icon
-                              use(href='../assets/svg/icon-sprite.svg#course-2')
-                          div 
-                            h4.mb-0 50+
-                            span.f-light In Progress Courses
-                            a.btn.btn-light(href="learning-list-view.html").f-light View course
-                              span.ms-2 
-                                svg.fill-icon.f-light
-                                  use(href='../assets/svg/icon-sprite.svg#arrowright')
-                      ul.square-group
-                        li.square-1.warning
-                        li.square-1.primary
-                        li.square-2.warning1
-                        li.square-3.danger
-                        li.square-4.light
-                        li.square-5.warning
-                        li.square-6.success
-                        li.square-7.success
-              .col-xxl-4.col-xl-5.col-md-6.box-col-6
-                .row 
-                  .col-xl-12 
-                    .card
-                      .card-header.card-no-border.pb-0
+                  .col-md-7
+                    .card.order-overview
+                      .card-header.pb-0
                         .header-top
-                          h4 Total Users
+                          h4 Order Overview
                           .dropdown.icon-dropdown
-                            button#userdropdown.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                            button#userdropdown4.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
                               i.icon-more-alt
-                            .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown')
-                              a.dropdown-item(href='#') Weekly
-                              a.dropdown-item(href='#') Monthly
-                              a.dropdown-item(href='#') Yearly
-                      .card-body.py-lg-3
-                        ul.user-list
-                          li 
-                            .user-icon.primary
-                              .user-box
-                                i.font-primary(data-feather="user-plus")
-                            div 
-                              h4.mb-1 178,098
-                              span.font-primary.d-flex.align-items-center
-                                i.icon-arrow-up.icon-rotate.me-1  
-                                span.f-w-500 +30.89
-                          li 
-                            .user-icon.success
-                              .user-box
-                                i.font-success(data-feather="user-minus")
-                            div 
-                              h4.mb-1 178,098
-                              span.font-danger.d-flex.align-items-center
-                                i.icon-arrow-down.icon-rotate.me-1
-                                span.f-w-500 -08.89
-                  .col-xl-12 
-                    .card.growth-wrap
-                      .card-header.card-no-border.pb-0
-                        .header-top
-                          h4 Followers Growth
-                          .dropdown.icon-dropdown
-                            button#growthdropdown.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
-                              i.icon-more-alt
-                            .dropdown-menu.dropdown-menu-end(aria-labelledby='growthdropdown')
+                            .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown4')
                               a.dropdown-item(href='#') Weekly
                               a.dropdown-item(href='#') Monthly
                               a.dropdown-item(href='#') Yearly
                       .card-body
-                        .growth-wrapper
-                          #growthchart
-              .col-xxl-5.col-xl-3.col-md-12.box-col-12
-                .card.visitor-card 
+                        .d-flex
+                          h2.me-2 ($3,512,201)
+                          h6 Total Revenue
+                        .total-revenue
+                          .d-flex
+                            h5.me-2 40
+                            span (Online Order)
+                          .progress
+                            .progress-bar.bg-primary(role='progressbar', style='width: 50%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100')
+                        .total-revenue
+                          .d-flex
+                            h5.me-2 60
+                            span (Offline Order)
+                          .progress
+                            .progress-bar.bg-secondary(role='progressbar', style='width: 70%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100')
+                        .total-revenue
+                          .d-flex
+                            h5.me-2 20
+                            span (Cash On Develery)
+                          .progress
+                            .progress-bar.bg-danger(role='progressbar', style='width: 30%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100')
+                  .col-md-5
+                    .row 
+                      .col-xl-12.col-lg-12.col-md-12.col-sm-6
+                        .card.monthly-chart
+                          .card-header.pb-0
+                            .header-top
+                              h4 Monthly Sale
+                              .dropdown.icon-dropdown
+                                button#userdropdown5.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                  i.icon-more-alt
+                                .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown5')
+                                  a.dropdown-item(href='#') Weekly
+                                  a.dropdown-item(href='#') Monthly
+                                  a.dropdown-item(href='#') Yearly
+                          .card-body 
+                            .d-flex
+                              .monthly
+                                h5 Growth
+                                h3 $7,234
+                              #monthlychart-1.growth
+                      .col-xl-12.col-lg-12.col-md-12.col-sm-6
+                        .card.invoices
+                          .card-header.pb-0
+                            .header-top
+                              h4 Invoices
+                              .dropdown.icon-dropdown
+                                button#userdropdown6.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                  i.icon-more-alt
+                                .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown6')
+                                  a.dropdown-item(href='#') Weekly
+                                  a.dropdown-item(href='#') Monthly
+                                  a.dropdown-item(href='#') Yearly
+                          .card-body
+                            .d-flex 
+                              .flex-shrink-0 
+                                h5 Due
+                                h3 $8,727
+                              .flex-grow-1 
+                                h5 Overdue
+                                h3 $8,727
+              .col-xl-6.col-xl-100.box-col-12
+                .row 
+                  .col-md-5
+                    .row 
+                      .col-xl-12.col-lg-12.col-md-12.col-sm-6
+                        .card.since
+                          .card-body
+                            .customer-card.d-flex.b-l-primary.border-2
+                              div.ms-3
+                                h3.mt-1 Customers
+                                h5.mt-1 1.485
+                              .dashboard-user.bg-light-primary
+                                span
+                                svg
+                                  use(href='../assets/svg/icon-sprite.svg#male')
+                            .customer
+                              span.me-1
+                                svg
+                                  use(href='../assets/svg/icon-sprite.svg#arrow-up')
+                              span.font-success.me-2 + 4.6%
+                              span Since last Week
+                      .col-xl-12.col-lg-12.col-md-12.col-sm-6
+                        .card.since
+                          .card-body.money
+                            .customer-card.d-flex.b-l-secondary.border-2
+                              div.ms-3
+                                h3.mt-1 Revenue
+                                h5.mt-1 $5.873
+                              .dashboard-user.bg-light-secondary
+                                span
+                                svg
+                                  use(href='../assets/svg/icon-sprite.svg#money')
+                            .customer
+                              span.me-1
+                                svg
+                                  use(href='../assets/svg/icon-sprite.svg#arrow-up')
+                              span.font-success.me-2 + 3.10%
+                              span Since last Week
+                  .col-md-7
+                    .card.discount-card 
+                      .card-body
+                        #owl-carousel-dashboard.owl-carousel.owl-theme
+                          .special-offer 
+                            .d-flex
+                              .flex-shrink-0
+                                h3 IPhone 14 Pro 
+                                h5 
+                                  | $21.45
+                                  del $65.40
+                                h6.bg-light Special Discount 
+                                p Deal of the  Day From 
+                                  span $48 
+                                ul 
+                                  li 
+                                    h5 28
+                                    span Days
+                                  li 
+                                    h5 03
+                                    span Hours
+                                  li 
+                                    h5 14
+                                    span Min
+                                  li 
+                                    h5 45
+                                    span Sec
+                              img(src='../assets/images/dashboard-2/product/7.png' alt="")
+                            .product-slider
+                              .shap-block
+                                .rounded-shap.animate-bg-secondary
+                                  i
+                                  i
+                                  i
+                          .special-offer 
+                            .d-flex
+                              .flex-shrink-0
+                                h3 Apple Airpods 
+                                h5 
+                                  | $20.35
+                                  del $35.43
+                                h6.bg-light Special Discount 
+                                p Deal of the  Day From 
+                                  span $38 
+                                ul 
+                                  li 
+                                    h5 20
+                                    span Days
+                                  li 
+                                    h5 05
+                                    span Hours
+                                  li 
+                                    h5 30
+                                    span Min
+                                  li 
+                                    h5 15
+                                    span Sec
+                              img(src='../assets/images/dashboard-2/product/8.png' alt="")
+                            .product-slider
+                              .shap-block
+                                .rounded-shap.animate-bg-secondary
+                                  i
+                                  i
+                                  i
+                          .special-offer 
+                            .d-flex
+                              .flex-shrink-0
+                                h3 Apple Watch Series 7 
+                                h5 
+                                  | $25.30
+                                  del $45.40
+                                h6.bg-light Special Discount 
+                                p Deal of the  Day From 
+                                  span $25 
+                                ul 
+                                  li 
+                                    h5 15
+                                    span Days
+                                  li 
+                                    h5 06
+                                    span Hours
+                                  li 
+                                    h5 18
+                                    span Min
+                                  li 
+                                    h5 30
+                                    span Sec
+                              img(src='../assets/images/dashboard-2/product/9.png' alt="")
+                            .product-slider
+                              .shap-block
+                                .rounded-shap.animate-bg-secondary
+                                  i
+                                  i
+                                  i
+              .col-lg-4
+                .row 
+                  .col-12.col-lg-12.col-sm-6.box-col-12
+                    .card.total-earning
+                      .card-body
+                        .row 
+                          .col-sm-7.box-col-7
+                            .d-flex
+                              h3.font-primary Total Earning
+                            h5 $20.790
+                            span + 16.06% than last week
+                          .col-sm-5.box-col-5.p-0
+                            #income-chart-1
+                  .col-12.col-lg-12.col-sm-6.box-col-12
+                    .card.total-earning
+                      .card-body.pb-0
+                        .row 
+                          .col-sm-7.box-col-7
+                            .d-flex
+                              h3.font-primary Total Expense
+                            h5 $4,683.90
+                            span + 10.34% than last week
+                          .col-sm-5.box-col-5.p-0
+                            #expense-chart-1
+              .col-xl-4.col-xl-40.col-md-6.box-col-4
+                .card
                   .card-header.card-no-border.pb-0
                     .header-top
-                      h4.m-0 Visitors
-                        span.f-14.font-primary.f-w-500.ms-1
-                          svg.svg-fill.me-1
-                            use(href='../assets/svg/icon-sprite.svg#user-visitor')
-                          | (+2.8)
-                      .card-header-right-icon
-                        .dropdown.icon-dropdown
-                          button#visitorButton.btn.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
-                            i.icon-more-alt
-                          .dropdown-menu.dropdown-menu-end(aria-labelledby='visitorButton')
-                            a.dropdown-item(href='#') Today
-                            a.dropdown-item(href='#') Tomorrow
-                            a.dropdown-item(href='#') Yesterday
-                  .card-body.pt-3
-                    .visitors-container
-                      #visitor-chart
-              .col-xl-3.col-sm-6 
-                .card.social-widget
-                  .card-body
-                    .d-flex.align-items-center.justify-content-between
-                      div.d-flex.align-items-center.gap-2
-                        .social-icons
-                          img(src="../assets/images/dashboard//social/1.png", alt="facebook icon")
-                        span Facebook
-                      span.font-success.f-12.d-xxl-block.d-xl-none +22.9%
-                    .social-content
-                      div 
-                        h3.mb-1 12,098
-                        span.f-light Followers
-                      .social-chart
-                        #radial-facebook
-              .col-xl-3.col-sm-6 
-                .card.social-widget
-                  .card-body
-                    .d-flex.align-items-center.justify-content-between
-                      div.d-flex.align-items-center.gap-2
-                        .social-icons
-                          img(src="../assets/images/dashboard/social/3.png", alt="twitter icon")
-                        span Twitter
-                      span.font-success.f-12.d-xxl-block.d-xl-none +14.09%
-                    .social-content
-                      div 
-                        h3.mb-1 12,564
-                        span.f-light Followers
-                      .social-chart
-                        #radial-twitter
-              .col-xl-3.col-sm-6  
-                .card.social-widget
-                  .card-body
-                    .d-flex.align-items-center.justify-content-between
-                      div.d-flex.align-items-center.gap-2
-                        .social-icons
-                          img(src="../assets/images/dashboard/social/2.png", alt="instagram icon")
-                        span Instagram
-                      span.font-success.f-12.d-xxl-block.d-xl-none +27.4%
-                    .social-content
-                      div 
-                        h3.mb-1 15,080
-                        span.f-light Followers
-                      .social-chart
-                        #radial-instagram
-              .col-xl-3.col-sm-6 
-                .card.social-widget
-                  .card-body
-                    .d-flex.align-items-center.justify-content-between
-                      div.d-flex.align-items-center.gap-2
-                        .social-icons
-                          img(src="../assets/images/dashboard/social/4.png", alt="you tube icon")
-                        span Youtube
-                      span.font-success.f-12.d-xxl-block.d-xl-none +22.9%
-                    .social-content
-                      div 
-                        h3.mb-1 68,954
-                        span.f-light Followers
-                      .social-chart
-                        #radial-youtube 
-              .col-xxl-5.col-xl-8.box-col-12
-                .row.g-sm-3.height-equal-2.widget-charts
-                  .col-sm-6  
-                    .card.small-widget.mb-sm-0
-                      .card-body.primary 
-                        span.f-light New Orders
-                        .d-flex.align-items-end.gap-1
-                          h4 2,435
-                          span.font-primary.f-12.f-w-500
-                            i.icon-arrow-up
-                            span +50%
-                        .bg-gradient 
-                          svg.stroke-icon.svg-fill
-                            use(href='../assets/svg/icon-sprite.svg#new-order')
-                  .col-sm-6  
-                    .card.small-widget.mb-sm-0 
-                      .card-body.warning
-                        span.f-light New Customers
-                        .d-flex.align-items-end.gap-1
-                          h4 2,908
-                          span.font-warning.f-12.f-w-500
-                            i.icon-arrow-up
-                            span +20%
-                        .bg-gradient 
-                          svg.stroke-icon.svg-fill
-                            use(href='../assets/svg/icon-sprite.svg#customers')
-                  .col-sm-6 
-                    .card.small-widget.mb-sm-0 
-                      .card-body.secondary
-                        span.f-light Average Sale
-                        .d-flex.align-items-end.gap-1
-                          h4 $389k
-                          span.font-secondary.f-12.f-w-500
-                            i.icon-arrow-down
-                            span -10%
-                        .bg-gradient 
-                          svg.stroke-icon.svg-fill
-                            use(href='../assets/svg/icon-sprite.svg#sale')
-                  .col-sm-6 
-                    .card.small-widget.mb-sm-0 
-                      .card-body.success
-                        span.f-light Gross Profit
-                        .d-flex.align-items-end.gap-1
-                          h4 $3,908
-                          span.font-success.f-12.f-w-500
-                            i.icon-arrow-up
-                            span +80%
-                        .bg-gradient 
-                          svg.stroke-icon.svg-fill
-                            use(href='../assets/svg/icon-sprite.svg#profit')
-                  .col-sm-6 
-                    .card.widget-1.widget-with-chart.mb-xl-0
-                      .card-body 
-                        div 
-                          h4.mb-1 1,80k
-                          span.f-light Orders
-                        .order-chart 
-                          #orderchart
-                  .col-sm-6 
-                    .card.widget-1.widget-with-chart.mb-xl-0
-                      .card-body 
-                        div 
-                          h4.mb-1 6,90k
-                          span.f-light Profit
-                        .profit-chart 
-                          #profitchart
-              .col-xxl-3.col-xl-4.col-sm-6.box-col-6 
-                .card.balance-box.height-equal-2
-                  .card-body.d-flex.align-items-center.justify-content-center
-                    .balance-profile
-                      .balance-img
-                        img(src="../assets/images/dashboard/user/user-boy.png", alt="user vector")
-                        a(href="user-profile.html").edit-icon
-                          svg
-                            use(href='../assets/svg/icon-sprite.svg#pencil')
-                      span.f-light.d-block Your Balance 
-                      h4.mt-1 $768,987.90
-                      ul 
-                        li
-                          .balance-item.danger 
-                            .balance-icon-wrap  
-                              .balance-icon
-                                i(data-feather="arrow-down-right")
-                            div 
-                              span.f-12.f-light Investment  
-                              h4 78.8K
-                              span.badge.badge-light-danger.rounded-pill -11.67%
-                        li
-                          .balance-item.success
-                            .balance-icon-wrap  
-                              .balance-icon
-                                i(data-feather="arrow-up-right")
-                            div 
-                              span.f-12.f-light Cash Back
-                              h4 19.7K
-                              span.badge.badge-light-success.rounded-pill +10.67%
-              .col-xl-4.d-xxl-block.d-xl-none.col-sm-6.box-col-6   
-                .card.height-equal-2 
-                  .card-body.ps-0
-                    .default-datepicker
-                      .datepicker-here(data-language='en')
+                      h4 Active Tasks
+                      .dropdown.icon-dropdown
+                        button#userdropdown6.btn.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                          i.icon-more-alt
+                        .dropdown-menu.dropdown-menu-end(aria-labelledby='userdropdown6')
+                          a.dropdown-item(href='#') Weekly
+                          a.dropdown-item(href='#') Monthly
+                          a.dropdown-item(href='#') Yearly
+                  .card-body.active-task
+                    ul
+                      li.d-flex.pt-0
+                        .flex-shrink-0
+                          .form-check
+                            input.form-check-input(type='checkbox' value='')
+                            label.form-check-label
+                        .flex-grow-1 
+                          a(href="to-do.html")
+                            h5 Regina Cooper
+                          p Create userflow social application design
+                        span.delete-option 
+                          a(href="#")
+                            svg.remove
+                              use(href='../assets/svg/icon-sprite.svg#Delete')
+                      li.d-flex  
+                        .flex-shrink-0
+                          .form-check
+                            input.form-check-input(type='checkbox' value='')
+                            label.form-check-label
+                        .flex-grow-1 
+                          a(href="to-do.html")
+                            h5 Install Appointment
+                          p Homepage design for slimmuch product
+                        span.delete-option 
+                          a(href="#")
+                            svg.remove
+                              use(href='../assets/svg/icon-sprite.svg#Delete')
+                      li.d-flex  
+                        .flex-shrink-0
+                          .form-check
+                            input.form-check-input(type='checkbox' value='')
+                            label.form-check-label
+                        .flex-grow-1 
+                          a(href="to-do.html")
+                            h5 Regina Cooper
+                          p Interactive prototype design - web design
+                        span.delete-option 
+                          a(href="#")
+                            svg.remove
+                              use(href='../assets/svg/icon-sprite.svg#Delete')
+                      li.d-flex  
+                        .flex-shrink-0
+                          .form-check
+                            input.form-check-input(type='checkbox' value='')
+                            label.form-check-label
+                        .flex-grow-1 
+                          a(href="to-do.html")
+                            h5 Regina Cooper
+                          p Create Application design for topbuzz
+                        span.delete-option 
+                          a(href="#")
+                            svg.remove
+                              use(href='../assets/svg/icon-sprite.svg#Delete')
+              .col-xl-2.col-xl-30.col-sm-6.box-col-4
+                .card.mb-0.online-order
+                  .card-header.pb-0
+                    .d-flex
+                      .order.bg-light-primary
+                        span
+                        svg
+                          use(href='../assets/svg/icon-sprite.svg#basket')
+                      .arrow-chart
+                        svg
+                          use(href='../assets/svg/icon-sprite.svg#arrow-chart')
+                        span.font-danger -6.3%
+                    .online
+                      span Online Order
+                      h2 16,2873
+                  .card-body.pt-0.ps-2.pe-2
+                    #online-chart-1
+              .col-xl-2.col-xl-33.col-sm-6.box-col-4.offline-card
+                .card.mb-0.online-order
+                  .card-header.offline-order
+                    .d-flex
+                      .order.bg-light-secondary
+                        span
+                        svg
+                          use(href='../assets/svg/icon-sprite.svg#delivery')
+                      .arrow-chart
+                        svg
+                          use(href='../assets/svg/icon-sprite.svg#arrow-chart-up')
+                        span.font-success +8.3%
+                    .online
+                      span Offline Order
+                      h2 62,5461
+                  .card-body.pt-0.ps-2.pe-2
+                    #offline-chart-1.offline-chart
           // Container-fluid Ends
         include ../../components/footer
     include ../../components/footer-files

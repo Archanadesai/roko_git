@@ -11,7 +11,7 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -20,14 +20,15 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | Edit Profile
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item Users
                     li.breadcrumb-item.active  Edit Profile
           // Container-fluid starts
@@ -36,7 +37,7 @@ html(lang='en')
               .row
                 .col-xl-4
                   .card
-                    .card-header
+                    .card-header.pb-0
                       h3.card-title.mb-0 My Profile
                       .card-options
                         a.card-options-collapse(href='#', data-bs-toggle='card-collapse')
@@ -68,7 +69,7 @@ html(lang='en')
                           button.btn.btn-primary.btn-block Save
                 .col-xl-8
                   form.card
-                    .card-header
+                    .card-header.pb-0
                       h3.card-title.mb-0 Edit Profile
                       .card-options
                         a.card-options-collapse(href='#', data-bs-toggle='card-collapse')
@@ -126,14 +127,14 @@ html(lang='en')
                       button.btn.btn-primary(type='submit') Update Profile
                 .col-md-12
                   .card
-                    .card-header
+                    .card-header.pb-0
                       h3.card-title.mb-0 Add projects And Upload
                       .card-options
                         a.card-options-collapse(href='#', data-bs-toggle='card-collapse')
                           i.fe.fe-chevron-up
                         a.card-options-remove(href='#', data-bs-toggle='card-remove')
                           i.fe.fe-x
-                    .table-responsive.add-project
+                    .table-responsive.custom-scrollbar.theme-scrollbar.add-project
                       table.table.card-table.table-vcenter.text-nowrap
                         thead
                           tr
@@ -146,7 +147,7 @@ html(lang='en')
                           tr
                             td
                               a.text-inherit(href='#') Untrammelled prevents 
-                            td 28 May 2018
+                            td 28 May 2023
                             td
                               span.status-icon.bg-success
                               |  Completed
@@ -167,7 +168,7 @@ html(lang='en')
                           tr
                             td
                               a.text-inherit(href='#') Untrammelled prevents
-                            td 12 June 2018
+                            td 12 June 2023
                             td
                               span.status-icon.bg-danger
                               |  On going
@@ -188,7 +189,7 @@ html(lang='en')
                           tr
                             td
                               a.text-inherit(href='#') Untrammelled prevents
-                            td 12 July 2018
+                            td 12 July 2023
                             td
                               span.status-icon.bg-warning
                               |  Pending
@@ -209,7 +210,7 @@ html(lang='en')
                           tr
                             td
                               a.text-inherit(href='#') Untrammelled prevents
-                            td 14 June 2018
+                            td 14 June 2023
                             td
                               span.status-icon.bg-warning
                               |  Pending
@@ -230,7 +231,7 @@ html(lang='en')
                           tr
                             td
                               a.text-inherit(href='#') Untrammelled prevents
-                            td 25 June 2018
+                            td 25 June 2023
                             td
                               span.status-icon.bg-success
                               |  Completed

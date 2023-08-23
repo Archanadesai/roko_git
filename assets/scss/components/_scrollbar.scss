@@ -6,9 +6,15 @@
 }
 
 .simplebar-mask {
-    top: 0;
+    top: 100px;
 }
-
+.page-wrapper {
+    &.horizontal-wrapper {
+        .simplebar-offset {
+            top: 0px ;
+        }
+    }
+}
 .simplebar-track {
     right: -2px;
 
@@ -21,7 +27,16 @@
         visibility: hidden !important;
     }
 }
-
+.simplebar-offset {
+    top: -10px;
+}
+.sidebar-wrapper {
+    &.close_icon {
+        .simplebar-offset {
+            top: 0;
+        }
+    }
+}
 .simplebar-scrollbar {
     &:before {
         background: rgba($primary-color, 0.2);
@@ -73,7 +88,6 @@
         }
     }
 }
-
 /**=====================
     2.36 Scrollbar CSS Ends
 ==========================**/

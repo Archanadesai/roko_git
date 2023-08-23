@@ -1740,7 +1740,7 @@ span.flatpickr-weekday {
 }
 
 .fv-plugins-bootstrap .fv-help-block {
-  color: #dc3545;
+  color: #FC4438 ;
   font-size: 80%;
   margin-top: 0.25rem;
 }
@@ -1751,7 +1751,7 @@ span.flatpickr-weekday {
 }
 
 .fv-plugins-bootstrap .has-danger .fv-plugins-icon {
-  color: #dc3545;
+  color: #FC4438 ;
 }
 
 .fv-plugins-bootstrap .has-success .fv-plugins-icon {
@@ -1820,7 +1820,7 @@ span.flatpickr-weekday {
 }
 
 .fv-plugins-bootstrap5 .fv-plugins-bootstrap5-row-invalid .fv-plugins-icon {
-  color: #dc3545;
+  color: #FC4438 ;
 }
 
 .fv-plugins-bootstrap5 .fv-plugins-bootstrap5-row-valid .fv-plugins-icon {

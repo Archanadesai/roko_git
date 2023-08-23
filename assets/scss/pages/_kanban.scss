@@ -15,7 +15,7 @@
   height: auto;
   width: auto;
   line-height: unset;
-  background: $body-color;
+  background: $main-body-color;
   border-bottom: 1px solid #ddd;
   &.bg-info {
     &~.kanban-drag {
@@ -35,6 +35,14 @@
 }
 .kanban-container {
   display: contents;
+  footer{
+    &:empty{
+      display: none;
+    }
+  }
+}
+.kanban-container {
+  display: contents;
 }
 .kanban-board {
   margin-bottom: 30px;
@@ -45,7 +53,7 @@
   overflow: hidden;
   width: calc(100% / 3 - 30px) !important;
   .kanban-drag {
-    background: $body-color;
+    background: $main-body-color;
   }
 }
 .kanban-item {
@@ -91,11 +99,10 @@
     .badge {
       font-weight: 400;
     }
-     h5 {
-      font-size: 15px;
-      margin-top: 5px;
-      padding-bottom: 8px;
-      font-weight: 700;
+    h6 {
+      font-size: 16px;
+      margin: 10px 0px 10px 0px;
+      font-weight: 500;
     }
     .dropdown {
       display: inline-block;
@@ -138,6 +145,11 @@ footer {
     margin-bottom: 10px;
     margin-left: 20px;
   }
+  .kanban-container {
+    .kanban-board {
+      width: 320px !important;
+    }
+  }
 }
 @media only screen and (max-width: 600px) {
   .kanban-board .kanban-drag,
@@ -158,6 +170,9 @@ footer {
   .kanban-board .kanban-drag,
   .kanban-container .kanban-item .kanban-box {
     padding: 10px 15px;
+  }
+  .kanban-container .kanban-board {
+    width: 270px !important;
   }
 }
 /**=====================

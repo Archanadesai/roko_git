@@ -1,17 +1,14 @@
 /**=====================
   5.9 Box-layout CSS start
 ==========================**/
-
 .box-layout {
   background-image: url(../images/other-images/boxbg.jpg);
   background-blend-mode: overlay;
   background-color: rgba($white, 0.5);
-
   @media only screen and (min-width: 1280px) {
     .learning-filter {
       order: -1;
     }
-
     .artist-table {
       .appointment-table.customer-table {
             table {
@@ -25,57 +22,45 @@
             }
       }
     }
-
-    .md-sidebar {
-      .md-sidebar-toggle {
-        display: block;
-      }
-
-      .md-sidebar-aside {
-        position: absolute;
-        top: 40px;
-        left: 0;
-        opacity: 0;
-        visibility: hidden;
-        z-index: 3;
-        width: 280px;
-
-        &.open {
-          opacity: 1;
-          visibility: visible;
+    .email-wrap {
+      .email-left-aside {
+        .email-app-sidebar {
+          .d-flex {
+            display: block !important;
+            .media-size-email {
+              width: 100%;
+              text-align: center;
+              .mr-3 {
+                margin-right: 0 !important;
+              }
+            }
+            .flex-grow-1 {
+              text-align: center;
+            }
+          }
         }
       }
     }
-
-    .job-sidebar {
-      background-color: var(--white);
-      padding: 20px;
-    }
-
     .widget-1 {
       &.mb-xl-0 {
         margin-bottom: 25px !important;
       }
     }
-
     .radial-progress-card {
       .radial-chart-wrap {
         margin-right: -10px;
       }
     }
-
     .currency-widget {
       div[class*=bg-light-] {
         display: none;
       }
     }
-
     .box-order {
       .order-1 {
         order: 1 !important;
       }
     }
-
     .activity-card {
       .appointment-table {
         &.customer-table {
@@ -83,7 +68,6 @@
         }
       }
     }
-
     .transaction-table {
       tr {
         td {
@@ -93,78 +77,163 @@
         }
       }
     }
-
     .welcome-card {
       .welcome-img {
         height: 170px;
         bottom: -22px;
       }
     }
-
+    .comment-box {
+      ul {
+        ul {
+          margin-left: 0;
+        }
+      }
+    }
+    .blog-page {
+      .blog-box {
+        &.blog-shadow {
+          height: 455px;
+          img {
+            height: 455px;
+          }
+        }
+      }
+    }
+    .blog-box {
+      .blog-details {
+        .blog-social {
+          margin-top: 12px;
+          li {
+            &:first-child {
+              padding-right: 8px;
+            }
+            + li {
+              padding-left: 8px;
+            }
+          }
+        }
+      }
+      &.blog-list {
+        .blog-details {
+          margin: 10px;
+        }
+      }
+      .blog-details-main {
+        .blog-social {
+          li {
+            padding: 0px 5px;
+          }
+        }
+      }
+    }
     .purchase-card {
       img {
         margin: -210px auto 0;
         width: 80%;
       }
-
       &.discover {
         margin-top: 90px;
-
         img {
           margin-top: -90px;
           width: 64%;
         }
       }
     }
-
     .apache-cotainer-large,
     #line-visual,
     #line-visulH {
-
       >div,
       canvas {
         width: 100% !important;
       }
     }
-
+    .page-wrapper {
+      .page-header {
+        .header-wrapper {
+          .nav-right {
+            > ul  {
+              > li {
+                &:nth-child(2) {
+                  display: none;
+                }
+              }
+            }
+          }
+          .serchinput {
+            display: block !important;
+          }
+        }
+      }
+    }
+    .page-wrapper {
+      &.horizontal-wrapper {
+        .header-logo-wrapper {
+          display: none;
+        }
+      }
+    }
+    .left-header {
+      .left-menu-header {
+        ul {
+          &.header-left {
+            li {
+              span {
+                &.f-w-500 {
+                  padding: 6px 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  .page-wrapper {
+    .page-header {
+      .header-wrapper {
+        padding: 18px 30px;
+        .nav-right {
+          > ul {
+            > li {
+              padding: 6px 8px;
+              margin-right: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
     .page-wrapper,
     &.page-wrapper {
       &.box-layout {
         padding-top: 40px;
         margin-top: 0 !important;
       }
-
       &.compact-wrapper {
         margin-top: $box-layout-space;
-
         .page-body-wrapper {
           .sidebar-wrapper {
-            width: 230px;
-            top: 140px;
-            bottom: 97px;
-            border-radius: 0 10px 10px 0;
-
+            width: $sidebar-compact-width;
+            top: $box-layout-space;
+            border-radius: 10px 0 0 10px;
             &.close_icon {
               ~footer {
                 width: 1200px;
                 left: 47%;
               }
-
               ~.footer-fix {
                 padding-left: 0;
               }
-
               .sidebar-main {
                 .sidebar-links {
                   height: calc(100vh - 196px);
                 }
               }
             }
-
             .logo-wrapper {
               box-shadow: 0 8px 6px -6px rgba(89, 102, 122, 0.1);
+              border-radius: 10px 0 0 0;
             }
-
             .sidebar-main {
               .sidebar-links {
                 margin-top: 10px;
@@ -173,7 +242,6 @@
               }
             }
           }
-
           .page-body {
             min-height: calc(100vh - 130px);
             margin-top: 0;
@@ -181,56 +249,44 @@
             overflow: scroll;
             max-height: calc(100vh - 220px);
             padding-bottom: 80px;
-            margin-left: 230px;
-
+            margin-left: 246px;
             &::-webkit-scrollbar-track {
               -webkit-box-shadow: inset 0 0 6px $light-gray;
             }
-
             &::-webkit-scrollbar {
               width: 6px;
             }
-
             &::-webkit-scrollbar-thumb {
-              background-color: rgba(68, 102, 242, 0.15);
+              background-color: rgba($primary-color, 0.15);
             }
           }
         }
       }
-
       &.compact-sidebar {
         .page-header {
           padding-left: 148px;
         }
-
         .page-body-wrapper {
           margin-top: 40px;
-
           div.sidebar-wrapper {
             top: 40px;
-
             &.close_icon {
               display: none;
               transition: 0.5s;
             }
-
             .sidebar-main {
               .sidebar-links {
                 height: calc(100vh - 166px);
                 margin: 0;
-
                 li {
-
                   .sidebar-submenu,
                   .mega-menu-container {
                     left: 470px;
                     top: 40px;
                     height: calc(100vh - 84px);
                   }
-
                   a {
                     &.active {
-
                       ~.sidebar-submenu,
                       ~.mega-menu-container {
                         animation: unset;
@@ -240,13 +296,10 @@
                 }
               }
             }
-
           }
-
           .footer {
             margin-left: 0;
           }
-
           .page-body {
             min-height: calc(100vh - 90px);
             margin-top: 0;
@@ -254,36 +307,29 @@
             overflow: scroll;
             max-height: calc(100vh - 170px);
             padding-bottom: 80px;
-
             &::-webkit-scrollbar-track {
               -webkit-box-shadow: inset 0 0 6px $light-gray;
             }
-
             &::-webkit-scrollbar {
               width: 6px;
             }
-
             &::-webkit-scrollbar-thumb {
-              background-color: rgba(68, 102, 242, 0.15);
+              background-color: rgba($primary-color, 0.15);
             }
           }
         }
-
         &.compact-small {
           .page-header {
             padding-left: 90px;
-
             &.close_icon {
               padding-left: 0;
             }
           }
-
           .page-body-wrapper {
             div.sidebar-wrapper {
               .sidebar-main {
                 .sidebar-links {
                   li {
-
                     .sidebar-submenu,
                     .mega-menu-container {
                       left: 410px;
@@ -295,55 +341,36 @@
           }
         }
       }
-      
-      .page-header {
-        .header-wrapper {
-          .search-full {
-            .form-group {
-              width: 345px;
-            }
-          }
-        }
-      }
-
       &.horizontal-wrapper {
         &:before {
           display: none;
         }
-
         .page-body-wrapper {
           margin-top: 40px;
-
           .page-body {
             margin-top: 80px;
             min-height: calc(100vh - 310px);
             max-height: calc(100vh - 230px);
             overflow: scroll;
-
             &::-webkit-scrollbar-track {
               -webkit-box-shadow: inset 0 0 6px $light-gray;
             }
-
             &::-webkit-scrollbar {
               width: 6px;
             }
-
             &::-webkit-scrollbar-thumb {
-              background-color: rgba(68, 102, 242, 0.15);
+              background-color: rgba($primary-color, 0.15);
             }
           }
-
           .footer {
             padding-left: 15px;
           }
-
           .sidebar-wrapper {
             width: 1280px;
-            top: 80px;
+            top: 72px;
             margin: 0;
             overflow-x: unset;
             position: relative;
-
             .sidebar-main {
               #sidebar-menu {
                 left: 0%;
@@ -354,48 +381,39 @@
             }
           }
         }
-
         .page-header {
           padding-left: 0;
         }
       }
-
       &.modern-type {
         .page-header {
           padding-left: 0px;
-
           .header-wrapper {
             .left-header {
               width: 36%;
             }
-
             .nav-right {
               width: 46%;
             }
           }
         }
-
         .page-body-wrapper {
           .page-body {
             margin-left: 260px;
           }
-
           .sidebar-wrapper {
             top: 120px;
-
             .sidebar-main {
               .sidebar-links {
                 height: calc(100vh - 311px);
               }
             }
-
             &.close_icon {
               .sidebar-main {
                 .sidebar-links {
                   height: calc(100vh - 316px);
                 }
               }
-
               ~footer {
                 width: 1280px;
                 left: 50%;
@@ -403,35 +421,34 @@
               }
             }
           }
-
           .footer {
             margin-left: 0;
           }
         }
       }
-
       .page-header {
         max-width: 1280px;
         margin: 0 auto;
         left: 0;
         right: 0;
         transition: $sidebar-transition;
+        padding-left: 246px;
         margin-top: $box-layout-space;
         border-radius: 10px;
         width: unset;
-
         &.close_icon {
-          padding-left: 0;
+          padding-left: 71px;
           margin-left: auto;
           width: calc(100% - 0px);
           transition: $sidebar-transition;
         }
+        .header-wrapper {
+          border-radius: 0 10px 0 0;
+        }
       }
-
       &.horizontal-wrapper {
         .page-header {
           .header-wrapper {
-
             .nav-right,
             .left-header {
               width: 36%;
@@ -439,31 +456,25 @@
           }
         }
       }
-
       &.material-type {
         .page-body-wrapper {
           margin-top: 0;
-
           .page-body {
             margin-top: 0;
           }
-
           .sidebar-wrapper {
             top: 0;
           }
         }
       }
-
       &.material-icon {
         .page-header {
           &.close_icon {
             margin-top: 40px !important;
           }
         }
-
         .page-body-wrapper {
           margin-top: 0;
-
           .page-body {
             top: 0;
             min-height: calc(100vh - 170px);
@@ -471,23 +482,19 @@
           }
         }
       }
-
       &.advance-layout {
         .page-header {
           box-shadow: 0px 0px 10px rgba($black, 0.07);
         }
-
         .page-body-wrapper {
           margin-top: 0;
         }
       }
-
       .page-body-wrapper {
         width: 1280px;
-        box-shadow: 4px 11px 25px rgba($black, 0.07);
+        box-shadow: 4px 11px 25px rgba(0, 0, 0, 0.07);
         margin: 0 auto;
         overflow: hidden;
-
         .todo {
           .todo-list-wrapper {
             #todo-list {
@@ -500,11 +507,9 @@
             }
           }
         }
-
         .active-order-table {
           max-width: 443px;
           overflow: auto;
-
           table {
             tbody {
               tr {
@@ -517,9 +522,8 @@
             }
           }
         }
-
         .activity {
-          .media {
+          .d-flex {
             .gradient-round {
               &.gradient-line-1 {
                 &:after {
@@ -527,14 +531,12 @@
                   bottom: -64px;
                 }
               }
-
               &.small-line {
                 &:after {
                   height: 36px;
                   bottom: -43px;
                 }
               }
-
               &.medium-line {
                 &:after {
                   height: 40px;
@@ -544,27 +546,23 @@
             }
           }
         }
-
         footer {
           width: 1280px;
           margin: 0 auto;
-          padding-left: 230px;
-          margin-bottom: 40px !important;
+          padding-left: 275px !important;
+          margin-bottom: 47px !important;
           position: fixed;
           left: 50%;
           transform: translate(-50%, 0);
           border-radius: 0 0 10px;
         }
-
         .blockquote-footer {
           margin-left: 0;
           width: 100%;
         }
-
         .footer-fix {
           padding-left: 230px;
         }
-
         .chat-box {
           .chat-history {
             .call-content {
@@ -572,27 +570,23 @@
               align-items: center;
               justify-content: center;
               min-width: 300px;
-
               >div {
                 z-index: 8;
-                background-color: rgba($white, 0.75);
+                background-color: rgba(255, 255, 255, 0.75);
                 background-blend-mode: overlay;
                 width: 100%;
                 padding: 30px;
                 left: 15px;
               }
-
               button {
                 width: 40%;
                 font-size: 14px;
                 margin: 0 auto;
               }
             }
-
             .call-icons {
               margin-top: 20px;
               margin-bottom: 20px;
-
               ul {
                 li {
                   border: 1px solid #717171;
@@ -602,16 +596,13 @@
                 }
               }
             }
-
             .receiver-img {
               margin-top: 30px;
               margin-bottom: 30px;
-
               img {
                 width: 38%;
               }
             }
-
             .total-time {
               h2 {
                 font-size: 28px;
@@ -620,43 +611,36 @@
             }
           }
         }
-
         canvas {
           &#myLineCharts {
             width: 100%;
           }
         }
-
         .chat-right-aside {
           flex: 0 0 60%;
           max-width: 60%;
           overflow: hidden;
         }
-
         .caller-img {
           position: absolute;
           width: 100%;
           max-width: 100%;
           left: 15px;
-
           img {
             opacity: 0.7;
           }
         }
-
         .browser-widget {
           img {
             height: 65px;
           }
         }
-
         .custom-card {
           .card-header {
             img {
               margin-top: -73px;
             }
           }
-
           .card-profile {
             img {
               height: 130px;
@@ -664,20 +648,15 @@
             }
           }
         }
-
         .select2 {
           width: 901.781px;
         }
-
       }
-
-
       ul {
         &.close_icon {
           >li {
             label {
               padding: 0;
-
               &:after {
                 display: none;
               }
@@ -685,13 +664,11 @@
           }
         }
       }
-
       .bookmark {
         ul {
           margin-right: -1px;
         }
       }
-
       #batchDelete {
         .jsgrid-grid-header {
           .jsgrid-table {
@@ -706,7 +683,6 @@
           }
         }
       }
-
       .btn-group-showcase {
         .btn-radio {
           .btn-group {
@@ -718,32 +694,26 @@
           }
         }
       }
-
-      .media.bitcoin-graph {
+      .d-flex.bitcoin-graph {
         display: block;
-
         .top-bitcoin {
           display: inline-block;
           vertical-align: middle;
         }
-
         .flex-grow-1 {
           margin-top: 30px;
-
           .bitcoin-content {
             .bitcoin-numbers {
               h6 {
                 font-size: 14PX;
               }
             }
-
             &.text-right {
               text-align: center !important;
             }
           }
         }
       }
-
       .alert {
         &.inverse {
           p {
@@ -755,24 +725,28 @@
           }
         }
       }
-
       .auth-bg-effect {
         .second-effect {
           left: 55%;
         }
       }
-
       .auth-bg-video {
         video {
           min-width: 67%;
           width: 67%;
         }
       }
-
+      .page-builder {
+        .ge-canvas.ge-layout-desktop {
+          margin-top: $box-layout-space;
+        }
+        .ge-addRowGroup {
+          margin-bottom: 10px;
+        }
+      }
       .pricing-wrapper-card {
         padding: 50px 20px;
       }
-
       .card {
         .blog-box {
           &.blog-grid {
@@ -782,69 +756,55 @@
           }
         }
       }
-
       .flot-chart-placeholder {
         &#donut-color-chart-morris-daily {
           min-height: 430px;
         }
       }
-
       .flot-chart-placeholder {
         &#donut-color-chart-morris {
           min-height: 430px;
         }
       }
-
       .box-col-12 {
         flex: 0 0 100%;
         max-width: 100%;
       }
-
       .box-col-6 {
         flex: 0 0 50%;
         max-width: 50%;
       }
-
       .box-col-3 {
         flex: 0 0 25%;
         max-width: 25%;
       }
-
       .box-col-7 {
         flex: 0 0 60%;
         max-width: 60%;
       }
-
       .box-col-5 {
         flex: 0 0 40%;
         max-width: 40%;
       }
-
       .box-col-8 {
         flex: 0 0 70%;
         max-width: 70%;
       }
-
       .box-col-4e {
         flex: 0 0 30%;
         max-width: 30%;
       }
-
-
       .box-col-4 {
         flex: 0 0 33.33%;
         max-width: 33%;
       }
-
       .box-col-8e {
         flex: 0 0 66.67%;
         max-width: 66.67%;
       }
-
       .box-col-none {
         display: none !important;
       }
-
       .chat-box {
         .chat-right-aside {
           .chat {
@@ -860,18 +820,15 @@
               }
             }
           }
-
           flex: 0 0 100%;
           max-width: calc(100% - 15px);
           overflow: hidden;
         }
-
         .toogle-bar {
           display: inline-block;
           margin-right: 0 !important;
         }
       }
-
       .chat-menu {
         right: 0;
         border-top: 1px solid #ddd;
@@ -883,7 +840,6 @@
         z-index: 9;
         background-color: #fff;
         transition: all linear 0.3s;
-
         &.show {
           opacity: 1;
           visibility: visible;
@@ -892,7 +848,6 @@
           padding-bottom: 25px;
         }
       }
-
       .ct-10.total-chart {
         .ct-chart-bar {
           .ct-series {
@@ -902,7 +857,6 @@
           }
         }
       }
-
       .social-app-profile {
         #friends {
           .box-col-4 {
@@ -911,7 +865,6 @@
           }
         }
       }
-
       .email-wrap {
         .email-body {
           .email-compose {
@@ -922,19 +875,16 @@
             }
           }
         }
-
         .row {
           .col-xl-6 {
             padding-left: 12px;
           }
-
           .col-xl-3 {
             +.col-xl-3 {
               padding-right: 12px;
             }
           }
         }
-
         .email-right-aside {
           .email-body {
             .inbox {
@@ -942,7 +892,6 @@
             }
           }
         }
-
         .email-content {
           .email-top {
             .user-emailid {
@@ -953,30 +902,25 @@
           }
         }
       }
-
       .todo {
         .notification-popup {
           right: 320px;
         }
       }
-
       .touchspin {
         padding: 0 10px;
       }
-
       .vertical-menu-main {
         width: 1280px;
         margin: 0 auto;
         left: 0;
         right: 0;
-
         .mega-menu {
           width: 1050px !important;
           max-width: 1050px !important;
           left: -320px !important;
         }
       }
-
       .comingsoon {
         video {
           min-width: 67%;
@@ -984,210 +928,53 @@
         }
       }
     }
-    .dashboard_default { 
-      table {
-        tbody {
-          tr {
-            td {
-              padding: 21px 0px 21px 0px !important;
-            }
+    // Dashboard-1 
+    .default-dashboard {
+      .review-slider {
+        .review {
+          .review-content {
+            margin: 20px 0;
           }
-        }
-      }
-      .total-earning {
-        .d-flex {
-          .badge {
-            margin: 0px 10px 0px 10px;
-          }
-        }
-        .d-flex {
-          .flex-grow-1 {
-            p {
-              span {
-                &:last-child {
-                  display: none;
-                }
-              }
-            }
-          }
-        }
-      }
-      .progress-show {
-        .d-flex {
-          .d-flex {
-            h3 {
-              font-size: 18px;
-            }
-            p {
-              font-size: 20px;
-            }
-          }
-        }
-      }
-      .main-balance{
-        .card-body {
-          h3 {
-            font-size: 20px;
-          }
-          .balance-limit {
-            display: block !important;
-            .limit-balance-title {
-              padding-right: 49px;
-            }
-          }
-        }
-      }
-      .total-earning {
-        .d-flex {
-          .badge {
-            margin: 0px 5px 0px 0px;
-          } 
-          .flex-grow-1 {
-            .d-flex {
-              span {
-                margin-right: 2px !important;
-              }
-            }
-          }
-        }
-      }
-      .activeorder {
-        table {
-          thead {
-            tr {
-              th {
-                &:nth-child(3) {
-                  display: none;
-                }
-              }
-            }
-          }
-          tbody {
-            tr {
-              td {
-                &:nth-child(3) {
-                  display: none;
-                }
-                &:nth-child(7) {
-                  .order {
-                    padding: 6px 6px;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-      .recent-activities {
-        table {
-          thead {
-            tr {
-              th {
-                &:nth-child(4) {
-                  display: none;
-                }
-              }
-            }
-          }
-          tbody {
-            tr {
-              td {
-                &:nth-child(4) {
-                  display: none;
-                }
-              }
-            }
-          }
-        }
-      }
-      // .live-price {
-      //   thead {
-      //     tr {
-      //       th {
-      //         &:nth-child(2) {
-      //           display: none;
-      //         }
-      //       }
-      //     }
-      //   }
-      //   table {
-      //     tbody {
-      //       tr {
-      //         td {
-      //           &:nth-child(2) {
-      //             display: none;
-      //           }
-      //         }
-      //       }
-      //     }
-      //   }
-      // }
-      .contact-details {
-        .card-body {
-          .d-flex {
-            margin-bottom: 25px;
-            span  {
-              padding: 10px 62px 10px 44px;
-            }
-          }
-          ul {
+          p {
             margin-top: 20px;
-            li {
-              &:last-child {
-                display: block;
-              }
-              img {
-                width: 100%;
-              }
-            }
+            font-size: 18px;
           }
         }
       }
-      .buysell-section {
-        .from-buy {
-          margin-bottom: 4px !important;
-          &.price-content {
-            margin-bottom: 0px;
-          }
-          &.amount {
-            display: none;
-          }
+      .sales {
+        .d-flex {
+          margin-left: 55px;
         }
-        a {
-          &.btn {
-            margin-top: 8px;
+        p {
+          margin: 10px 0;
+        }
+      }
+      .welcome-card {
+        .card-body {
+          height: 296px;
+          .d-flex {
+            margin-top: 45px;
           }
         }
       }
-      .coins-table {
-        table {
-          thead {
-            tr {
-              th {
-                &:nth-child(5) {
-                  display: none;
-                }
-                &:nth-child(6) {
-                  display: none;
-                }
-              }
-            }
-          }
-          tbody {
-            tr {
-              td {
-                &:nth-child(5) {
-                  display: none;
-                }
-                &:nth-child(6) {
-                  display: none;
-                }
-              }
+      .news-update {
+        margin-bottom: 0;
+      }
+      .left-background {
+        margin-bottom: 30px;
+      }
+      .product-chart {
+        .shap-block {
+          .rounded-shap {
+            i {
+              right: 38%;
+              top: -53%;
             }
           }
         }
       }
     }
+    // order
     .proorder-xl-1 {
       order: 1;
     }
@@ -1227,112 +1014,52 @@
     .proorder-xl-13 {
       order: 13;
     }
-    .dashboard_ecommerce {
-      table {
-        tbody {
-          tr {
-            td{
-              padding: 15px 0px 15px 0px !important;
-            }
-          }
-        }
-      }
-      .conversion-rate {
-        ul {
-          li {
-            button {
-              padding: 8px 1px;
-            }
-          }
-        }
-        .conversion-table {
-          thead {
-            tr {
-              th {
-                &:nth-child(4) {
-                  display: none;
-                }
-              }
-            }
-          }
-          tbody {
-            tr {
-              td {
-                padding: 10px 0px 10px 0px !important;
-                &:nth-child(4) {
-                  display: none;
-                }
-              }
-            }
-          }
-        }
-        ul {
-          li {
-            &:first-child {
-              padding-right: 7px;
-            }
-          }
-        }
-      }
-      .countries-user {
-        .countries-name {
-          border-left: none;
-          .user {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 12px;
-          }
-          .countries {
-            ul {
-              display: flex;
-              flex-wrap: wrap;
-              justify-content: space-between;
-              li {
-                .flex-grow-1{
-                  .progress {
-                    width: 100px;
+    .pedding-start {
+      padding-left: 0;
+    }
+    .pedding-end {
+      padding-right: 0;
+    }
+    .margin-bottom {
+      margin-bottom: 0 !important;
+    }
+    .online-order {
+      margin-bottom: 30px !important;
+    }
+    // dashboard-03
+    .project-dashboard {
+      .web-card {
+        .flex-shrink-0 {
+          .user-details {
+            &.customers {
+              ul {
+                li {
+                  + li {
+                    margin-left: -20%;
+                    [dir="rtl"] & {
+                      margin-left: unset;
+                      margin-right: -20%;
+                    }
                   }
                 }
               }
             }
           }
-        }
-      }
-      .profit {
-        .profit-earning {
-          .d-flex{
-            .badge {
-              width: 60px;
-              height: 60px;
-              margin-right: 8px;
-              svg {
-                width: 35px;
-                height: 35px;
-              }
+          .progress-value {
+            .progress {
+              width: 120px;
             }
-            .flex-grow-1 {
-              .d-flex {
-                h2 {
-                  font-size: 24px;
-                }
-                span[class*="bg-"] {
-                  display: none;
-                  svg {
-                    display: none;
-                  }
-                }
-                span {
-                  &.font-secondary {
-                    display: none;
-                  }
-                }
-              } 
+          }
+        }
+        .comment {
+          ul {
+            li {
+              padding: 6px 12px;
             }
           }
         }
       }
-      .latest-sales {
+      .project-summary {
         table {
           thead {
             tr {
@@ -1341,9 +1068,6 @@
                   display: none;
                 }
                 &:nth-child(5) {
-                  display: none;
-                }
-                &:nth-child(6) {
                   display: none;
                 }
               }
@@ -1356,9 +1080,6 @@
                   display: none;
                 }
                 &:nth-child(5) {
-                  display: none ;
-                }
-                &:nth-child(6) {
                   display: none;
                 }
               }
@@ -1366,100 +1087,91 @@
           }
         }
       }
-      .revenue-ecommerce {
-        .d-flex {
-          gap: 8px;
-          .flex-grow-1 {
-            &:nth-child(3) {
-              border-right: none;
-            }
-            &:last-child {
-              display: none;
-            }
-            h3 {
-              font-size: 20px;
-            }
-          }
-        }
-      }
-      .selling-table {
-        .card-header {
-          h3 {
-            text-overflow: ellipsis;
-            overflow: hidden;
-            display: -webkit-box !important;
-            -webkit-line-clamp: 1;
-            -webkit-box-orient: vertical;
-            width: 170px;
-            white-space: normal;
-          }
-        }
-        table {
-          thead {
-            tr {
-              th {
-                &:nth-child(3) {
-                  display: none;
-                }
-              }
-            }
-          }
-          tbody {
-            tr {
-              td {
-                &:nth-child(3) {
-                  display: none;
+      .today-task {
+        .clients-project {
+          table {
+            tbody {
+              tr {
+                td {
+                  .user-details {
+                    &.customers {
+                      ul {
+                        li {
+                          + li {
+                            margin-left: -30% !important;
+                            [dir="rtl"] & {
+                              margin-left: unset !important;
+                              margin-right: -30% !important;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
           }
         }
       }
-      .recent-orders {
-        .card-header {
-          h3 {
-            text-overflow: ellipsis;
-            overflow: hidden;
-            display: -webkit-box !important;
-            -webkit-line-clamp: 1;
-            -webkit-box-orient: vertical;
-            white-space: normal;
-            width: 110px;
-          }
+      .ps-20 {
+        padding-left: 0.5rem!important; 
+        [dir="rtl"] & {
+          padding-right: 0.5rem!important;
+          padding-left: unset;
         }
-        table {
-          thead {
-            tr {
-              th {
-                &:nth-child(3) {
-                  display: none;
-                }
-              }
-            }
-          }
-          tbody {
-            tr {
-              td {
-                &:nth-child(3) {
-                   display: none;
-                }
-              }
-            }
-          }
+      }
+      .pe-30 {
+        padding-right:  1rem!important;
+        [dir="rtl"] & {
+          padding-left:  1rem!important;
+          padding-right: unset;
         }
       }
     }
-    .col-xl-100 {
-      flex: 0 0 auto;
-      width: 100%;
-    }
-    .col-xl-50 {
-      flex: 0 0 auto;
-      width: 50%;
+    .general-widget {
+      .web-card {
+        .flex-shrink-0 {
+          .user-details {
+            &.customers {
+              ul {
+                li {
+                  + li {
+                    margin-left: -20%;
+                    [dir="rtl"] & {
+                      margin-left: unset;
+                      margin-right: -20%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .progress-value {
+            .progress {
+              width: 120px;
+            }
+          }
+        }
+        .comment {
+          ul {
+            li {
+              padding: 6px 10px;
+            }
+          }
+        }
+      }
+      .budget-card {
+        .budget-spent {
+          display: none;
+        }
+      }
+      .offline-card {
+        display: none;
+      }
     }
   }
 }
-
 /**=====================
   5.9 Box-layout CSS Ends
 ==========================**/

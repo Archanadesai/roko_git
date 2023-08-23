@@ -13,7 +13,7 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -22,27 +22,27 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | Cart
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item Ecommerce
                     li.breadcrumb-item.active Cart
-
           // Container-fluid starts
           .container-fluid
             .row
               .col-sm-12
                 .card
-                  .card-header
-                    h5 Cart
+                  .card-header.pb-0
+                    h3 Cart
                   .card-body
                     .row
-                      .order-history.table-responsive.wishlist.custom-scrollbar
+                      .order-history.table-responsive.custom-scrollbar.custom-scrollbar.wishlist
                         table.table.table-bordered
                           thead
                             tr
@@ -101,16 +101,15 @@ html(lang='en')
                                   input.form-control.me-2(type='text' placeholder='Enter coupan code')
                                   a.btn.btn-primary(href='#') Apply
                               td.total-amount
-                                h6.m-0.text-end
+                                h3.m-0.text-end
                                   span.f-w-600 Total Price :
                               td
                                 span $6935.00  
                             tr
                               td.text-end(colspan='5')
-                                a.btn.btn-secondary.cart-btn-transform(href='product.html') continue shopping
+                                a.btn.btn-secondary.cart-btn-transform(href='product.html') Continue Shopping
                               td
-                                a.btn.btn-success(href="checkout.html").cart-btn-transform check out
-
+                                a.btn.btn-success(href="checkout.html").cart-btn-transform Check out
                   // Container-fluid Ends
         include ../../components/footer
     include ../../components/footer-files

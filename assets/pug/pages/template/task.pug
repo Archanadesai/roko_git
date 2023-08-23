@@ -16,7 +16,7 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-sidebar.compact-small.material-icon
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -25,23 +25,23 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | Tasks
 
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
                         svg.stroke-icon
-                          use(href='../assets/svg/icon-sprite.svg#breadcrumb-home')
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item Apps
                     li.breadcrumb-item.active Tasks
           // Container-fluid starts
           .container-fluid
             .email-wrap.bookmark-wrap
               .row
-                .col-xl-3.box-col-6
+                .col-xl-3.box-col-3
                   .md-sidebar
                     a.btn.btn-primary.md-sidebar-toggle(href='javascript:void(0)') task filter
                     .md-sidebar-aside.job-left-aside.custom-scrollbar
@@ -53,15 +53,15 @@ html(lang='en')
                                 .media-size-email
                                   img.me-3.rounded-circle(src='../assets/images/user/user.png', alt='')
                                 .flex-grow-1
-                                  h5.f-w-600 MARK JENCO
+                                  h3 MARK JENCO
                                   p Markjecno@gmail.com
                               ul.nav.main-menu(role='tablist')
                                 li.nav-item
-                                  button.badge-light-primary.btn-block.btn-mail.w-100(type='button', data-bs-toggle='modal', data-bs-target='#exampleModal')
+                                  button.badge-light-primary.btn-block.txt-primary.btn-mail.w-100(type='button', data-bs-toggle='modal', data-bs-target='#exampleModal')
                                     i.me-2(data-feather='check-circle')
                                     |  New Task
                                 li.nav-item
-                                  span.f-w-700.main-title
+                                  span.main-title
                                     |  Views
                                 li
                                   a#pills-created-tab(data-bs-toggle='pill', href='#pills-created', role='tab', aria-controls='pills-created', aria-selected='true')
@@ -98,7 +98,7 @@ html(lang='en')
                                 li
                                   hr
                                 li
-                                  span.f-w-700.main-title
+                                  span.main-title
                                     |  Tags
                                     span.pull-right
                                       a(href='#', data-bs-toggle='modal', data-bs-target='#createtag')
@@ -119,25 +119,25 @@ html(lang='en')
                                   a#pills-holidays-tab.show(data-bs-toggle='pill', href='#', role='tab', aria-selected='false')
                                     span.title
                                       |  Holidays
-                .col-xl-9.col-md-12.box-col-12
+                .col-xl-9.col-md-12.box-col-80
                   .email-right-aside.bookmark-tabcontent
                     .card.email-body.radius-left
                       .ps-0
                         .tab-content
                           #pills-created.tab-pane.fade.active.show(role='tabpanel', aria-labelledby='pills-created-tab')
                             .card.mb-0
-                              .card-header.d-flex.card-no-border.pb-0
+                              .card-header.d-flex.pb-0
                                 h3.mb-0 Created by me
                                 a(href='#')
                                   i.me-2(data-feather='printer')
                                   | Print
                               .card-body.p-0
                                 .taskadd
-                                  .table-responsive.custom-scrollbar
+                                  .table-responsive.custom-scrollbar.theme-scrollbar
                                     table.table
                                       tr
                                         td
-                                          h5.task_title_0.f-w-700 Client meeting
+                                          h3.task_title_0 Client meeting
                                           p.project_name_0 General
                                         td
                                           p.task_desc_0 Documentation that is used to explain regarding some attributes of an object.
@@ -151,7 +151,7 @@ html(lang='en')
                                             i(data-feather='trash-2')
                                       tr
                                         td
-                                          h5.task_title_0.f-w-700 Plan webinar
+                                          h3.task_title_0 Plan webinar
                                           p.project_name_0 General
                                         td
                                           p.task_desc_0 kanban board is one of the tools that can be used to implement kanban to manage.
@@ -165,7 +165,7 @@ html(lang='en')
                                             i(data-feather='trash-2')
                                       tr
                                         td
-                                          h5.task_title_0.f-w-700 Email newsletter
+                                          h3.task_title_0 Email newsletter
                                           p.project_name_0 General
                                         td
                                           p.task_desc_0 There is some Console error in user profile page.
@@ -179,7 +179,7 @@ html(lang='en')
                                             i(data-feather='trash-2')
                                       tr
                                         td
-                                          h5.task_title_0.f-w-700 Publish podcast
+                                          h3.task_title_0 Publish podcast
                                           p.project_name_0 General
                                         td
                                           p.task_desc_0 Clone the theme test data file from the GitHub repository.
@@ -193,11 +193,10 @@ html(lang='en')
                                             i(data-feather='trash-2')
                                       tr
                                         td
-                                          h5.task_title_0.f-w-700 Lunch website
+                                          h3.task_title_0 Lunch website
                                           p.project_name_0 General
                                         td
                                           p.task_desc_0 Documentation that is used to explain regarding some attributes of an object to the client.
-
                                         td
                                           a.me-2(href='#')
                                             i(data-feather='link')
@@ -208,11 +207,10 @@ html(lang='en')
                                             i(data-feather='trash-2')
                                       tr
                                         td
-                                          h5.task_title_0.f-w-700 Client meeting
+                                          h3.task_title_0 Client meeting
                                           p.project_name_0 General
                                         td
                                           p.task_desc_0 Digital News Report shows that podcasting is now a worldwide that has become one of the hottest topic.
-
                                         td
                                           a.me-2(href='#')
                                             i(data-feather='link')
@@ -223,7 +221,7 @@ html(lang='en')
                                             i(data-feather='trash-2')
                                       tr
                                         td
-                                          h5.task_title_0.f-w-700 Plan webinar
+                                          h3.task_title_0 Plan webinar
                                           p.project_name_0 General
                                         td
                                           p.task_desc_0 There are many tools available for testing websites, we’ve chosen classics: Chrome dev tools.
@@ -235,27 +233,12 @@ html(lang='en')
                                         td
                                           a(href='#')
                                             i(data-feather='trash-2')
-                                      tr
-                                        td
-                                          h5.task_title_0.f-w-700 Email newsletter
-                                          p.project_name_0 General
-                                        td
-                                          p.task_desc_0 kanban board is one of the tools that can be used to implement kanban to manage.
-                                        td
-                                          a.me-2(href='#')
-                                            i(data-feather='link')
-                                          a(href='#')
-                                            i(data-feather='more-horizontal')
-                                        td
-                                          a(href='#')
-                                            i(data-feather='trash-2')
-
                                 //- .details-bookmark.text-center
                                 //-   span No tasks found.
                           #pills-todaytask.fade.tab-pane(role='tabpanel', aria-labelledby='pills-todaytask-tab')
                             .card.mb-0
                               .card-header.d-flex
-                                h5.mb-0 Today's Tasks
+                                h3.mb-0 Today's Tasks
                                 a(href='#')
                                   i.me-2(data-feather='printer')
                                   | Print
@@ -267,7 +250,7 @@ html(lang='en')
                           #pills-delayed.fade.tab-pane(role='tabpanel', aria-labelledby='pills-delayed-tab')
                             .card.mb-0
                               .card-header.d-flex
-                                h5.mb-0 Delayed Tasks
+                                h3.mb-0 Delayed Tasks
                                 a(href='#')
                                   i.me-2(data-feather='printer')
                                   | Print
@@ -277,7 +260,7 @@ html(lang='en')
                           #pills-upcoming.fade.tab-pane(role='tabpanel', aria-labelledby='pills-upcoming-tab')
                             .card.mb-0
                               .card-header.d-flex
-                                h5.mb-0 Upcoming Tasks
+                                h3.mb-0 Upcoming Tasks
                                 a(href='#')
                                   i.me-2(data-feather='printer')
                                   | Print
@@ -287,7 +270,7 @@ html(lang='en')
                           #pills-weekly.fade.tab-pane(role='tabpanel', aria-labelledby='pills-weekly-tab')
                             .card.mb-0
                               .card-header.d-flex
-                                h5.mb-0 This Week Tasks
+                                h3.mb-0 This Week Tasks
                                 a(href='#')
                                   i.me-2(data-feather='printer')
                                   | Print
@@ -297,7 +280,7 @@ html(lang='en')
                           #pills-monthly.fade.tab-pane(role='tabpanel', aria-labelledby='pills-monthly-tab')
                             .card.mb-0
                               .card-header.d-flex
-                                h5.mb-0 This Month Tasks
+                                h3.mb-0 This Month Tasks
                                 a(href='#')
                                   i.me-2(data-feather='printer')
                                   | Print
@@ -307,20 +290,20 @@ html(lang='en')
                           #pills-assigned.fade.tab-pane(role='tabpanel', aria-labelledby='pills-assigned-tab')
                             .card.mb-0
                               .card-header.d-flex
-                                h5.mb-0 Assigned to me
+                                h3.mb-0 Assigned to me
                                 a(href='#')
                                   i.me-2(data-feather='printer')
                                   | Print
                               .card-body.p-0
                                 .taskadd
-                                  .table-responsive
+                                  .table-responsive.custom-scrollbar.theme-scrollbar
                                     table.table
                                       tr
                                         td
-                                          h5.task_title_0 Task name
+                                          h3.task_title_0 Client meeting
                                           p.project_name_0 General
                                         td
-                                          p.task_desc_0 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                                          p.task_desc_0 Documentation that is used to explain regarding some attributes of an object.
                                         td
                                           a.me-2(href='#')
                                             i(data-feather='link')
@@ -331,10 +314,10 @@ html(lang='en')
                                             i(data-feather='trash-2')
                                       tr
                                         td
-                                          h5.task_title_0 Task name
+                                          h3.task_title_0 Plan webinar
                                           p.project_name_0 General
                                         td
-                                          p.task_desc_0 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                                          p.task_desc_0 kanban board is one of the tools that can be used to implement kanban to manage.
                                         td
                                           a.me-2(href='#')
                                             i(data-feather='link')
@@ -345,10 +328,10 @@ html(lang='en')
                                             i(data-feather='trash-2')
                                       tr
                                         td
-                                          h5.task_title_0 Task name
+                                          h3.task_title_0 Email newsletter
                                           p.project_name_0 General
                                         td
-                                          p.task_desc_0 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                                          p.task_desc_0 There is some Console error in user profile page.
                                         td
                                           a.me-2(href='#')
                                             i(data-feather='link')
@@ -359,10 +342,10 @@ html(lang='en')
                                             i(data-feather='trash-2')
                                       tr
                                         td
-                                          h5.task_title_0 Task name
+                                          h3.task_title_0 Publish podcast
                                           p.project_name_0 General
                                         td
-                                          p.task_desc_0 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                                          p.task_desc_0 Clone the theme test data file from the GitHub repository.
                                         td
                                           a.me-2(href='#')
                                             i(data-feather='link')
@@ -373,10 +356,10 @@ html(lang='en')
                                             i(data-feather='trash-2')
                                       tr
                                         td
-                                          h5.task_title_0 Task name
+                                          h3.task_title_0 Lunch website
                                           p.project_name_0 General
                                         td
-                                          p.task_desc_0 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                                          p.task_desc_0 Documentation that is used to explain regarding some attributes of an object to the client.
                                         td
                                           a.me-2(href='#')
                                             i(data-feather='link')
@@ -390,20 +373,20 @@ html(lang='en')
                           #pills-tasks.fade.tab-pane(role='tabpanel', aria-labelledby='pills-tasks-tab')
                             .card.mb-0
                               .card-header.d-flex
-                                h5.mb-0 My tasks
+                                h3.mb-0 My tasks
                                 a(href='#')
                                   i.me-2(data-feather='printer')
                                   | Print
                               .card-body.p-0
                                 .taskadd
-                                  .table-responsive
+                                  .table-responsive.custom-scrollbar.theme-scrollbar
                                     table.table
                                       tr
                                         td
-                                          h5.task_title_0 Task name
+                                          h3.task_title_0 Client meeting
                                           p.project_name_0 General
                                         td
-                                          p.task_desc_0 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                                          p.task_desc_0 Documentation that is used to explain regarding some attributes of an object.
                                         td
                                           a.me-2(href='#')
                                             i(data-feather='link')
@@ -414,10 +397,10 @@ html(lang='en')
                                             i(data-feather='trash-2')
                                       tr
                                         td
-                                          h5.task_title_0 Task name
+                                          h3.task_title_0 Plan webinar
                                           p.project_name_0 General
                                         td
-                                          p.task_desc_0 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                                          p.task_desc_0 kanban board is one of the tools that can be used to implement kanban to manage.
                                         td
                                           a.me-2(href='#')
                                             i(data-feather='link')
@@ -428,10 +411,10 @@ html(lang='en')
                                             i(data-feather='trash-2')
                                       tr
                                         td
-                                          h5.task_title_0 Task name
+                                          h3.task_title_0 Email newsletter
                                           p.project_name_0 General
                                         td
-                                          p.task_desc_0 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                                          p.task_desc_0 There is some Console error in user profile page.
                                         td
                                           a.me-2(href='#')
                                             i(data-feather='link')
@@ -442,10 +425,10 @@ html(lang='en')
                                             i(data-feather='trash-2')
                                       tr
                                         td
-                                          h5.task_title_0 Task name
+                                          h3.task_title_0 Publish podcast
                                           p.project_name_0 General
                                         td
-                                          p.task_desc_0 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                                          p.task_desc_0 Clone the theme test data file from the GitHub repository.
                                         td
                                           a.me-2(href='#')
                                             i(data-feather='link')
@@ -456,10 +439,10 @@ html(lang='en')
                                             i(data-feather='trash-2')
                                       tr
                                         td
-                                          h5.task_title_0 Task name
+                                          h3.task_title_0 Lunch website
                                           p.project_name_0 General
                                         td
-                                          p.task_desc_0 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                                          p.task_desc_0 Documentation that is used to explain regarding some attributes of an object to the client.
                                         td
                                           a.me-2(href='#')
                                             i(data-feather='link')
@@ -483,7 +466,7 @@ html(lang='en')
                           #pills-newsletter.fade.tab-pane(role='tabpanel', aria-labelledby='pills-newsletter-tab')
                             .card.mb-0
                               .card-header.d-flex
-                                h5.mb-0 Newsletter
+                                h3.mb-0 Newsletter
                                 a(href='#')
                                   i.me-2(data-feather='printer')
                                   | Print
@@ -494,7 +477,7 @@ html(lang='en')
                             .modal-dialog.modal-lg(role='document')
                               .modal-content
                                 .modal-header
-                                  h5.modal-title Create Tag
+                                  h3.modal-title Create Tag
                                   button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
                                 .modal-body
                                   form.form-bookmark.needs-validation(novalidate='')
@@ -504,14 +487,14 @@ html(lang='en')
                                         input.form-control(type='text', required='', autocomplete='off')
                                       div.mt-0.col-md-12
                                         label Tag color
-                                        input.form-color.d-block(type='color', value='#563d7c')
+                                        input.form-color.d-block(type='color', value='#795EBD')
                                     button.btn.btn-secondary(type='button') Save
                                     button.btn.btn-primary(type='button', data-bs-dismiss='modal') Cancel
             #exampleModal.modal.fade.modal-bookmark(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
               .modal-dialog.modal-lg(role='document')
                 .modal-content
                   .modal-header
-                    h5#exampleModalLabel.modal-title Add Task
+                    h3#exampleModalLabel.modal-title Add Task
                     button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
                   .modal-body
                     form.form-bookmark#bookmark-form.needs-validation(novalidate='')

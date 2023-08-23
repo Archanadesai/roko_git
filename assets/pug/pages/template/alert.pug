@@ -13,7 +13,7 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -22,14 +22,15 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | Alert
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item Ui Kits
                     li.breadcrumb-item.active Alert
           // Container-fluid starts
@@ -37,12 +38,12 @@ html(lang='en')
             .row
               .col-xl-12
                 .card
-                  .card-header
-                    h3 Link color in dark theme
+                  .card-header.pb-0
+                    h3 Link Color In Dark Theme
                     p.f-m-light.mt-1
                       | Use the 
                       code .alert-link
-                      |  utility class to quickly provide matching colored links within any alert.
+                      |  utility class to quickly provide matching colored links within any alert
                   .card-body
                     .row 
                       .col-xl-6 
@@ -54,7 +55,7 @@ html(lang='en')
                             |  with an example link.Check it out.
                         p.mb-0 Secondary Alert
                         .alert.alert-secondary.dark(role='alert')
-                          p.text-dark
+                          p
                             | This is a   
                             a.alert-link.text-white(href='#') secondary alert
                             |   with an example link. Check it out.
@@ -85,7 +86,7 @@ html(lang='en')
                             |   with an example link. Check it out.
                         p.mb-0 Light Alert
                         .alert.alert-light.dark(role='alert')
-                          p.text-dark
+                          p.txt-dark
                             | This is a  
                             a.alert-link(href='#') light alert 
                             |   with an example link. Check it out.
@@ -97,12 +98,12 @@ html(lang='en')
                             |   with an example link. Check it out.
               .col-xl-12
                 .card
-                  .card-header
-                    h3 Link color in light theme
+                  .card-header.pb-0
+                    h3 Link Color In Light Theme
                     p.f-m-light.mt-1
                       | Use the 
                       code .alert-link
-                      |  utility class to quickly provide matching colored links within any alert.
+                      |  utility class to quickly provide matching colored links within any alert
                   .card-body
                     .row 
                       .col-xl-6
@@ -157,11 +158,11 @@ html(lang='en')
                             |   with an example link. Check it out.
               .col-sm-12.col-xl-6
                 .card
-                  .card-header
-                    h3 Outline dark and light alerts
+                  .card-header.pb-0
+                    h3 Outline Dark And Light Alerts
                     p.f-m-light.mt-1
                       | Use the 
-                      code .border-* 
+                      code .border-*
                       | utility class to quickly provide matching border and border-width within any alert.
                   .card-body
                     .alert.txt-primary.border-primary.alert-dismissible.fade.show(role='alert')
@@ -179,8 +180,8 @@ html(lang='en')
                       button.btn-close(type='button', data-bs-dismiss='alert', aria-label='Close')
               .col-sm-12.col-xl-6
                 .card
-                  .card-header
-                    h3 Alerts with icons and text actions
+                  .card-header.pb-0
+                    h3 Alerts With Icons and Text Actions
                     p.f-m-light.mt-1
                       | Use the 
                       code .dismiss-text
@@ -194,7 +195,7 @@ html(lang='en')
                         strong.txt-dark 5
                         |   minute
                       button.p-0.border-0.me-2.ms-auto(type='button' data-bs-dismiss='alert' aria-label='Close')
-                        span.bg-warning.px-3.py-1(aria-hidden='true') Check
+                        span.bg-warning.text-black.px-3.py-1(aria-hidden='true') Check
                     .alert.border-danger.alert-dismissible.fade.show.p-0.mb-0(role='alert')
                       .alert-arrow.bg-danger
                         i.icon-heart
@@ -205,8 +206,8 @@ html(lang='en')
                         span.bg-danger.text-white.px-3.py-1(aria-hidden='true') Alert
               .col-sm-12.col-xl-6
                 .card.height-equal
-                  .card-header
-                    h3 Dismissing dark alert
+                  .card-header.pb-0
+                    h3 Dismissing Dark Alerts
                     p.f-m-light.mt-1
                       | Use the 
                       code .alert-dismissible
@@ -218,12 +219,12 @@ html(lang='en')
                       button.btn-close(type='button', data-bs-dismiss='alert', aria-label='Close')
               .col-sm-12.col-xl-6
                 .card.height-equal
-                  .card-header
-                    h3 Dismissing light alert
+                  .card-header.pb-0
+                    h3 Dismissing Light Alerts
                     p.f-m-light.mt-1
-                      | Use the 
-                      code .alert-dismissible
-                      |  utility class to quickly remove the alerts.
+                    | Use the 
+                    code .alert-dismissible
+                    |  utility class to quickly remove the alerts.
                   .card-body
                     .alert.alert-warning.alert-dismissible.fade.show(role='alert')
                       i(data-feather='bell')
@@ -231,8 +232,8 @@ html(lang='en')
                       button.btn-close(type='button', data-bs-dismiss='alert', aria-label='Close')
               .col-xl-6
                 .card.height-equal
-                  .card-header 
-                    h3 Live alert
+                  .card-header.pb-0 
+                    h3 Live Alert
                     p.f-m-light.mt-1 
                       | Click the button below to show an alert,then dismiss it with the built-in close button.
                   .card-body.live-dark
@@ -240,8 +241,8 @@ html(lang='en')
                       button#liveAlertBtn.btn.btn-dark(type='button') Show live alert
               .col-xl-6
                 .card.height-equal
-                  .card-header 
-                    h3 Left border alert
+                  .card-header.pb-0 
+                    h3 Left Border Alert
                     p.f-m-light.mt-1 
                       | Use the 
                       code .border-left-wrapper 
@@ -249,33 +250,33 @@ html(lang='en')
                   .card-body.live-dark
                     .alert.alert-light-dark.light.alert-dismissible.fade.show.text-dark.border-left-wrapper(role='alert')
                       i(data-feather='help-circle')
-                      p.text-dark You can check in on some of those fields below.
+                      p.txt-dark You can check in on some of those fields below.
                       button.btn-close(type='button', data-bs-dismiss='alert', aria-label='Close')
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 Additional content
                     p.f-m-light.mt-1 
                       | Use the 
-                      code .alert 
+                      code .alert
                       |  utility class to quickly provide additional content within any alerts.
                   .card-body.dark-alert
                     .alert.bg-light-primary(role='alert')
-                      h5.alert-heading.pb-2.txt-primary Please! Check your notifications
-                      p.text-bark 
+                      h3.alert-heading.pb-2.txt-primary Please! Check your notifications
+                      p
                         | The duty of notification is imposed upon the head of the family, and also upon the medical practitioner who may be in attendance on the patient.
                       hr
                       p.mb-0
                         | The emergency notification system is free and is available in all 50 states.
                     .alert.bg-light-secondary(role='alert')
-                      h5.alert-heading.pb-2.txt-secondary Something went wrong! Please, chrome update.
+                      h3.alert-heading.pb-2.txt-secondary Something went wrong! Please, chrome update.
                       p
                         | The duty of notification is imposed upon the head of the family, and also upon the medical practitioner who may be in attendance on the patient.
                       hr
                       p.mb-0
                         | Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
                     .alert.bg-light-success(role='alert')
-                      h5.alert-heading.pb-2.txt-success Please! Hidden cameras were not installed.
+                      h3.alert-heading.pb-2.txt-success Please! Hidden cameras were not installed.
                       p
                         | Due to increasingly accessible technology, hidden cameras have grown in popularity among regular people in recent years.
                       hr

@@ -11,7 +11,7 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-sidebar.compact-small.material-icon
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -20,15 +20,15 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6.p-0
+                .col-sm-6.ps-0
                   h3
                     | Grid
-                .col-12.col-sm-6.p-0
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
                         svg.stroke-icon
-                          use(href='../assets/svg/icon-sprite.svg#breadcrumb-home')
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item  Ui Kits
                     li.breadcrumb-item.active Grid
           // Container-fluid starts
@@ -37,39 +37,33 @@ html(lang='en')
               .col-sm-12
                 .card
                   .card-header
-                    h3 Grid Options
+                    h4 Grid options
                     p.mt-1.f-m-light
-                      | Bootstrap grid system allow all six breakpoints, and any breakpoints
-                      | you can customize.
+                    | Bootstrap grid system allow all six breakpoints, and any breakpoints
+                    | you can customize.
                   .card-body
-                    .table-responsive.theme-scrollbar
+                    .table-responsive
                       table.table.table-bordered.table-striped
                         thead
                           tr
                             th
-                            th.text-center.f-w-700
-                              | Extra small
-                              br
+                            th.text-center
+                              p Extra small
                               small &lt;576px
-                            th.text-center.f-w-700
-                              | Small
-                              br
+                            th.text-center
+                              p Small
                               small ≥576px
-                            th.text-center.f-w-700
-                              | Medium
-                              br
+                            th.text-center
+                              p Medium
                               small ≥768px
-                            th.text-center.f-w-700
-                              | Large
-                              br
+                            th.text-center
+                              p Large
                               small ≥992px
-                            th.text-center.f-w-700
-                              | Extra large
-                              br
+                            th.text-center
+                              p Extra large
                               small ≥1200px
-                            th.text-center.f-w-700
-                              | Extra extra large
-                              br
+                            th.text-center
+                              p Extra extra large
                               small.digits ≥1400px
                         tbody
                           tr
@@ -116,10 +110,10 @@ html(lang='en')
               .col-sm-12
                 .card
                   .card-header
-                    h3 Grid For Column
+                    h4 Grid for column
                     p.mt-1.f-m-light
                       | You may use predefined grid classes. Using 
-                      code .col-md-*
+                      code .col-md-* 
                       | you can set the grid system.
                   .card-body.grid-showcase
                     .row
@@ -158,85 +152,83 @@ html(lang='en')
               .col-sm-12
                 .card
                   .card-header
-                    h3 Vertical Alignment
+                    h4 Vertical alignment
                     p.mt-1.f-m-light
                       | You can use the 
                       code align-items-*
                       |  class
-                      |   to set the Vertical alignment.
+                      |   to set the vertical alignment.
                   .card-body.grid-showcase.mb-0
                     .row
-                        .col-lg-4
-                            .row.grid-vertical.align-items-start.m-1.g-2.bg-light
-                                .col-6
-                                    span.bg-white one column
-                                .col-6
-                                    span.bg-white two column
-                        .col-lg-4
-                            .row.grid-vertical.align-items-center.m-1.g-2.bg-light
-                                .col-6
-                                    span.bg-white one column
-                                .col-6
-                                    span.bg-white two column
-                        .col-lg-4
-                            .row.grid-vertical.align-items-end.m-1.g-2.bg-light
-                                .col-6
-                                    span.bg-white one column
-                                .col-6
-                                    span.bg-white two column
+                      .col-lg-4
+                        .row.grid-vertical.align-items-start.m-1.g-2.bg-light
+                          .col-6
+                            span.bg-white one column
+                          .col-6
+                            span.bg-white two column
+                      .col-lg-4
+                        .row.grid-vertical.align-items-center.m-1.g-2.bg-light
+                          .col-6
+                            span.bg-white one column
+                          .col-6
+                            span.bg-white two column
+                      .col-lg-4
+                        .row.grid-vertical.align-items-end.m-1.g-2.bg-light
+                          .col-6
+                            span.bg-white one column
+                          .col-6
+                            span.bg-white two column
                   .card-footer
-                      .table-responsive.theme-scrollbar
-                          table.w-100
-                              tbody
-                                  tr
-                                      th  Class
-                                      th.f-w-800 Value of the class
-                                  tr
-                                      td
-                                          code .align-items-*
-                                      td  start / center / end / baseline / stretch
+                      .table-responsive
+                        table.w-100
+                          tbody
+                            tr
+                              th  Class
+                              th Value of the class
+                            tr
+                              td
+                                code .align-items-*
+                              td  start / center / end / baseline / stretch
               .col-sm-12
                 .card
                   .card-header
-                    h3 Horizontal Alignment
+                    h4 Horizontal alignment
                     p.mt-1.f-m-light
                       | You can use the 
                       code justify-content-*
                       |  class
                       |   to set the horizontal alignment.
-                  .card-body 
-                    .grid-showcase.grid-align
-                      .row.justify-content-start.bg-light
-                        .col-5
-                          span.bg-white.text-dark One column
-                        .col-5
-                          span.bg-white.text-dark Two column
-                      .row.justify-content-center.bg-light
-                        .col-5
-                          span.bg-white.text-dark One column
-                        .col-5
-                          span.bg-white.text-dark Two column
-                      .row.justify-content-end.bg-light
-                        .col-5
-                          span.bg-white.text-dark One column
-                        .col-5
-                          span.bg-white.text-dark Two column
-                    .card-footer
-                      .table-responsive.theme-scrollbar
-                          table.w-100
-                              tbody
-                              tr
-                                  th  Class
-                                  th.f-w-800 Value of the class
-                              tr
-                                  td
-                                      code .justify-content-*
-                                  td
-                                      | start / center / end / around / between
+                  .card-body.grid-showcase.grid-align
+                    .row.justify-content-start.bg-light
+                      .col-5
+                        span.bg-white.text-dark One column
+                      .col-5
+                        span.bg-white.text-dark Two column
+                    .row.justify-content-center.bg-light
+                      .col-5
+                        span.bg-white.text-dark One column
+                      .col-5
+                        span.bg-white.text-dark Two column
+                    .row.justify-content-end.bg-light
+                      .col-5
+                        span.bg-white.text-dark One column
+                      .col-5
+                        span.bg-white.text-dark Two column
+                  .card-footer
+                    .table-responsive
+                      table.w-100
+                        tbody
+                          tr
+                            th  Class
+                            th Value of the class
+                          tr
+                            td
+                              code .justify-content-*
+                            td  start / center / end / around / between
               .col-sm-12
                 .card
                   .card-header
-                    h3 Nesting
+                    h4 Nesting
                     p.mt-1.f-m-light
                       | To nest your content with the default grid, add a new
                       code .row
@@ -265,11 +257,11 @@ html(lang='en')
                                         .col-sm-10.col-8
                                           span.border.border-2 Level 1: .col-10
                                 .col-4
-                                    span Level 2: .col-4   
+                                    span Level 2: .col-4  
               .col-sm-12
                 .card
                   .card-header
-                    h3 Order
+                    h4 Order
                     p.mt-1.f-m-light
                       | Using 
                       code .order 
@@ -289,12 +281,12 @@ html(lang='en')
                         .col-sm-6.col-4.order-4
                             span sixth Item (order-4)
                   .card-footer
-                    .table-responsive.theme-scrollbar
+                    .table-responsive
                       table.w-100
                           tbody
                               tr
                                   th  Class
-                                  th.f-w-800 Value of the class
+                                  th Value of the class
                               tr
                                   td
                                       code .order-*
@@ -302,10 +294,10 @@ html(lang='en')
               .col-sm-12
                 .card
                   .card-header
-                    h3 Offset
+                    h4 Offset
                     p.mt-1.f-m-light
                       | You can offset the grid column using 
-                      code .offset-
+                      code .offset-*
                       |  grid class.
                   .card-body.grid-showcase
                             .row.g-2
@@ -318,12 +310,12 @@ html(lang='en')
                               .col-sm-3.col-4.offset-sm-2.offset-1
                                   span col-3 offset-2
                   .card-footer 
-                      .table-responsive.theme-scrollbar
+                      .table-responsive
                         table.w-100
                           tbody
                               tr
                                   th  Class
-                                  th.f-w-800 Value of the class
+                                  th Value of the class
                               tr
                                   td
                                       code .offset-*

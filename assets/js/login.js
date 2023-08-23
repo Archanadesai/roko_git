@@ -6,7 +6,7 @@
     $('.show-hide').show();
     $('.show-hide span').addClass('show');
 
-    $('.show-hide span').on("click", function (){
+    $('.show-hide span').click(function () {
         if ($(this).hasClass('show')) {
             $('input[name="login[password]"]').attr('type', 'text');
             $(this).removeClass('show');

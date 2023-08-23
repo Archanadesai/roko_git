@@ -1,26 +1,21 @@
 /**=====================
     1.1 Reset CSS start
 ==========================**/
-
 .f-light {
   color: rgba($theme-body-sub-title-color, 0.8);
 }
-
 svg {
   &.f-light {
     fill: $theme-body-sub-title-color;
     opacity: 0.8;
   }
 }
-
 .light-card {
   background-color: var(--light-background);
 }
-
 .light-background {
   background-color: var(--light-bg);
 }
-
 .icon-arrow-down,
 .icon-arrow-up {
   &.icon-rotate {
@@ -28,168 +23,114 @@ svg {
     display: inline-block;
   }
 }
-
 /*====== Padding css starts ======*/
 $i: 0;
-
 @while $i<=50 {
   .p-#{$i} {
     padding:#{$i}px;
   }
-
   $i: $i+5;
 }
-
 /*====== Padding css ends ======*/
-
 /*====== Padding-left css starts ======*/
 $i: 0;
-
 @while $i<=50 {
   .p-l-#{$i} {
     padding-left:#{$i}px;
   }
-
   $i: $i+5;
-
 }
-
 /*====== Padding-left css ends ======*/
-
 /*====== Padding-top css starts ======*/
 $i: 0;
-
 @while $i<=50 {
   .p-t-#{$i} {
     padding-top:#{$i}px !important;
   }
-
   $i: $i+5;
 }
-
 /*====== Padding-top css ends ======*/
-
-
 /*====== Padding-bottom css starts ======*/
 $i: 0;
-
 @while $i<=50 {
   .p-b-#{$i} {
     padding-bottom:#{$i}px !important;
   }
-
   $i: $i+5;
 }
-
 /*====== Padding-bottom css ends ======*/
-
 /*====== Padding-right css starts ======*/
 $i: 0;
-
 @while $i<=50 {
   .p-r-#{$i} {
     padding-right:#{$i}px;
   }
-
   $i: $i+5;
 }
-
 /*====== Padding-right css ends ======*/
-
-
 /*====== Margin css starts ======*/
 $i: 0;
-
 @while $i<=50 {
   .m-#{$i} {
     margin:#{$i}px !important;
   }
-
   $i: $i+5;
 }
-
 /*====== Margin css ends ======*/
-
 /*====== Margin-top css starts ======*/
 $i: 0;
-
 @while $i<=50 {
   .m-t-#{$i} {
     margin-top:#{$i}px !important;
   }
-
   $i: $i+5;
 }
-
 /*====== Margin-top css ends ======*/
-
 /*====== Margin-Bottom css starts ======*/
 $i: 0;
-
 @while $i<=50 {
   .m-b-#{$i} {
     margin-bottom:#{$i}px !important;
   }
-
   $i: $i+5;
 }
-
 /*====== Margin-Bottom css ends ======*/
-
 /*====== Margin-left css starts ======*/
 $i: 0;
-
 @while $i<=50 {
   .m-l-#{$i} {
     margin-left:#{$i}px !important;
   }
-
   $i: $i+5;
 }
-
 /*====== Margin-left css ends ======*/
-
 /*====== Margin-right css starts ======*/
 $i: 0;
-
 @while $i<=50 {
   .m-r-#{$i} {
     margin-right:#{$i}px;
   }
-
   $i: $i+5;
 }
-
 /*====== Margin-right css ends ======*/
-
 /*====== Border-radius css starts ======*/
 $i: 0;
-
-@while $i<=10 {
+@while $i<=35 {
   .b-r-#{$i} {
     border-radius:#{$i}px !important;
   }
-
   $i: $i+1;
 }
-
 /*====== Border-radius css ends ======*/
-
-
 /*====== Font-size css starts ======*/
 $i: 12;
-
 @while $i<=100 {
   .f-#{$i} {
     font-size:#{$i}px !important;
   }
-
   $i: $i+2;
 }
-
 /*====== Font-size css ends ======*/
-
-
 /*====== Font-weight css starts ======*/
 $i: 100,
   300,
@@ -198,34 +139,25 @@ $i: 100,
   600,
   700,
   900;
-
 @each $val in $i {
   .f-w-#{$val} {
     font-weight: $val;
   }
 }
-
 /*====== Font-weight css ends ======*/
-
-
 /*====== Font-style css starts ======*/
 $i: normal,
   italic,
   oblique,
   initial,
   inherit;
-
 @each $val in $i {
   .f-s-#{$val} {
     font-style: $val;
   }
 }
-
 /*====== Font-style css ends ======*/
-
-
 /*====== Text-Decoration css starts ======*/
-
 $i: overline,
   line-through,
   underline,
@@ -238,16 +170,12 @@ $i: overline,
   wavy,
   inherit,
   double;
-
 @each $val in $i {
   .text-#{$val} {
     text-decoration: $val;
   }
 }
-
 /*====== Text-Decoration css ends ======*/
-
-
 /*====== Vertical-Align css starts ======*/
 $i: baseline,
   sub,
@@ -259,78 +187,57 @@ $i: baseline,
   text-bottom,
   initial,
   inherit;
-
 @each $val in $i {
   .#{$val} {
     vertical-align: $val;
   }
 }
-
 /*====== Vertical-Align css ends ======*/
-
-
 /*====== Position css starts ======*/
-
 $i: static,
   absolute,
   fixed,
   relative,
   initial,
   inherit;
-
 @each $val in $i {
   .p-#{$val} {
     position: $val;
   }
 }
-
 /*====== Position css ends ======*/
-
 /*====== Float css starts ======*/
 $i: left,
   right,
   none;
-
 @each $val in $i {
   .f-#{$val} {
     float: $val;
   }
 }
-
 /*====== Float css ends ======*/
-
-
 /*====== Overflow css starts ======*/
 $i: hidden,
   visible,
   auto;
-
 @each $val in $i {
   .o-#{$val} {
     overflow: $val;
   }
 }
-
 /*====== Overflow css ends ======*/
-
-
 /*====== Image-sizes css starts ======*/
 $i: 10;
-
 @while $i<=100 {
   .img-#{$i} {
     width:#{$i}px !important;
   }
-
   .img-h-#{$i} {
     height:#{$i}px !important;
   }
-
   $i: $i+10;
 }
-
 /*====== Image-sizes css ends ======*/
-
 /*======= Text css starts ===========*/
 $text-name: primary,
   secondary,
@@ -348,28 +255,20 @@ $info-color,
 $light-color,
 $dark-color,
 $warning-color;
-
 @each $var in $text-name {
   $i: index($text-name, $var);
-
   .font-#{$var} {
     color: nth($text-color, $i) !important;
   }
 }
-
 .font-primary {
-  color: var(--theme-deafult) !important;
+  color: var(--theme-default) !important;
 }
-
 .font-secondary {
   color: var(--theme-secondary) !important;
 }
-
 /*======= Text css ends ===========*/
-
-
 /*======= Label-color css starts  ======= */
-
 .label {
   border-radius: 2px;
   color: $white;
@@ -378,7 +277,6 @@ $warning-color;
   margin-bottom: 0;
   text-transform: capitalize;
 }
-
 $label-name: theme,
   primary,
   secondary,
@@ -397,21 +295,14 @@ $label-color: $primary-color,
   $light-color,
   $dark-color,
   $warning-color;
-
 @each $var in $label-name {
   $i: index($label-name, $var);
-
   .label-#{$var} {
     background-color: nth($label-color, $i);
   }
 }
-
-
 /*======= Label-color css ends  ======= */
-
-
 /*======= Badge-color css starts  ======= */
-
 $badge-name: primary,
   secondary,
   success,
@@ -428,34 +319,26 @@ $badge-color: $primary-color,
   $light-color,
   $dark-color,
   $warning-color;
-
 @each $var in $badge-name {
   $i: index($badge-name, $var);
-
   .badge-#{$var} {
     background-color: nth($badge-color, $i);
-
     @if($badge-name=="light") {
       color: $theme-body-font-color !important;
     }
   }
 }
-
 .badge-primary {
-  background-color: var(--theme-deafult) !important;
+  background-color: var(--theme-default) !important;
 }
-
 .badge-secondary {
   background-color: var(--theme-secondary) !important;
 }
-
 /*======= Badge-color css end  ======= */
-
-
 /*======= Background-color css starts  ======= */
-
 $background-name: primary,
   secondary,
+  tertiary,
   success,
   danger,
   info,
@@ -464,42 +347,31 @@ $background-name: primary,
   warning;
 $background-color: $primary-color,
   $secondary-color,
+  $tertiary-color,
   $success-color,
   $danger-color,
   $info-color,
   $light-color,
   $dark-color,
   $warning-color;
-
 @each $var in $background-name {
   $i: index($background-name, $var);
-
   .bg-#{$var} {
     background-color: nth($background-color, $i) !important;
     color: $white;
   }
-
-  .fill-#{$var} {
-    fill: nth($background-color, $i) !important;
-  }
-
   .bg-light-#{$var} {
-    background-color: rgba(nth($background-color, $i), 0.2) !important; 
+    background-color: rgba(nth($background-color, $i), 0.1) !important;
   }
 }
-
 .bg-primary {
-  background-color: var(--theme-deafult) !important;
+  background-color: var(--theme-default) !important;
 }
-
 .bg-secondary {
   background-color: var(--theme-secondary) !important;
 }
-
 /*======= Background-color css end  ======= */
-
 /*======= Font-color css starts  ======= */
-
 $text-name: primary,
   secondary,
   success,
@@ -524,38 +396,29 @@ $label-color: $primary-color,
   $twitter,
   $linkedin,
   $fb;
-
 @each $var in $text-name {
   $i: index($text-name, $var);
-
   .txt-#{$var} {
     color: nth($label-color, $i) !important;
   }
 }
-
 .txt-primary {
-  color: var(--theme-deafult) !important;
+  color: var(--theme-default) !important;
 }
-
 .txt-secondary {
   color: var(--theme-secondary) !important;
 }
-
 /*======= Font-color css end  ======= */
-
-
 /*======= Button-color css starts  ======= */
 // btn--color//
 @keyframes push {
   50% {
     transform: scale(0.95);
   }
-
   100% {
     transform: scale(1);
   }
 }
-
 @each $btn-name,
 $btn-color in (primary, $primary-color),
 (secondary, $secondary-color),
@@ -570,10 +433,8 @@ $btn-color in (primary, $primary-color),
     border-color: $btn-color !important;
     -webkit-tap-highlight-color: transparent;
     transform: translateZ(0);
-
     @if($btn-name=="info") {
       color: $white;
-
       &:hover,
       &:focus,
       &:active,
@@ -581,45 +442,37 @@ $btn-color in (primary, $primary-color),
         color: $white;
       }
     }
-
     &.disabled,
     &:disabled {
       background-color: $btn-color !important;
       border-color: $btn-color !important;
     }
-
     &:focus {
       box-shadow: 0 0 0 0.2rem lighten($btn-color, 30%);
     }
   }
 }
-
 .btn-light {
   background-color: rgba($primary-color, 0.06) !important;
   border-color: rgba($primary-color, 0.06) !important;
-
   &:hover {
     background-color: rgba($primary-color, 0.1) !important;
     border-color: rgba($primary-color, 0.1) !important;
   }
 }
-
 .btn-primary {
-  background-color: var(--theme-deafult) !important;
-  border-color: var(--theme-deafult) !important;
+  background-color: var(--theme-default) !important;
+  border-color: var(--theme-default) !important;
 }
-
 .btn-secondary {
   background-color: var(--theme-secondary) !important;
   border-color: var(--theme-secondary) !important;
 }
-
 .btn-hover-effect {
   &:hover {
     animation: push 0.5s linear 1;
   }
 }
-
 /*======= Button-color css ends  ======= */
 @each $btn-name,
 $btn-color in (primary, $primary-color),
@@ -635,7 +488,6 @@ $btn-color in (primary, $primary-color),
     border-color: $btn-color;
     color: $btn-color;
     background-color: transparent;
-
     &:hover,
     &:focus,
     &:active,
@@ -647,7 +499,6 @@ $btn-color in (primary, $primary-color),
     }
   }
 }
-
 // outline buttons//
 @each $btn-name,
 $btn-color in (primary, $primary-color),
@@ -662,15 +513,12 @@ $btn-color in (primary, $primary-color),
     border-color: $btn-color;
     color: $btn-color;
     background-color: transparent;
-
     &.disabled {
       color: $btn-color;
     }
-
     @if($btn-name=="light") {
       color: $theme-body-font-color;
     }
-
     &:hover,
     &:focus,
     &:active,
@@ -681,9 +529,7 @@ $btn-color in (primary, $primary-color),
     }
   }
 }
-
 //active button css //
-
 @each $btn-name,
 $btn-color in (primary, $primary-color),
 (secondary, $secondary-color),
@@ -697,7 +543,6 @@ $btn-color in (primary, $primary-color),
     background-color: darken($btn-color, 10%);
     border-color: darken($btn-color, 10%);
     box-shadow: none !important;
-
     &:hover,
     &:focus,
     &:active,
@@ -708,9 +553,7 @@ $btn-color in (primary, $primary-color),
     }
   }
 }
-
 //* active button css end *//
-
 @each $btn-name,
 $btn-color in (primary, $primary-color),
 (secondary, $secondary-color),
@@ -720,13 +563,11 @@ $btn-color in (primary, $primary-color),
 (light, $light-color),
 (dark, $dark-color),
 (warning, $warning-color) {
-
   .btn-outline-#{$btn-name}-2x:not([disabled]):not(.disabled).active {
     background-color: $btn-color;
     border-color: $btn-color;
     box-shadow: none !important;
     color: white;
-
     &:hover,
     &:focus,
     &:active,
@@ -738,9 +579,7 @@ $btn-color in (primary, $primary-color),
     }
   }
 }
-
 /*======= Table-Border-Bottom-color css starts  ======= */
-
 $border-name: primary,
   secondary,
   success,
@@ -757,23 +596,16 @@ $border-color: $primary-color,
   $light-color,
   $dark-color,
   $warning-color;
-
 @each $var in $border-name {
   $i: index($border-name, $var);
-
   table thead .border-bottom-#{$var} th,
   table tbody .border-bottom-#{$var} th,
   table tbody .border-bottom-#{$var} td {
     border-bottom: 1px solid nth($border-color, $i) !important;
   }
 }
-
-
 /*======= Table-Border-Bottom-color css ends  ======= */
-
-
 /*======= Table styling css starts  ======= */
-
 $table-name: primary,
   secondary,
   success,
@@ -790,36 +622,78 @@ $table-color: $primary-color,
   $light-color,
   $dark-color,
   $warning-color;
-
 @each $var in $table-name {
   $i: index($table-name, $var);
-
   .table-styling .table-#{$var},
   .table-styling.table-#{$var} {
     background-color: nth($border-color, $i);
     color: $white;
     border: 3px solid nth($border-color, $i);
-
     thead {
       background-color: darken(nth($border-color, $i), 10%);
       border: 3px solid darken(nth($border-color, $i), 10%);
     }
-
     th,
     td {
       background-color: transparent;
     }
   }
 }
-
-
 /*======= Table styling css ends  ======= */
-
-
-
-
+/*======= Svg stroke css start  ======= */
+$stroke-name: primary,
+  secondary,
+  success,
+  danger,
+  info,
+  light,
+  dark,
+  warning;
+$stroke-color: $primary-color,
+  $secondary-color,
+  $success-color,
+  $danger-color,
+  $info-color,
+  $light-color,
+  $dark-color,
+  $warning-color;
+@each $var in $stroke-name {
+  $i: index($stroke-name, $var);
+  .stroke-#{$var} {
+    stroke: nth($stroke-color, $i) !important;
+  }
+}
+/*======= Svg stroke css end  ======= */
+/*======= Checkbox color css start  ======= */
+$checkbox-name: primary,
+  secondary,
+  success,
+  danger,
+  info,
+  light,
+  dark,
+  warning;
+$checkbox-color: $primary-color,
+  $secondary-color,
+  $success-color,
+  $danger-color,
+  $info-color,
+  $light-color,
+  $dark-color,
+  $warning-color;
+@each $var in $checkbox-name {
+  $i: index($stroke-name, $var);
+  .checkbox-#{$var} {
+    &.form-check-input {
+      &:checked {
+        background-color: nth($checkbox-color, $i);
+        border-color: nth($checkbox-color, $i);
+      }
+    }
+  }
+}
+/*======= Checkbox color css end  ======= */
 /*======= All-Borders-color css starts  ======= */
-
 $b-name: primary,
   secondary,
   success,
@@ -836,88 +710,49 @@ $b-color: $primary-color,
   $light-color,
   $dark-color,
   $warning-color;
-
 @each $var in $b-name {
   $i: index($b-name, $var);
-
   .b-#{$var} {
     border: 1px solid nth($b-color, $i) !important;
   }
-
   .b-t-#{$var} {
     border-top: 1px solid nth($b-color, $i) !important;
   }
-
   .border-t-#{$var} {
     border-top: 1px solid nth($b-color, $i) !important;
   }
-
   .b-b-#{$var} {
     border-bottom: 1px solid nth($b-color, $i) !important;
   }
-
   .border-b-#{$var} {
     border-bottom: 1px solid nth($b-color, $i) !important;
   }
-
   .b-l-#{$var} {
     border-left: 1px solid nth($b-color, $i) !important;
   }
-
   .border-l-#{$var} {
     border-left: 1px solid nth($b-color, $i) !important;
   }
-
   .b-r-#{$var} {
     border-right: 1px solid nth($b-color, $i) !important;
   }
-
   .border-r-#{$var} {
     border-right: 1px solid nth($b-color, $i) !important;
   }
 }
-
-
 /*======= All-Borders-color css ends  ======= */
-
-
 /*====== Border width css starts ======*/
 $i: 1;
-
 @while $i<=10 {
   .border-#{$i} {
     border-width:#{$i}px !important;
   }
-
   $i: $i+1;
 }
-
 /*====== Border width css ends ======*/
-
-.opacity-0 {
-  opacity: 0;
-}
-
-.map-block {
-  height: 350px;
-  width: 100%;
-}
-
 .map-js-height {
   height: 500px;
-
-  .btn-group {
-    input {
-      background-color: $primary-color;
-      color: $white;
-
-      &+input {
-        background-color: $secondary-color;
-      }
-    }
-  }
 }
-
 /**====== custom scrollbar css start ======**/
 .custom-scrollbar {
   &::-webkit-scrollbar-track {
@@ -932,79 +767,48 @@ $i: 1;
   }
 }
 /**====== Custom scrollbar css end ======**/
-
 /**====== Animation css Start ======**/
-.comment {
-  color: #9f9ba5;
-  font-style: italic;
-}
-
 .line {
   color: $dark-color;
-
   pre {
     font-size: 100%;
   }
 }
-
 /**====== Animation css end ======**/
-
-/**====== list style css Start ======**/
-.list-circle {
-  list-style: circle;
-}
-
-/**====== list style css end ======**/
-
 /**====== Modal style css Start ======**/
 .theme-close {
   opacity: 1;
-  height: 40px;
-  width: 40px;
   position: absolute;
-  font-weight: 400;
   z-index: 1;
   right: 0;
   background-color: $white !important;
-  border-radius: 5px;
 }
-
 /**====== Modal style css end ======**/
-
 /**====== Animation css start ======**/
 .options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
   >div {
     color: $gray-60;
-    display: inline-block;
     padding: 2px 10px;
     border: 1px solid;
-    margin: 0 8px 8px 0;
-    transition: all 0.3s ease;
-
-    &:hover {
+      &:hover {
       background-color: $primary-color;
       color: $white;
-      transition: all 0.3s ease;
+      transition: background-color 0.3s ease;
     }
   }
 }
-
 /**====== Animation css Ends ======**/
-
 .modal-footer {
   flex-wrap: wrap;
 }
-
 .img-cropper {
-  #putData {
-    margin-bottom: 0;
-  }
-
   .img-container {
     min-height: auto;
     margin-bottom: 0;
   }
-
   .docs-data {
     >.input-group {
       &:last-child {
@@ -1012,27 +816,23 @@ $i: 1;
       }
     }
   }
-
   .docs-preview {
     margin-top: 20px;
     margin-bottom: 10px;
   }
 }
-
 .dropzone {
   .dz-preview {
     .dz-error-message {
       background: $white !important;
       color: $primary-color !important;
       border: 1px solid $primary-color;
-
       &:after {
         border-bottom: 6px solid $primary-color !important;
       }
     }
   }
 }
-
 .typeahead {
   .theme-form {
     .form-group {
@@ -1040,152 +840,90 @@ $i: 1;
     }
   }
 }
-
-.editor-statusbar {
-  border-bottom: 1px solid rgba($black, 0.125);
-}
-
-.page-builder {
-  .ge-canvas {
-    &.ge-editing {
-      .row {
-        padding: 30px;
-        margin-bottom: 0;
-        background-color: rgba($primary-color, 0.02);
-      }
-    }
-  }
-
-  .btn-screen {
-    padding: 0 18px 0 0;
-  }
-}
-
-.bg-overlay {
-  &.active {
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba($black, 0.2);
-    position: fixed;
-    z-index: 8;
-    top: 0;
-  }
-}
-
-button {
-  &:focus {
-    outline: none !important;
-  }
-}
-
 .primary {
   .svg-fill {
-    fill: var(--theme-deafult);
-
+    fill: var(--theme-default);
     &:not(.half-circle) {
-      stroke: var(--theme-deafult);
+      stroke: var(--theme-default);
     }
   }
-
   .bg-gradient {
     background-image: linear-gradient(144.16deg, rgba($primary-color, 0.1) 19.06%, rgba($primary-color, 0) 79.03%) !important;
   }
 }
-
 .secondary {
   .svg-fill {
     fill: var(--theme-secondary);
-
     &:not(.half-circle) {
       stroke: var(--theme-secondary);
     }
   }
-
   .bg-gradient {
     background-image: linear-gradient(144.16deg, rgba($secondary-color, 0.1) 19.06%, rgba($secondary-color, 0) 79.03%) !important;
   }
 }
-
 .success {
   .svg-fill {
     fill: $success-color;
   }
-
   .bg-gradient {
     background-image: linear-gradient(144.16deg, rgba($success-color, 0.1) 19.06%, rgba($success-color, 0) 79.03%) !important;
   }
 }
-
 .warning {
   .svg-fill {
     fill: $warning-color;
   }
-
   .bg-gradient {
     background-image: linear-gradient(144.16deg, rgba($warning-color, 0.1) 19.06%, rgba($warning-color, 0) 79.03%) !important;
   }
 }
-
-
 .dotted {
   border-style: dotted;
 }
-
 .dashed {
   border-style: dashed;
 }
-
 .double {
   border-style: double;
 }
-
 .groove {
   border-style: groove;
 }
-
 .ridge {
   border-style: ridge;
 }
-
 .inset {
   border-style: inset;
 }
-
 .outset {
   border-style: outset;
 }
-
 @keyframes fadeIncustom {
   0% {
     opacity: 0;
     top: 50px;
   }
-
   75% {
     opacity: .6;
     top: 0;
   }
-
   100% {
     opacity: 1;
   }
 }
-
 .code-box-copy {
   width: 100%;
   overflow: auto;
 }
-
 @media (max-width: 1660px) and (min-width: 1400px) {
   .custom-rs-4 {
     width: 33.33333333%;
   }
-
   .custom-rs-12 {
     width: 100%;
   }
 }
-
 // dashboard-7
 .apexcharts-canvas {
   .apexcharts-tooltip {
@@ -1193,23 +931,43 @@ button {
       width: 10px;
       height: 10px;
     }
-
     .apexcharts-tooltip-goals-group,
     .apexcharts-tooltip-z-group {
       display: none;
     }
   }
 }
-
 // dashboard-8
 .bg-gray {
   background-color: var(--text-gray);
 }
-
 .text-gray {
   color: var(--text-gray) !important;
 }
-@media screen and (max-width: 1399px) and (min-width: 1200px) {
+// common css
+.common-space {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Override the default tooltip arrow color */
+.bs-tooltip-top .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before {
+  border-top-color: $light-primary;
+}
+.bs-tooltip-end .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before {
+  border-right-color: $light-primary;
+}
+.bs-tooltip-bottom .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before {
+  border-bottom-color: $light-primary;
+}
+.bs-tooltip-start .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before {
+  border-left-color: $light-primary;
+}
+@media screen and (max-width: 1440px) and (min-width: 768px) {
   .proorder-xl-1 {
     order: 1;
   }
@@ -1250,49 +1008,47 @@ button {
     order: 13;
   }
 }
-@media screen and (max-width: 1199px) {
-  .proorder-lg-1 {
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  .proorder-1 {
     order: 1;
   }
-  .proorder-lg-2 {
+  .proorder-2 {
     order: 2;
   }
-  .proorder-lg-3 {
+  .proorder-3 {
     order: 3;
   }
-  .proorder-lg-4 {
+  .proorder-4 {
     order: 4;
   }
-  .proorder-lg-5 {
+  .proorder-5 {
     order: 5;
   }
-  .proorder-lg-6 {
+  .proorder-6 {
     order: 6;
   }
-  .proorder-lg-7 {
+  .proorder-7 {
     order: 7;
   }
-  .proorder-lg-8 {
+  .proorder-8 {
     order: 8;
   }
-  .proorder-lg-9 {
+  .proorder-9 {
     order: 9;
   }
-  .proorder-lg-10 {
+  .proorder-10 {
     order: 10;
   }
-  .proorder-lg-11 {
+  .proorder-11 {
     order: 11;
   }
-  .proorder-lg-12 {
+  .proorder-12 {
     order: 12;
   }
-  .proorder-lg-13 {
+  .proorder-13 {
     order: 13;
   }
 }
-
-
 /**=====================
     1.1 Reset CSS Ends
 ==========================**/

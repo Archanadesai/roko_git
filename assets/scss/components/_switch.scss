@@ -11,7 +11,7 @@
 		display: none;
 
 		&:checked+.switch-state {
-			background-color: var(--theme-deafult);
+			background-color: var(--theme-default);
 
 			&:before {
 				transform: translateX(26px);
@@ -19,7 +19,7 @@
 		}
 
 		&:focus+.switch-state {
-			box-shadow: 0 0 1px var(--theme-deafult);
+			box-shadow: 0 0 1px var(--theme-default);
 		}
 	}
 }
@@ -79,6 +79,8 @@
 	.switch {
 		width: 75px;
 		height: 40px;
+		padding: 0;
+		margin: 0;
 
 		.switch-state {
 			&:before {
@@ -165,7 +167,7 @@
 .switch-outline {
 	.switch-state {
 		background-color: $white;
-		border: 1px solid var(--theme-deafult);
+		border: 1px solid var(--theme-default);
 		transition: .4s;
 
 		&:before {
@@ -183,10 +185,10 @@
 
 			&:checked+.switch-state {
 				background-color: $transparent-color;
-				border: 1px solid var(--theme-deafult);
+				border: 1px solid var(--theme-default);
 
 				&:before {
-					background-color: var(--theme-deafult);
+					background-color: var(--theme-default);
 					bottom: 3px;
 					transform: translateX(26px);
 				}
@@ -201,7 +203,7 @@
 
 .switch-outline {
 	.switch-state.bg-primary {
-		border: 1px solid var(--theme-deafult);
+		border: 1px solid var(--theme-default);
 		background-color: $transparent-color !important;
 	}
 
@@ -209,10 +211,10 @@
 		input {
 			&:checked+.switch-state.bg-primary {
 				background-color: $transparent-color !important;
-				border: 1px solid var(--theme-deafult);
+				border: 1px solid var(--theme-default);
 
 				&:before {
-					background-color: var(--theme-deafult);
+					background-color: var(--theme-default);
 				}
 			}
 		}
@@ -309,7 +311,7 @@
 	}
 
 	.switch-state.bg-primary {
-		border: 1px solid var(--theme-deafult);
+		border: 1px solid var(--theme-default);
 		background-color: $transparent-color !important;
 	}
 
@@ -317,10 +319,10 @@
 		input {
 			&:checked+.switch-state.bg-primary {
 				background-color: $transparent-color !important;
-				border: 1px solid var(--theme-deafult);
+				border: 1px solid var(--theme-default);
 
 				&:before {
-					background-color: var(--theme-deafult);
+					background-color: var(--theme-default);
 				}
 			}
 		}
@@ -348,7 +350,7 @@
 .switch-showcase {
 	margin-bottom: -8px;
 
-	.media {
+	.d-flex {
 		line-height: 1;
 	}
 
@@ -362,8 +364,8 @@
 .form-switch {
 	.form-check-input {
 		&:checked {
-			background-color: var(--theme-deafult);
-			border-color: var(--theme-deafult);
+			background-color: var(--theme-default);
+			border-color: var(--theme-default);
 		}
 	}
 }
@@ -379,7 +381,6 @@
 .tgl {
 	display: none;
 
-	// add default box-sizing for this scope
 	&,
 	&:after,
 	&:before,
@@ -444,8 +445,8 @@
 			position: absolute;
 			line-height: 2em;
 			font-weight: bold;
-			color: #fff;
-			text-shadow: 0 1px 0 rgba($black, .4);
+			color: var(--white);
+			text-shadow: 0 1px 0 rgba(0, 0, 0, .4);
 		}
 
 		&:after {
@@ -500,7 +501,7 @@
 			position: absolute;
 			line-height: 2em;
 			font-weight: bold;
-			color: #fff;
+			color: var(--white);
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -548,8 +549,6 @@
 	}
 }
 
-
-// Square Checked
 .tg-list {
 	.tg-list-item {
 		.square-checked {
@@ -564,7 +563,9 @@
 }
 
 .switch-wrapper {
-	.media {
+	.d-flex {
+		margin-right: 20px;
+
 		.col-form-label {
 			padding-bottom: 0;
 		}
@@ -590,7 +591,6 @@
 		}
 	}
 }
-
 
 /**=====================
     2.28 Switch CSS Ends

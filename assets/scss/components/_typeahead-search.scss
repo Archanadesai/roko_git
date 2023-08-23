@@ -91,7 +91,7 @@
   width: 100%;
   overflow: hidden;
   background-color: $white;
-  box-shadow: 0 5px 10px rgba($black, .2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
 }
 
 .Typeahead-menu.is-open {
@@ -184,7 +184,7 @@
 
 .ProfileCard.is-active {
   color: $white;
-  background: var(--theme-deafult);
+  background: var(--theme-default);
 
   .ProfileCard-screenName {
     color: $white;
@@ -207,6 +207,79 @@
   width: 1rem;
   height: 1rem;
 }
+
+
+// typehead new search 
+$color_1: #333;
+$color_2: #fff;
+$color_3: #aaa;
+$background-color_1: #fff;
+$background-color_2: #444;
+$background-color_3: #333;
+$background-color_4: #eee;
+
+.sey-container {
+  display: none;
+  position: absolute;
+  box-shadow: 1px 2px 6px;
+  background-color: $background-color_1;
+  color: $color_1;
+  transition: left 0.1s ease-in-out;
+  z-index: 1;
+}
+
+.sey-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.sey-show {
+  display: block;
+}
+
+.sey-hide {
+  display: none;
+}
+
+.sey-empty {
+  cursor: default;
+  padding: 7px;
+}
+
+.sey-item {
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 7px;
+
+  &:hover {
+    background-color: $background-color_2;
+    color: $color_2;
+  }
+}
+
+.sey-selected {
+  background-color: $background-color_3;
+  color: $color_2;
+}
+
+.sey-char-highlight {
+  font-weight: bold;
+}
+
+.sey-category-id {
+  background-color: $background-color_4;
+  color: $color_3;
+  text-align: right;
+  text-transform: capitalize;
+  font-style: italic;
+  font-size: 12px;
+  box-shadow: 1px 0px 1px;
+  padding: 7px;
+}
+
 
 /**=====================
   2.35 Typeahead-search CSS Ends

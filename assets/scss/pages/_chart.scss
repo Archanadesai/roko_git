@@ -303,7 +303,7 @@ $url-4: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AA
       }
 
       polyline {
-        stroke: var(--theme-deafult);
+        stroke: var(--theme-default);
       }
     }
   }
@@ -313,7 +313,7 @@ $url-4: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AA
   svg {
     rect {
       &:nth-child(odd) {
-        fill: var(--theme-deafult);
+        fill: var(--theme-default);
       }
 
       &:nth-child(even) {
@@ -327,7 +327,7 @@ $url-4: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AA
   svg {
     path {
       &:nth-child(odd) {
-        fill: var(--theme-deafult);
+        fill: var(--theme-default);
       }
 
       &:nth-child(even) {
@@ -345,7 +345,7 @@ $url-4: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AA
   svg {
     path {
       &:nth-child(odd) {
-        fill: var(--theme-deafult);
+        fill: var(--theme-default);
       }
 
       &:nth-child(even) {
@@ -459,14 +459,14 @@ p {
   .ct-slice-pie,
   .ct-slice-donut-solid,
   .ct-area {
-    fill: var(--theme-deafult);
+    fill: var(--theme-default);
   }
 
   .ct-point,
   .ct-line,
   .ct-bar,
   .ct-slice-donut {
-    stroke: var(--theme-deafult);
+    stroke: var(--theme-default);
   }
 }
 

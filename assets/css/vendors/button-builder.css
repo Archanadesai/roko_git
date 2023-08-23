@@ -9,14 +9,14 @@
   display: none;
   z-index: 8;
   background: #2c323f;
-  border: 1px solid #ededed;
+  border: 1px solid #ecf3fa;
 }
 .button-builder .colorpicker input {
   background-color: transparent;
   border: 1px solid transparent;
   position: absolute;
   font-size: 10px;
-  color: #ededed;
+  color: #ecf3fa;
   top: 4px;
   right: 11px;
   text-align: right;
@@ -30,7 +30,7 @@
   left: 14px;
   top: 13px;
   position: absolute;
-  background: #FC4438;
+  background: #FC4438 ;
   overflow: hidden;
   cursor: crosshair;
 }
@@ -74,7 +74,7 @@
   height: 30px;
   left: 213px;
   top: 13px;
-  background: #FC4438;
+  background: #FC4438 ;
 }
 .button-builder .colorpicker-current-color {
   position: absolute;
@@ -82,7 +82,7 @@
   height: 30px;
   left: 283px;
   top: 13px;
-  background: #FC4438;
+  background: #FC4438 ;
 }
 .button-builder .colorpicker-hex {
   position: absolute;
@@ -204,14 +204,14 @@
   position: relative;
   z-index: 1;
   top: 3px;
-  border: 1px solid var(--theme-deafult);
+  border: 1px solid var(--theme-default);
   border-radius: 100%;
 }
 .button-builder .custom-radio:hover {
   background-position: 0 -16px;
 }
 .button-builder .custom-radio.selected {
-  background-color: var(--theme-deafult);
+  background-color: var(--theme-default);
 }
 .button-builder .custom-radio input[type=radio] {
   margin: 1px;
@@ -259,7 +259,7 @@
 .button-builder .colorpicker-hex input {
   background: transparent;
   border: medium none;
-  color: #1F2F3E;
+  color: #242934;
   display: block;
   box-shadow: none;
   font-size: 13px;
@@ -297,7 +297,7 @@
   position: absolute;
   top: 12px;
   width: 73px;
-  border: 1px solid #ededed;
+  border: 1px solid #ecf3fa;
 }
 .button-builder .colorpicker-field {
   display: none;
@@ -313,7 +313,7 @@
   position: absolute;
   top: 133px;
   width: 75px;
-  background-color: var(--theme-deafult);
+  background-color: var(--theme-default);
   border-radius: 5px;
 }
 .button-builder .colorpicker-submit:before {
@@ -325,7 +325,7 @@
   color: #fff;
 }
 .button-builder .colorpicker-submit:hover {
-  background-color: #3548e5;
+  background-color: #4433ff;
 }
 .button-builder .box {
   background-color: #fff;
@@ -377,7 +377,7 @@
   margin: 0 auto !important;
 }
 .button-builder .copy a {
-  background-color: var(--theme-deafult);
+  background-color: var(--theme-default);
   color: #fff;
   font-weight: bold;
   display: inline-block;

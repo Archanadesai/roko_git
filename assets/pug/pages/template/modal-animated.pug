@@ -12,7 +12,7 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -21,14 +21,15 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | Animated Modal
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item Bonus Ui
                     li.breadcrumb-item.active Animated Modal
           // Container-fluid starts
@@ -37,7 +38,7 @@ html(lang='en')
               .col-sm-12
                 .card
                   .card-header
-                    h3 Modal With Animations
+                    h4 Modal With Animations
                     p.f-m-light.mt-1 
                       | Use the different types of fades and animations in modals.
                   .card-body
@@ -50,8 +51,9 @@ html(lang='en')
                                 img.img-fluid(src='../assets/images/slider/6.jpg', alt='Drawing-room')
                               .text-center.p-25
                                 p.text-muted.mb-0
-                                h3 It's Magic!!
-                                | Select the animation options given below and then click on the launch modal button.
+                                h5 It&apos;s Magic!!
+                                |  Select the animation options given below and then click on the launch button.
+                                p
                       .col-xl-6
                         form.form-inline.theme-form.row.animated-modal
                           .mb-3.mb-0.animated-modal-md-mb.w-100
@@ -177,7 +179,7 @@ html(lang='en')
                                 .text-center.p-25
                                   p.text-muted.mb-0
                                     strong.txt-danger Wow!!!
-                                    |  It's so beautiful animations in wool theme...
+                                    |  It's so beautiful animations in Riho theme...
           // Container-fluid Ends
         include ../../components/footer
     include ../../components/footer-files

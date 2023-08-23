@@ -1,7 +1,6 @@
 /**=====================
     2.30 Table CSS Start
 ==========================**/
-
 thead,
 tbody,
 tfoot,
@@ -10,28 +9,21 @@ td,
 th {
 	border-color: #dee2e6;
 }
-.table> :not(caption)>*>* {
-	background-color: transparent;
-}
 .pills-component {
 	width: 20%;
 }
-
 #row_create {
 	td.highlight {
 		font-weight: 600;
 		color: $primary-color;
 	}
-
 	td.danger {
 		font-weight: 600;
 		color: $danger-color;
 	}
 }
-
 .table {
 	margin-bottom: $table-b-margin;
-
 	> :not(:last-child) {
 		> :last-child {
 			>* {
@@ -39,18 +31,15 @@ th {
 			}
 		}
 	}
-
 	th,
 	td {
 		padding: $table-padding;
 	}
-
 	&.table-primary {
 		th {
 			color: $white;
 		}
 	}
-
 	thead.bg-primary {
 		tr {
 			th {
@@ -58,78 +47,68 @@ th {
 			}
 		}
 	}
-
 	th {
 		color: $table-heading-color;
-		font-weight: 700;
-
+		font-weight: 600;
 		&.f-light {
 			color: var(--chart-text-color);
 			opacity: 0.8;
 		}
 	}
-
 	td {
 		color: $table-row-color;
 	}
-
 	[class*='bg-'] {
 		color: $white;
 	}
-
 	.bg-light {
 		color: $theme-body-font-color;
 	}
-
 	tfoot {
 		font-weight: $table-footer-font-weight;
 	}
 }
-
 .table-dark {
 	th {
 		color: $white;
 	}
 }
-
+.table-bordered {
+	.dropdown-menu.show {
+		background-color: $white;
+	}
+}
 .table-inverse {
 	color: $white;
-	background-color: $table-inverse-bg-color;
-
+	background-color: $dark-body-background;
 	th,
 	td {
 		border-color: $white;
 		color: $white;
+		background-color: $dark-body-background;
 	}
-
 	&.table-bordered {
 		border: 0;
 	}
 }
-
 .table[class*='bg-'] {
-
 	th,
 	td {
 		color: $white;
 	}
 }
-
 .table-hover {
 	>tbody {
 		>tr:hover {
 			--bs-table-accent-bg: #f6f6f6;
 		}
 	}
-
 	tbody {
 		tr {
 			&:hover {
 				background-color: rgba($primary-color, 0.1);
 			}
-
 			vertical-align: middle;
-
 			td {
 				svg {
 					width: 30px;
@@ -137,7 +116,6 @@ th {
 					padding: 5px;
 					border-radius: 4px;
 					margin-right: 10px;
-
 					[dir="rtl"] & {
 						margin-right: unset;
 						margin-left: 10px;
@@ -147,24 +125,45 @@ th {
 		}
 	}
 }
-
+.grid-wrrapper {
+	.table-striped {
+		tbody {
+			tr{
+				&:nth-of-type(odd) {
+					background-color:rgba($primary-color,0.1) !important;
+					--bs-table-accent-bg:unset;
+					th,td{
+						color: $primary-color;
+					}
+				}
+			}
+		}
+	}
+}
+.table-striped {
+	tbody {
+		tr {
+			&:nth-of-type(odd) {
+				background-color: var(--light-background);
+				--bs-table-accent-bg: unset;
+			}
+		}
+	}
+}
 // Table border-bottom removes in particular typography page
 .typography-table {
 	tr {
 		&:last-child {
 			border-bottom: none;
-
 			td {
 				border-bottom: none;
 			}
 		}
 	}
 }
-
 .table-double {
 	border-left: 4px double #dee2e6;
 	border-right: 4px double #dee2e6;
-
 	thead,
 	tbody,
 	tfoot,
@@ -177,11 +176,9 @@ th {
 		border-left: 0;
 	}
 }
-
 .table-dotted {
 	border-left: 2px dotted #dee2e6;
 	border-right: 2px dotted #dee2e6;
-
 	thead,
 	tbody,
 	tfoot,
@@ -194,11 +191,9 @@ th {
 		border-left: 0;
 	}
 }
-
 .table-dashed {
 	border-left: 2px dashed #dee2e6;
 	border-right: 2px dashed #dee2e6;
-
 	thead,
 	tbody,
 	tfoot,
@@ -211,55 +206,43 @@ th {
 		border-left: 0;
 	}
 }
-
 //Sizing class
 .table-xl {
-
 	td,
 	th {
 		padding: $table-xl-padding;
 		font-size: $table-xl-font;
 	}
 }
-
 .table-lg {
-
 	td,
 	th {
 		padding: $table-lg-padding;
 		font-size: $table-lg-font;
 	}
 }
-
 .table-de {
-
 	td,
 	th {
 		padding: $table-de-padding;
 	}
 }
-
 .table-sm {
-
 	th,
 	td {
 		padding: $table-sm-padding;
 		font-size: $table-sm-font;
 	}
 }
-
 .table-xs {
-
 	th,
 	td {
 		padding: $table-xs-padding;
 		font-size: $table-xs-font;
 	}
 }
-
 //Table Border
 .table-border-horizontal {
-
 	tr,
 	th,
 	td {
@@ -267,26 +250,21 @@ th {
 		padding: $horizontal-padding;
 	}
 }
-
 .table-border-vertical {
-
 	tr,
 	th,
 	td {
 		border-top: 0;
 		border-right: 1px solid $horizontal-border-color;
 	}
-
 	tr {
 		td {
 			border-bottom: 0;
-
 			&:last-child {
 				border-right: none;
 			}
 		}
 	}
-
 	tbody {
 		tr {
 			th {
@@ -295,90 +273,17 @@ th {
 		}
 	}
 }
-
 .table-bordernone {
 	td {
 		border: none !important;
 	}
-
 	thead {
 		th {
 			border: none !important;
 		}
 	}
-
 	.u-s-tb {
 		padding: 11px;
-	}
-}
-
-.table-striped {
-	tbody {
-		tr {
-			&:nth-of-type(odd) {
-				background-color: var(--light-background);
-				--bs-table-accent-bg: unset;
-			}
-		}
-	}
-}
-
-.table-bordered {
-
-	thead,
-	tbody,
-	tfoot,
-	tr,
-	td,
-	th {
-		border-color: rgba($light-text, 0.3);
-	}
-}
-.product-table {
-	.dataTable {
-		thead {
-			tr {
-				th {
-					&:nth-child(4){
-						min-width: 70px;
-					}
-					&:nth-child(5){
-						min-width: 80px;
-					}
-				}
-			}
-		}
-		tbody {
-			tr {
-				td {
-					&:nth-child(2){
-						min-width: 200px;
-					}
-				}
-			}
-		}
-	}
-}
-.order-history {
-	.dataTable {
-		thead {
-			tr {
-				th {
-					&:nth-child(2){
-						min-width: 125px;
-					}
-					&:nth-child(3){
-						min-width: 60px;
-					}
-					&:nth-child(4){
-						min-width: 65px;
-					}
-					&:nth-child(5){
-						min-width: 130px;
-					}
-				}
-			}
-		}
 	}
 }
 .table-striped {
@@ -391,38 +296,23 @@ th {
 		}
 	}
 }
-.invoice {
-	p {
-		color: $theme-body-sub-title-color;
+.table-bordered {
+	thead,
+	tbody,
+	tfoot,
+	tr,
+	td,
+	th {
+		border-color: rgba($light-text, 0.3);
 	}
 }
-.invoice-table {
-	tbody {
-		tr {
-			&:nth-child(odd){
-				background-color: rgba($primary-color, 0.1);
-				--bs-table-bg-type: unset;
-			}
-			td{
-				&:nth-child(1){
-					min-width: 200px;
-				}
-			}
+.extra_data {
+	.card-body {
+		.table-responsive {
+			overflow-x: hidden;
 		}
 	}
 }
-.aos-table {
-	thead {
-		tr {
-			th {
-				&:nth-child(2){
-					min-width: 200px;
-				}
-			}
-		}
-	}
-}
-
 /**=====================
     2.30 Table CSS Ends
 ==========================**/

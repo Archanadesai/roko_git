@@ -12,7 +12,7 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -21,14 +21,15 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | Paginations
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item  Bonus Ui
                     li.breadcrumb-item.active Pagination
           // Container-fluid starts
@@ -37,7 +38,7 @@ html(lang='en')
               // simple pagination
               .col-md-6
                 .card.height-equal
-                  .card-header
+                  .card-header.pb-0
                     h3 Default Pagination
                     p.f-m-light.mt-1
                     | If the pagination component is used to navigate between a set of search results, an appropriate label could be 
@@ -59,7 +60,7 @@ html(lang='en')
               // pagination with active and disabled state
               .col-md-6
                 .card.height-equal
-                  .card-header
+                  .card-header.pb-0
                     h3 Pagination With Active And Disabled
                     p.f-m-light.mt-1
                       | Use 
@@ -85,7 +86,7 @@ html(lang='en')
               // pagination with icons
               .col-md-6
                 .card.height-equal
-                  .card-header
+                  .card-header.pb-0
                     h3 Pagination With Icons
                     p.f-m-light.mt-1
                       | Use an icon or symbol in place of text for some pagination links.
@@ -113,7 +114,7 @@ html(lang='en')
               // Rounded Pagination
               .col-md-6
                 .card.height-equal
-                  .card-header
+                  .card-header.pb-0
                     h3  Rounded Pagination
                     p.f-m-light.mt-1
                       | Used in rounded pagination.Use an icon or symbol in place of text for some pagination links.
@@ -138,9 +139,9 @@ html(lang='en')
                             span(aria-hidden='true') »
                             span.sr-only Next
               // pagination alignments
-              .col-xxl-6
+              .col-xl-6
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 Pagination Alignment
                     p.f-m-light.mt-1
                       | Change the alignment of pagination components with flexbox utilities. For example, with 
@@ -149,7 +150,7 @@ html(lang='en')
                   .card-body
                     // left aligned pagination
                     nav.m-b-30(aria-label='Page navigation example')
-                      ul.pagination.pagin-border-warning.pagination-warning
+                      ul.pagination.pagin-border-primary.pagination-primary
                         li.page-item
                           a.page-link(href='javascript:void(0)') Previous
                         li.page-item
@@ -187,9 +188,9 @@ html(lang='en')
                         li.page-item
                           a.page-link(href='javascript:void(0)') Next
               // pagination sizing
-              .col-xxl-6
+              .col-xl-6
                 .card
-                  .card-header
+                  .card-header.pb-0
                     h3 Pagination Sizing
                     p.f-m-light.mt-1
                       | Use 

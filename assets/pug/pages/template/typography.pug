@@ -12,7 +12,7 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -21,14 +21,15 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | Typography
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item Ui Kits
                     li.breadcrumb-item.active Typography
           // Container-fluid starts
@@ -36,8 +37,8 @@ html(lang='en')
             .row
               .col-xxl-6
                 .card.height-equal
-                  .card-header
-                    h3.mb-0 Headings
+                  .card-header.pb-0
+                    h4.mb-0 Headings
                     p.f-m-light.mt-1
                       | All HTML headings, 
                       code &lt;h1&gt;
@@ -45,9 +46,9 @@ html(lang='en')
                       code &lt;h6&gt;
                       | , are available.
                   .card-body
-                    .table-responsive.custom-scrollbar
+                    .table-responsive
                       table.table.mb-0.typography-table
-                        thead
+                        thead 
                           tr
                             th.pt-0 Code
                             th.pt-0 Font-Size
@@ -57,23 +58,23 @@ html(lang='en')
                             td
                               code &lt;h1&gt;&lt;/h1&gt;
                             td
-                              h1.mb-0 1.875rem
+                              h1.mb-0 1.75rem
                             td
                               h1
                                 span  Heading 1 (MEGA)
                           tr
-                            td
+                            td 
                               code &lt;h2&gt;&lt;/h2&gt;
                             td
-                              h2.mb-0 1.625rem
-                            td
+                              h2.mb-0 1.63rem 
+                            td 
                               h2
                                 span  Heading 2 (XL)
                           tr
                             td
                               code &lt;h3&gt;&lt;/h3&gt;
                             td
-                              h3.mb-0 1.25rem
+                              h3.mb-0 1.5rem
                             td
                               h3
                                 span  Heading 3 (LARGE)
@@ -81,7 +82,7 @@ html(lang='en')
                             td
                               code &lt;h4&gt;&lt;/h4&gt;
                             td
-                              h4.mb-0 1.125rem
+                              h4.mb-0 1.25rem
                             td
                               h4
                                 span  Heading 4 (MEDIUM)
@@ -97,14 +98,14 @@ html(lang='en')
                             td.pb-0
                               code &lt;h6&gt;&lt;/h6&gt;
                             td.pb-0
-                              h6.mb-0 0.938rem
+                              h6.mb-0 0.94rem
                             td.pb-0
                               h5
                                 span  Heading 6 
               .col-xxl-6
                 .card.height-equal
-                  .card-header
-                    h3.mb-0 Colored headings
+                  .card-header.pb-0
+                    h4.mb-0 Colored headings
                     p.f-m-light.mt-1
                       | All HTML headings, 
                       code &lt;h1&gt;
@@ -112,7 +113,7 @@ html(lang='en')
                       code &lt;h6&gt;
                       | , are available.
                   .card-body
-                    .table-responsive.custom-scrollbar
+                    .table-responsive
                       table.table.mb-0.typography-table
                         thead
                           tr
@@ -163,8 +164,8 @@ html(lang='en')
                                 |  Sub Heading
               .col-12
                   .card
-                    .card-header
-                      h3.mb-0 Font weight
+                    .card-header.pb-0
+                      h4.mb-0 Font weight
                       p.f-m-light.mt-1
                         | Using 
                         code f-w-*
@@ -187,8 +188,8 @@ html(lang='en')
                         code  f-w-300
               .col-sm-12.listing
                 .card
-                  .card-header
-                    h3.mb-0 Listing typography
+                  .card-header.pb-0
+                    h4.mb-0 Listing typography
                     p.f-m-light.mt-1
                       | All typography list:- 
                       code &lt;ul&gt;
@@ -245,8 +246,8 @@ html(lang='en')
                             dd.mb-0 -Dalai Lama
               .col-12
                   .card
-                    .card-header
-                      h3.mb-0 Display headings
+                    .card-header.pb-0
+                      h4.mb-0 Display headings
                       p.f-m-light.mt-1
                         | Traditional heading elements are designed to work
                         | best in the meat of your
@@ -256,13 +257,13 @@ html(lang='en')
                         | larger, slightly more opinionated heading style.
                     .card-body.d-flex.flex-column.gap-2
                       h1.display-1 Display 1
-                      h2.display-2 Display 2
-                      h3.display-3 Display 3
-                      h4.display-4 Display 4
+                      h1.display-2 Display 2
+                      h1.display-3 Display 3
+                      h1.display-4 Display 4
               .col-sm-12.col-xl-6
                 .card
-                  .card-header
-                    h3 Inline text elements
+                  .card-header.pb-0
+                    h4 Inline text elements
                     p.f-m-light.mt-1 Styling for common inline HTML5 elements.
                   .card-body
                       .d-flex.flex-column.gap-2
@@ -288,8 +289,8 @@ html(lang='en')
                           em This line rendered as italicized text.
               .col-sm-12.col-xl-6
                 .card
-                  .card-header
-                    h3.mb-0 Text color
+                  .card-header.pb-0
+                    h4.mb-0 Text color
                     p.f-m-light.mt-1
                       | You can Give text color by using 
                       code txt-*
@@ -330,7 +331,7 @@ html(lang='en')
                           |  class
               .col-sm-12
                 .card.overflow-hidden
-                  .card-header
+                  .card-header.pb-0
                     h4.mb-0 Blockquotes
                     p.f-m-light.mt-1
                       | The 

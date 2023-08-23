@@ -19,13 +19,13 @@ function style() {
     .pipe(browserSync.reload({ stream: true }));
 }
 
-// pug to html  
+// pug to html
 function html() {
   return gulp
-    .src("./assets/pug/pages/template/**.pug")
+  .src("./assets/pug/pages/template/**.pug")
     .pipe(
       pug({
-    pretty: true,       
+        pretty: true,
       })
     )
     .on("error", console.error.bind(console))
@@ -40,7 +40,7 @@ function html() {
 // Watch function
 function watch() {
   browserSync.init({
-    proxy: "localhost/Wool/template/index.html"
+    proxy: "localhost/roko_git/template/index.html"
   });
   gulp.watch("assets/scss/**/**.scss", style);
   gulp.watch("assets/pug/pages/template/**.pug", html);

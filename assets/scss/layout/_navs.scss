@@ -22,7 +22,7 @@
 			position: relative;
 
 			&:hover {
-				color: var(--theme-deafult) !important;
+				color: var(--theme-default) !important;
 			}
 		}
 
@@ -50,7 +50,7 @@
 			color: $theme-body-font-color;
 
 			&:hover {
-				color: var(--theme-deafult);
+				color: var(--theme-default);
 			}
 		}
 
@@ -76,17 +76,7 @@
 }
 
 .icon-lists {
-	font-family: $font-nunito-sans, $font-serif;
-}
-
-.pl-navs-inline {
-	padding-left: 30px !important;
-}
-
-.inline-nav {
-	li {
-		line-height: 1.3;
-	}
+	font-family: inherit;
 }
 
 /**=====================

@@ -1,5 +1,6 @@
 - var theme_customizer      = true;
 - var email_pagination      = true;
+- var tooltip               = true;
 - var sidebar               = true;
 - var print                 = true;
 - var editors               = true;
@@ -24,10 +25,10 @@ html(lang='en')
             .container-fluid
                 .page-title
                     .row
-                        .col-6
-                            h4
+                        .col-sm-6.ps-0
+                            h3
                                 | Letter Box
-                        .col-6
+                        .col-sm-6.ps-0
                             ol.breadcrumb
                                 li.breadcrumb-item
                                     a(href='index.html')                                        
@@ -216,7 +217,7 @@ html(lang='en')
                                                             svg.important-mail.active
                                                                 use(href="../assets/svg/icon-sprite.svg#fill-star")
                                                             .rounded-border
-                                                                img.img-fluid(src="../assets/images/dashboard/user/13.png", alt="user")
+                                                                img.img-fluid(src="../assets/images/dashboard/user/6.jpg", alt="user")
                                                             p Marvin McKinney
                                                         .inbox-message
                                                             .email-data
@@ -510,7 +511,7 @@ html(lang='en')
                                                             svg.important-mail
                                                                 use(href="../assets/svg/icon-sprite.svg#fill-star")
                                                             .rounded-border
-                                                                img.img-fluid(src="../assets/images/dashboard/user/13.png", alt="user")
+                                                                img.img-fluid(src="../assets/images/dashboard/user/6.jpg", alt="user")
                                                             p Marvin McKinney
                                                         .inbox-message
                                                             .email-data
@@ -580,7 +581,7 @@ html(lang='en')
                                                             svg.important-mail.active
                                                                 use(href="../assets/svg/icon-sprite.svg#fill-star")
                                                             .rounded-border
-                                                                img.img-fluid(src="../assets/images/dashboard/user/13.png", alt="user")
+                                                                img.img-fluid(src="../assets/images/dashboard/user/6.jpg", alt="user")
                                                             p Marvin McKinney
                                                         .inbox-message
                                                             .email-data
@@ -967,7 +968,7 @@ html(lang='en')
                                                                     input#Email_Modal.form-control(type='email')
                                                                 label.form-label.col-sm-2(for='exampleColorInput') Label Color :
                                                                 .col-sm-2.col-2
-                                                                    input#exampleColorInput.form-control.form-control-color(type='color' value='#7366FF' title='Choose your color')
+                                                                    input#exampleColorInput.form-control.form-control-color(type='color' value='#006666' title='Choose your color')
 
                                                            
                                                     .modal-footer
@@ -1076,10 +1077,10 @@ html(lang='en')
                                                         button.ql-indent(value="+1")
                                                         button.ql-link
                                                         button.ql-image
-                                                    #editor
-                                            .send-btn
+                                                    #editor 
+                                            .send-btn 
                                                 button.btn.btn-primary Send
-                                                    i.fa.fa-paper-plane
+                                                    i.fa.fa-paper-plane 
         // Container-fluid Ends
         include ../../components/footer
     include ../../components/footer-files

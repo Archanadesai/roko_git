@@ -1,4 +1,3 @@
-(function ($) {
 document.addEventListener('DOMContentLoaded', function() {
 
     /* initialize the external events
@@ -13,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
     });
-  
+   
 
     //// the individual way to do it
     // var containerEl = document.getElementById('external-events-list');
@@ -101,4 +100,3 @@ document.addEventListener('DOMContentLoaded', function() {
     calendar.render();
 
   });
-})(jQuery);

@@ -23,7 +23,7 @@
           input {
             width: 240px;
             background-color: $white;
-            box-shadow: 0 5px 21px rgba($black, 0.10);
+            box-shadow: 0 5px 21px rgba(0, 0, 0, 0.10);
           }
 
           &.open {
@@ -87,7 +87,7 @@
             li {
               a {
                 z-index: 99999;
-                color: rgba($white, 0.5);
+                color: rgba(255, 255, 255, 0.5);
               }
             }
           }
@@ -99,7 +99,7 @@
   &:before {
     position: fixed;
     content: '';
-    background-color: rgba($black, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     height: 100%;
     width: 100%;
     z-index: 1;

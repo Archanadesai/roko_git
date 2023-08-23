@@ -1,257 +1,239 @@
 (function ($) {
   "use strict";
   /*Line chart*/
-  var optionslinechart = {
+  var options = {
+    series: [{
+      name: "Desktops",
+      data: [ 50, 50, 50, 25, 25, 25, 2, 2, 2, 25, 25, 25, 62, 62, 62, 35, 35, 35, 66, 66],
+  }],
     chart: {
-      toolbar: {
-        show: false,
-      },
-      height: 200,
-      type: "area",
+    type: 'area',
+    height: 200,
+    zoom: {
+      enabled: false
     },
-    dataLabels: {
-      enabled: false,
-    },
-    stroke: {
-      width: 3,
-      curve: "smooth",
-    },
-    xaxis: {
+    toolbar: {
       show: false,
-      type: "datetime",
-      categories: [
-        "2018-09-19T00:00:00",
-        "2018-09-19T01:30:00",
-        "2018-09-19T02:30:00",
-        "2018-09-19T03:30:00",
-        "2018-09-19T04:30:00",
-        "2018-09-19T05:30:00",
-        "2018-09-19T06:30:00",
-        "2018-09-19T07:30:00",
-        "2018-09-19T08:30:00",
-        "2018-09-19T09:30:00",
-        "2018-09-19T10:30:00",
-      ],
+    }, 
+    dropShadow: {
+      enabled: true,
+      top: 5,
+      left: 0,
+      bottom: 3,
+      blur: 2,
+      color: RokoAdminConfig.primary,
+      opacity: 0.2,
+    },
+  },
+  colors: [RokoAdminConfig.primary],
+  fill: {
+    type: "gradient",
+    gradient: {
+      shadeIntensity: 1,
+      opacityFrom: 0.5,
+      opacityTo: 0.1,
+      stops: [0, 90, 100]
+    }
+  },
+  dataLabels: {
+    enabled: false
+  },
+  grid: {
+    show: false,
+  },
+    xaxis: {
       labels: {
         show: false,
       },
       axisBorder: {
         show: false,
       },
-    },
-    yaxis: {
-      labels: {
+      axisTicks: {
         show: false,
       },
     },
-    grid: {
+    yaxis: {
       show: false,
-      padding: {
-        left: -10,
-        top: -25,
-        right: -60,
-        bottom: -40,
-      },
     },
-    fill: {
-      opacity: 0.2,
+    stroke: {
+      curve: 'straight',
+      width: 2,
     },
-    colors: [woolAdminConfig.primary],
-    series: [
-      {
-        data: [70, 60, 82, 80, 60, 90, 70, 120, 50, 60, 0],
-      },
-    ],
-    tooltip: {
-      x: {
-        format: "dd/MM/yy HH:mm",
-      },
+    markers: {
+      discrete: [{
+        seriesIndex: 0,
+        dataPointIndex: 12,
+        fillColor: RokoAdminConfig.primary,
+        strokeColor:'#fff',
+        size: 5,
+        shape: "circle"
+      }],
     },
-    responsive: [
-      {
-        breakpoint: 576,
-        options: {
+    responsive: [{
+      breakpoint: 1661,
+      options: {
           chart: {
-            height: 100,
-          }
-        }
-      }
-    ]
+              height: 140
+          },
+      },
+    }
+  ],
   };
+  var chart = new ApexCharts(document.querySelector("#offline-chart-2"), options);
+  chart.render();
 
-  var chartlinechart = new ApexCharts(
-    document.querySelector("#chart-widget1"),
-    optionslinechart
-  );
-
-  chartlinechart.render();
 
   /*Line chart2*/
-  var optionslinechart2 = {
-    chart: {
-      toolbar: {
-        show: false,
+  var expensesOption = {
+    series: [
+      {
+        name: 'series2',
+        data: [15, 25, 20, 35, 55, 30, 20, 30, 20, 35, 25, 20, 15, 25, 20, 35, 50, 30, 20, 30, 20, 35, 25, 20],
       },
-      height: 200,
-      type: "area",
+    ],
+    colors: [ "var(--theme-default)" , "#FFA941"],
+    chart: {
+      height: 215,
+      offsetY: 20,
+      type: 'bar',
+      sparkline: {
+        enabled: true,
+      },
     },
     dataLabels: {
       enabled: false,
     },
     stroke: {
-      width: 3,
-      curve: "smooth",
+      curve: 'smooth',
     },
-    xaxis: {
-      show: false,
-      type: "datetime",
-      categories: [
-        "2018-09-19T00:00:00",
-        "2018-09-19T01:30:00",
-        "2018-09-19T02:30:00",
-        "2018-09-19T03:30:00",
-        "2018-09-19T04:30:00",
-        "2018-09-19T05:30:00",
-        "2018-09-19T06:30:00",
-        "2018-09-19T07:30:00",
-        "2018-09-19T08:30:00",
-        "2018-09-19T09:30:00",
-        "2018-09-19T10:30:00",
-      ],
-      labels: {
-        show: false,
-      },
-      axisBorder: {
-        show: false,
-      },
-    },
-    yaxis: {
-      show: false
-    },
-    grid: {
-      show: false,
-      padding: {
-        left: -10,
-        top: -25,
-        right: -60,
-        bottom: -40,
-      },
-    },
-    fill: {
-      opacity: 0.2,
-    },
-    colors: [woolAdminConfig.secondary],
-    series: [
-      {
-        name: "series1",
-        data: [70, 60, 82, 80, 60, 90, 70, 120, 50, 60, 0],
-      },
-    ],
-    tooltip: {
-      x: {
-        format: "dd/MM/yy HH:mm",
-      },
+    plotOptions: {
+      bar: {
+        borderRadius: 5,
+        distributed: true,
+        columnWidth: "50%",
+        barHeight: '38%',
+        dataLabels: {
+          position: 'top',
+        },
+      }
     },
     responsive: [
       {
-        breakpoint: 576,
+        breakpoint: 1700,
         options: {
           chart: {
-            height: 100,
-          }
-        }
-      }
-    ]
+            height: 86,
+          },
+        },
+      },
+      {
+        breakpoint: 1699,
+        options: {
+          chart: {
+            height: 95,
+          },
+        },
+      },
+      {
+        breakpoint: 1460,
+        options: {
+          grid: {
+            padding: {
+              top: 0,
+              right: 0,
+              bottom: 0,
+              left: 5,
+            },
+          },
+        },
+      },
+      {
+        breakpoint: 376,
+        options: {
+          chart: {
+            height: 50,
+          },
+        },
+      },
+    ],
   };
-
-  var chartlinechart2 = new ApexCharts(
-    document.querySelector("#chart-widget2"),
-    optionslinechart2
-  );
-  chartlinechart2.render();
+  var expensesEl = new ApexCharts(document.querySelector('#income-chart-2'), expensesOption);
+  expensesEl.render();
 
   /*Line chart3*/
-  var optionslinechart3 = {
+  var options = {
+    series: [{
+      name: "Desktops",
+      data: [15, 14, 11, 20, 10, 15 , 11],
+  }],
     chart: {
-      toolbar: {
-        show: false,
-      },
-      height: 200,
-      type: "area",
+    type: 'area',
+    height: 200,
+    offsetY: 10,
+    zoom: {
+      enabled: false
     },
-    dataLabels: {
-      enabled: false,
-    },
-    stroke: {
-      width: 3,
-      curve: "smooth",
-    },
-    xaxis: {
+    toolbar: {
       show: false,
-      type: "datetime",
-      categories: [
-        "2018-09-19T00:00:00",
-        "2018-09-19T01:30:00",
-        "2018-09-19T02:30:00",
-        "2018-09-19T03:30:00",
-        "2018-09-19T04:30:00",
-        "2018-09-19T05:30:00",
-        "2018-09-19T06:30:00",
-        "2018-09-19T07:30:00",
-        "2018-09-19T08:30:00",
-        "2018-09-19T09:30:00",
-        "2018-09-19T10:30:00",
-      ],
+    }, 
+    dropShadow: {
+      enabled: true,
+      top: 5,
+      left: 0,
+      bottom: 3,
+      blur: 2,
+      color: RokoAdminConfig.secondary,
+      opacity: 0.2,
+    },
+  },
+  colors: [RokoAdminConfig.secondary],
+  fill: {
+    type: "gradient",
+    gradient: {
+      shadeIntensity: 1,
+      opacityFrom: 0.6,
+      opacityTo: 0.2,
+      stops: [0, 100, 100]
+    }
+  },
+  dataLabels: {
+    enabled: false
+  },
+  grid: {
+    show: false,
+  },
+    xaxis: {
       labels: {
         show: false,
       },
       axisBorder: {
         show: false,
       },
+      axisTicks: {
+        show: false,
+      },
     },
     yaxis: {
-      show: false
-    },
-    grid: {
       show: false,
-      padding: {
-        left: -10,
-        top: -25,
-        right: -60,
-        bottom: -40,
-      },
     },
-    fill: {
-      opacity: 0.2,
+    stroke: {
+      curve: 'smooth',
+      width: 2,
     },
-    colors: ["#51bb25"],
-    series: [
-      {
-        data: [70, 60, 82, 80, 60, 90, 70, 120, 50, 60, 0],
+    markers: {
+        discrete: [{
+            seriesIndex: 0,
+            dataPointIndex: 3,
+            fillColor: RokoAdminConfig.secondary,
+            strokeColor: "#fff",
+            size: 6,
+            shape: "circle"
+        },
+        ],
       },
-    ],
-    tooltip: {
-      x: {
-        format: "dd/MM/yy HH:mm",
-      },
-    },
-    responsive: [
-      {
-        breakpoint: 576,
-        options: {
-          chart: {
-            height: 100,
-          }
-        }
-      }
-    ]
   };
-
-  var chartlinechart3 = new ApexCharts(
-    document.querySelector("#chart-widget3"),
-    optionslinechart3
-  );
-  chartlinechart3.render();
+  var chart = new ApexCharts(document.querySelector("#budget-chart-2"), options);
+  chart.render();
 
   // column chart
   var optionscolumnchart = {
@@ -313,7 +295,7 @@
         },
       },
     },
-    colors: [woolAdminConfig.secondary, "#51bb25", woolAdminConfig.primary],
+    colors: [RokoAdminConfig.secondary, "#51bb25", RokoAdminConfig.primary],
     fill: {
       type: "gradient",
       gradient: {
@@ -339,10 +321,10 @@
         options: {
           chart: {
             height: 200,
-          }
-        }
-      }
-    ]
+          },
+        },
+      },
+    ],
   };
   var chartcolumnchart = new ApexCharts(
     document.querySelector("#chart-widget4"),
@@ -374,7 +356,7 @@
       },
     ],
     fill: {
-      colors: [woolAdminConfig.primary, woolAdminConfig.secondary],
+      colors: [RokoAdminConfig.primary, RokoAdminConfig.secondary],
       type: "gradient",
       gradient: {
         shade: "light",
@@ -397,7 +379,7 @@
         bottom: 10,
       },
     },
-    colors: [woolAdminConfig.primary, woolAdminConfig.secondary],
+    colors: [RokoAdminConfig.primary, RokoAdminConfig.secondary],
     labels: [
       "Jan",
       "Feb",
@@ -496,7 +478,7 @@
     fill: {
       opacity: 0.2,
     },
-    colors: [woolAdminConfig.primary],
+    colors: [RokoAdminConfig.primary],
     series: [
       {
         data: [70, 60, 82, 80, 60, 90, 70, 120, 50, 60, 0],
@@ -573,7 +555,7 @@
     fill: {
       opacity: 0.2,
     },
-    colors: [woolAdminConfig.primary],
+    colors: [RokoAdminConfig.primary],
     series: [
       {
         data: [
@@ -594,10 +576,10 @@
         options: {
           chart: {
             height: 200,
-          }
-        }
-      }
-    ]
+          },
+        },
+      },
+    ],
   };
   var chartcryptopricechart = new ApexCharts(
     document.querySelector("#chart-crypto"),
@@ -659,13 +641,13 @@
         {
           x: new Date("15 Nov 2017").getTime(),
           strokeDashArray: 0,
-          borderColor: woolAdminConfig.primary,
+          borderColor: RokoAdminConfig.primary,
           label: {
-            borderColor: woolAdminConfig.primary,
+            borderColor: RokoAdminConfig.primary,
             offsetY: 20,
             style: {
               color: "#fff",
-              background: woolAdminConfig.primary,
+              background: RokoAdminConfig.primary,
             },
             text: "Anno Test",
           },
@@ -706,25 +688,27 @@
       align: "left",
       style: {
         fontSize: "18px",
-        fontFamily: "Nunito Sans, sans-serif",
+        fontFamily: "Outfit, sans-serif",
         fontWeight: 500,
       },
     },
-    colors: [woolAdminConfig.secondary],
+    colors: [RokoAdminConfig.secondary],
     labels: series.monthDataSeries1.dates,
     xaxis: {
       type: "datetime",
     },
-    responsive: [{
-      breakpoint: 576,
-      options: {
-        title: {
-          style: {
-            fontSize: "16px",
+    responsive: [
+      {
+        breakpoint: 576,
+        options: {
+          title: {
+            style: {
+              fontSize: "16px",
+            },
           },
         },
       },
-    }]
+    ],
   };
   var chartannotation = new ApexCharts(
     document.querySelector("#crypto-annotation"),
@@ -746,7 +730,7 @@
         stops: [0, 100],
       },
     },
-    colors: [woolAdminConfig.primary, woolAdminConfig.secondary],
+    colors: [RokoAdminConfig.primary, RokoAdminConfig.secondary],
     chart: {
       height: 300,
       type: "radar",
@@ -855,8 +839,8 @@
       },
     },
     colors: [
-      woolAdminConfig.primary,
-      woolAdminConfig.secondary,
+      RokoAdminConfig.primary,
+      RokoAdminConfig.secondary,
       "#51bb25",
       "#544fff",
     ],
@@ -1152,25 +1136,25 @@
     plotOptions: {
       candlestick: {
         colors: {
-          upward: '#FF474A',
-          downward: '#6540D1'
-        }
-      }
+          upward: "#FF474A",
+          downward: "#6540D1",
+        },
+      },
     },
     legend: {
       show: false,
     },
     fill: {
-      type: 'gradient',
+      type: "gradient",
       gradient: {
-          shade: 'dark',
-          type: 'vertical',
-          shadeIntensity: 0.2,
-          inverseColors: true,
-          opacityFrom: 1,
-          opacityTo: 1,
-          stops: [0, 100],
-      }
+        shade: "dark",
+        type: "vertical",
+        shadeIntensity: 0.2,
+        inverseColors: true,
+        opacityFrom: 1,
+        opacityTo: 1,
+        stops: [0, 100],
+      },
     },
     chart: {
       height: 450,
@@ -1180,7 +1164,7 @@
       },
     },
     stroke: {
-      curve: 'smooth',
+      curve: "smooth",
       width: [1, 1],
     },
     tooltip: {
@@ -1201,21 +1185,21 @@
     xaxis: {
       type: "datetime",
       axisBorder: {
-        show: false
+        show: false,
       },
       axisTicks: {
-        show: false
-      }
+        show: false,
+      },
     },
     grid: {
       strokeDashArray: 3,
-      position: 'back', 
+      position: "back",
       row: {
-          opacity: 0.5
-      },  
+        opacity: 0.5,
+      },
       column: {
-          opacity: 0.5
-      },  
+        opacity: 0.5,
+      },
     },
     responsive: [
       {
@@ -1223,10 +1207,10 @@
         options: {
           chart: {
             height: 250,
-          }
-        }
-      }
-    ]
+          },
+        },
+      },
+    ],
   };
 
   var chartcandlestickchart = new ApexCharts(
@@ -1283,7 +1267,7 @@
   var optionsColumn = {
     chart: {
       height: 350,
-      type: 'line',
+      type: "line",
       // animations: {
       //   enabled: true,
       //   easing: "linear",
@@ -1336,7 +1320,7 @@
     series: [
       {
         name: "Load Average",
-        type: 'column',
+        type: "column",
         data: generateMinuteWiseTimeSeries(
           new Date("12/12/2016 00:20:00").getTime(),
           12,
@@ -1347,10 +1331,10 @@
         ),
       },
       {
-        name: 'Social Media',
-        type: 'line',
-        data: [23, 42, 35, 27, 43, 22, 17, 31, 22, 22, 12, 16]
-      }
+        name: "Social Media",
+        type: "line",
+        data: [23, 42, 35, 27, 43, 22, 17, 31, 22, 22, 12, 16],
+      },
     ],
     title: {
       text: "Average",
@@ -1370,7 +1354,7 @@
       },
     },
     fill: {
-      colors: [woolAdminConfig.primary],
+      colors: [RokoAdminConfig.primary],
       type: "gradient",
       gradient: {
         shade: "light",
@@ -1392,27 +1376,28 @@
     legend: {
       show: true,
     },
-    responsive: [{
-      breakpoint: 1366,
-      options: {
-        subtitle: {
-          style: {
-            fontSize: "18px",
+    responsive: [
+      {
+        breakpoint: 1366,
+        options: {
+          subtitle: {
+            style: {
+              fontSize: "18px",
+            },
           },
         },
       },
-    },
-    {
-      breakpoint: 992,
-      options: {
-        subtitle: {
-          style: {
-            fontSize: "16px",
+      {
+        breakpoint: 992,
+        options: {
+          subtitle: {
+            style: {
+              fontSize: "16px",
+            },
           },
         },
       },
-    }
-    ]
+    ],
   };
 
   var chartColumn = new ApexCharts(
@@ -1483,7 +1468,7 @@
     fill: {
       opacity: 0.9,
     },
-    colors: [woolAdminConfig.primary, woolAdminConfig.secondary],
+    colors: [RokoAdminConfig.primary, RokoAdminConfig.secondary],
     markers: {
       size: 0,
       hover: {
@@ -1539,27 +1524,28 @@
       offsetY: -33,
       offsetX: 60,
     },
-    responsive: [{
-      breakpoint: 1366,
-      options: {
-        title: {
-          style: {
-            fontSize: "18px",
+    responsive: [
+      {
+        breakpoint: 1366,
+        options: {
+          title: {
+            style: {
+              fontSize: "18px",
+            },
           },
         },
       },
-    },
-    {
-      breakpoint: 992,
-      options: {
-        title: {
-          style: {
-            fontSize: "16px",
+      {
+        breakpoint: 992,
+        options: {
+          title: {
+            style: {
+              fontSize: "16px",
+            },
           },
         },
       },
-    }
-    ]
+    ],
   };
 
   var chartLine = new ApexCharts(
@@ -1568,579 +1554,236 @@
   );
   chartLine.render();
 
-  var optionsCircle = {
+  var options = {
+    series: [{
+    name: 'TEAM A',
+    type: 'column',
+    data: [220,, 250, , 210, , 210, , 270, , 220, , 250, , 260, , 210, , 230]
+  },{
+    name: 'TEAM B',
+    type: 'area',
+    data: [210,170, 240, 160, 200, 170, 200, 150, 260, 170, 210,170,240, 160, 250, 140, 200, 140,220,220]
+  }],
     chart: {
-      type: "radialBar",
-      height: 375,
-      offsetY: -30,
-      offsetX: 20,
+    height: 335,
+    type: 'area',
+    stacked: false,
+    toolbar: {
+      show: false,
+    }
+  },
+  stroke: {
+    width: [0, 2, 5],
+    curve: 'stepline'
+  },
+  plotOptions: {
+    bar: {
+      columnWidth: '100px'
+    }
+  },
+  colors: [ '#bebebe' , RokoAdminConfig.primary],
+  dropShadow: {
+    enabled: true,
+    top: 5,
+    left: 6,
+    bottom: 5,
+    blur: 2,
+    color: RokoAdminConfig.primary,
+    opacity: 0.5,
+  },
+  fill: {
+      type: "gradient",
+      gradient: {
+        shadeIntensity: 1,
+        opacityFrom: 0.5,
+        opacityTo: 0.1,
+        stops: [0, 90, 100]
+      }
+    },    
+  grid :{
+    show: true,
+    strokeDashArray: 3,
+    xaxis: {
+      lines: {
+        show: true,
+      }
     },
-    plotOptions: {
-      radialBar: {
-        size: undefined,
-        inverseOrder: false,
-        hollow: {
-          margin: 10,
-          size: "30%",
-          background: "transparent",
-        },
-        track: {
-          show: true,
-          background: "#f2f2f2",
-          strokeWidth: "10%",
-          opacity: 1,
-          margin: 3,
-        },
+    yaxis: {
+      lines: {
+        show: true,
+      }
+    },
+  },
+  xaxis: {
+    categories: ["Jan", "", "feb", "", "Mar", "", "Apr", "", "May", "", "Jun" ,"" , "July" , "" , "Aug" , "" , "Sep" , "" , "Oct" , ""],
+    labels: {
+      style: {
+          fontFamily: 'Outfit, sans-serif',
+          fontWeight: 500,
+          colors: '#8D8D8D',
       },
     },
-    series: [90, 63, 50],
-    labels: ["Skill 01", "Skill 02", "Skill 03"],
-    legend: {
-      show: true,
-      fontSize: "16px",
-      fontFamily: "Roboto, sans-serif",
-      fontWeight: 500,
+  },
+  dataLabels: {
+    enabled: false,
+  },
+    yaxis: {
       labels: {
-        colors: "#2C323F",
-      },
-      markers: {
-        width: 86,
-        height: 18,
-        radius: 3,
-      },
-    },
-    colors: [woolAdminConfig.secondary, woolAdminConfig.primary, "#51bb25"],
-    responsive: [{
-      breakpoint: 767,
-      options: {
-        title: {
-          style: {
-            fontSize: "16px",
-          },
+        style: {
+            fontFamily: 'Outfit, sans-serif',
+            fontWeight: 500,
+            colors: '#8D8D8D',
         },
       },
-    }]
+    },
+  legend:{
+    show: false,
+  },
+  tooltip: {
+    custom: function ({ series, seriesIndex, dataPointIndex,}) {
+      return '<div class="apex-tooltip p-2">' + '<span>' + '<span class="bg-primary">' + '</span>' + 'Project Created' + '<h3>' + '$'+ series[seriesIndex][dataPointIndex] + '<h3/>'  + '</span>' + '</div>';
+    },
+  },
   };
+  var chart = new ApexCharts(document.querySelector("#revenuegrowth-2"), options);
+  chart.render();
 
-  var chartCircle = new ApexCharts(
-    document.querySelector("#circlechart"),
-    optionsCircle
-  );
-  chartCircle.render();
-
-  var optionsProgress1 = {
+  var options = {
+    series: [{
+        name: 'TEAM A',
+        type: 'area',
+        data: [183 , 175 , 170 , 178 , 185 , 171 , 177 , 185 , 170 , 180, 175 , 170]
+    }, {
+        name: 'TEAM B',
+        type: 'line',
+        data: [183 , 193 , 170 , 182 , 200 , 180 , 185 , 178 , 165 , 175, 190 , 190],
+    }],
     chart: {
-      height: 70,
-      type: "bar",
-      stacked: true,
-      sparkline: {
-        enabled: true,
-      },
-    },
-    plotOptions: {
-      bar: {
-        horizontal: true,
-        barHeight: "15%",
-        colors: {
-          backgroundBarColors: [woolAdminConfig.primary],
-          backgroundBarOpacity: 0.2,
+        height: 320,
+        type: 'line',
+        stacked: false,
+        toolbar: {
+            show: false,
         },
-      },
+        zoom: {
+          enabled: false,
+        },
     },
-    colors: [woolAdminConfig.primary],
     stroke: {
-      width: 0,
+        curve: 'smooth',
+        width: [3, 3],
+        dashArray: [0, 4]
+  
     },
-    fill: {
-      colors: [woolAdminConfig.primary],
-      type: "gradient",
-      gradient: {
-        gradientToColors: [woolAdminConfig.primary],
+    grid: {
+      show: true,
+      borderColor: '#000000',
+      strokeDashArray: 0,
+      position: 'back',
+      xaxis: {
+          lines: {
+              show: true,
+          },
+      },
+      yaxis: {
+          lines: {
+              show: false,
+          },
       },
     },
-    series: [
+    labels: ['Jan', 'Feb','Mar','Apr','May','Jun','Jul','Aug','Sep', 'Oct', 'Nov', 'Dec',],
+    markers: {
+      discrete: [{
+        seriesIndex: 0,
+        dataPointIndex: 2,
+        fillColor: "#fff",
+        strokeColor:'#000',
+        size: 7,
+        shape: "circle"
+      },
       {
-        name: "Process 1",
-        data: [44],
+        seriesIndex: 0,
+        dataPointIndex: 4,
+        fillColor: "#fff",
+        strokeColor:'#000',
+        size: 7,
+        shape: "circle"
       },
-    ],
-    title: {
-      floating: true,
-      offsetX: -10,
-      offsetY: 5,
-      text: "Packed",
-      style: {
-        fontSize: "18px",
-        fontFamily: "Roboto, sans-serif",
-        fontWeight: 500,
+      {
+        seriesIndex: 0,
+        dataPointIndex: 6,
+        fillColor: "#fff",
+        strokeColor:'#000',
+        size: 7,
+        shape: "circle"
       },
-    },
-    subtitle: {
-      floating: true,
-      align: "right",
-      offsetY: 0,
-      text: "44%",
-      style: {
-        fontSize: "14px",
+      {
+        seriesIndex: 0,
+        dataPointIndex: 9,
+        fillColor: "#fff",
+        strokeColor:'#000',
+        size: 7,
+        shape: "circle"
       },
+      ],
     },
     tooltip: {
-      enabled: false,
+        shared: true,
+        intersect: false,
+        y: {
+            formatter: function (y) {
+                if (typeof y !== "undefined") {
+                    return y.toFixed(0) + " points";
+                }
+                return y;
+            }
+        }
     },
-    xaxis: {
-      categories: ["Packed"],
+    legend: {
+        show: false,
     },
-    yaxis: {
-      max: 100,
-    },
+      colors: [RokoAdminConfig.primary, '#EAEAEA'],
     fill: {
-      opacity: 1,
-    },
-    responsive: [{
-      breakpoint: 767,
-      options: {
-        title: {
-          style: {
-            fontSize: "16px",
-          },
-        },
-      },
-    }]
-  };
-
-  var chartProgress1 = new ApexCharts(
-    document.querySelector("#progress1"),
-    optionsProgress1
-  );
-  chartProgress1.render();
-
-  var optionsProgress2 = {
-    chart: {
-      height: 70,
-      type: "bar",
-      stacked: true,
-      sparkline: {
-        enabled: true,
-      },
-    },
-    plotOptions: {
-      bar: {
-        horizontal: true,
-        barHeight: "15%",
-        colors: {
-          backgroundBarColors: [woolAdminConfig.secondary],
-          backgroundBarOpacity: 0.2,
-          backgroundBarRadius: 10,
-        },
-      },
-    },
-    colors: [woolAdminConfig.secondary],
-    stroke: {
-      width: 0,
-    },
-    series: [
-      {
-        name: "Dispatched",
-        data: [40],
-      },
-    ],
-    title: {
-      floating: true,
-      offsetX: -10,
-      offsetY: 5,
-      text: "Dispatched",
-      style: {
-        fontSize: "18px",
-        fontFamily: "Roboto, sans-serif",
-        fontWeight: 500,
-      },
-    },
-    subtitle: {
-      floating: true,
-      align: "right",
-      offsetY: 0,
-      text: "44%",
-      style: {
-        fontSize: "14px",
-      },
-    },
-    tooltip: {
-      enabled: false,
-    },
-    xaxis: {
-      categories: ["Process 2"],
-    },
-    yaxis: {
-      max: 100,
-    },
-    fill: {
-      colors: [woolAdminConfig.secondary],
-      type: "gradient",
+      type: ['gradient', 'solid', 'gradient'],
       gradient: {
-        inverseColors: false,
-        gradientToColors: [woolAdminConfig.secondary],
-      },
+        shade: 'light',
+        type: "vertical",
+        shadeIntensity: 1,
+        gradientToColors: [ RokoAdminConfig.primary, '#fff5f7', RokoAdminConfig.primary ],
+        inverseColors: true,
+        opacityFrom: 0.4,
+        opacityTo: 0,
+        stops: [0, 100, 100, 100],
+      }
     },
-    responsive: [{
-      breakpoint: 767,
-      options: {
-        title: {
-          style: {
-            fontSize: "16px",
-          },
-        },
-      },
-    }]
-  };
-
-  var chartProgress2 = new ApexCharts(
-    document.querySelector("#progress2"),
-    optionsProgress2
-  );
-  chartProgress2.render();
-
-  var optionsProgress3 = {
-    chart: {
-      height: 70,
-      type: "bar",
-      stacked: true,
-      sparkline: {
-        enabled: true,
-      },
-    },
-    plotOptions: {
-      bar: {
-        horizontal: true,
-        barHeight: "15%",
-        colors: {
-          backgroundBarColors: ["#a927f9"],
-          backgroundBarOpacity: 0.2,
-          backgroundBarRadius: 10,
-        },
-      },
-    },
-    colors: ["#a927f9"],
-    stroke: {
-      width: 0,
-    },
-    series: [
-      {
-        name: "Reach Station",
-        data: [50],
-      },
-    ],
-    fill: {
-      colors: ["#a927f9"],
-      type: "gradient",
-      gradient: {
-        gradientToColors: ["#a927f9"],
-      },
-    },
-    title: {
-      floating: true,
-      offsetX: -10,
-      offsetY: 5,
-      text: "Reach Station",
-      style: {
-        fontSize: "18px",
-        fontFamily: "Roboto, sans-serif",
-        fontWeight: 500,
-      },
-    },
-    subtitle: {
-      floating: true,
-      align: "right",
-      offsetY: 0,
-      text: "50%",
-      style: {
-        fontSize: "14px",
-      },
-    },
-    tooltip: {
-      enabled: false,
-    },
+  
     xaxis: {
-      categories: ["Reach Station"],
+        labels: {
+            style: {
+                fontFamily: 'Outfit, sans-serif',
+                fontWeight: 500,
+                colors: '#8D8D8D',
+            },
+        },
+        axisBorder: {
+            show: false
+        },
     },
     yaxis: {
-      max: 100,
+        labels: {
+            show: false
+        },
     },
     responsive: [{
-      breakpoint: 767,
+      breakpoint: 1440,
       options: {
-        title: {
-          style: {
-            fontSize: "16px",
+          chart: {
+              height: 220
           },
-        },
       },
-    }]
+    },
+    ]
   };
-
-  var chartProgress3 = new ApexCharts(
-    document.querySelector("#progress3"),
-    optionsProgress3
-  );
-  chartProgress3.render();
-
-  var optionsProgress4 = {
-    chart: {
-      height: 70,
-      type: "bar",
-      stacked: true,
-      sparkline: {
-        enabled: true,
-      },
-    },
-    plotOptions: {
-      bar: {
-        horizontal: true,
-        barHeight: "15%",
-        colors: {
-          backgroundBarColors: ["#F8D62B"],
-          backgroundBarOpacity: 0.2,
-          backgroundBarRadius: 10,
-        },
-      },
-    },
-    colors: ["#F8D62B"],
-    stroke: {
-      width: 0,
-    },
-    series: [
-      {
-        name: "Out for delivery",
-        data: [60],
-      },
-    ],
-    fill: {
-      colors: ["#F8D62B"],
-      type: "gradient",
-      gradient: {
-        gradientToColors: ["#F8D62B"],
-      },
-    },
-    title: {
-      floating: true,
-      offsetX: -10,
-      offsetY: 5,
-      text: "Out for delivery",
-      style: {
-        fontSize: "18px",
-        fontFamily: "Roboto, sans-serif",
-        fontWeight: 500,
-      },
-    },
-    subtitle: {
-      floating: true,
-      align: "right",
-      offsetY: 0,
-      text: "60%",
-      style: {
-        fontSize: "14px",
-      },
-    },
-    tooltip: {
-      enabled: false,
-    },
-    xaxis: {
-      categories: ["Out for delivery"],
-    },
-    yaxis: {
-      max: 100,
-    },
-    responsive: [{
-      breakpoint: 767,
-      options: {
-        title: {
-          style: {
-            fontSize: "16px",
-          },
-        },
-      },
-    }]
-  };
-
-  var chartProgress4 = new ApexCharts(
-    document.querySelector("#progress4"),
-    optionsProgress4
-  );
-  chartProgress4.render();
-
-  var optionsProgress5 = {
-    chart: {
-      height: 70,
-      type: "bar",
-      stacked: true,
-      sparkline: {
-        enabled: true,
-      },
-    },
-    plotOptions: {
-      bar: {
-        horizontal: true,
-        barHeight: "15%",
-        colors: {
-          backgroundBarColors: ["#51BB25"],
-          backgroundBarOpacity: 0.2,
-          backgroundBarRadius: 10,
-        },
-      },
-    },
-    colors: ["#51BB25"],
-    stroke: {
-      width: 0,
-    },
-    series: [
-      {
-        name: "Delivered",
-        data: [74],
-      },
-    ],
-    fill: {
-      colors: ["#51BB25"],
-      type: "gradient",
-      gradient: {
-        gradientToColors: ["#51BB25"],
-      },
-    },
-    title: {
-      floating: true,
-      offsetX: -10,
-      offsetY: 5,
-      text: "Delivered",
-      style: {
-        fontSize: "18px",
-        fontFamily: "Roboto, sans-serif",
-        fontWeight: 500,
-      },
-    },
-    subtitle: {
-      floating: true,
-      align: "right",
-      offsetY: 0,
-      text: "74%",
-      style: {
-        fontSize: "14px",
-      },
-    },
-    tooltip: {
-      enabled: false,
-    },
-    xaxis: {
-      categories: ["Delivered"],
-    },
-    yaxis: {
-      max: 100,
-    },
-    responsive: [{
-      breakpoint: 767,
-      options: {
-        title: {
-          style: {
-            fontSize: "16px",
-          },
-        },
-      },
-    }]
-  };
-
-  var chartProgress5 = new ApexCharts(
-    document.querySelector("#progress5"),
-    optionsProgress5
-  );
-  chartProgress5.render();
-
-  window.setInterval(function () {
-    iteration++;
-
-    chartColumn.updateSeries([
-      {
-        data: [
-          ...chartColumn.w.config.series[0].data,
-          [chartColumn.w.globals.maxX + 210000, getRandom()],
-        ],
-      },
-    ]),
-      chartLine.updateSeries([
-        {
-          data: [
-            ...chartLine.w.config.series[0].data,
-            [chartLine.w.globals.maxX + 300000, getRandom()],
-          ],
-        },
-        {
-          data: [
-            ...chartLine.w.config.series[1].data,
-            [chartLine.w.globals.maxX + 300000, getRandom()],
-          ],
-        },
-      ]);
-
-    chartCircle.updateSeries([
-      getRangeRandom({ min: 10, max: 100 }),
-      getRangeRandom({ min: 10, max: 100 }),
-      getRangeRandom({ min: 10, max: 100 }),
-    ]);
-
-    var p1Data = getRangeRandom({ min: 10, max: 100 });
-    chartProgress1.updateOptions({
-      series: [
-        {
-          data: [p1Data],
-        },
-      ],
-      subtitle: {
-        text: p1Data + "%",
-      },
-    });
-
-    var p2Data = getRangeRandom({ min: 10, max: 100 });
-    chartProgress2.updateOptions({
-      series: [
-        {
-          data: [p2Data],
-        },
-      ],
-      subtitle: {
-        text: p2Data + "%",
-      },
-    });
-
-    var p3Data = getRangeRandom({ min: 10, max: 100 });
-    chartProgress3.updateOptions({
-      series: [
-        {
-          data: [p3Data],
-        },
-      ],
-      subtitle: {
-        text: p3Data + "%",
-      },
-    });
-
-    var p4Data = getRangeRandom({ min: 10, max: 100 });
-    chartProgress4.updateOptions({
-      series: [
-        {
-          data: [p4Data],
-        },
-      ],
-      subtitle: {
-        text: p4Data + "%",
-      },
-    });
-
-    var p5Data = getRangeRandom({ min: 10, max: 100 });
-    chartProgress5.updateOptions({
-      series: [
-        {
-          data: [p5Data],
-        },
-      ],
-      subtitle: {
-        text: p5Data + "%",
-      },
-    });
-  }, 3000);
+  var chart = new ApexCharts(document.querySelector("#sales-overview-2"), options);
+  chart.render();
 })(jQuery);

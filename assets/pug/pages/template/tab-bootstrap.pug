@@ -12,7 +12,7 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-sidebar.compact-small.material-icon
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -21,14 +21,15 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-12.col-sm-6.p-0
                   h3
                     | Bootstrap Tabs
-                .col-12.col-sm-6
+                .col-12.col-sm-6.p-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#breadcrumb-home')
                     li.breadcrumb-item Tabs
                     li.breadcrumb-item.active Bootstrap Tabs
           // Container-fluid starts                    
@@ -36,7 +37,7 @@ html(lang='en')
             .row
               .col-sm-12.col-xl-6
                 .card
-                  .card-header
+                  .card-header.card-no-border.pb-0
                     h3 Simple tabs
                     p.mt-1.f-m-light
                         | Use the 
@@ -58,7 +59,7 @@ html(lang='en')
                               | Tabs have long been used to show alternative views of the same group of information tabs in software. Known as
                               em.txt-danger  “module tabs”
                               | , these are still used today in web sites. For instance, airline companies such as Ryanair, easyJet and AirMalta use module tabs to enable the user to switch between bookings for flights, hotels and car hire.
-                      #profile.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='profile-tabs')
+                      #profile.tab-pane.fade.show.active(role='tabpanel')
                           div.pt-3.mb-0
                               .flex-space.flex-wrap.align-items-center
                                   img.tab-img(src="../assets/images/avtar/3.jpg", alt="profile") 
@@ -73,7 +74,7 @@ html(lang='en')
                                         strong Contact Number: 
                                         |  (954) 357-7760
                       #contact.tab-pane.fade(role='tabpanel' aria-labelledby='contact-tab')
-                          ul.pt-3.d-flex.flex-column.gap-1
+                         ul.pt-3.d-flex.flex-column.gap-1
                             li
                                 | Us Technology offers web & mobile development solutions for all industry verticals.Include a short form using fields that'll help your business understand who's contacting them.
                             li 
@@ -87,8 +88,8 @@ html(lang='en')
                                 |  (954) 357-7760
               .col-sm-12.col-xl-6
                 .card
-                  .card-header
-                    h3 Icons with tabs
+                  .card-header.card-no-border.pb-0
+                    h3 Icons With Tabs
                     p.mt-1.f-m-light
                         | Use the 
                         code .nav-link 
@@ -113,7 +114,7 @@ html(lang='en')
                       #icon-home.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='icon-home-tab')
                           p.pt-3
                               |  Not limited to any states, boundaries. All over India providing cutting-edge design and website development services for over 12 years. We provide end to end digital solutions, right from designing your website/application development: Domain, Web Hosting, Email Hosting Registration, Search Engine Optimization and other Internet Marketing, Renewal of Services timely and effectively.
-                      #profile-icon.tab-pane.fade(role='tabpanel' aria-labelledby='profile-icon-tabs')
+                      #profile-icon.tab-pane.fade(role='tabpanel')
                           div.pt-3.mb-0
                               .flex-space.flex-wrap.align-items-center
                                   img.tab-img(src="../assets/images/avtar/7.jpg", alt="profile") 
@@ -128,14 +129,15 @@ html(lang='en')
                                         strong Contact Number: 
                                         |  510-767-0025
                       #contact-icon.tab-pane.fade(role='tabpanel' aria-labelledby='contact-icon-tab')
-                        p.pt-3
-                            | Us Technology offers web & mobile development solutions for all industry verticals.Include a short form using fields that'll help your business understand who's contacting them. 
-                        label.form-label(for='exampleFormControlone') Email address
-                        input#exampleFormControlone.form-control(type='email' placeholder='youremail@gmail.com')
-              .col-sm-12.col-xxl-6
+                          p.pt-3
+                              | Us Technology offers web & mobile development solutions for all industry verticals.Include a short form using fields that'll help your business understand who's contacting them. 
+                          .pt-3
+                              label.form-label(for='exampleFormControlInput1') Email address
+                              input#exampleFormControlInput.form-control(type='email' placeholder='youremail@gmail.com')
+              .col-sm-12.col-xl-6
                 .card.height-equal
-                  .card-header
-                    h3 Vertical tabs
+                  .card-header.card-no-border.pb-0
+                    h3 Vertical Tabs
                     p.mt-1.f-m-light
                         | Use the 
                         code #var-pills-tab
@@ -144,10 +146,10 @@ html(lang='en')
                     .row     
                         .col-md-4.col-xs-12
                             #ver-pills-tab.nav.flex-column.nav-pills.nav-success(role='tablist' aria-orientation='vertical')
-                                a#ver-pills-home-tab.nav-link(data-bs-toggle='pill' href='#ver-pills-home' role='tab' aria-controls='ver-pills-home' aria-selected='true') Home
-                                a#ver-pills-components-tab.nav-link.active(data-bs-toggle='pill' href='#ver-pills-components' role='tab' aria-controls='ver-pills-components' aria-selected='false') Components
-                                a#ver-pills-pages-tab.nav-link(data-bs-toggle='pill' href='#ver-pills-pages' role='tab' aria-controls='ver-pills-pages' aria-selected='false') Pages
-                                a#ver-pills-settings-tab.nav-link(data-bs-toggle='pill' href='#ver-pills-settings' role='tab' aria-controls='ver-pills-settings' aria-selected='false') Settings
+                                a#ver-pills-home-tab.f-w-600.nav-link(data-bs-toggle='pill' href='#ver-pills-home' role='tab' aria-controls='ver-pills-home' aria-selected='true') Home
+                                a#ver-pills-components-tab.f-w-600.nav-link.active(data-bs-toggle='pill' href='#ver-pills-components' role='tab' aria-controls='ver-pills-components' aria-selected='false') Components
+                                a#ver-pills-pages-tab.f-w-600.nav-link(data-bs-toggle='pill' href='#ver-pills-pages' role='tab' aria-controls='ver-pills-pages' aria-selected='false') Pages
+                                a#ver-pills-settings-tab.f-w-600.nav-link(data-bs-toggle='pill' href='#ver-pills-settings' role='tab' aria-controls='ver-pills-settings' aria-selected='false') Settings
                         .col-md-8.col-xs-12
                             #ver-pills-tabContent.tab-content
                                 #ver-pills-home.tab-pane.fade(role='tabpanel' aria-labelledby='ver-pills-home-tab')
@@ -185,9 +187,9 @@ html(lang='en')
                                         li
                                             strong  Features
                                             |  It's important to figure out as many of these in advance as you can for the sake of a more coherent design. 
-              .col-sm-12.col-xxl-6
+              .col-sm-12.col-xl-6
                 .card.height-equal
-                  .card-header
+                  .card-header.card-no-border.pb-0
                     h3 Pills tabs
                     p.mt-1.f-m-light
                         | Use the 
@@ -198,12 +200,12 @@ html(lang='en')
                   .card-body
                     ul#pills-tab.nav.nav-pills.nav-primary(role='tablist')
                       li.nav-item
-                          a#pills-aboutus-tab.nav-link(data-bs-toggle='pill' href='#pills-aboutus' role='tab' aria-controls='pills-aboutus' aria-selected='true')
+                          a#pills-aboutus-tab.f-w-600.nav-link(data-bs-toggle='pill' href='#pills-aboutus' role='tab' aria-controls='pills-aboutus' aria-selected='true')
                               | About us
                       li.nav-item
-                          a#pills-contactus-tab.nav-link(data-bs-toggle='pill' href='#pills-contactus' role='tab' aria-controls='pills-contactus' aria-selected='false') Contact us
+                          a#pills-contactus-tab.f-w-600.nav-link(data-bs-toggle='pill' href='#pills-contactus' role='tab' aria-controls='pills-contactus' aria-selected='false') Contact us
                       li.nav-item
-                          a#pills-blog-tab.nav-link.active(data-bs-toggle='pill' href='#pills-blog' role='tab' aria-controls='pills-blog' aria-selected='false') Blog 
+                          a#pills-blog-tab.f-w-600.nav-link.active(data-bs-toggle='pill' href='#pills-blog' role='tab' aria-controls='pills-blog' aria-selected='false') Blog 
                     #pills-tabContent.tab-content
                       #pills-aboutus.tab-pane.fade(role='tabpanel' aria-labelledby='pills-aboutus-tab')
                           p.pt-3
@@ -229,10 +231,10 @@ html(lang='en')
                                   p 
                                   em.txt-danger.fw-bold Smart headphones
                                   |   — also called smart earbuds or hearable — are high-tech in-ear devices that do more than transmit audio. These headphones are usually wireless, and they can sync up with your phone, tablet, computer or other Bluetooth-enabled device. The main appeal of hearables is convenience, as they allow you to complete common tasks without directly accessing your phone or computer. Smart wireless headphones sync up to other devices using Bluetooth technology, and many of their features rely on data from your smartphone or computer.
-              .col-xxl-6 
+              .col-xl-6 
                 .card 
-                  .card-header
-                    h3 Justify tabs
+                  .card-header.card-no-border.pb-0
+                    h3 Justify Tabs
                     p.mt-1.f-m-light
                         | Use the 
                         code .nav-link
@@ -242,7 +244,7 @@ html(lang='en')
                   .card-body 
                     .card-header.d-flex.justify-content-between.align-items-center.flex-wrap.gap-2.pb-2.p-0
                       p 
-                        em.txt-danger wool Profiles For New Employees:
+                        em.txt-danger Boho Profiles For New Employees:
                       ul#j-pills-tab.nav.nav-pills.nav-warning(role='tablist')
                         li.nav-item
                           a#j-pills-web-designer-tab.nav-link(data-bs-toggle='pill' href='#j-pills-web-designer' role='tab' aria-controls='j-pills-web-designer' aria-selected='true')  Web designer
@@ -366,10 +368,10 @@ html(lang='en')
                                           .designer-content 
                                               h6 Amber Cecil
                                               p 802-662-2407
-              .col-xxl-6 
+              .col-xl-6 
                 .card 
-                  .card-header
-                    h3 Material style left tabs
+                  .card-header.card-no-border.pb-0
+                    h3 Material Style Left Tabs
                     p.mt-1.f-m-light
                         | Use the 
                         code .nav-link 
@@ -377,16 +379,16 @@ html(lang='en')
                         code .active 
                         | class through jump another tabs.And 
                         code aria-orientation='vertical'
-                        | through change vertical tabs.
+                        | thorough change vertical tabs.
                   .card-body
                         .tabs-responsive-side
                             .material-wrapper
                                 .d-flex
                                     #sideline-tab.nav.flex-column.nav-secondary.border-tab.nav-left(role='tablist' aria-orientation='vertical')
-                                        a#sideline-home-tab.nav-link.nav-effect.active(data-bs-toggle='pill' href='#sideline-home' role='tab' aria-controls='sideline-home' aria-selected='true') Home
-                                        a#sideline-profile-tab.nav-link.nav-effect(data-bs-toggle='pill' href='#sideline-profile' role='tab' aria-controls='sideline-profile' aria-selected='false') Profile
-                                        a#sideline-messages-tab.nav-link.nav-effect(data-bs-toggle='pill' href='#sideline-messages' role='tab' aria-controls='sideline-messages' aria-selected='false') Inbox
-                                        a#sideline-settings-tab.nav-link.nav-effect.pb-0(data-bs-toggle='pill' href='#sideline-settings' role='tab' aria-controls='sideline-settings' aria-selected='false') Settings
+                                        a#sideline-home-tab.f-w-600.nav-link.nav-effect.active(data-bs-toggle='pill' href='#sideline-home' role='tab' aria-controls='sideline-home' aria-selected='true') Home
+                                        a#sideline-profile-tab.f-w-600.nav-link.nav-effect(data-bs-toggle='pill' href='#sideline-profile' role='tab' aria-controls='sideline-profile' aria-selected='false') Profile
+                                        a#sideline-messages-tab.f-w-600.nav-link.nav-effect(data-bs-toggle='pill' href='#sideline-messages' role='tab' aria-controls='sideline-messages' aria-selected='false') Inbox
+                                        a#sideline-settings-tab.f-w-600.nav-link.nav-effect.pb-0(data-bs-toggle='pill' href='#sideline-settings' role='tab' aria-controls='sideline-settings' aria-selected='false') Settings
                                 .material-content
                                     #sideline-tabContent.tab-content
                                         #sideline-home.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='sideline-home-tab')
@@ -396,19 +398,18 @@ html(lang='en')
                                             p.mb-0
                                             .flex-space.flex-wrap.align-items-center
                                                 img.tab-img(src="../assets/images/ecommerce/08.jpg", alt="profile") 
-                                                ul.d-flex.flex-column.gap-1
-                                                    li 
-                                                        strong  Name: 
-                                                        |  Jully Catlin
-                                                    li
-                                                        strong Visit Us: 
-                                                        |  50006 Ehrenberg/Parker,Arkansas-85334
-                                                    li
-                                                        strong Mail Us:
-                                                        |  hello.@gmail.com
-                                                    li
-                                                        strong Contact Number: 
-                                                        |  (928) 923-7940
+                                                p
+                                                    strong  Name: 
+                                                    | Jully Catlin
+                                                    br
+                                                    strong Visit Us: 
+                                                    | 50006 Ehrenberg/Parker,Arkansas-85334
+                                                    br
+                                                    strong Mail Us:
+                                                    | hello.@gmail.com
+                                                    br
+                                                    strong Contact Number: 
+                                                    | (928) 923-7940
                                         #sideline-messages.tab-pane.fade(role='tabpanel' aria-labelledby='sideline-messages-tab')
                                             .card-body.p-0
                                                 .main-inbox 
@@ -417,7 +418,7 @@ html(lang='en')
                                                             .inbox-img
                                                                 img(src="../assets/images/ecommerce/07.jpg", alt="profile")
                                                         .inbox-content 
-                                                            h6 Dalbult Caslin 
+                                                            h4 Dalbult Caslin 
                                                             p.text-muted stroman.rogers@gmail.com
                                                     .body-inbox.mt-2
                                                         .body-h-wrapper
@@ -428,10 +429,10 @@ html(lang='en')
                                             p
                                                 strong  In this situation, you would probably do two things:
                                                 |  exit the page, or look for the trusty search bar. If you decide to stick around, a proper search function should take your query and send you to your destination. Problem solved. It's not a perfect experience, but it's a hard one to avoid on larger websites that simply can't link to every piece of content from the homepage.
-              .col-xxl-6 
+              .col-xl-6 
                 .card 
-                  .card-header
-                    h3 Material style tabs
+                  .card-header.card-no-border.pb-0
+                    h3 Material Style Tabs
                     p.mt-1.f-m-light
                         | Use the 
                         code .nav-link 
@@ -458,7 +459,7 @@ html(lang='en')
                               .user-header.pb-2 
                                   h6.fw-bold User Details:
                               .user-content 
-                                .table-responsive
+                                .table-responsive.custom-scrollbar
                                     table.table.mb-0
                                         thead
                                             tr
@@ -482,7 +483,7 @@ html(lang='en')
                               .user-header.pb-2 
                                   h6.fw-bold Description:
                               .user-content 
-                                .table-responsive
+                                .table-responsive.custom-scrollbar
                                     table.table.mb-0
                                         thead
                                             tr
@@ -503,7 +504,7 @@ html(lang='en')
                               .user-header.pb-2 
                                   h6.fw-bold Review:
                               .user-content 
-                                .table-responsive
+                                .table-responsive.custom-scrollbar
                                     table.table.mb-0
                                         thead
                                             tr
@@ -522,17 +523,17 @@ html(lang='en')
                                                     i.ico-color.icofont.icofont-star
                                                     i.ico-color.icofont.icofont-star
                                             tr
-                                                th(scope='row') 2
+                                                th(scope='row') 3
                                                 td Irfan
                                                 td India
                                                 td 
                                                     i.ico-color.icofont.icofont-star
                                                     i.ico-color.icofont.icofont-star
                                                     i.ico-color.icofont.icofont-star
-              .col-xxl-6 
+              .col-xl-6 
                 .card 
-                  .card-header
-                    h3 Border tabs 
+                  .card-header.card-no-border.pb-0
+                    h3 Border Tabs 
                     p.mt-1.f-m-light
                         | Use the 
                         code .nav-link 
@@ -567,7 +568,7 @@ html(lang='en')
                                           .inbox-img
                                               img(src="../assets/images/ecommerce/06.jpg", alt="profile")
                                           .inbox-content 
-                                              h6 Dalbult Caslin 
+                                              h4 Dalbult Caslin 
                                               p.text-muted stroman.rogers@gmail.com
                                       ul.header-right-inbox
                                           li 
@@ -585,8 +586,8 @@ html(lang='en')
                           .card-body.px-0.pb-0 
                               .form 
                                   .mb-3
-                                      label.form-label(for='exampleFormControltwo') Email address
-                                      input#exampleFormControltwo.form-control(type='email' placeholder='youremail@gmail.com')
+                                      label.form-label(for='exampleFormControlInput1') Email address
+                                      input#exampleFormControlInput1.form-control(type='email' placeholder='youremail@gmail.com')
                                   .mb-0
                                       label.form-label(for='exampleFormControlTextarea1') Example textarea
                                       textarea#exampleFormControlTextarea1.form-control(rows='3')

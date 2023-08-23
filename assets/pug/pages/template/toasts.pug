@@ -14,7 +14,7 @@ html(lang='en')
     include ../../components/loader
     include ../../components/taptop
     // page-wrapper Start
-    #pageWrapper.page-wrapper.compact-wrapper.modern-type
+    #pageWrapper.page-wrapper.compact-wrapper
       include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -23,14 +23,15 @@ html(lang='en')
           .container-fluid
             .page-title
               .row
-                .col-12.col-sm-6
+                .col-sm-6.ps-0
                   h3
                     | Toasts
-                .col-12.col-sm-6
+                .col-sm-6.pe-0
                   ol.breadcrumb
                     li.breadcrumb-item
                       a(href='index.html')                                        
-                        i(data-feather='home')
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
                     li.breadcrumb-item Bonus Ui
                     li.breadcrumb-item.active Toasts
           // Container-fluid starts
@@ -39,7 +40,7 @@ html(lang='en')
               .col-md-6
                 .card
                   .card-header
-                    h3 Live Toast
+                    h4 Live Toast
                     p.f-m-light.mt-1 
                       | Use the 
                       code .hide 
@@ -52,8 +53,8 @@ html(lang='en')
                     .toast-container.position-fixed.top-0.end-0.p-3.toast-index.toast-rtl
                       #liveToast.toast.hide.toast.fade(role='alert' aria-live='assertive' aria-atomic='true')
                         .toast-header.toast-img
-                          img.rounded.me-2(src='../assets/images/dashboard/user/profile.png' alt='profile')
-                          strong.me-auto wool Theme
+                          img.rounded.me-2(src='../assets/images/dashboard-8/profile.png' alt='profile')
+                          strong.me-auto Roko Theme
                           small 5 min ago
                           button.btn-close(type='button' data-bs-dismiss='toast' aria-label='Close')
                         .toast-body.toast-dark
@@ -69,8 +70,8 @@ html(lang='en')
                     .toast-container.position-fixed.start-0.top-0.p-3.toast-index.toast-rtl
                       #liveToast2.toast.hide.toast.fade(role='alert' aria-live='assertive' aria-atomic='true')
                         .toast-header.toast-img
-                          img.rounded.me-2(src='../assets/images/dashboard/user/profile.png' alt='profile')
-                          strong.me-auto wool Theme
+                          img.rounded.me-2(src='../assets/images/dashboard-8/profile.png' alt='profile')
+                          strong.me-auto Roko Theme
                           small.d-sm-block.d-none 10 min ago
                           button.btn-close(type='button' data-bs-dismiss='toast' aria-label='Close')
                         .toast-body.toast-dark
@@ -80,8 +81,8 @@ html(lang='en')
                     .toast-container.position-fixed.start-0.bottom-0.p-3.toast-index.toast-rtl
                       #liveToast3.toast.hide.toast.fade(role='alert' aria-live='assertive' aria-atomic='true')
                         .toast-header.toast-img
-                          img.rounded.me-2(src='../assets/images/dashboard/user/profile.png' alt='profile')
-                          strong.me-auto wool Theme
+                          img.rounded.me-2(src='../assets/images/dashboard-8/profile.png' alt='profile')
+                          strong.me-auto Roko Theme
                           button.btn-close(type='button' data-bs-dismiss='toast' aria-label='Close')
                         .toast-body.toast-dark
                           h6.mb-2 Your account will be permanently deleted?
@@ -92,7 +93,7 @@ html(lang='en')
               .col-md-6
                 .card
                   .card-header
-                    h3 Colors Schemes
+                    h4 Colors Schemes
                     p.f-m-light.mt-1 
                       | Use the 
                       code .hide 
@@ -108,7 +109,7 @@ html(lang='en')
               .col-md-6
                 .card
                   .card-header
-                    h3 Stacking Toasts
+                    h4 Stacking Toasts
                     p.f-m-light.mt-1 
                       | You can stack toasts by wrapping them in a toast container, which will vertically add some spacing.
                       code [toast-*]
@@ -118,7 +119,7 @@ html(lang='en')
                       .toast.show(role='alert' aria-live='assertive' aria-atomic='true')
                         .toast-header
                           i.toast-icons.toast-primary(data-feather='bell')
-                          strong.me-auto Wool theme
+                          strong.me-auto Roko theme
                           small.txt-danger just now
                           button.btn-close(type='button' data-bs-dismiss='toast' aria-label='Close')
                         .toast-body.toast-dark
@@ -150,7 +151,7 @@ html(lang='en')
               .col-md-6
                 .card.overflow-hidden
                   .card-header
-                    h3 Translucent Toasts
+                    h4 Translucent Toasts
                     p.f-m-light.mt-1 
                       | Use the 
                       code .hide 
@@ -164,7 +165,7 @@ html(lang='en')
                       .toast.show(role='alert' aria-live='assertive' aria-atomic='true')
                         .toast-header
                           i.toast-icons.toast-info(data-feather='disc')
-                          strong.me-auto wool theme
+                          strong.me-auto Roko theme
                           small.text-muted.d-sm-block.d-none 11 mins ago
                           button.btn-close(type='button' data-bs-dismiss='toast' aria-label='Close')
                         .toast-body.toast-dark
@@ -196,7 +197,7 @@ html(lang='en')
               .col-md-6
                 .card.height-equal
                   .card-header
-                    h3 Default Toast
+                    h4 Default Toast
                     p.f-m-light.mt-1 
                       | Use the 
                       code .hide 
@@ -206,8 +207,8 @@ html(lang='en')
                   .card-body.toast-rtl
                     .toast.default-show-toast.toast.show(role='alert' aria-live='assertive' aria-atomic='true')
                       .toast-header.toast-img
-                        img.rounded.me-2(src='../assets/images/dashboard/user/profile.png' alt='profile')
-                        strong.me-auto Wool Theme
+                        img.rounded.me-2(src='../assets/images/dashboard-8/profile.png' alt='profile')
+                        strong.me-auto Roko Theme
                         small.d-sm-block.d-none 10 min ago
                         button.btn-close(type='button' data-bs-dismiss='toast' aria-label='Close')
                       .toast-body.toast-dark
@@ -216,7 +217,7 @@ html(lang='en')
               .col-md-6
                 .card.height-equal
                   .card-header
-                    h3 Unique Toast
+                    h4 Unique Toast
                     p.f-m-light.mt-1 
                       | Use the 
                       code .hide 
@@ -226,8 +227,8 @@ html(lang='en')
                   .card-body.toast-rtl
                     .toast.fade.show(role='alert' aria-live='assertive' aria-atomic='true')
                       .toast-header.toast-img
-                        img.rounded.me-2(src='../assets/images/dashboard/user/profile.png' alt='profile')
-                        strong.me-auto Wool Theme
+                        img.rounded.me-2(src='../assets/images/dashboard-8/profile.png' alt='profile')
+                        strong.me-auto Roko Theme
                         button.btn-close(type='button' data-bs-dismiss='toast' aria-label='Close')
                       .toast-body.toast-dark
                         h6.mb-2 Your account will be permanently deleted?
@@ -238,7 +239,7 @@ html(lang='en')
               .col-sm-12
                 .card
                   .card-header
-                    h3 Toast Placement
+                    h4 Toast Placement
                     p.f-m-light.mt-1 
                       | Use the 
                       code .hide 
@@ -265,8 +266,8 @@ html(lang='en')
                       #toastPlacement.toast-container.p-3.position-absolute
                         .toast.toast-fade.show
                           .toast-header.toast-img
-                            img.rounded.me-2(src='../assets/images/dashboard/user/profile.png' alt='profile')
-                            strong.me-auto Wool Theme
+                            img.rounded.me-2(src='../assets/images/dashboard-8/profile.png' alt='profile')
+                            strong.me-auto Roko Theme
                             small.d-sm-block.d-none 25 min ago
                           .toast-body.toast-dark.txt-dark
                             p.toast-content
