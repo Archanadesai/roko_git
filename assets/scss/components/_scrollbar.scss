@@ -6,7 +6,7 @@
 }
 
 .simplebar-mask {
-    top: 100px;
+    top: 71px;
 }
 .page-wrapper {
     &.horizontal-wrapper {
@@ -30,13 +30,13 @@
 .simplebar-offset {
     top: -10px;
 }
-.sidebar-wrapper {
-    &.close_icon {
-        .simplebar-offset {
-            top: 0;
-        }
-    }
-}
+// .sidebar-wrapper {
+//     &.close_icon {
+//         .simplebar-offset {
+//             top: 0;
+//         }
+//     }
+// }
 .simplebar-scrollbar {
     &:before {
         background: rgba($primary-color, 0.2);
