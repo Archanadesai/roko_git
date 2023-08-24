@@ -39822,9 +39822,6 @@ footer p .footer-icon {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper.close_icon .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content > li a svg {
-  margin: 0;
-}
 .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper.close_icon .sidebar-main-title {
   display: none !important;
   opacity: 0;
@@ -39868,9 +39865,6 @@ footer p .footer-icon {
   padding: 12px 15px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-}
-.page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper.close_icon:hover .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content > li > a svg {
-  margin-right: 10px;
 }
 .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper.close_icon:hover .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content > li > a span {
   display: inline-block;
