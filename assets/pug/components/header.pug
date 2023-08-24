@@ -10,113 +10,10 @@
         svg.sidebar-toggle 
           use(href='../assets/svg/icon-sprite.svg#stroke-animation')
     .left-header.col-xxl-5.col-xl-6.col-auto.box-col-6.horizontal-wrapper.p-0
-      .left-menu-header
-        ul.app-list
-          li.onhover-dropdown
-            .app-menu 
-              i(data-feather="folder-plus")
-            ul.onhover-show-div.left-dropdown
-              li 
-                a(href="file-manager.html") File Manager
-              li 
-                a(href="kanban.html")  Kanban board
-              li 
-                a(href="social-app.html")  Social App
-              li 
-                a(href="bookmark.html")  Bookmark
-        ul.header-left 
-          li.onhover-dropdown
-            span.f-w-500
-              svg
-                use(href='../assets/svg/icon-sprite.svg#fill-bonus')
-              | Bonus Ui
-            ul.onhover-show-div.left-dropdown
-              li
-                a(href='scrollable.html') Scrollable
-              li
-                a(href='tree.html') Tree view
-              li
-                a(href='toasts.html') Toasts
-              li
-                a(href='rating.html') Rating
-              li
-                a(href='dropzone.html') dropzone
-              li
-                a(href='tour.html') Tour
-              li
-                a(href='sweet-alert2.html') SweetAlert2
-              li
-                a(href='modal-animated.html') Animated Modal
-              li
-                a(href='owl-carousel.html') Owl Carousel
-              li
-                a(href='ribbons.html') Ribbons
-              li
-                a(href='pagination.html') Pagination
-              li
-                a(href='breadcrumb.html') Breadcrumb
-              li
-                a(href='range-slider.html') Range Slider
-              li
-                a(href='image-cropper.html') Image cropper
-              li
-                a(href='basic-card.html') Basic Card
-              li
-                a(href='creative-card.html') Creative Card
-              li
-                a(href='dragable-card.html') Draggable Card
-              li
-                a(href='timeline-v-1.html') Timeline
-          li.onhover-dropdown
-            span.f-w-500
-              svg
-                use(href='../assets/svg/icon-sprite.svg#fill-Grid')
-              | Level Menu
-            ul.onhover-show-div.left-dropdown
-              li
-                a(href='add-products.html') Add Product
-              li
-                a(href='product.html') Product
-              li
-                a(href='product-page.html') Product page
-              li
-                a(href='list-products.html') Product list
-              li
-                a(href='payment-details.html') Payment Details
-              li
-                a(href='order-history.html') Order History
-              li
-                a(href='invoice-template.html') Invoice
-              li
-                a(href='cart.html') Cart
-              li
-                a(href='list-wish.html') Wishlist
-              li
-                a(href='checkout.html') Checkout
-              li
-                a(href='pricing.html') Pricing  
-          li.onhover-dropdown 
-            span.f-w-500
-              svg
-                use(href='../assets/svg/icon-sprite.svg#fill-Perk-Ui')
-              | Project
-            ul.onhover-show-div.left-dropdown
-              li
-                a(href='projects.html') Project List
-              li
-                a(href='projectcreate.html') Create new
-          li.onhover-dropdown.p-0
-            span.f-w-500
-              svg
-                use(href='../assets/svg/icon-sprite.svg#fill-bonus')
-              | Blog
-            ul.onhover-show-div.left-dropdown
-              li
-                a(href='blog.html') Blog Details
-              li
-                a(href='blog-single.html') Blog Single
-              li
-                a(href='add-post.html') Add Post
+      .left-header
+        
+
+       
     .nav-right.col-xxl-7.col-xl-6.col-auto.box-col-6.pull-right.right-header.p-0.ms-auto
       ul.nav-menus
         li.serchinput
@@ -135,7 +32,7 @@
         li.onhover-dropdown
           .notification-box
             svg
-              use(href='../assets/svg/icon-sprite.svg#fill-Bell')
+              use(href='../assets/svg/icon-sprite.svg#Bell')
           .onhover-show-div.notification-dropdown
             h6.f-18.mb-0.dropdown-title Notitications                               
             ul
@@ -159,7 +56,7 @@
                 a.f-w-700(href="#") Check all
         li.onhover-dropdown
           svg
-            use(href='../assets/svg/icon-sprite.svg#fill-star')
+            use(href='../assets/svg/icon-sprite.svg#Bookmark')
           .onhover-show-div.bookmark-flip
             .flip-card
               .flip-card-inner
@@ -193,10 +90,50 @@
                     li
                       a.f-w-700.d-block.flip-back#flip-back(href="javascript:void(0)")
                         | Back
+        li.onhover-dropdown
+          .message
+            svg
+              use(href='../assets/svg/icon-sprite.svg#Message')
+            span.rounded-pill.badge-secondary 
+          .onhover-show-div.message-dropdown
+            h6.f-18.mb-0.dropdown-title Message                               
+            ul
+              li
+                .d-flex.align-items-start
+                  .message-img.bg-light-primary
+                    img(src="../assets/images/user/3.jpg" alt="")
+                  .flex-grow-1
+                    h5.mb-1
+                      a(href="email_inbox.html") Helen Walter
+                    p Do you want to go see movie?
+                  .notification-right
+                    i(data-feather="x")
+              li
+                .d-flex.align-items-start
+                  .message-img.bg-light-primary
+                    img(src="../assets/images/user/6.jpg" alt="")
+                  .flex-grow-1
+                    h5.mb-1
+                      a(href="email_inbox.html") Jason Borne
+                    p Thank you for rating us.
+                  .notification-right
+                    i(data-feather="x")
+              li
+                .d-flex.align-items-start
+                  .message-img.bg-light-primary
+                    img(src="../assets/images/user/10.jpg" alt="")
+                  .flex-grow-1
+                    h5.mb-1
+                      a(href="email_inbox.html") Sarah Loren
+                    p What`s the project report update?
+                  .notification-right
+                    i(data-feather="x")
+              li
+                a.f-w-700(href="chat.html") Check all
         li.cart-nav.onhover-dropdown
           .cart-box
             svg
-              use(href='../assets/svg/icon-sprite.svg#fill-Buy')
+              use(href='../assets/svg/icon-sprite.svg#Buy')
           .cart-dropdown.onhover-show-div
             h6.f-18.mb-0.dropdown-title Cart
             ul
@@ -245,50 +182,43 @@
                   | Go to your cart
                 a.btn.btn-primary.view-checkout(href='checkout.html')
                   | Checkout
-        li.onhover-dropdown
-          .message
-            svg
-              use(href='../assets/svg/icon-sprite.svg#fill-message')
-            span.rounded-pill.badge-secondary 
-          .onhover-show-div.message-dropdown
-            h6.f-18.mb-0.dropdown-title Message                               
-            ul
-              li
-                .d-flex.align-items-start
-                  .message-img.bg-light-primary
-                    img(src="../assets/images/user/3.jpg" alt="")
-                  .flex-grow-1
-                    h5.mb-1
-                      a(href="email_inbox.html") Helen Walter
-                    p Do you want to go see movie?
-                  .notification-right
-                    i(data-feather="x")
-              li
-                .d-flex.align-items-start
-                  .message-img.bg-light-primary
-                    img(src="../assets/images/user/6.jpg" alt="")
-                  .flex-grow-1
-                    h5.mb-1
-                      a(href="email_inbox.html") Jason Borne
-                    p Thank you for rating us.
-                  .notification-right
-                    i(data-feather="x")
-              li
-                .d-flex.align-items-start
-                  .message-img.bg-light-primary
-                    img(src="../assets/images/user/10.jpg" alt="")
-                  .flex-grow-1
-                    h5.mb-1
-                      a(href="email_inbox.html") Sarah Loren
-                    p What`s the project report update?
-                  .notification-right
-                    i(data-feather="x")
-              li
-                a.f-w-700(href="chat.html") Check all
         li
           .mode
-            svg
-              use(href='../assets/svg/icon-sprite.svg#fill-dark')
+            i(data-feather='moon')
+        li.language-nav
+          .translate_wrapper
+            .current_lang
+              .lang
+                i.flag-icon.flag-icon-us
+                span.lang-txt EN                               
+            .more_lang
+              .lang.selected(data-value='en') 
+                i.flag-icon.flag-icon-us
+                span.lang-txt
+                  | English
+                  span  (US)
+              .lang(data-value='de')
+                i.flag-icon.flag-icon-de
+                span.lang-txt Deutsch
+              .lang(data-value='es')
+                i.flag-icon.flag-icon-es
+                span.lang-txt Español
+              .lang(data-value='fr')
+                i.flag-icon.flag-icon-fr
+                span.lang-txt Français
+              .lang(data-value='pt')
+                i.flag-icon.flag-icon-pt
+                span.lang-txt
+                  | Português
+                  span  (BR)
+              .lang(data-value='cn')
+                i.flag-icon.flag-icon-cn
+                span.lang-txt 简体中文
+              .lang(data-value='ae')
+                i.flag-icon.flag-icon-ae
+                span.lang-txt
+                  | لعربية 
+                  span  (ae)
         li.profile-nav.onhover-dropdown.p-0
           .d-flex.align-items-center.profile-media
             img.b-r-10.img-40(src='../assets/images/dashboard/profile.png', alt='')
