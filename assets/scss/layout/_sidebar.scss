@@ -104,16 +104,23 @@
   position: relative;
   .page-header {
     max-width: 100vw;
+    align-items: center;
+    justify-content: space-between;
     position: $main-header-position;
     top: $main-header-top;
     z-index: $main-header-z-index;
     transition: $sidebar-transition;
     background-color: $white;
     box-shadow: $main-header-shadow-1;
+    padding: $header-wrapper-padding;
+    .page-title {
+      nav {
+        display: none;
+      }
+    }
     .header-wrapper {
-      width: 100%;
+      width: auto;
       align-items: center;
-      padding: $header-wrapper-padding;
       position: relative;
       @media (max-width: 1550px) and (min-width: 1200px){
         padding: 16px 20px;
@@ -159,6 +166,9 @@
         justify-content: flex-end;
         >ul {
           >li {
+            &:nth-child(2) {
+              background-color: #EFF5FB;
+            }
             &:nth-child(5) {
               svg {
                 width: 25px;
@@ -176,11 +186,14 @@
                 right: 58px;
               }
             }
-            &:nth-child(7)::after {
-              left: 81px;
+            &:nth-child(-n+2)::after {
+              display: none;
+            }
+            &:nth-child(8)::after {
+              left: 82px;
               [dir="rtl"] &{
-                right: 81px;
-              }
+                right: 82px;
+            }
             }
             &:last-child::after {
               display: none;

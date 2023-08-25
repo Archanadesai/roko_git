@@ -52,21 +52,20 @@
     <!-- tap on tap ends-->
     <!-- page-wrapper Start-->
     <div class="page-wrapper compact-wrapper" id="pageWrapper">
-      <!-- Page Header Start-->
-      <div class="page-header">
-        <div class="header-wrapper row m-0">
-          <div class="header-logo-wrapper col-auto p-0">
-            <div class="logo-wrapper"><a href="index.html"><img class="img-fluid for-light" src="../assets/images/logo/logo-1.png" alt=""><img class="img-fluid for-dark" src="../assets/images/logo/logo.png" alt=""></a></div>
-            <div class="toggle-sidebar">
-              <svg class="sidebar-toggle"> 
-                <use href="../assets/svg/icon-sprite.svg#stroke-animation"></use>
-              </svg>
-            </div>
-          </div>
-          <div class="left-header col-xxl-5 col-xl-6 col-auto box-col-6 horizontal-wrapper p-0">
-            <div class="left-header"></div>
-          </div>
-          <div class="nav-right col-xxl-7 col-xl-6 col-auto box-col-6 pull-right right-header p-0 ms-auto">
+      <div class="page-header row">
+        <div class="page-title w-auto">
+          <h4 class="f-w-700">Default dashboard</h4>
+          <nav>
+            <ol class="breadcrumb justify-content-sm-start align-items-center mb-0">
+              <li class="breadcrumb-item"><a href="index.html"> <i data-feather="home"></i></a></li>
+              <li class="breadcrumb-item f-w-400"> </li>
+              <li class="breadcrumb-item f-w-400 active"> </li>
+            </ol>
+          </nav>
+        </div>
+        <!-- Page Header Start-->
+        <div class="header-wrapper">
+          <div class="nav-right pull-right right-header p-0 ms-auto">
             <ul class="nav-menus">
               <li class="serchinput">
                 <div class="serchbox">
@@ -82,10 +81,10 @@
                 <div class="form-group w-100">
                   <div class="Typeahead Typeahead--twitterUsers">
                     <div class="u-posRelative d-flex">
+                      <input class="demo-input py-0 Typeahead-input form-control-plaintext w-100" type="text" placeholder="Search Roko .." name="q" title="">
                       <svg class="search-bg svg-color me-2">
                         <use href="../assets/svg/icon-sprite.svg#fill-search"></use>
                       </svg>
-                      <input class="demo-input py-0 Typeahead-input form-control-plaintext w-100" type="text" placeholder="Search Roko .." name="q" title="">
                     </div>
                   </div>
                 </div>
@@ -269,7 +268,7 @@
                   </div>
                 </div>
               </li>
-              <li class="profile-nav onhover-dropdown p-0">
+              <li class="profile-nav onhover-dropdown">
                 <div class="d-flex align-items-center profile-media"><img class="b-r-10 img-40" src="../assets/images/dashboard/profile.png" alt="">
                   <div class="flex-grow-1"><span>Helen Walter</span>
                     <p class="mb-0">Admin <i class="middle fa fa-angle-down"></i></p>
@@ -284,19 +283,19 @@
                 </ul>
               </li>
             </ul>
+            <script class="result-template" type="text/x-handlebars-template">
+              <div class="ProfileCard u-cf">                        
+              <div class="ProfileCard-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay m-0"><path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path><polygon points="12 15 17 21 7 21 12 15"></polygon></svg></div>
+              <div class="ProfileCard-details">
+              <div class="ProfileCard-realName">{{name}}</div>
+              </div>
+              </div>
+            </script>
+            <script class="empty-template" type="text/x-handlebars-template"><div class="EmptyMessage">Your search turned up 0 results. This most likely means the backend is down, yikes!</div></script>
           </div>
-          <script class="result-template" type="text/x-handlebars-template">
-            <div class="ProfileCard u-cf">                        
-            <div class="ProfileCard-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay m-0"><path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path><polygon points="12 15 17 21 7 21 12 15"></polygon></svg></div>
-            <div class="ProfileCard-details">
-            <div class="ProfileCard-realName">{{name}}</div>
-            </div>
-            </div>
-          </script>
-          <script class="empty-template" type="text/x-handlebars-template"><div class="EmptyMessage">Your search turned up 0 results. This most likely means the backend is down, yikes!</div></script>
         </div>
+        <!-- Page Header Ends                              -->
       </div>
-      <!-- Page Header Ends                              -->
       <!-- Page Body Start-->
       <div class="page-body-wrapper">
         <!-- Page Sidebar Start-->
@@ -960,7 +959,7 @@
           <div class="container-fluid default-dashboard">
             <div class="row">
               <div class="col-xxl-4 col-xl-100 box-col-12 ps-4 pe-4 left-background">
-                <div class="row bg-light h-100 p-3 pt-4 pb-4">
+                <div class="row bg-light p-3 pt-4 pb-4">
                   <div class="col-12 col-xl-50 box-col-6">
                     <div class="card welcome-card">
                       <div class="card-header card-no-border pb-0">
