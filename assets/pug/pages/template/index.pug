@@ -28,7 +28,8 @@ html(lang='en')
     // page-wrapper Start
     #pageWrapper.page-wrapper.compact-wrapper
       .page-header.row
-        +breadcrumb([' ',' '],'Default dashboard')
+        .page-title.w-auto
+          +breadcrumb([' ',' '],'Advanced Dashboard')
         include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -37,17 +38,8 @@ html(lang='en')
           .container-fluid         
             .page-title
               .row
-                .col-sm-6.p-0
-                  h3
-                    | Default Dashboard 
-                .col-sm-6.p-0
-                  ol.breadcrumb
-                    li.breadcrumb-item
-                      a(href='index.html')
-                        svg.stroke-icon
-                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
-                    li.breadcrumb-item Dashboard
-                    li.breadcrumb-item.active Default      
+                include ../../components/sub-header
+                +breadcrumb(['Advanced',' dashboard'],' ')     
           // Container-fluid starts
           .container-fluid.default-dashboard
             .row

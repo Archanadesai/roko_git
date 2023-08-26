@@ -111,11 +111,16 @@
     z-index: $main-header-z-index;
     transition: $sidebar-transition;
     background-color: $white;
-    box-shadow: $main-header-shadow-1;
+    border-bottom: 1px solid $light-gray;
     padding: $header-wrapper-padding;
     .page-title {
-      nav {
-        display: none;
+      .breadcrumb-content{
+        h3 {
+          font-weight: 800;
+        }
+        nav {
+          display: none;
+        }
       }
     }
     .header-wrapper {
@@ -752,6 +757,7 @@
     .page-title {
       padding: $page-title-padding;
       margin: 0 -27px 0;
+      background-color: $white;
       >.row {
         margin: 0;
         .col-6 {
@@ -760,18 +766,7 @@
       }
       .row {
         align-items: center;
-        h3 {
-          text-transform: $page-title-text-tranform;
-          color: $theme-font-color;
-          font-weight: 600;
-          small {
-            display: $page-small-title-display;
-            font-size: $page-small-title-font-size;
-            margin-bottom: $page-small-title-margin-bottom;
-            text-transform: $page-small-title-text-transform;
-            color: $theme-body-sub-title-color;
-          }
-        }
+        justify-content: space-between;
       }
       .breadcrumb {
         background-color: $transparent-color;
@@ -1867,7 +1862,7 @@
       }
       .page-body {
         min-height: calc(100vh - 80px);
-        margin-top: 73px;
+        margin-top: 62px;
         margin-left: $sidebar-compact-width;
       }
     }

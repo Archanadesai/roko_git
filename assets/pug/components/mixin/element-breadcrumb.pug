@@ -1,10 +1,10 @@
 mixin breadcrumb(items,pagetitle)
-  .page-title.w-auto
-      h4.f-w-700= pagetitle
-      nav
-        ol.breadcrumb.justify-content-sm-start.align-items-center.mb-0
-          li.breadcrumb-item
-            a(href='index.html') 
-              i(data-feather='home')
-          each pagename, index in items
-            li.breadcrumb-item.f-w-400(class=`${(index === items.length - 1 ?'active':'')}`)= pagename
+  .breadcrumb-content.w-auto
+    h3.f-w-800= pagetitle
+    nav.w-auto
+      ol.breadcrumb.justify-content-sm-start.align-items-center.mb-0
+        li.breadcrumb-item
+          a(href='index.html') 
+            i(data-feather='home')
+        each pagename, index in items
+          li.breadcrumb-item.f-w-400(class=`${(index === items.length - 1 ?'active':'')}`)= pagename
