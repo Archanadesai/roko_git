@@ -47,11 +47,11 @@
   height: calc(100% - 15px);
   background: $primary-color;
   top: 10px;
-  left: 43px;
+  left: 40px;
   transition: height 0.5s;
   [dir="rtl"] & {
     left: unset;
-    right: 27px;
+    right: 40px;
   }
 }
 %horizontal-after {
@@ -69,6 +69,10 @@
   opacity: 0;
   visibility: hidden;
   left: 0;
+  [dir="rtl"] & { 
+    left: unset;
+    right: 0;
+  }
 }
 %for-animated-hover-box {
   opacity: 1;
@@ -86,6 +90,10 @@
     position: absolute;
     left: 10px;
     z-index: 2;
+    [dir="rtl"] & { 
+      right: 10px;
+      left: unset;
+    }
   }
   &:after {
     width: 0;
@@ -98,6 +106,10 @@
     position: absolute;
     left: 10px;
     z-index: 1;
+    [dir="rtl"] & { 
+      right: 10px;
+      left: unset;
+    }
   }
 }
 .page-wrapper {
@@ -121,15 +133,15 @@
         nav {
           display: none;
         }
+        .sub-header-dropdwon {
+          display: none !important;
+        }
       }
     }
     .header-wrapper {
       width: auto;
       align-items: center;
       position: relative;
-      @media (max-width: 1550px) and (min-width: 1200px){
-        padding: 16px 20px;
-      }
       .left-header{
         .left-menu-header{
           .app-menu{
@@ -152,8 +164,15 @@
           visibility: hidden;
           width: 180px;
           margin-left: 12px;
+          [dir="rtl"] & { 
+            left: -50px;
+            right: unset;
+          }
           @media (max-width: 480px) {
             right: -85px;
+            [dir="rtl"] & { 
+              left: -85px;
+            }
           }
           &.open {
             transform: translateY(0px) scaleY(1);
@@ -172,7 +191,7 @@
         >ul {
           >li {
             &:nth-child(2) {
-              background-color: #EFF5FB;
+              background-color: #F6F8FC;
             }
             &:nth-child(5) {
               svg {
@@ -305,6 +324,11 @@
               padding: 3px 4px;
               margin-right: 5px;
             }
+            &:nth-child(2) {
+            width: 480px;
+            padding: 11px 25px;
+            border: 1px solid $table-border-color;
+            }
             &:last-child {
               border: none !important;
               margin-right: 0;
@@ -323,7 +347,11 @@
               padding: 2px 4px;
               font-size: 11px;
               font-weight: 700;
-              font-family: work-Sans, sans-serif;
+              font-family:  $font-nunito-sans;
+              [dir="rtl"] & { 
+                left: -5px;
+                right: unset;
+              }
             }
             span {
               ul {
@@ -782,7 +810,7 @@
             width: 30px;
             align-items: center;
             justify-content: center;
-            border-radius: 5px;
+            border: 1px solid #EFF5FB;
             background-color: rgba($primary-color, 0.1);
           }
         }
@@ -804,7 +832,7 @@
             }
           }
           &.active {
-            font-weight: 100;
+            font-weight: 700;
           }
         }
       }
@@ -1327,7 +1355,7 @@
           width: $sidebar-compact-width;
           text-align: left;
           transition: 0.3s;
-          box-shadow: 0 0 21px 0 rgba($semi-dark, 0.1);
+          box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.10);
           .logo-wrapper,
           .logo-icon-wrapper {
             padding: 15px 25px 0 32px;
@@ -1620,7 +1648,7 @@
                           }
                         }
                         a {
-                          padding: 12px 20px 12px 36px; 
+                          padding: 12px 20px 12px 32px; 
                           position: relative;
                           color: #222222;
                           transition: all 0.3s ease;
@@ -1648,7 +1676,7 @@
                           }
                           >li {
                             a {
-                              padding-left: 71px !important;
+                              padding-left: 66px !important;
                               font-weight: 400;
                             }
                           }
@@ -1710,6 +1738,9 @@
                               white-space: nowrap;
                               overflow: hidden;
                               text-overflow: ellipsis;
+                              [dir="rtl"] & { 
+                                padding: 7px 59px 7px 18px;
+                              }
                               &.active {
                                 color: var(--theme-default);
                               }
@@ -1748,6 +1779,9 @@
                                   letter-spacing: 0.06em;
                                   font-weight: 500;
                                   cursor: pointer;
+                                  [dir="rtl"] & { 
+                                    padding: 12px 75px 5px 15px;
+                                  }
                                   &:after {
                                     left: 55px;
                                     @extend %sidebar-after;
@@ -1770,6 +1804,9 @@
                                       display: block;
                                       letter-spacing: 0.06em;
                                       font-weight: 500;
+                                      [dir="rtl"] & { 
+                                        padding: 6px 75px 6px 25px !important;
+                                      }
                                       &:after {
                                         display: none;
                                       }

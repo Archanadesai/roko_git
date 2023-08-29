@@ -1,5 +1,5 @@
 mixin breadcrumb(items,pagetitle)
-  .breadcrumb-content.w-auto
+  .breadcrumb-content.w-auto.d-flex
     h3.f-w-800= pagetitle
     nav.w-auto
       ol.breadcrumb.justify-content-sm-start.align-items-center.mb-0
@@ -8,3 +8,14 @@ mixin breadcrumb(items,pagetitle)
             i(data-feather='home')
         each pagename, index in items
           li.breadcrumb-item.f-w-400(class=`${(index === items.length - 1 ?'active':'')}`)= pagename
+    .sub-header-dropdwon.d-flex
+      .drop-icon  
+        svg.animation
+          use(href='../assets/svg/icon-sprite.svg#download')
+      .dropdown
+        button#dropdownMenuButton4.btn.dropdown-toggle.yearly(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+          | Last 7 Days
+        .dropdown-menu.dropdown-menu-end(aria-labelledby='dropdownMenuButton4')
+          a.dropdown-item(href='#') Today
+          a.dropdown-item(href='#') Tomorrow
+          a.dropdown-item(href='#') Yesterday

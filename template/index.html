@@ -54,7 +54,7 @@
     <div class="page-wrapper compact-wrapper" id="pageWrapper">
       <div class="page-header row">
         <div class="page-title w-auto">
-          <div class="breadcrumb-content w-auto">
+          <div class="breadcrumb-content w-auto d-flex">
             <h3 class="f-w-800">Advanced Dashboard</h3>
             <nav class="w-auto">
               <ol class="breadcrumb justify-content-sm-start align-items-center mb-0">
@@ -63,10 +63,21 @@
                 <li class="breadcrumb-item f-w-400 active"> </li>
               </ol>
             </nav>
+            <div class="sub-header-dropdwon d-flex">
+              <div class="drop-icon"> 
+                <svg class="animation">
+                  <use href="../assets/svg/icon-sprite.svg#download"></use>
+                </svg>
+              </div>
+              <div class="dropdown">
+                <button class="btn dropdown-toggle yearly" id="dropdownMenuButton4" type="button" data-bs-toggle="dropdown" aria-expanded="false">Last 7 Days</button>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton4"><a class="dropdown-item" href="#">Today</a><a class="dropdown-item" href="#">Tomorrow</a><a class="dropdown-item" href="#">Yesterday</a></div>
+              </div>
+            </div>
           </div>
         </div>
         <!-- Page Header Start-->
-        <div class="header-wrapper">
+        <div class="header-wrapper">     
           <div class="nav-right pull-right right-header p-0 ms-auto">
             <ul class="nav-menus">
               <li class="serchinput">
@@ -1174,16 +1185,29 @@
                     </ul>
                   </div>
                 </div>
-                <div class="breadcrumb-content w-auto">
+                <!-- Page Sub Header end-->
+                <div class="breadcrumb-content w-auto d-flex">
                   <h3 class="f-w-800"> </h3>
                   <nav class="w-auto">
                     <ol class="breadcrumb justify-content-sm-start align-items-center mb-0">
                       <li class="breadcrumb-item"><a href="index.html"> <i data-feather="home"></i></a></li>
-                      <li class="breadcrumb-item f-w-400">Advanced</li>
-                      <li class="breadcrumb-item f-w-400 active"> dashboard</li>
+                      <li class="breadcrumb-item f-w-400">Dashboard</li>
+                      <li class="breadcrumb-item f-w-400 active"> Advanced</li>
                     </ol>
                   </nav>
+                  <div class="sub-header-dropdwon d-flex">
+                    <div class="drop-icon"> 
+                      <svg class="animation">
+                        <use href="../assets/svg/icon-sprite.svg#download"></use>
+                      </svg>
+                    </div>
+                    <div class="dropdown">
+                      <button class="btn dropdown-toggle yearly" id="dropdownMenuButton4" type="button" data-bs-toggle="dropdown" aria-expanded="false">Last 7 Days</button>
+                      <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton4"><a class="dropdown-item" href="#">Today</a><a class="dropdown-item" href="#">Tomorrow</a><a class="dropdown-item" href="#">Yesterday</a></div>
+                    </div>
+                  </div>
                 </div>
+                <!-- Page Sub Header Dropdwon Start-->
               </div>
             </div>
           </div>

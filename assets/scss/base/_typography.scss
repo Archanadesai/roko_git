@@ -5,7 +5,7 @@
 body {
     font-size: $body-font-size;
     overflow-x: hidden;
-    font-family: $font-nunito-sans, $font-serif;
+    font-family: $font-nunito-sans;
     color: $theme-body-font-color;
 }
 h1,
@@ -18,17 +18,17 @@ h6 {
 }
 h1 {
     font-size: $heading_1;
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: $common_letter_spacing;
 }
 h2 {
     font-size: $heading_2;
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: $common_letter_spacing;
 }
 h3 {
     font-size: $heading_3;
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: $common_letter_spacing;
 }
 h4 {
@@ -38,12 +38,12 @@ h4 {
 }
 h5 {
    font-size: $heading_5;
-   font-weight: 400;
+   font-weight: 500;
    letter-spacing: $common_letter_spacing;
 }
 h6 {
    font-size: $heading_6;
-   font-weight: 400;
+   font-weight: 500;
    letter-spacing: $common_letter_spacing;
 }
 ul {
