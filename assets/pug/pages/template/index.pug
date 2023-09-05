@@ -28,8 +28,9 @@ html(lang='en')
     // page-wrapper Start
     #pageWrapper.page-wrapper.compact-wrapper
       .page-header.row
+        include ../../components/toggle-icon
         .page-title.w-auto
-          +breadcrumb([' ',' '],'Advanced Dashboard')
+          +breadcrumb(['Dashboard','Advanced'],'Advanced Dashboard')
         include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -39,8 +40,7 @@ html(lang='en')
             .page-title
               .row
                 include ../../components/sub-header
-                +breadcrumb(['Dashboard',' Advanced'],' ')
-                include ../../components/sub-header-dropdwon     
+                +breadcrumb(['Dashboard',' Advanced'],'Advanced Dashboard')  
           // Container-fluid starts
           .container-fluid.default-dashboard
             .row

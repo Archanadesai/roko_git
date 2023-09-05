@@ -79,12 +79,6 @@
             border-bottom: 2px solid var(--theme-default);
           }
         }
-        @media (max-width: 1550px) and (min-width: 1200px){
-          padding: 0 8px 0px 0px;
-          [dir="rtl"] & {
-            padding: 0 0px 0px 8px;
-          }
-        }
         a {
           color: $theme-body-font-color;
           font-weight: 500;

@@ -125,6 +125,17 @@
     background-color: $white;
     border-bottom: 1px solid $light-gray;
     padding: $header-wrapper-padding;
+    .header-logo-wrapper {
+      display: none;
+      .logo-wrapper {
+        svg {
+          position: unset;
+          width: 24px;
+          height: 24px;
+          stroke: $theme-font-color;
+        }
+      }
+    }
     .page-title {
       .breadcrumb-content{
         h3 {
@@ -190,14 +201,6 @@
         justify-content: flex-end;
         >ul {
           >li {
-            &:nth-child(2) {
-              background-color: #F6F8FC;
-            }
-            &:nth-child(5) {
-              svg {
-                width: 25px;
-              }
-            }
             &:after{
               content: "";
               position: absolute;
@@ -217,10 +220,15 @@
               left: 82px;
               [dir="rtl"] &{
                 right: 82px;
-            }
+              }
             }
             &:last-child::after {
               display: none;
+            }
+            .profile-media {
+              img {
+                width: 40px;
+              }
             }
             svg {
               vertical-align: $header-wrapper-nav-icon-align;
@@ -303,27 +311,11 @@
           display: flex;
           align-items: center;
           justify-content: flex-end;
-          >li {
+            >li {
             padding: 6px 17px;
             display: inline-block;
             position: relative;
-            [dir="rtl"] & {
-              margin-right: unset;
-              margin-left: 15px;
-            }
             cursor: pointer;
-            @media (max-width: 1550px) and (min-width: 1200px){
-              padding: 6px 8px;
-              margin-right: 8px;
-              [dir="rtl"] & {
-                margin-right: unset;
-                margin-left: 8px;
-              }
-            }
-            @media (max-width: 630px){
-              padding: 3px 4px;
-              margin-right: 5px;
-            }
             &:nth-child(2) {
             width: 480px;
             padding: 11px 25px;
@@ -335,9 +327,6 @@
               [dir="rtl"] & {
                 margin-right: unset;
                 margin-left: 0;
-              }
-              @media (max-width: 630px){
-                display: none;
               }
             }
             .badge {
@@ -796,43 +785,48 @@
         align-items: center;
         justify-content: space-between;
       }
-      .breadcrumb {
-        background-color: $transparent-color;
-        padding: 0;
-        margin-bottom: 0;
-        align-items: center;
-        justify-content: flex-end;
-        li {
-          &:first-child {
-            position: relative;
-            display: flex;
-            height: 30px;
-            width: 30px;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid #EFF5FB;
-            background-color: rgba($primary-color, 0.1);
-          }
+      .breadcrumb-content {
+        h3 {
+          display: none;
         }
-        .breadcrumb-item {
-          color: $primary-color;
-          font-weight: 500;
-          &+.breadcrumb-item {
-            &:before {
-              content: $breadcrumb-content;
-              color: $primary-color;
+        .breadcrumb {
+          background-color: $transparent-color;
+          padding: 0;
+          margin-bottom: 0;
+          align-items: center;
+          justify-content: flex-end;
+          li {
+            &:first-child {
+              position: relative;
+              display: flex;
+              height: 30px;
+              width: 30px;
+              align-items: center;
+              justify-content: center;
+              border: 1px solid #EFF5FB;
+              background-color: rgba($primary-color, 0.1);
             }
           }
-          a {
-            svg {
-              width: 16px;
-              height: 16px;
-              stroke: $primary-color;
-              vertical-align: middle;
+          .breadcrumb-item {
+            color: $primary-color;
+            font-weight: 500;
+            &+.breadcrumb-item {
+              &:before {
+                content: $breadcrumb-content;
+                color: $primary-color;
+              }
             }
-          }
-          &.active {
-            font-weight: 700;
+            a {
+              svg {
+                width: 16px;
+                height: 16px;
+                stroke: $primary-color;
+                vertical-align: middle;
+              }
+            }
+            &.active {
+              font-weight: 700;
+            }
           }
         }
       }
@@ -1249,9 +1243,6 @@
       width: 100%;
       box-shadow: none;
       .header-wrapper {
-        .form-control-plaintext {
-          width: auto !important;
-        }
         .left-header {
           width: 30%;
           @media (max-width: 1428px) and (min-width: 1324px) {
@@ -1482,7 +1473,7 @@
             }
             .sidebar-main {
               .sidebar-links {
-                height: calc(100vh - 118px);
+                height: calc(100vh - 90px);
                 .simplebar-wrapper {
                   .simplebar-mask {
                     .simplebar-content-wrapper {
@@ -3086,6 +3077,16 @@
   }
   .page-wrapper {
     &.horizontal-wrapper {
+      .page-header {
+        .page-title {
+          .breadcrumb-content {
+            display: block !important;
+            nav {
+              display: block;
+            }
+          }
+        }
+      }
       .page-body-wrapper {
         .sidebar-main {
           .sidebar-links {
@@ -3174,6 +3175,11 @@
         }
         .mobile-back {
           display: none !important;
+        }
+        .page-body {
+          .page-title {
+            display: none;
+          }
         }
       }
     }
