@@ -53,15 +53,15 @@
     <!-- page-wrapper Start-->
     <div class="page-wrapper compact-wrapper" id="pageWrapper">
       <div class="page-header row">
-        <!-- Page Sub Header Dropdwon Start-->
-        <div class="header-logo-wrapper col-auto p-0">
-          <div class="logo-wrapper">
-            <svg class="toggle-sidebar sidebar-toggle stroke-icon">
-              <use href="../assets/svg/icon-sprite.svg#menu"></use>
-            </svg>
-          </div>
-        </div>
         <div class="page-title w-auto">
+          <div class="header-logo-wrapper col-auto p-0">
+            <div class="logo-wrapper"><a href="index.html"><img class="img-fluid for-light" src="../assets/images/logo/logo.png" alt=""/><img class="img-fluid for-dark" src="../assets/images/logo/logo_light.png" alt=""/></a></div>
+            <div class="toggle-sidebar">
+              <svg class="stroke-icon sidebar-toggle status_toggle middle">
+                <use href="../assets/svg/icon-sprite.svg#menu"></use>
+              </svg>
+            </div>
+          </div>
           <div class="breadcrumb-content w-auto d-flex">
             <h3 class="f-w-800">Advanced Dashboard</h3>
             <nav class="w-auto">
@@ -1195,6 +1195,14 @@
                   </div>
                 </div>
                 <!-- Page Sub Header end-->
+                <div class="header-logo-wrapper col-auto p-0">
+                  <div class="logo-wrapper"><a href="index.html"><img class="img-fluid for-light" src="../assets/images/logo/logo.png" alt=""/><img class="img-fluid for-dark" src="../assets/images/logo/logo_light.png" alt=""/></a></div>
+                  <div class="toggle-sidebar">
+                    <svg class="stroke-icon sidebar-toggle status_toggle middle">
+                      <use href="../assets/svg/icon-sprite.svg#menu"></use>
+                    </svg>
+                  </div>
+                </div>
                 <div class="breadcrumb-content w-auto d-flex">
                   <h3 class="f-w-800">Advanced Dashboard</h3>
                   <nav class="w-auto">
@@ -1220,24 +1228,24 @@
             </div>
           </div>
           <!-- Container-fluid starts-->
-          <div class="container-fluid default-dashboard">
-            <div class="row">
-              <div class="col-xxl-4 col-xl-100 box-col-12 ps-4 pe-4 left-background">
-                <div class="row bg-light p-3 pt-4 pb-4">
-                  <div class="col-12 col-xl-50 box-col-6">
-                    <div class="card welcome-card">
-                      <div class="card-header card-no-border pb-0">
-                        <h3>Recent </h3>
-                      </div>
-                      <div class="card-body">
-                        <div class="d-flex"> 
-                          <div class="flex-grow-1"> 
-                            <h1>Hello, Ramirez</h1>
-                            <p>Welcome back! Let's start from where you left.</p><a class="btn" href="user-profile.html">View Profile</a>
-                          </div>
-                          <div class="flex-shrink-0"> <img src="../assets/images/dashboard/welcome.png" alt=""></div>
-                        </div>
-                      </div>
+          <div class="container-fluid dashboard_default">
+            <div class="row widget-grid">
+              <div class="col-xl-6"> 
+                <div class="card sales-chart">
+                  <div class="card-header card-no-border pb-0"> 
+                    <h3>Sales Analytics</h3>
+                  </div>
+                  <div class="card-body">
+                    <ul> 
+                      <li class="me-2"><span class="circle bg-primary me-1"> </span>
+                        <p>Pending<span>($4,875)</span></p>
+                      </li>
+                      <li> <span class="circle bg-secondary me-1"></span>
+                        <p>Complete   <span>($1,450)</span></p>
+                      </li>
+                    </ul>
+                    <div class="legend"> 
+                      <div id="sales-analytics"></div>
                     </div>
                   </div>
                 </div>

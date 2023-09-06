@@ -346,6 +346,7 @@
   top: 28px;
   cursor: pointer;
   svg {
+    stroke: $theme-font-color;
     width: $header-wrapper-nav-icon-size;
     height: $header-wrapper-nav-icon-size;
   }

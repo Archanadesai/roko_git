@@ -27,7 +27,33 @@ $badge-light-color in (primary, $primary-color),
 .badge-light-secondary {
   background-color: rgba($secondary-color, 0.08);
 }
-
+.dashboard_default {
+  .sales-chart {
+    .card-body {
+      ul {
+        display: flex;
+        align-items: center;
+        li {
+          display: flex;
+          align-items: center;
+          .circle {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+          }
+          p {
+            color: $theme-body-sub-title-color;
+            font-weight: 600;
+            span {
+              color: $theme-font-color;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 // /**=====================
 //   3.13 Dashboard_default CSS Ends

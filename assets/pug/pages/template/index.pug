@@ -28,7 +28,7 @@ html(lang='en')
     // page-wrapper Start
     #pageWrapper.page-wrapper.compact-wrapper
       .page-header.row
-        include ../../components/toggle-icon
+        //- include ../../components/toggle-icon
         .page-title.w-auto
           +breadcrumb(['Dashboard','Advanced'],'Advanced Dashboard')
         include ../../components/header
@@ -42,22 +42,24 @@ html(lang='en')
                 include ../../components/sub-header
                 +breadcrumb(['Dashboard',' Advanced'],'Advanced Dashboard')  
           // Container-fluid starts
-          .container-fluid.default-dashboard
-            .row
-              .col-xxl-4.col-xl-100.box-col-12.ps-4.pe-4.left-background
-                .row.bg-light.p-3.pt-4.pb-4
-                  .col-12.col-xl-50.box-col-6
-                    .card.welcome-card
-                      .card-header.card-no-border.pb-0
-                        h3 Recent 
-                      .card-body
-                        .d-flex 
-                          .flex-grow-1 
-                            h1 Hello, Ramirez
-                            p Welcome back! Let's start from where you left.
-                            a.btn(href="user-profile.html") View Profile
-                          .flex-shrink-0  
-                            img(src='../assets/images/dashboard/welcome.png' alt="")
+          .container-fluid.dashboard_default
+            .row.widget-grid
+              .col-xl-6 
+                .card.sales-chart
+                  .card-header.card-no-border.pb-0 
+                    h3 Sales Analytics
+                  .card-body
+                    ul 
+                      li.me-2
+                        span.circle.bg-primary.me-1 
+                        p Pending
+                          span ($4,875)
+                      li 
+                        span.circle.bg-secondary.me-1
+                        p Complete   
+                          span ($1,450)
+                    .legend 
+                      #sales-analytics
                   
           // Container-fluid Ends
         include ../../components/footer        

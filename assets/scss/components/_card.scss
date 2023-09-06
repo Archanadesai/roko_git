@@ -8,6 +8,7 @@
   transition: all 0.3s ease;
   letter-spacing: 0.5px;
   border: $card-border;
+  background-color: $card-body-bg-color;
   border-radius: $card-border-radius;
   &:hover {
     box-shadow: $card-hover-box-shadow;
