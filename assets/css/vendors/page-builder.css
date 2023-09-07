@@ -21,7 +21,7 @@
 }
 .page-builder .btn-grid {
   background-color: #fff;
-  color: #52526c !important;
+  color: #848789 !important;
   border-right: 1px solid #efefef;
   padding: 0px;
   margin-right: 8px;
@@ -33,7 +33,7 @@
 }
 .page-builder .ge-mainControls .ge-wrapper {
   color: #fff;
-  font-family: Outfit, sans-serif;
+  font-family: "Nunito Sans", sans-serif, sans-serif;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -55,7 +55,7 @@
 }
 .page-builder .ge-mainControls .ge-addRowGroup .ge-row-icon .column {
   height: 10px;
-  background: var(--theme-default);
+  background: var(--theme-deafult);
   padding: 0;
   border-left: 3px solid #fff;
 }
@@ -97,7 +97,7 @@
 }
 .page-builder .ge-canvas.ge-editing .ge-tools-drawer > a:hover {
   cursor: pointer;
-  color: var(--theme-default) !important;
+  color: var(--theme-deafult) !important;
 }
 .page-builder .ge-canvas.ge-editing .ge-tools-drawer .ge-details {
   padding: 5px;
@@ -146,7 +146,7 @@
   min-height: 50px;
 }
 .page-builder .ge-canvas.ge-editing .ge-content-type-tinymce.active {
-  outline: 1px dotted #ecf3fa;
+  outline: 1px dotted #ededed;
 }
 .page-builder .ge-canvas.ge-layout-phone {
   max-width: 450px;

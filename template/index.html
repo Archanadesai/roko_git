@@ -1233,7 +1233,13 @@
               <div class="col-xl-6"> 
                 <div class="card sales-chart">
                   <div class="card-header card-no-border pb-0"> 
-                    <h3>Sales Analytics</h3>
+                    <div class="header-top">
+                      <h3>Sales Analytics</h3>
+                      <div class="dropdown">
+                        <button class="btn dropdown-toggle yearly" id="dropdownMenuButton4" type="button" data-bs-toggle="dropdown" aria-expanded="false">Yearly</button>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton4"><a class="dropdown-item" href="#">Today</a><a class="dropdown-item" href="#">Tomorrow</a><a class="dropdown-item" href="#">Yesterday</a></div>
+                      </div>
+                    </div>
                   </div>
                   <div class="card-body">
                     <ul> 
@@ -1247,6 +1253,266 @@
                     <div class="legend"> 
                       <div id="sales-analytics"></div>
                     </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="card new-followers">
+                  <div class="card-header card-no-border pb-0"> 
+                    <h3>New Followers</h3>
+                    <div class="card-header-right">
+                      <ul class="list-unstyled card-option">
+                        <li>
+                          <div><i class="icon-settings"></i></div>
+                        </li>
+                        <li><i class="view-html fa fa-code"></i></li>
+                        <li><i class="icofont icofont-maximize full-card"></i></li>
+                        <li><i class="icofont icofont-minus minimize-card"></i></li>
+                        <li><i class="icofont icofont-refresh reload-card"></i></li>
+                        <li><i class="icofont icofont-error close-card"></i></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive custom-scrollbar">
+                      <table class="table display" id="new-followers" style="width:100%">
+                        <thead> 
+                          <tr> 
+                            <th>Customer</th>
+                            <th>Countey</th>
+                            <th>Popular</th>
+                          </tr>
+                        </thead>
+                        <tbody>   
+                          <tr> 
+                            <td> 
+                              <div class="d-flex gap-2">
+                                <div class="flex-shrink-0"><img src="../assets/images/dashboard/user/1.png" alt="user"></div>
+                                <div class="flex-grow-1"><a href="product.html">
+                                    <h6 class="f-w-600">Joshua Wood</h6><span>14+ Online</span></a></div>
+                              </div>
+                            </td>
+                            <td> <span class="f-w-600">USA</span></td>
+                            <td> 
+                              <div class="progress">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td> 
+                              <div class="d-flex gap-2">
+                                <div class="flex-shrink-0"><img src="../assets/images/dashboard/user/2.png" alt="user"></div>
+                                <div class="flex-grow-1"><a href="product.html">
+                                    <h6 class="f-w-600">Michael Backer</h6><span>265+ Online  </span></a></div>
+                              </div>
+                            </td>
+                            <td> <span class="f-w-600">Angola</span></td>
+                            <td> 
+                              <div class="progress">
+                                <div class="progress-bar bg-secondary" role="progressbar" style="width: 70%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td> 
+                              <div class="d-flex gap-2">
+                                <div class="flex-shrink-0"><img src="../assets/images/dashboard/user/3.png" alt="user"></div>
+                                <div class="flex-grow-1"><a href="product.html">
+                                    <h6 class="f-w-600">Cayla Brister</h6><span>160+ Online</span></a></div>
+                              </div>
+                            </td>
+                            <td> <span class="f-w-600">Cuba </span></td>
+                            <td> 
+                              <div class="progress">
+                                <div class="progress-bar bg-tertiary" role="progressbar" style="width: 70%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td> 
+                              <div class="d-flex gap-2">
+                                <div class="flex-shrink-0"><img src="../assets/images/dashboard/user/4.png" alt="user"></div>
+                                <div class="flex-grow-1"><a href="product.html">
+                                    <h6 class="f-w-600">Ron Dayley</h6><span>245+ Online</span></a></div>
+                              </div>
+                            </td>
+                            <td> <span class="f-w-600">England</span></td>
+                            <td> 
+                              <div class="progress">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3"> 
+                <div class="card bussiness-card">
+                  <div class="card-body">
+                    <div class="dussiness-heding"> 
+                      <h2>How to build your success in 3 steps</h2>
+                      <p>Upgrade your bussiness</p><a class="btn btn-primary f-w-700">Learn More</a>
+                    </div>
+                    <div class="bussiness-img"> <img class="img-1" src="../assets/images/dashboard/bussienss/image.png" alt="bussiness-img"><img class="img-2" src="../assets/images/dashboard/bussienss/cat.png" alt="bussiness-img"><img class="img-3" src="../assets/images/dashboard/bussienss/vector-1.png" alt="bussiness-img"><img class="img-4" src="../assets/images/dashboard/bussienss/vector.png" alt="bussiness-img"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6"> 
+                <div class="card project-summary">
+                  <div class="card-header card-no-border pb-0"> 
+                    <h3>Project Summary</h3>
+                  </div>
+                  <div class="card-body"> 
+                    <table class="table display" id="project-summry" style="width:100%">
+                      <thead> 
+                        <tr> 
+                          <th>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="">
+                              <label class="form-check-label"></label>
+                            </div>
+                          </th>
+                          <th>Product Name</th>
+                          <th>Date</th>
+                          <th>Quantity</th>
+                          <th>Value</th>
+                          <th>Rate</th>
+                          <th>Payment</th>
+                        </tr>
+                      </thead>
+                      <tbody> 
+                        <tr> 
+                          <td>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="">
+                              <label class="form-check-label"></label>
+                            </div>
+                          </td>
+                          <td> 
+                            <div class="d-flex gap-2">
+                              <div class="flex-shrink-0"><img src="../assets/images/dashboard/product/1.png" alt="user"></div>
+                              <div class="flex-grow-1"><a href="product.html">
+                                  <h6 class="f-w-600">Nike Sports NK</h6><span>Free delivery</span></a></div>
+                            </div>
+                          </td>
+                          <td>16 August</td>
+                          <td>65554</td>
+                          <td> 
+                            <div id="priceChart1"></div>
+                          </td>
+                          <td>$844648</td>
+                          <td>Done</td>
+                        </tr>
+                        <tr> 
+                          <td>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="">
+                              <label class="form-check-label"></label>
+                            </div>
+                          </td>
+                          <td> 
+                            <div class="d-flex gap-2">
+                              <div class="flex-shrink-0"><img src="../assets/images/dashboard/product/2.png" alt="user"></div>
+                              <div class="flex-grow-1"><a href="product.html">
+                                  <h6 class="f-w-600">Women Bag</h6><span>$83.97 delivery</span></a></div>
+                            </div>
+                          </td>
+                          <td>2 October</td>
+                          <td>65491</td>
+                          <td> 
+                            <div id="priceChart2"></div>
+                          </td>
+                          <td>$282392</td>
+                          <td>Pending</td>
+                        </tr>
+                        <tr> 
+                          <td>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="">
+                              <label class="form-check-label"></label>
+                            </div>
+                          </td>
+                          <td> 
+                            <div class="d-flex gap-2">
+                              <div class="flex-shrink-0"><img src="../assets/images/dashboard/product/3.png" alt="user"></div>
+                              <div class="flex-grow-1"><a href="product.html">
+                                  <h6 class="f-w-600">Sunglasses </h6><span>Free delivery</span></a></div>
+                            </div>
+                          </td>
+                          <td>21 March</td>
+                          <td>95361</td>
+                          <td> 
+                            <div id="priceChart3"></div>
+                          </td>
+                          <td>$84568</td>
+                          <td>Done</td>
+                        </tr>
+                        <tr> 
+                          <td>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="">
+                              <label class="form-check-label"></label>
+                            </div>
+                          </td>
+                          <td> 
+                            <div class="d-flex gap-2">
+                              <div class="flex-shrink-0"><img src="../assets/images/dashboard/product/4.png" alt="user"></div>
+                              <div class="flex-grow-1"><a href="product.html">
+                                  <h6 class="f-w-600">Cotton T-shirt</h6><span>$12.55 delivery</span></a></div>
+                            </div>
+                          </td>
+                          <td>31 December</td>
+                          <td>98744</td>
+                          <td> 
+                            <div id="priceChart4"></div>
+                          </td>
+                          <td>$844648</td>
+                          <td>Pending</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6"> 
+                <div class="card monthly-growth">
+                  <div class="card-header card-no-border pb-0"> 
+                    <h3>Monthly Revenue Growth</h3>
+                  </div>
+                  <div class="card-body"> 
+                    <div id="monthlyChart">    </div>
+                    <ul class="d-flex">
+                      <li> 
+                        <div class="d-flex"> 
+                          <div class="flex-shrink-0">
+                            <h3>$ 4,875</h3><span>Active User</span>
+                          </div>
+                          <div class="flex-grow-1">
+                            <h4>1,00,00</h4><span>85% goal reached</span>
+                          </div>
+                        </div>
+                        <div class="progress">
+                          <div class="progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </li>
+                      <li> 
+                        <div class="d-flex"> 
+                          <div class="flex-shrink-0">
+                            <h3>$ 7,560</h3><span>Total Tax</span>
+                          </div>
+                          <div class="flex-grow-1">
+                            <h4>1,00,00</h4><span>45% goal reached</span>
+                          </div>
+                        </div>
+                        <div class="progress">
+                          <div class="progress-bar bg-secondary" role="progressbar" style="width: 70%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>

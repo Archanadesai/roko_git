@@ -102,3 +102,187 @@ var growthchart = new ApexCharts(
   growthoptions
 );
 growthchart.render();
+
+
+// bitcoin widget charts
+function priceChartOptions(data) {
+  return {
+    series: [
+      {
+        data: data.data,
+      },
+    ],
+    chart: {
+      type: 'line',
+      width: '80',
+      height: 15,
+      sparkline: {
+        enabled: true,
+      },
+    },
+    fill: {
+      opacity: 1,
+    },
+    colors: [data.color],
+    stroke: {
+      curve: 'smooth',
+      width: 3,
+    },
+
+    tooltip: {
+      enabled: false,
+    },
+  };
+}
+
+/*===== Table Sparkline 1 =====*/
+const priceGraph1 = {
+  data: [1,20,10,30,10,55,20,30],
+  color:  RokoAdminConfig.primary,
+};
+const priceChart1El = document.querySelector('#priceChart1');
+if (priceChart1El) {
+  var priceChart1 = new ApexCharts(priceChart1El, priceChartOptions(priceGraph1));
+  priceChart1.render();
+}
+
+// /*===== Table Sparkline 2 =====*/
+const priceGraph2 = {
+  data: [1,25,10,25,25,18,25,10,30],
+  color:  RokoAdminConfig.secondary,
+};
+const priceChart2El = document.querySelector('#priceChart2');
+if (priceChart2El) {
+  var priceChart2 = new ApexCharts(priceChart2El, priceChartOptions(priceGraph2));
+  priceChart2.render();
+}
+
+// /*===== Table Sparkline 3 =====*/
+const priceGraph3 = {
+  data: [1,25,10,25,25,10,25,18,30],
+  color: RokoAdminConfig.tertiary ,
+};
+const priceChart3El = document.querySelector('#priceChart3');
+if (priceChart3El) {
+  var priceChart3 = new ApexCharts(priceChart3El, priceChartOptions(priceGraph3));
+  priceChart3.render();
+}
+
+// /*===== Table Sparkline 4 =====*/
+const priceGraph4 = {
+  data: [1,25,10,25,25,18,25,10,30],
+  color:  RokoAdminConfig.primary,
+};
+const priceChart4El = document.querySelector('#priceChart4');
+if (priceChart4El) {
+  var priceChart4 = new ApexCharts(priceChart4El, priceChartOptions(priceGraph4));
+  priceChart4.render();
+}
+
+// /*===== Table Sparkline 5 =====*/
+const priceGraph5 = {
+  data: [1,55,10,30,10,55,20,30],
+  color:  RokoAdminConfig.secondary,
+};
+const priceChart5El = document.querySelector('#priceChart5');
+if (priceChart5El) {
+  var priceChart5 = new ApexCharts(priceChart5El, priceChartOptions(priceGraph5));
+  priceChart5.render();
+}
+
+
+const monthlyChartOption = {
+  series: [
+    {
+      name: 'Good',
+      data: [170, 250, 350, 150, 230, 120, 330, 350, 280, 300, 250, 110],
+    },
+    {
+      name: 'Very Good',
+      data: [290, 180, 120, 290, 370, 250, 230, 200, 140, 220, 220, 330],
+    },
+  ],
+  colors: [RokoAdminConfig.primary , RokoAdminConfig.secondary],
+  chart: {
+    type: 'bar',
+    height: 250,
+    width: '100%',
+    offsetY: 10,
+    offsetX: 0,
+    toolbar: {
+      show: false,
+    },
+  },
+  plotOptions: {
+    bar: {
+      horizontal: false,
+      dataLabels: {
+        position: 'top',
+      },
+    },
+  },
+
+  grid: {
+    show: false,
+    padding: {
+      left: -8,
+      right: 0,
+    },
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  plotOptions: {
+    bar: {
+      horizontal: false,
+      borderRadius: 8,
+      columnWidth: '45%',
+      barHeight: '100%',
+      s̶t̶a̶r̶t̶i̶n̶g̶S̶h̶a̶p̶e̶: 'rounded',
+      e̶n̶d̶i̶n̶g̶S̶h̶a̶p̶e̶: 'rounded',
+    },
+  },
+
+  stroke: {
+    show: true,
+    width: 1,
+    colors: ['#fff'],
+  },
+  tooltip: {
+    shared: true,
+    intersect: false,
+    x: {
+      show: true,
+      format: 'dd MMM',
+      formatter: undefined,
+    },
+    y: {
+      show: false,
+    },
+  },
+  yaxis: {
+    show: false,
+    min: 0,
+    max: 400,
+    logBase: 100,
+    tickAmount: 4,
+  },
+  xaxis: {
+    show: false,
+    labels: {
+      show: false,
+    },
+    axisBorder: {
+      show: false,
+    },
+    axisTicks: {
+      show: false,
+    },
+  },
+  legend: {
+    show: false,
+  },
+};
+
+const monthlyChartChartEl = new ApexCharts(document.querySelector('#monthlyChart'), monthlyChartOption);
+monthlyChartChartEl.render();

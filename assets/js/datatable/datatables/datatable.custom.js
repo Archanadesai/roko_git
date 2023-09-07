@@ -8,21 +8,6 @@
       ordering: false,
       info: false,
     });
-    $('#resent-order').DataTable({
-      "searchable": true,
-      "paging": false,
-      "info": false
-    });
-    $('#product-order').DataTable({
-      "searchable": true,
-      "paging": false,
-      "info": false
-    });
-    $('#project-summary').DataTable({
-      "searchable": true,
-      "paging": false,
-      "info": false
-    });
     $("#basic-3").DataTable({
       order: [[3, "desc"]],
     });
@@ -41,6 +26,16 @@
           orderData: [4, 0],
         },
       ],
+    });
+    $('#new-followers').DataTable({
+      "searchable": true,
+      "paging": false,
+      "info": false
+    });
+    $('#project-summry').DataTable({
+      "searchable": true,
+      "paging": false,
+      "info": false
     });
     $("table.show-case").DataTable();
     $("#basic-5").DataTable({

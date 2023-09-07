@@ -62,8 +62,8 @@
 .cropper-view-box {
   display: block;
   height: 100%;
-  outline-color: var(--theme-default);
-  outline: 1px solid var(--theme-default);
+  outline-color: var(--theme-deafult);
+  outline: 1px solid var(--theme-deafult);
   overflow: hidden;
   width: 100%;
 }
@@ -120,7 +120,7 @@
 }
 
 .cropper-line {
-  background-color: var(--theme-default);
+  background-color: var(--theme-deafult);
 }
 .cropper-line.line-e {
   cursor: ew-resize;
@@ -148,7 +148,7 @@
 }
 
 .cropper-point {
-  background-color: var(--theme-default);
+  background-color: var(--theme-deafult);
   height: 5px;
   opacity: 0.75;
   width: 5px;
@@ -201,7 +201,7 @@
   width: 20px;
 }
 .cropper-point.point-se:before {
-  background-color: var(--theme-default);
+  background-color: var(--theme-deafult);
   bottom: -50%;
   content: " ";
   display: block;

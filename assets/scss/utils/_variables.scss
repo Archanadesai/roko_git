@@ -16,6 +16,7 @@ $light-color : #f4f4f4;
 $badge-light-color: #52526c;
 $light-gray : #ECF3FA;
 $icon-bg-color: #F6F8FC;
+$light-bg: #EFF5FB;
 $table-border-color:#ECF3FA;
 
 
@@ -75,7 +76,7 @@ $youtube-color: #F42F2F;
 $light-body-bg-color: #fafdff;
 // typography variables
 $heading_1: 30px;
-$heading_2: 24px;
+$heading_2: 26px;
 $heading_3: 20px;
 $heading_4: 18px;
 $heading_5: 16px;
@@ -189,14 +190,14 @@ $btn-xs-padding: 0.05rem 0.4rem;
 $card-padding :18px;
 $card-margin-bottom :30px;
 $card-border : 1px solid $light-gray;
-$card-border-radius :10px;
+$card-border-radious :10px;
 $common-shadow-color : rgba($info-color, 0.08);
 $card-box-shadow : 0px 9px 20px rgba(46, 35, 94, 0.07);
 $card-header-bg-color : $white;
 $card-header-font-transform : capitalize;
 $card-header-span-size : 12px;
 $card-header-span-color : $theme-body-sub-title-color;
-$card-body-bg-color : $white;
+$card-body-bg-color :  $transparent-color;
 $card-footer-bg-color : $white;
 $card-hover-box-shadow : 0 0 40px rgba(8, 21, 66, .05);
 // According settings
@@ -276,7 +277,7 @@ $header-light-color: #4F5875;
 $page-body-padding : 0 25px 0 25px;
 $page-body-bg-color: $light-color;
 $page-body-margin-bottom: 0px;
-$page-title-padding : 18px 30px;
+$page-title-padding : 15px 30px;
 $common-box-shadow: 2px 3.464px 8px 0px rgba(22, 145, 248, 0.18);
 $page-title-font-size: 24px;
 $page-title-margin-bottom: 0;

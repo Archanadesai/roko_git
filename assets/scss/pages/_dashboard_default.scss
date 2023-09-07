@@ -28,6 +28,62 @@ $badge-light-color in (primary, $primary-color),
   background-color: rgba($secondary-color, 0.08);
 }
 .dashboard_default {
+  table {
+    thead {
+      tr {
+        th{
+          padding: 0px 8px 8px 0px !important;
+          [dir="rtl"] & {
+            padding: 0px 0px 8px 8px !important;
+          }
+          .form-check {
+            input {
+              height: 15px;
+              &:checked{
+                background-color: var(--theme-deafult);
+                border: 1px solid $table-border-color;
+              }
+              &:focus {
+                box-shadow: none;
+              }
+            }
+          }
+          padding-bottom: 8px;
+          border-bottom: 1px solid $table-border-color;
+          color: $theme-body-sub-title-color;
+        }
+      }
+    }
+    tbody {
+      tr{
+        .form-check {
+          input {
+            height: 15px;
+            &:checked{
+              background-color: var(--theme-deafult);
+              border: 1px solid $table-border-color;
+            }
+            &:focus {
+              box-shadow: none;
+            }
+          }
+        }
+        td {
+          padding: 20px 18px 20px 0px !important;
+          border-bottom: 1px solid $table-border-color;
+        }
+        &:last-child {
+          td {
+            padding-bottom: 0px !important;
+            border-bottom: none;
+            [dir="rtl"] & { 
+              padding-bottom: 0px !important;
+            }
+          }
+        }
+      }
+    }
+  }
   .sales-chart {
     .card-body {
       ul {
@@ -49,6 +105,217 @@ $badge-light-color in (primary, $primary-color),
               font-weight: 600;
             }
           }
+        }
+      }
+    }
+  }
+  .new-followers {
+    .card-body {
+      .dataTables_filter {
+        display: none;
+      }
+      table {
+        margin: 0 !important;
+        thead {
+          th {
+            &:last-child {
+              text-align: center;
+            }
+          }
+        }
+        tbody {
+          tr {
+            td {
+              &:first-child {
+                .d-flex {
+                  align-items: center;
+                  .flex-shrink-0 {
+                    img {
+                      border-radius: 50%;
+                    }
+                  }
+                  .flex-grow-1 {
+                    span {
+                      font-size: 13px;
+                      font-weight: 600;
+                      color: $theme-body-sub-title-color;
+                    }
+                  }
+                }
+              }
+              &:nth-child(2){
+
+              }
+              &:nth-child(3){
+                .progress{
+                  border-radius: 50px;
+                  height: 5px;
+                  width: 70px;
+                  background-color: $light-bg;
+                  .progress-bar{
+                    border-radius: 50px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .bussiness-card {
+    height: auto;
+    min-height: 410px;
+    .dussiness-heding {
+      width: 300px;
+      h2 {
+        font-weight: 700;
+        line-height: 35.46px;
+      }
+      p {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 0px;
+        color: $theme-body-sub-title-color;
+      }
+    }
+    .bussiness-img {
+      .img-1 {
+        bottom: 10px;
+        position: absolute;
+        right: 16px;
+      }
+      .img-2 {
+        position: absolute;
+        left: 88px;
+        bottom: 29px;
+        animation: move2 1.2s infinite alternate;
+      }
+      .img-3 {
+        position: absolute;
+        left: 68px;
+        bottom: 110px;
+        animation: displayTransition 2s infinite;
+      }
+      .img-4 {
+        position: absolute;
+        right: 53px;
+        bottom: 184px;
+        animation: displayTransition 2s infinite;
+      }
+    }
+  }
+  .project-summary {
+    table {
+      tbody {
+        tr {
+          td{
+            &:nth-child(2) {
+              .flex-shrink-0 {
+                img {
+                  border-radius: 50%;
+                }
+              }
+              .flex-grow-1 {
+                span {
+                  font-size: 13px;
+                  font-weight: 600;
+                  color: $theme-body-sub-title-color;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .monthly-growth {
+    .card-body {
+      ul {
+        align-items: center;
+        justify-content: space-between;
+        li {
+          width: 100%;
+          padding: 32px 21px 8px 21px;
+          .d-flex {
+            align-items: center;
+            justify-content: space-between;
+            .flex-shrink-0 {
+              width: 100%;
+            }
+            .flex-grow-1 {
+              width: 100%;
+            }
+          }
+          .progress {
+            margin-top: 26px;
+            width: 348px;
+            height: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+div.dataTables_wrapper {
+  position: unset;
+  div.dataTables_filter {
+    position: absolute;
+    top: 15px;
+    right: 22px;
+    @media (max-width: 575px) {
+      top: 60px;
+      right: 18px;
+    }
+    [dir="rtl"] & {
+      left: 22px;
+      right: unset;
+    }
+    input[type=search] {
+      width: 150px !important;
+      height: 34px;
+      border-radius: 6px;
+    }
+  }
+  table.dataTable {
+    margin-top: 13px !important;
+    border: none;
+    font-family: $font-nunito-sans;
+    @media (max-width: 575px) {
+      margin-top: 42px !important;
+    }
+    &.display {
+      tbody {
+        tr.odd,
+        tr.even {
+          background-color: transparent !important;
+          >.sorting_1 {
+            background-color: transparent !important;
+          }
+        }
+      }
+    }
+    thead {
+      >tr {
+        >th {
+          text-transform: capitalize;
+          font-weight: 600;
+          &:before,
+          &:after {
+            display: none;
+          }
+          // [dir="rtl"] & {
+          //   padding-right: 0px !important;
+          // }
+        }
+      }
+    }
+    tbody {
+      >tr {
+        >td {
+          font-weight: 600;
+          // color: $theme-font-color;
         }
       }
     }

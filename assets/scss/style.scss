@@ -146,9 +146,6 @@
     --dark-primary: rgba(115, 102, 255);
     --bs-heading-color: var(--body-font-color);
     --bs-card-color: var(--body-font-color);
-    --bs-table-bg: transparent;
-    --bs-body-bg: transparent;
-    ;
 
 
     --fc-button-bg-color: var(--theme-default);
@@ -216,9 +213,6 @@ body[class='dark-only'] {
         linear-gradient(0deg, #FFFFFF, #FFFFFF);
     --bs-heading-color: #ffffffd7;
     --bs-card-color: #ffffffd7;
-    --bs-table-bg: transparent;
-    --bs-body-bg: transparent;
-
 }
 
 body[class="rtl dark-only"] {

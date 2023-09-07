@@ -530,12 +530,12 @@
   margin-right: auto;
   margin-left: auto;
   padding: 50px;
-  border: 2px dashed var(--theme-default);
+  border: 2px dashed var(--theme-deafult);
   border-radius: 15px;
   -webkit-border-image: none;
   -o-border-image: none;
   border-image: none;
-  background: rgba(115, 102, 255, 0.1);
+  background: rgba(98, 113, 235, 0.1);
   box-sizing: border-box;
   min-height: 150px;
   position: relative;
@@ -545,7 +545,7 @@
 }
 .dropzone i {
   font-size: 50px;
-  color: var(--theme-default);
+  color: var(--theme-deafult);
 }
 .dropzone .dz-message {
   text-align: center;
@@ -560,7 +560,7 @@
   background-color: #eeeeee;
   width: 120px;
   height: 120px;
-  box-shadow: 0px 0px 3px var(--theme-default);
+  box-shadow: 0px 0px 3px var(--theme-deafult);
 }
 .dropzone .dz-preview .dz-progress {
   display: block;
@@ -610,8 +610,4 @@
   height: 58px;
   left: 50%;
   margin-left: -27px;
-}
-
-.product-upload .dropzone {
-  border: 2px solid var(--chart-dashed-border);
 }
