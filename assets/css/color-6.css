@@ -20352,36 +20352,19 @@ p.data-attributes svg {
   font-weight: 600;
   color: #848789;
 }
-.dashboard_default .monthly-growth .card-body ul {
+.dashboard_default .product-sale .card-body .product-heading h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
-.dashboard_default .monthly-growth .card-body ul li {
-  width: 100%;
-  padding: 32px 21px 8px 21px;
-}
-.dashboard_default .monthly-growth .card-body ul li .d-flex {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.dashboard_default .monthly-growth .card-body ul li .d-flex .flex-shrink-0 {
-  width: 100%;
-}
-.dashboard_default .monthly-growth .card-body ul li .d-flex .flex-grow-1 {
-  width: 100%;
-}
-.dashboard_default .monthly-growth .card-body ul li .progress {
-  margin-top: 26px;
-  width: 348px;
-  height: 4px;
+.dashboard_default .product-sale .card-body .product-heading h3 span {
+  font-size: 14px;
+  font-weight: 700;
+  color: #848789;
+  margin-left: 5px;
 }
 
 div.dataTables_wrapper {

@@ -286,3 +286,95 @@ const monthlyChartOption = {
 
 const monthlyChartChartEl = new ApexCharts(document.querySelector('#monthlyChart'), monthlyChartOption);
 monthlyChartChartEl.render();
+
+
+var options = {
+  series: [{
+    name: "Product Sales",
+    data: [5, 15, 70, 45, 38, 53, 38, 40, 53, 45, 95, 53, 60, 65, 60, 53, 20,    67 , 20 , 69, 65, 75, 72, 65, 72, 95, 50 , 45 , 57 , 54 , 48 , 53 , 60 , 25, 30]
+}],
+  chart: {
+  height: 270,
+  type: 'area',
+  zoom: {
+    enabled: false
+  },
+  toolbar:{
+    show: false,
+  },  
+},
+dataLabels: {
+  enabled: false
+},
+stroke: {
+  curve: 'straight',
+  width: 3,
+},
+colors:[ RokoAdminConfig.primary ],
+fill: {
+  type: "gradient",
+  gradient: {
+    shadeIntensity: 1,
+    opacityFrom: 0.4,
+    opacityTo: 0.2,
+    stops: [0, 100, 100]
+  }
+},
+grid: {
+  row: {
+    colors: ['transparent'], // takes an array which will be repeated on columns
+    opacity: 0.5
+  },
+},
+xaxis: {
+  categories: [' ', ' ', '12:00', ' ', ' ', ' ', '', ' ', '15:00' , ' ' , ' ' , ' ' , ' ' , ' ' , '18:00', ' ', ' ', ' ', ' ', ' ', '21:00', ' ', ' ' , ' ' , ' ' , ' ' , '03:00' , ' ' , ' ', ' ', ' ', ' ' , '04:00' , ' ' , ' ' ],
+  labels: {
+    style: {
+      fontSize: "13px",
+      colors: "#959595",
+      fontFamily: "Lexend, sans-serif",
+    },
+  },
+  axisBorder: {
+    show: false
+  },
+},
+yaxis: {
+  labels: {
+    formatter: function (val) {
+      return "$" + val + "" + "k";
+    },
+    style: {
+      fontSize: "14px",
+      colors: "#171829",
+      fontWeight: "500",
+      fontFamily: "Lexend, sans-serif",
+    },
+  },
+},
+tooltip: {
+  custom: function ({ series, seriesIndex, dataPointIndex,}) {
+    return '<div class="apex-tooltip p-2">' + '<span>' + '<span class="bg-primary">' + '</span>' + 'Product Sales' + '<h3>' + '$'+ series[seriesIndex][dataPointIndex] + '<h3/>'  + '</span>' + '</div>';
+  },
+},
+responsive: [
+  {
+    breakpoint: 1200,
+    options: {
+      chart: {
+        height: 215,
+      },
+    },
+  },
+  {
+    breakpoint: 992,
+    options: {
+      chart: {
+        height: 180,
+      },
+    },
+  },
+]
+};
+var chart = new ApexCharts(document.querySelector("#product-sales"), options);
+chart.render();
