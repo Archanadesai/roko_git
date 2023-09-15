@@ -230,33 +230,54 @@ $badge-light-color in (primary, $primary-color),
       }
     }
   }
-  // .monthly-growth {
-  //   .card-body {
-  //     ul {
-  //       align-items: center;
-        
-  //       li {
-          
-  //         padding: 25px 21px 8px 21px;
-  //         .d-flex {
-  //           align-items: center;
-            
-  //           .flex-shrink-0 {
-              
-  //           }
-  //           .flex-grow-1 {
-              
-  //           }
-  //         }
-  //         .progress {
-  //           margin-top: 26px;
-  //           width: 348px;
-  //           height: 4px;
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
+  .monthly-growth {
+    .card-body {
+      ul {
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid $table-border-color;
+        li {
+          width: 100%;
+          padding: 25px 12px 8px 12px;
+          &:first-child {
+            border-right: 1px solid $table-border-color;
+          }
+          .d-flex {
+            align-items: center;
+            justify-content: space-between;
+            .flex-grow-1 {
+              h3 {
+                font-size: 24px;
+                font-weight: 800;
+              }
+              span {
+                font-size: 14px;
+                font-weight: 600;
+                color: $theme-body-sub-title-color;
+              }
+            }
+            .flex-shrink-0 {
+              text-align: center;
+              h4 {
+                color: $theme-body-sub-title-color;
+                font-weight: 800;
+              }
+              span {
+                font-size: 14px;
+                font-weight: 600;
+                color: $theme-body-sub-title-color;
+              }
+            }
+          }
+          .progress {
+            margin-top: 26px;
+            width: 348px;
+            height: 4px;
+          }
+        }
+      }
+    }
+  }
   .product-sale {
     .card-body {
       .product-heading  {
@@ -283,7 +304,7 @@ div.dataTables_wrapper {
     @media (max-width: 575px) {
       top: 60px;
       right: 18px;
-    }
+    }flex-grow-1
     [dir="rtl"] & {
       left: 22px;
       right: unset;
@@ -319,7 +340,7 @@ div.dataTables_wrapper {
           font-weight: 600;
           &:before,
           &:after {
-            display: none;
+            display: none !important;
           }
           // [dir="rtl"] & {
           //   padding-right: 0px !important;

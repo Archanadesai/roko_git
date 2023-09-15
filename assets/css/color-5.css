@@ -20352,6 +20352,56 @@ p.data-attributes svg {
   font-weight: 600;
   color: #848789;
 }
+.dashboard_default .monthly-growth .card-body ul {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid #ECF3FA;
+}
+.dashboard_default .monthly-growth .card-body ul li {
+  width: 100%;
+  padding: 25px 12px 8px 12px;
+}
+.dashboard_default .monthly-growth .card-body ul li:first-child {
+  border-right: 1px solid #ECF3FA;
+}
+.dashboard_default .monthly-growth .card-body ul li .d-flex {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.dashboard_default .monthly-growth .card-body ul li .d-flex .flex-grow-1 h3 {
+  font-size: 24px;
+  font-weight: 800;
+}
+.dashboard_default .monthly-growth .card-body ul li .d-flex .flex-grow-1 span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #848789;
+}
+.dashboard_default .monthly-growth .card-body ul li .d-flex .flex-shrink-0 {
+  text-align: center;
+}
+.dashboard_default .monthly-growth .card-body ul li .d-flex .flex-shrink-0 h4 {
+  color: #848789;
+  font-weight: 800;
+}
+.dashboard_default .monthly-growth .card-body ul li .d-flex .flex-shrink-0 span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #848789;
+}
+.dashboard_default .monthly-growth .card-body ul li .progress {
+  margin-top: 26px;
+  width: 348px;
+  height: 4px;
+}
 .dashboard_default .product-sale .card-body .product-heading h3 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20381,7 +20431,7 @@ div.dataTables_wrapper div.dataTables_filter {
     right: 18px;
   }
 }
-[dir=rtl] div.dataTables_wrapper div.dataTables_filter {
+flex-grow-1 [dir=rtl] div.dataTables_wrapper div.dataTables_filter {
   left: 22px;
   right: unset;
 }
@@ -20413,7 +20463,7 @@ div.dataTables_wrapper table.dataTable thead > tr > th {
   font-weight: 600;
 }
 div.dataTables_wrapper table.dataTable thead > tr > th:before, div.dataTables_wrapper table.dataTable thead > tr > th:after {
-  display: none;
+  display: none !important;
 }
 div.dataTables_wrapper table.dataTable tbody > tr > td {
   font-weight: 600;
