@@ -59,21 +59,24 @@
 }
 .left-header {
   display: flex;
+  width: auto;
   .left-menu-header {
     ul.header-left {
       height: 100%;
       display: flex;
       align-items: center;
       li {
-        padding: 0 15px 0px 0px;
+        padding: 0 34px 0px 0px;
         position: relative;
+        font-weight: 700;
+        color: $theme-body-sub-title-color; 
         [dir="rtl"] & {
           padding: 0px 0px 0px 15px;
         }
-        @media (max-width: 1550px) and (min-width: 1200px){
-          padding: 0 8px 0px 0px;
-          [dir="rtl"] & {
-            padding: 0 0px 0px 8px;
+        &:hover {
+          span {
+            color: var(--theme-default);
+            border-bottom: 2px solid var(--theme-default);
           }
         }
         a {
@@ -87,7 +90,7 @@
         }
         ul.onhover-show-div {
           min-width: 190px;
-          padding: 20px 0;
+          padding: 10px 0;
           li {
             padding: 6px 25px;
           }
@@ -100,7 +103,7 @@
               }
             }
             ul {
-              padding: 20px 0;
+              padding: 10px 0;
               li {
                 padding: 6px 25px;
               }
@@ -140,30 +143,16 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          color: $primary-color;
-          padding: 6px 18px;
-          background-color: rgba($primary-color , 0.2);
-          border-radius: 5px;
+          color: $theme-body-sub-title-color;
           z-index: -1;
+          font-size: 14px;
+          font-weight: 700;
           transition: all 0.5s ease-in-out;
-          @media (max-width: 1550px) and (min-width: 1200px){
-            padding: 6px 10px;
-          }
         }
         span {
           font-size: 14px;
           line-height: 1.8;
           color: $theme-body-font-color;
-          svg {
-            width: 22px;
-            height: 22px;
-            fill: $primary-color;
-            margin-right: 10px;
-            [dir="rtl"] & {
-              margin-right: unset;
-              margin-left: 10px;
-            }
-          }
         }
       }
     }
@@ -304,7 +293,37 @@
     }
   }
 }
+.main-sub-header {
+  .page-title {
+    padding: 0;
+  }
+}
 /*======= Page Header css ends  ======= */
+/*======= Page sub Header css start  ======= */
+.breadcrumb-content {
+  align-items: center;
+  nav {
+    margin-right: 15px;
+  }
+  .sub-header-dropdwon {
+    .drop-icon {
+      background-color: $icon-bg-color;
+      width: 44px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      border: 1px solid  $table-border-color;
+      cursor: pointer;
+      svg {
+        width: 20px;
+        height: 20px;
+        stroke: $theme-body-sub-title-color;
+      }
+    } 
+  } 
+}
 /**======Main Header css Start ======**/
 .offcanvas,
 .offcanvas-bookmark {
@@ -329,6 +348,7 @@
   top: 28px;
   cursor: pointer;
   svg {
+    stroke: $theme-font-color;
     width: $header-wrapper-nav-icon-size;
     height: $header-wrapper-nav-icon-size;
   }

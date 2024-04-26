@@ -3,7 +3,7 @@ $theme-font-color: #1F2F3E;
 $theme-body-font-color: $theme-font-color;
 $theme-body-sub-title-color: #848789;
 $body-color: #ffff;
-$main-body-color: #ffff;
+$main-body-color: #EFF3F8;
 // Theme colors variables
 $primary-color: #795EBD;
 $secondary-color: #F07EB5;
@@ -14,7 +14,12 @@ $warning-color: #FFAA05;
 $danger-color: #FC4438 ;
 $light-color : #f4f4f4;
 $badge-light-color: #52526c;
-$light-gray : #EAEAEA;
+$light-gray : #ECF3FA;
+$icon-bg-color: #F6F8FC;
+$light-bg: #EFF5FB;
+$table-border-color:#ECF3FA;
+
+
 $light-widget-border: #EFEEFF;
 $light-semi-gray :#EAEAEA;
 $font-gray-color: #6C757D;
@@ -53,6 +58,7 @@ $light-dark: #EAEBF2;
 $font-light: #E9E9E9;
 $header-light-bg: #F4F7F9;
 $light-button: #F6F6F6;
+$gray-200: #F4F9FF;
 // gradient colors
 $gradient-primary: linear-gradient(26deg, var(--theme-default) 0%, #a26cf8 100%);
 $gradient-bg-primary: linear-gradient(103.75deg, #33B1EE -13.9%, var(--theme-default) 79.68%);
@@ -71,7 +77,7 @@ $youtube-color: #F42F2F;
 $light-body-bg-color: #fafdff;
 // typography variables
 $heading_1: 30px;
-$heading_2: 24px;
+$heading_2: 26px;
 $heading_3: 20px;
 $heading_4: 18px;
 $heading_5: 16px;
@@ -88,15 +94,15 @@ $font-ICO: IcoFont;
 $landing-header: #323C58;
 $landing-card-box-shadow: -13px 8px 41px rgba(42, 54, 80, 0.25);
 // dark layout variables
-$dark-body-background: #191f31;
-$dark-card-background: #1f2639;
+$dark-body-background: #171821;
+$dark-card-background: #21222d;
 $dark-background: #21283b;
 $dark-card-inbox: #323846;
-$dark-small-font-color: #98a6ad;
-$dark-all-font-color: rgba(255, 255, 255, 0.6);
-$light-all-font-color: rgba(255, 255, 255, 0.2);
+$dark-small-font-color: #717276;
+$dark-all-font-color: rgb(231, 231, 231);
+$light-all-font-color: rgb(113, 114, 118);
 $dark-border-color: $dark-body-background;
-$dark-card-border: #374558;
+$dark-card-border: #2c2c32;
 $dark-editor-document: #2b2b2b;
 $bg-dark-color: #1f2533;
 $dark-datatable-odd: $dark-body-background;
@@ -185,14 +191,14 @@ $btn-xs-padding: 0.05rem 0.4rem;
 $card-padding :18px;
 $card-margin-bottom :30px;
 $card-border : 1px solid $light-gray;
-$card-border-radius :5px;
+$card-border-radious :10px;
 $common-shadow-color : rgba($info-color, 0.08);
 $card-box-shadow : 0px 9px 20px rgba(46, 35, 94, 0.07);
 $card-header-bg-color : $white;
 $card-header-font-transform : capitalize;
 $card-header-span-size : 12px;
 $card-header-span-color : $theme-body-sub-title-color;
-$card-body-bg-color : $transparent-color;
+$card-body-bg-color :  $transparent-color;
 $card-footer-bg-color : $white;
 $card-hover-box-shadow : 0 0 40px rgba(8, 21, 66, .05);
 // According settings
@@ -260,8 +266,8 @@ $sidebar-arrow-color: $theme-body-font-color;
 $sidebar-open-icon: "\f107";
 $sidebar-close-icon: "\f105";
 $sidebar-icon-font-family: $font-awesome;
-$sidebar-height: calc(100vh - 115px);
-$sidebar-compact-width: 246px;
+$sidebar-height: calc(100vh - 112px);
+$sidebar-compact-width: 253px;
 //Header settings
 $main-header-position: fixed;
 $main-header-top: 0;
@@ -269,10 +275,10 @@ $main-header-shadow: 0 0 20px rgba($semi-dark, 0.1);
 $main-header-shadow-1: 0px 4px 40px 0px rgba(0, 0, 0, 0.07);
 $header-light-color: #4F5875;
 //page settings
-$page-body-padding : 0 15px 0 15px;
+$page-body-padding : 0 25px 0 25px;
 $page-body-bg-color: $light-color;
 $page-body-margin-bottom: 0px;
-$page-title-padding : 18px 30px;
+$page-title-padding : 15px 30px;
 $common-box-shadow: 2px 3.464px 8px 0px rgba(22, 145, 248, 0.18);
 $page-title-font-size: 24px;
 $page-title-margin-bottom: 0;
@@ -287,12 +293,12 @@ $breadcrumb-content: "/";
 //main header left settings
 $header-left-bg-color : $white;
 $main-header-z-index : 8;
-$header-wrapper-padding: 16px 30px;
+$header-wrapper-padding: 11px 24px;
 $header-wrapper-nav-right : 0px;
 $header-wrapper-nav-icon-size : 24px;
 $header-wrapper-nav-icon-color : $theme-font-color;
 $header-wrapper-nav-icon-align : middle;
-$header-size: 136px;
+$header-size: 128px;
 $box-layout-space : 40px;
 // widgets variables
 $widget-shadow: 1px 2px 21px -2px rgba(214, 214, 227, 0.83);

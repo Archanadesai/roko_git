@@ -9,7 +9,7 @@
 - var header_slider         = true;
 - var animate               = true;
 - var scrollbar             = true;
-
+include ../../components/mixin
 doctype html
 html(lang='en')
   include ../../components/header-files
@@ -18,44 +18,39 @@ html(lang='en')
     include ../../components/taptop
     // page-wrapper Start
     #pageWrapper.page-wrapper.default-wrapper
-      include ../../components/header
+      .page-header.row
+        
+        .page-title.w-auto
+          +breadcrumb(['Dashboard','Advanced'],'Advanced Dashboard')
+        include ../../components/header
       // Page Body Start
-      .page-body-wrapper.default-menu.default-menu
+      .page-body-wrapper
         include ../../components/sidebar
         .page-body
-          .container-fluid
+          .container-fluid         
             .page-title
               .row
-                .col-sm-6.ps-0
-                  h3 
-                    | Kanban Board
-                .col-sm-6.pe-0
-                  ol.breadcrumb
-                    li.breadcrumb-item
-                      a(href='index.html')                                        
-                        svg.stroke-icon
-                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
-                    li.breadcrumb-item  Apps
-                    li.breadcrumb-item.active  Kanban Board
+                include ../../components/sub-header
+                +breadcrumb(['Dashboard',' Advanced'],'Advanced Dashboard')
           // Container-fluid starts
           .container-fluid.jkanban-container
             .row
               .col-12
                 .card
-                  .card-header.pb-0
+                  .card-header
                     h3 Default Demo                            
                   .card-body                     
                     #demo1
               .col-12
                 .card
-                  .card-header.pb-0
+                  .card-header
                     h3 Custom Board  
                     p.mb-0 | colors, gutter, click on board&apos;s item and restricting which boards to drag items to                         
                   .card-body                     
                     #demo2
               .col-12
                 .card
-                  .card-header.pb-0
+                  .card-header
                     h3 API
                     p.mb-0 add item, add board, delete board:                    
                   .card-body                     

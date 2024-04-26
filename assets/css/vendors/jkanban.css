@@ -1,4 +1,4 @@
-.drag_handler_icon:after, .drag_handler_icon:before {
+  .drag_handler_icon:after, .drag_handler_icon:before {
   background: #000;
   content: "";
   display: block;
@@ -35,7 +35,7 @@
   padding: 20px 30px;
 }
 .kanban-board header .kanban-title-board {
-  font-weight: 500;
+  font-weight: 700;
   margin: 0;
   padding: 0;
   display: inline;

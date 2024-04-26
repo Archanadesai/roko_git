@@ -12,8 +12,8 @@
   vertical-align: 0;
 }
 .todo .action-box.completed {
-  background: #FC4438 ;
-  border: 1px solid #FC4438 ;
+  background: #f1523d;
+  border: 1px solid #f1523d;
   border-radius: 4px;
 }
 .todo .action-box.completed .icon {
@@ -29,10 +29,10 @@
   vertical-align: -4px;
 }
 .todo .action-box.large .icon .icon-trash {
-  color: #795EBD;
+  color: #6271EB;
 }
 .todo .action-box.large .icon .icon-check {
-  color: #795EBD;
+  color: #6271EB;
 }
 .todo .todo-list-wrapper {
   width: 100%;
@@ -99,25 +99,25 @@
   transition: all 0.3s ease;
 }
 .todo .todo-list-wrapper #todo-list li.completed .task-container .complete-btn {
-  border: 1px solid #795EBD;
+  border: 1px solid #6271EB;
   border-radius: 4px;
 }
 .todo .todo-list-wrapper #todo-list li.completed .task-container .complete-btn .icon {
   font-weight: bold;
 }
 .todo .todo-list-wrapper #todo-list li.completed .task-container .complete-btn .icon i {
-  color: #795EBD;
+  color: #63d5be;
 }
 .todo .todo-list-wrapper #todo-list li.completed .task-container .complete-btn:hover {
   background: #fff;
-  border: 1px solid #795EBD;
+  border: 1px solid #63d5be;
 }
 .todo .todo-list-wrapper #todo-list li.completed .task-container .complete-btn:hover .icon {
   color: #fff;
 }
 .todo .todo-list-wrapper #todo-list li.completed .task-container .task-label {
   text-decoration: line-through;
-  color: #795EBD;
+  color: #6271EB;
 }
 .todo .todo-list-wrapper #todo-list li.new .task-container {
   animation: taskHighlighter 2000ms linear 1;
@@ -132,8 +132,8 @@
   right: 10px;
   width: 300px;
   display: inline-block;
-  background: #795EBD;
-  border: 1px solid #795EBD;
+  background: #63d5be;
+  border: 1px solid #63d5be;
   color: #fff;
   padding: 20px;
   opacity: 0.9;
@@ -142,8 +142,8 @@
   transition: all 300ms ease;
 }
 .todo .notification-popup.success {
-  background: #795EBD;
-  border: 1px solid #795EBD;
+  background: #63d5be;
+  border: 1px solid #63d5be;
 }
 .todo .notification-popup p {
   margin-top: 0;
@@ -185,6 +185,7 @@
     background: #fff;
   }
 }
+
 .todo-wrap .card-header.b-bottom {
   border-bottom: 1px solid #EDEDED;
 }
@@ -230,4 +231,5 @@
 .todo-wrap.email-wrap .email-app-sidebar .main-menu > li a:hover .badge {
   color: #fff;
 }
+
 /*====todo css end====*/

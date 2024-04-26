@@ -181,39 +181,6 @@
     }
   }
 }
-@media screen and (max-width: 1660px) and (min-width: 1200px) {
-  .xl-none {
-    display: none;
-  }
-  .xl-60 {
-    max-width: 60%;
-    flex: 0 0 60%;
-  }
-  .xl-50 {
-    max-width: 50%;
-    flex: 0 0 50%;
-  }
-  .xl-100 {
-    max-width: 100%;
-    flex: 0 0 100%;
-  }
-  .xl-23 {
-    max-width: 23%;
-    flex: 0 0 23%;
-  }
-  .xl-25 {
-    max-width: 25%;
-    flex: 0 0 25%;
-  }
-  .xl-40 {
-    max-width: 40%;
-    flex: 0 0 40%;
-  }
-  .xl-4 {
-    max-width: 33.33%;
-    flex: 0 0 33.33%;
-  }
-}
 @media (max-width: 1280px) {
   .img-gallery-set1,
   .img-gallery-set5 {
@@ -634,6 +601,48 @@
   .bookmark-wrap {
     .task-sidebar {
       height: auto;
+    }
+  }
+    .page-wrapper {
+    .page-header {
+      padding: 11px 10px;
+      .header-wrapper {
+        .nav-right {
+          > ul {
+            > li {
+              padding: 6px 13px;
+              svg {
+                width: 20px;
+                height: 20px;
+              }
+              &::after {
+                left: 46px;
+              }
+              &:nth-child(8)::after {
+                left: 73px;
+              }
+            }
+          }
+        }
+      }
+    } 
+    .page-body-wrapper {
+      .page-body {
+        .page-title {
+          padding: 18px 15px;
+          .left-header {
+            .left-menu-header {
+              ul {
+                &.header-left {
+                  li {
+                    padding: 0 20px 0px 0px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
   .btn-radio {
@@ -1660,8 +1669,69 @@
       }
     }
   }
+  .kanban-container .kanban-board {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    width: calc(33.3333333333% - 20px) !important;
+  }
 }
 @media only screen and (max-width: 991.98px) {
+  .page-wrapper {
+    .page-header {
+      .page-title {
+        .header-logo-wrapper{
+          display: block;
+          .logo-wrapper {
+            display: none;
+          }
+          .toggle-sidebar { 
+            position: unset;
+            display: block;
+          }
+        }
+        .breadcrumb-content {
+          h3 {
+            display: none;
+          }
+        }
+      }
+      .header-wrapper {
+        .nav-right {
+          > ul {
+            > li {
+              padding: 6px 13px;
+              &::after{
+                left: 49px;
+              }
+              &:nth-child(8)::after{
+                left: 47px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .page-body-wrapper {
+      .page-body {
+        .page-title {
+          padding: 18px 10px;
+          .breadcrumb-content {
+            width: 100% !important;
+            justify-content: space-between;
+            h3 {
+              display: block;
+            }
+            nav {
+              margin: 0;
+            }
+            .sub-header-dropdwon {
+              display: none !important;
+            }
+          }
+        }
+      }
+    }
+  }
   .todo-list-wrapper {
     #todo-list {
       li {
@@ -1680,6 +1750,9 @@
   }
   .project-box {
     margin-bottom: 20px;
+  }
+  .kanban-container .kanban-board {
+    width: calc(50% - 30px) !important;
   }
   .page-wrapper {
     &.modern-type {
@@ -1990,8 +2063,6 @@
     }
     .page-header {
       .header-wrapper {
-        margin: 0;
-        padding: 12px 30px;
         .nav-right {
           .notification {
             top: 10px;
@@ -2692,7 +2763,7 @@
     }
   }
 }
-@media only screen and (max-width: 810px) {
+@media only screen and (max-width: 900px) {
   .page-wrapper {
     .page-header {
       .header-wrapper {
@@ -2712,6 +2783,27 @@
   }
 }
 @media only screen and (max-width: 767.98px) {
+  .page-wrapper {
+    .page-header {
+      .header-wrapper {
+        .nav-right{
+          ul {
+            li {
+              svg {
+                width: 20px;
+              }
+              &::after {
+                left: 45px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .kanban-container .kanban-board {
+    width: calc(100% - 30px) !important;
+  }
   .wizard-4 {
     ul.anchor {
       width: 100%;
@@ -3718,6 +3810,28 @@
   }
 }
 @media only screen and (max-width: 575.98px) {
+  .page-wrapper {
+    .page-header {
+      padding: 12px 15px !important;
+      .header-wrapper {
+        padding: 0;
+      }
+    }
+    .page-body-wrapper {
+      .page-body {
+        padding: 0 !important;
+        .page-title {
+          padding: 15px 30px;
+          .breadcrumb-content {
+            display: block !important;
+            nav {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+  }
   .todo {
     .todo-list-wrapper {
       .mark-all-tasks {
@@ -3942,14 +4056,14 @@
         }
       }
     }
-    .page-body-wrapper {
-      .page-title {
-        .breadcrumb {
-          margin-top: 8px;
-          justify-content: flex-start;
-        }
-      }
-    }
+    // .page-body-wrapper {
+    //   .page-title {
+    //     .breadcrumb {
+    //       margin-top: 8px;
+    //       justify-content: flex-start;
+    //     }
+    //   }
+    // }
     &.compact-wrapper,
     &.compact-sidebar {
       .page-header {
@@ -3999,7 +4113,6 @@
     }
     .page-header {
       .header-wrapper {
-        padding: 12px 15px !important;
         .nav-right {
           >ul {
             top: 58px;
@@ -5353,6 +5466,22 @@
   .page-wrapper.only-body .page-header .header-wrapper .nav-right {
     display: none;
   }
+  .page-wrapper {
+    .page-header {
+      .header-wrapper {
+        .nav-right {
+          ul {
+            li {
+              padding: 4px 10px;
+              &::after {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   .chat-menu {
     top: 120px;
   }
@@ -5373,11 +5502,6 @@
   }
   h6 {
     font-size: 14px;
-  }
-  .prooduct-details-box {
-    .flex-grow-1 {
-      margin-left: 0rem !important;
-    }
   }
   .knob-block {
     .chart-clock-main {
@@ -5605,6 +5729,21 @@
   }
 }
 @media only screen and (max-width: 420px) {
+  .page-wrapper {
+    &.compact-wrapper {
+      .page-header {
+        .header-wrapper {
+          .nav-right {
+            > ul{
+              > li {
+                padding: 4px 6px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   .product-sidebar {
     &.open {
       top: -75px;
@@ -5685,6 +5824,26 @@
   }
 }
 @media only screen and (max-width: 360px) {
+  .page-wrapper{
+    &.compact-wrapper {
+      .page-header {
+        .page-title {
+          padding: 0;
+        }
+        .header-wrapper {
+          .nav-right {
+            > ul {
+              > li {
+                svg {
+                  width: 15px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   .product-box {
     .modal {
       .modal-header {
@@ -5711,8 +5870,6 @@
       padding: 4px 8px;
     }
     .d-flex {
-      padding: 15px;
-      display: block;
       .flex-grow-1 {
         margin-top: 15px;
       }
@@ -5724,6 +5881,13 @@
     background-color: transparent;
     path {
       stroke: var(--theme-default);
+    }
+  }
+  .addcart-btn {
+    a {
+      &:first-child {
+        margin-bottom: 5px;
+      }
     }
   }
   .clockpicker-align-top {

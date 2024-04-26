@@ -1,0 +1,30 @@
+mixin breadcrumb(items,pagetitle)
+  .header-logo-wrapper.col-auto.p-0
+    .logo-wrapper
+      a(href='index.html')
+        img.img-fluid.for-light(src='../assets/images/logo/logo.png', alt='')
+        img.img-fluid.for-dark(src='../assets/images/logo/logo-dark.png', alt='')
+    .toggle-sidebar
+      svg.stroke-icon.sidebar-toggle.status_toggle.middle
+        use(href='../assets/svg/icon-sprite.svg#menu')
+  .breadcrumb-content.w-auto.d-flex
+    h3.f-w-800= pagetitle
+    nav.w-auto
+      ol.breadcrumb.justify-content-sm-start.align-items-center.mb-0
+        li.breadcrumb-item
+          a(href='index.html') 
+            i(data-feather='home')
+        each pagename, index in items
+          li.breadcrumb-item.f-w-400(class=`${(index === items.length - 1 ?'active':'')}`)= pagename
+    .sub-header-dropdwon.d-flex
+      .drop-icon  
+        svg.animation
+          use(href='../assets/svg/icon-sprite.svg#download')
+      .dropdown
+        button#dropdownMenuButton4.btn.dropdown-toggle.yearly(type='button', data-bs-toggle='dropdown', aria-expanded='false') Last 7 Days
+          svg.animation
+            use(href='../assets/svg/icon-sprite.svg#arrow-dropdwon')  
+        .dropdown-menu.dropdown-menu-end(aria-labelledby='dropdownMenuButton4')
+          a.dropdown-item(href='#') Today
+          a.dropdown-item(href='#') Tomorrow
+          a.dropdown-item(href='#') Yesterday

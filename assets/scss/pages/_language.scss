@@ -8,6 +8,8 @@
 }
 
 .lang {
+	display: flex;
+	align-items: center;
 	&.selected {
 		display: none;
 	}
@@ -17,7 +19,11 @@
 		margin-left: 8px;
 		font-weight: 500;
 	}
-
+	svg {
+		width: 10px !important;
+		height: 10px !important;
+		fill: $theme-font-color !important;
+	  }
 	span {
 		span {
 			color: #999;
