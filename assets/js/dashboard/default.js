@@ -205,7 +205,7 @@ const monthlyChartOption = {
   colors: [RokoAdminConfig.primary , RokoAdminConfig.secondary],
   chart: {
     type: 'bar',
-    height: 250,
+    height: 230,
     width: '100%',
     offsetY: 10,
     offsetX: 0,
@@ -294,7 +294,7 @@ var options = {
     data: [5, 15, 70, 45, 38, 53, 38, 40, 53, 45, 95, 53, 60, 65, 60, 53, 20,    67 , 20 , 69, 65, 75, 72, 65, 72, 95, 50 , 45 , 57 , 54 , 48 , 53 , 60 , 25, 30]
 }],
   chart: {
-  height: 270,
+  height: 320,
   type: 'area',
   zoom: {
     enabled: false
@@ -362,15 +362,7 @@ responsive: [
     breakpoint: 1200,
     options: {
       chart: {
-        height: 215,
-      },
-    },
-  },
-  {
-    breakpoint: 992,
-    options: {
-      chart: {
-        height: 180,
+        height: 320,
       },
     },
   },
@@ -378,3 +370,133 @@ responsive: [
 };
 var chart = new ApexCharts(document.querySelector("#product-sales"), options);
 chart.render();
+
+// temperature chart
+var optionsoverview = {
+  series: [
+    {
+      name: "view",
+      data: [40, 45, 40, 45],
+    },
+  ],
+  chart: {
+    height: 340,
+    type: "line",
+    stacked: false,
+    toolbar: {
+      show: false, 
+    },
+  },
+  stroke: {
+    width: 3,  
+    curve: "smooth",
+  },
+  grid: {
+    show: true,
+    borderColor: "#D6D6D6", 
+    strokeDashArray: 3,
+    position: "back",
+    xaxis: {
+      lines: {
+        show: true,
+      },
+    },
+    yaxis: {
+      lines: {
+        show: false,
+      },
+    },
+  },
+  colors: [RokoAdminConfig.primary ,RokoAdminConfig.secondary],
+  fill: {
+    opacity: 1,
+    type: "gradient",
+    gradient: {
+      shade: "light",
+      type: "vertical",
+      shadeIntensity: 1,
+      opacityFrom: 0.95,
+      opacityTo: 1,
+      colorStops: [
+        {
+          offset: 0,
+          color: RokoAdminConfig.primary,
+          opacity: 0.05,
+        },
+        {
+          offset: 30,
+          color: RokoAdminConfig.primary,
+          opacity: 1,
+        },
+        {
+          offset: 80,
+          color: RokoAdminConfig.primary,
+          opacity: 1,
+        },
+        {
+          offset: 100,
+          color: RokoAdminConfig.primary,
+          opacity: 0.1,
+        },
+      ],
+    },
+  },
+  labels: [
+    "Morning",
+    "Afternon",
+    "Evening",
+    "Night",
+  ],
+  markers: {
+    size: 6,
+    colors: "#fff",
+    strokeColor: RokoAdminConfig.primary,
+    strokeWidth: 3,
+  },
+  xaxis: {
+    type: "category",
+    tickAmount: 4,
+    tickPlacement: "between",
+    tooltip: {
+      enabled: false,
+    },
+    axisTicks: {
+      show: false,
+    },
+    labels: {
+      style: {
+          fontFamily: 'Outfit, sans-serif',
+          fontWeight: 600,
+          colors: '#1F2F3E',
+      },
+  },
+  },
+  legend: {
+    show: false,
+  },
+  yaxis: {
+    tickAmount: 4,
+    min: 10,
+    max: 60,
+    show: true,
+    min: 0,
+    labels: {
+      show: false,
+      style: {
+        fontFamily: 'Outfit, sans-serif',
+        fontWeight: 500,
+        colors: '#3D434A',
+     },
+    },
+  },
+  tooltip: {
+    shared: false,
+    intersect: false,
+  },
+};
+
+var temperaturechart = new ApexCharts(
+  document.querySelector("#temperature-chart"),
+  optionsoverview
+);
+temperaturechart.render();

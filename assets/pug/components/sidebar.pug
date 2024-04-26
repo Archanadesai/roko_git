@@ -4,7 +4,8 @@
   div
     .logo-wrapper
       a(href='index.html')
-        img.img-fluid(src='../assets/images/logo/logo.png', alt='')
+        img.img-fluid.for-light(src='../assets/images/logo/logo.png', alt='')
+        img.img-fluid.for-dark(src='../assets/images/logo/logo-dark.png', alt='')
       .toggle-sidebar
         svg.sidebar-toggle 
           use(href='../assets/svg/icon-sprite.svg#menu')
@@ -42,8 +43,7 @@
                   | Default
               li
                 a(href='dashboard-02.html').lan-5 Ecommerce
-              li
-                a(href='dashboard-03.html') Project
+
           li.sidebar-list
             i.fa.fa-thumb-tack
             a.sidebar-link.sidebar-title(href='#')

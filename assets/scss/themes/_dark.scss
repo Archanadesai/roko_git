@@ -15,6 +15,12 @@ body {
 				}
 			}
 		}
+		.card {
+			background-color: $dark-card-background;
+			.card-header {
+				border-bottom: 1px solid $dark-card-border;
+			}
+		}
 		.form-control {
 			background-color: $dark-card-background  !important;
 			border-color: $dark-card-border  !important;
@@ -37,13 +43,46 @@ body {
 		.total-balance {
 			background-blend-mode: overlay;
 		}
+		.product-box {
+			.modal {
+				.modal-header {
+					.product-box {
+						.product-details {
+							.product-view {
+								h3 {
+									color: $dark-all-font-color;
+								}
+								p {
+									color: $dark-small-font-color;
+								}
+							}
+						}
+					}
+				}
+			}
+			.product-details {
+				p {
+					color: $dark-small-font-color;
+				}
+			}
+		}
+		.table > :not(caption) > * > * {
+			background-color: $dark-card-background;
+		}
+		.datatable-wrapper {
+			&.no-footer {
+				.datatable-container {
+					border-bottom: 1px solid $dark-card-border;
+				}
+			}
+		}
 		.page-wrapper {
 			&.compact-wrapper {
 				.page-body-wrapper {
 					div.sidebar-wrapper {
 						background-color: $dark-card-background;
 						.logo-wrapper {
-						background-color: $dark-body-background;
+						background-color: $dark-card-background;
 						}
 					}
 				}
@@ -57,6 +96,16 @@ body {
 							}
 						}
 					}
+				}
+			}
+		}
+		.page-wrapper {
+			.page-header {
+				background-color: $dark-card-background;
+			}
+			.page-body-wrapper {
+				.page-title {
+					background-color: $dark-card-background;
 				}
 			}
 		}
@@ -89,6 +138,28 @@ body {
 					.row {
 						h3 {
 							color: $dark-all-font-color;
+						}
+					}
+					.breadcrumb-content {
+						.breadcrumb {
+							li{
+								&:first-child {
+									border: 1px solid $dark-card-border;
+								}
+							}
+						}
+						.sub-header-dropdwon {
+							.drop-icon {
+								border: 1px solid $dark-card-border;
+								background-color: $dark-body-background;
+							}
+							.dropdown {
+								.dropdown-toggle {
+									background-color: $dark-body-background;
+									color: $light-all-font-color;
+									border: 1px solid $dark-card-border;
+								}
+							}
 						}
 					}
 				}
@@ -273,6 +344,13 @@ body {
 				}
 			}
 		}
+		.product-page-main {
+			.tab-content {
+				.tab-pane {
+					color: $dark-small-font-color;
+				}
+			}
+		}
 		.clockpicker-popover {
 			.popover-title {
 				background-color: $dark-card-background;
@@ -345,11 +423,23 @@ body {
 		// header
 		.page-wrapper {
 			.page-header {
+				border-bottom: 1px solid $dark-card-border;
 				.header-wrapper {
 					.nav-right {
 						> ul {
-							> li {
-								border: 1px solid $dark-card-border;
+							> li { 
+								svg {
+									stroke: $dark-all-font-color;
+								}
+								&::after {
+									background-color: $dark-card-border;
+								}
+								&:nth-child(2) {
+									.form-group {
+										background-color: $dark-body-background;
+										border: 1px solid $dark-card-border;
+									}
+								}
 							}
 						}
 					}
@@ -357,207 +447,19 @@ body {
 			}
 		}
 		// dashboard-1
-		.since {
-			.customer-card {
-				&.b-l-primary {
-					border: none !important;
-					border-left: 2px solid $primary-color !important;
-					background-color: unset !important;
-				}
-				&.b-l-secondary {
-					border: none !important;
-					border-left: 2px solid $secondary-color !important;
-					background-color: unset !important;
-				}
-				&.b-l-danger {
-					border: none !important;
-					border-left: 2px solid $danger-color !important;
-					background-color: unset !important;
-				}
-				&.b-l-success {
-					border: none !important;
-					border-left: 2px solid $success-color !important;
-					background-color: unset !important;
-				}
-			}
-		}
-		.sales {
-			.btn {
-				&:last-child {
-					background-color: $dark-body-background;
-					color: $dark-all-font-color;
-				}
-			}
-		}
-		.review-slider {
-			.review {
-				.d-flex {
-					background-color: $dark-body-background;
-				}
-			}
-		}
-		.active-task {
-			ul {
-				li {
-					border-bottom: 1px dashed $dark-card-border;
-				}
-			}
-		}
-		.leads {
-			.lead-status {
-				ul {
-					li {
-						background-color: $dark-body-background;
-						&.b-l-primary {
-							border: none !important;
-							border-left: 2px solid $primary-color !important;
-						}
-						&.b-l-secondary {
-							border: none !important;
-							border-left: 2px solid $secondary-color !important;
-						}
-						&.b-l-danger {
-							border: none !important;
-							border-left: 2px solid $danger-color !important;
-						}
-					}
-				}
-			}
-		}
-		.statistics {
-			.d-flex {
-				.flex-shrink-0 {
-					border-right: 1px dashed $dark-card-border;
-				}
-			}
-		}
-		// Dashboard-2
-		.ecommerce-dashboard {
-			.recent-activity {
-				ul {
-					li {
-						&.d-flex {
-							.activity-line {
-								border: 1px solid $dark-card-border;
-								&::before {
-									border-top: 1px solid $dark-card-border;
-								}
-							}
-						}
-					}
-				}
-			}
-			.invoices {
-				.d-flex {
-					.flex-shrink-0 {
-						border-right: 1px dashed $dark-card-border;
-					}
-				}
-			}
-			.new-customers {
-				table {
+		.dashboard_default {
+			table {
+				thead {
+					background-color: transparent !important;
 					tr {
-						td {
-							.d-flex {
-								.flex-grow-1 {
-									a {
-										span {
-											color: rgba($white , 0.8);
-										}
-									}
-								}
-							}
+						th {
+							background-color: transparent;
 						}
 					}
 				}
-			}
-		}
-		// Dashboard-3 
-		.project-dashboard {
-			.upcoming-launch {
-				.meeting {
-					background-color: $dark-body-background;
-					.d-flex {
-						span {
-							color: $dark-all-font-color;
-						}
-					}
-				}
-			}
-			.today-task {
-				.clients-project {
-					table {
-						thead {
-							background-color: $dark-body-background;
-						}
-					}
-				}
-			}
-			.upcoming-meeting {
-				.default-datepicker {
-					.datepicker {
-						.datepicker--nav {
-							.datepicker--nav-action {
-								svg {
-									path {
-										stroke: $dark-all-font-color;
-									}
-								}
-							}
-							.datepicker--nav-title {
-								color: $dark-all-font-color;
-								i {
-								  color: $dark-all-font-color;
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-		.web-card {
-			.comment {
-				ul {
-					li {
-						background-color: $dark-body-background;
-					}
-				}
-			}
-		}
-		.budget-card {
-			.budget-spent {
-				background-color: $dark-body-background;
-			}
-		}
-		.discount-card {
-			.special-offer {
-				.d-flex {
-					ul {
-						li {
-							background-color: $dark-body-background;
-						}
-					}
-				}
-			}
-		}
-		// crypto dashboard
-		.currency-widget {
-			div[class*=bg-light-] {
-				color: $dark-all-font-color;
-			}
-		}
-		.btn {
-			&.badge-light-primary {
-				&:hover {
-					color: rgba($white, 0.6);
-				}
-			}
-		}
-		.portfolio-chart-container {
-			.apexcharts-canvas {
-				.apexcharts-radialbar {
-					image {
-						display: none;
+				tbody {
+					td {
+						background-color: transparent;
 					}
 				}
 			}
@@ -613,17 +515,13 @@ body {
 			}
 		}
 		.f-light {
-			color: $dark-all-font-color;
+			color: $dark-small-font-color;
 		}
 		.apexcharts-tooltip.light {
 			.apexcharts-tooltip-title {
 				background: $dark-card-background;
 				color: $white;
 			}
-		}
-		.card {
-			background-color: $dark-card-background;
-			border: 1px solid $dark-card-border
 		}
 		.ecommerce-widget {
 			border: 1px solid $dark-card-border !important;
@@ -693,6 +591,22 @@ body {
 		}
 		.form-check-input {
 			background-color: $dark-body-background;
+			border: 1px solid $dark-card-border;
+		}
+		.datatable-sorter	{
+			&::before {
+				border-top: 4px solid $dark-card-border; 
+			}
+			&::after {
+				border-bottom: 4px solid $dark-card-border; 
+			}
+		}
+		.list-product {
+			.datatable-dropdown {
+				label {
+					color: $dark-all-font-color;
+				}
+			}
 		}
 		.icon-lists {
 			div {
@@ -2736,10 +2650,6 @@ body {
 						}
 					}
 					.card:not(.email-body) {
-						background-color: $dark-card-background;
-						box-shadow: 1px 1px 2px 1px rgba(29, 28, 28, 0.08);
-						border: 1px solid $dark-card-border;
-						color: $dark-all-font-color;
 						&.widget-1 {
 							background-blend-mode: overlay;
 							.widget-round {
@@ -2841,7 +2751,7 @@ body {
 						.card-header {
 							background-color: $transparent-color;
 							>span {
-								color: $dark-all-font-color;
+								// color: $dark-all-font-color;
 							}
 							h1,
 							h2,

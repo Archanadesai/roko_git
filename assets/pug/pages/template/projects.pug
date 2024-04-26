@@ -18,9 +18,9 @@ html(lang='en')
     // page-wrapper Start
     #pageWrapper.page-wrapper.default-wrapper
       .page-header.row
-        include ../../components/toggle-icon
         .page-title.w-auto
-          +breadcrumb(['Dashboard','Advanced'],'Advanced Dashboard')
+          h3 Project List
+          //- +breadcrumb(['Project','Project List'],'Project List')
         include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -30,7 +30,7 @@ html(lang='en')
             .page-title
               .row
                 include ../../components/sub-header
-                +breadcrumb(['Dashboard',' Advanced'],'Advanced Dashboard')
+                +breadcrumb(['Project','Project List'],'Project List')
           // Container-fluid starts
           .container-fluid
             .row.project-cards

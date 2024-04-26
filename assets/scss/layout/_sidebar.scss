@@ -243,13 +243,6 @@
                 color: $header-wrapper-nav-icon-color;
               }
             }
-            .mode {
-              &.active {
-                svg {
-                  fill: $white;
-                }
-              }
-            }
           }
         }
         ul {
@@ -262,13 +255,6 @@
               stroke: $theme-font-color;
               path {
                 color: $header-wrapper-nav-icon-color;
-              }
-            }
-            .mode {
-              &.active {
-                svg {
-                  rotate: 180deg;
-                }
               }
             }
           }
@@ -304,6 +290,18 @@
                     font-size: 12px;
                     line-height: 1;
                     color: rgba($theme-body-font-color, 0.7);
+                    display: flex;
+                    align-items: center;
+                    svg {
+                      width: 10px !important;
+                      height: 10px !important;
+                      fill: $theme-font-color !important;
+                      margin-left: 2px;
+                      [dir="rtl"] & { 
+                        margin-right: 2px;
+                        margin-left: unset;
+                      }
+                    }
                   }
                 }
               }
@@ -320,9 +318,19 @@
             position: relative;
             cursor: pointer;
             &:nth-child(2) {
-            width: 480px;
-            padding: 11px 25px;
-            border: 1px solid $table-border-color;
+              padding: 0;
+              .form-group {
+                background-color: $icon-bg-color;
+                width: 480px;
+                padding: 9px 25px;
+                border: 1px solid $table-border-color;
+                input {
+                  &::placeholder {
+                    color: $theme-font-color;
+                    font-weight: 600;
+                  }
+                }
+              }
             }
             &:last-child {
               border: none !important;
@@ -1920,7 +1928,7 @@
       }
       .page-body {
         min-height: calc(100vh - 80px);
-        margin-top: 71px;
+        margin-top: 67px;
         margin-left: $sidebar-compact-width;
       }
     }

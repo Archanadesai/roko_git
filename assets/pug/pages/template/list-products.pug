@@ -19,7 +19,7 @@ html(lang='en')
     // page-wrapper Start
     #pageWrapper.page-wrapper.compact-wrapper
       .page-header.row
-        include ../../components/toggle-icon
+        
         .page-title.w-auto
           +breadcrumb(['Dashboard','Advanced'],'Advanced Dashboard')
         include ../../components/header
@@ -84,8 +84,8 @@ html(lang='en')
                                 option(value='3') 10000.00
                                 option(value='3') 15000.00
                                 option(value='3') 99000.00
-                    .list-product
-                      table#project-status.table
+                    .list-product 
+                      table#project-status.table.custom-scrollbar
                         thead 
                           tr 
                             th

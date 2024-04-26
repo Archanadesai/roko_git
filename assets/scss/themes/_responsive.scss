@@ -1669,6 +1669,11 @@
       }
     }
   }
+  .kanban-container .kanban-board {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    width: calc(33.3333333333% - 20px) !important;
+  }
 }
 @media only screen and (max-width: 991.98px) {
   .page-wrapper {
@@ -1745,6 +1750,9 @@
   }
   .project-box {
     margin-bottom: 20px;
+  }
+  .kanban-container .kanban-board {
+    width: calc(50% - 30px) !important;
   }
   .page-wrapper {
     &.modern-type {
@@ -2793,6 +2801,9 @@
       }
     }
   }
+  .kanban-container .kanban-board {
+    width: calc(100% - 30px) !important;
+  }
   .wizard-4 {
     ul.anchor {
       width: 100%;
@@ -3808,7 +3819,9 @@
     }
     .page-body-wrapper {
       .page-body {
+        padding: 0 !important;
         .page-title {
+          padding: 15px 30px;
           .breadcrumb-content {
             display: block !important;
             nav {
@@ -5490,11 +5503,6 @@
   h6 {
     font-size: 14px;
   }
-  .prooduct-details-box {
-    .flex-grow-1 {
-      margin-left: 0rem !important;
-    }
-  }
   .knob-block {
     .chart-clock-main {
       margin: auto;
@@ -5819,6 +5827,9 @@
   .page-wrapper{
     &.compact-wrapper {
       .page-header {
+        .page-title {
+          padding: 0;
+        }
         .header-wrapper {
           .nav-right {
             > ul {
@@ -5829,13 +5840,6 @@
               }
             }
           }
-        }
-      }
-    }
-    .page-body-wrapper {
-      .page-body {
-        .page-title {
-          padding: 13px 10px;
         }
       }
     }
@@ -5866,8 +5870,6 @@
       padding: 4px 8px;
     }
     .d-flex {
-      padding: 15px;
-      display: block;
       .flex-grow-1 {
         margin-top: 15px;
       }
@@ -5879,6 +5881,13 @@
     background-color: transparent;
     path {
       stroke: var(--theme-default);
+    }
+  }
+  .addcart-btn {
+    a {
+      &:first-child {
+        margin-bottom: 5px;
+      }
     }
   }
   .clockpicker-align-top {

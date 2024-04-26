@@ -22,6 +22,8 @@
 
 .dropdown {
 	.dropdown-toggle {
+		display: flex;
+		align-items: center;
 		background-color: $icon-bg-color;
 		color: $theme-font-color;
 		padding: 7px 10px;
@@ -31,6 +33,11 @@
 		font-size: 12px;
 		border-radius: 0;
 		border: 1px solid $table-border-color;
+		svg {
+			width: 14px !important;
+			height: 14px !important;
+			fill: $theme-font-color !important;
+		}
 		&:after {
 			position: absolute;
 			top: 50%;
@@ -42,6 +49,7 @@
 			font-family: "FontAwesome";
 			font-size: 14px;
 			margin: 0;
+			display: none;
 		}
 
 		&.btn-primary {

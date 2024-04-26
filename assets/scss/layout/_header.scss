@@ -315,9 +315,11 @@
       justify-content: center;
       margin-right: 15px;
       border: 1px solid  $table-border-color;
+      cursor: pointer;
       svg {
         width: 20px;
         height: 20px;
+        stroke: $theme-body-sub-title-color;
       }
     } 
   } 

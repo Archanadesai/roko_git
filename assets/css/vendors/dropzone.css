@@ -530,7 +530,7 @@
   margin-right: auto;
   margin-left: auto;
   padding: 50px;
-  border: 2px dashed var(--theme-deafult);
+  border: 2px dashed var(--theme-default);
   border-radius: 15px;
   -webkit-border-image: none;
   -o-border-image: none;

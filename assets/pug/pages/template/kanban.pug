@@ -19,7 +19,7 @@ html(lang='en')
     // page-wrapper Start
     #pageWrapper.page-wrapper.default-wrapper
       .page-header.row
-        include ../../components/toggle-icon
+        
         .page-title.w-auto
           +breadcrumb(['Dashboard','Advanced'],'Advanced Dashboard')
         include ../../components/header
@@ -37,20 +37,20 @@ html(lang='en')
             .row
               .col-12
                 .card
-                  .card-header.pb-0
+                  .card-header
                     h3 Default Demo                            
                   .card-body                     
                     #demo1
               .col-12
                 .card
-                  .card-header.pb-0
+                  .card-header
                     h3 Custom Board  
                     p.mb-0 | colors, gutter, click on board&apos;s item and restricting which boards to drag items to                         
                   .card-body                     
                     #demo2
               .col-12
                 .card
-                  .card-header.pb-0
+                  .card-header
                     h3 API
                     p.mb-0 add item, add board, delete board:                    
                   .card-body                     

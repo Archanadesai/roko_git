@@ -44,7 +44,7 @@ html(lang='en')
           // Container-fluid starts
           .container-fluid.dashboard_default
             .row.widget-grid
-              .col-xl-6 
+              .col-xxl-6.col-xl-4.col-lg-6.box-col-4 
                 .card.sales-chart
                   .card-header.card-no-border.pb-0 
                     .header-top
@@ -59,16 +59,16 @@ html(lang='en')
                   .card-body
                     ul 
                       li.me-2
-                        span.circle.bg-primary.me-1 
-                        p Pending
+                        span.circle.bg-secondary.me-1 
+                        p Pending 
                           span ($4,875)
                       li 
-                        span.circle.bg-secondary.me-1
+                        span.circle.bg-primary.me-1
                         p Complete   
                           span ($1,450)
                     .legend 
                       #sales-analytics
-              .col-3
+              .col-xxl-3.col-xl-4.col-sm-6.box-col-4
                 .card.new-followers
                   .card-header.card-no-border.pb-0 
                     h3 New Followers
@@ -152,7 +152,7 @@ html(lang='en')
                             td 
                               .progress
                                   .progress-bar.bg-primary(role='progressbar', style='width: 70%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100')
-              .col-3 
+              .col-xxl-3.col-xl-4.col-sm-6.box-col-4 
                 .card.bussiness-card
                   .card-body
                     .dussiness-heding  
@@ -164,102 +164,98 @@ html(lang='en')
                       img.img-2(src="../assets/images/dashboard/bussienss/cat.png", alt="bussiness-img")
                       img.img-3(src="../assets/images/dashboard/bussienss/vector-1.png", alt="bussiness-img")
                       img.img-4(src="../assets/images/dashboard/bussienss/vector.png", alt="bussiness-img")
-              .col-6 
+              .col-lg-6 
                 .card.project-summary
                   .card-header.card-no-border.pb-0 
                     h3 Project Summary
                   .card-body 
-                    table#project-summry.table.display(style='width:100%')
-                      thead 
-                        tr 
-                          th
-                            .form-check
-                              input.form-check-input(type='checkbox' value='')
-                              label.form-check-label
-                          th Product Name
-                          th Date
-                          th Quantity
-                          th Value
-                          th Rate
-                          th Payment
-                      tbody 
-                        tr  
-                          td
-                            .form-check
-                              input.form-check-input(type='checkbox' value='')
-                              label.form-check-label
-                          td 
-                            .d-flex.gap-2
-                                .flex-shrink-0
-                                  img(src="../assets/images/dashboard/product/1.png", alt="user") 
-                                .flex-grow-1
-                                  a(href="product.html")
-                                    h6.f-w-600 Nike Sports NK
-                                    span Free delivery
-                          td 16 August
-                          td 65554
-                          td 
-                            #priceChart1
-                          td $844648
-                          td Done
-                        tr  
-                          td
-                            .form-check
-                              input.form-check-input(type='checkbox' value='')
-                              label.form-check-label
-                          td 
-                            .d-flex.gap-2
-                                .flex-shrink-0
-                                  img(src="../assets/images/dashboard/product/2.png", alt="user") 
-                                .flex-grow-1
-                                  a(href="product.html")
-                                    h6.f-w-600 Women Bag
-                                    span $83.97 delivery
-                          td 2 October
-                          td 65491
-                          td 
-                            #priceChart2
-                          td $282392
-                          td Pending
-                        tr  
-                          td
-                            .form-check
-                              input.form-check-input(type='checkbox' value='')
-                              label.form-check-label
-                          td 
-                            .d-flex.gap-2
-                                .flex-shrink-0
-                                  img(src="../assets/images/dashboard/product/3.png", alt="user") 
-                                .flex-grow-1
-                                  a(href="product.html")
-                                    h6.f-w-600 Sunglasses 
-                                    span Free delivery
-                          td 21 March
-                          td 95361
-                          td 
-                            #priceChart3
-                          td $84568
-                          td Done
-                        tr  
-                          td
-                            .form-check
-                              input.form-check-input(type='checkbox' value='')
-                              label.form-check-label
-                          td 
-                            .d-flex.gap-2
-                                .flex-shrink-0
-                                  img(src="../assets/images/dashboard/product/4.png", alt="user") 
-                                .flex-grow-1
-                                  a(href="product.html")
-                                    h6.f-w-600 Cotton T-shirt
-                                    span $12.55 delivery
-                          td 31 December
-                          td 98744
-                          td 
-                            #priceChart4
-                          td $844648
-                          td Pending
-              .col-6 
+                    .table-responsive.custom-scrollbar
+                      table#project-summry.table.display(style='width:100%')
+                        thead 
+                          tr 
+                            th
+                              .checkbox-checked
+                                input.form-check-input(type='checkbox' value='')
+                            th Product Name
+                            th Date
+                            th Quantity
+                            th Value
+                            th Rate
+                            th Payment
+                        tbody 
+                          tr  
+                            td
+                              .checkbox-checked
+                                input.form-check-input(type='checkbox' value='')
+                            td 
+                              .d-flex.gap-2
+                                  .flex-shrink-0
+                                    img(src="../assets/images/dashboard/product/1.png", alt="user") 
+                                  .flex-grow-1
+                                    a(href="product.html")
+                                      h6.f-w-600 Nike Sports NK
+                                      span Free delivery
+                            td 16 August
+                            td 65554
+                            td 
+                              #priceChart1
+                            td $844648
+                            td Done
+                          tr  
+                            td
+                              .checkbox-checked
+                                input.form-check-input(type='checkbox' value='')
+                            td 
+                              .d-flex.gap-2
+                                  .flex-shrink-0
+                                    img(src="../assets/images/dashboard/product/2.png", alt="user") 
+                                  .flex-grow-1
+                                    a(href="product.html")
+                                      h6.f-w-600 Women Bag
+                                      span $83.97 delivery
+                            td 2 October
+                            td 65491
+                            td 
+                              #priceChart2
+                            td $282392
+                            td Pending
+                          tr  
+                            td
+                              .checkbox-checked
+                                input.form-check-input(type='checkbox' value='')
+                            td 
+                              .d-flex.gap-2
+                                  .flex-shrink-0
+                                    img(src="../assets/images/dashboard/product/3.png", alt="user") 
+                                  .flex-grow-1
+                                    a(href="product.html")
+                                      h6.f-w-600 Sunglasses 
+                                      span Free delivery
+                            td 21 March
+                            td 95361
+                            td 
+                              #priceChart3
+                            td $84568
+                            td Done
+                          tr  
+                            td
+                              .checkbox-checked
+                                input.form-check-input(type='checkbox' value='')
+                            td 
+                              .d-flex.gap-2
+                                  .flex-shrink-0
+                                    img(src="../assets/images/dashboard/product/4.png", alt="user") 
+                                  .flex-grow-1
+                                    a(href="product.html")
+                                      h6.f-w-600 Cotton T-shirt
+                                      span $12.55 delivery
+                            td 31 December
+                            td 98744
+                            td 
+                              #priceChart4
+                            td $844648
+                            td Pending
+              .col-md-6 
                 .card.monthly-growth
                   .card-header.card-no-border.pb-0 
                     h3 Monthly Revenue Growth
@@ -286,7 +282,7 @@ html(lang='en')
                             span 45% goal reached
                         .progress
                           .progress-bar.bg-secondary(role='progressbar', style='width: 70%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100')
-              .col-4 
+              .col-xl-4.col-md-6 
                 .card.product-sale
                   .card-header.card-no-border.pb-0 
                     h3 Product Sales
@@ -310,7 +306,314 @@ html(lang='en')
                       h3 $12,000
                         span (15,080 To Goal)
                     #product-sales
-
+              .col-xl-4.col-md-6
+                .card.active-task
+                  .card-header.card-no-border.pb-0 
+                    h3 Active Tasks
+                  .card-body
+                    ul 
+                      li.d-flex.align-items-center.gap-3
+                        span.bg-primary
+                        .flex-shrink-0
+                          .checkbox-checked
+                            input.form-check-input(type='checkbox' value='')
+                        .flex-grow-1
+                          h6 Regina Cooper
+                          p Sending project 
+                            span.font-primary #783 
+                            |  for revision to Leslie Miles
+                        .dropdown
+                          button#dropdownMenuButton4.btn.yearly(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+                            i(data-feather="more-horizontal")
+                          .dropdown-menu.dropdown-menu-end(aria-labelledby='dropdownMenuButton4')
+                            a.dropdown-item(href='#') Today
+                            a.dropdown-item(href='#') Tomorrow
+                            a.dropdown-item(href='#') Yesterday
+                      li.d-flex.align-items-center.gap-3
+                        span.bg-secondary
+                        .flex-shrink-0
+                          .checkbox-checked
+                            input.form-check-input(type='checkbox' value='')
+                        .flex-grow-1
+                          h6 Install Appointment
+                          p Sending project 
+                            span.font-primary #675  
+                            |  for revision to Kristin Edwards
+                        .dropdown
+                          button#dropdownMenuButton4.btn.yearly(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+                            i(data-feather="more-horizontal")
+                          .dropdown-menu.dropdown-menu-end(aria-labelledby='dropdownMenuButton4')
+                            a.dropdown-item(href='#') Today
+                            a.dropdown-item(href='#') Tomorrow
+                            a.dropdown-item(href='#') Yesterday
+                      li.d-flex.align-items-center.gap-3
+                        span.bg-tertiary
+                        .flex-shrink-0
+                          .checkbox-checked
+                            input.form-check-input(type='checkbox' value='')
+                        .flex-grow-1
+                          h6 Territory Adjustment
+                          p Sending project 
+                            span.font-primary #788 
+                            |  for revision to Regina Warren
+                        .dropdown
+                          button#dropdownMenuButton4.btn.yearly(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+                            i(data-feather="more-horizontal")
+                          .dropdown-menu.dropdown-menu-end(aria-labelledby='dropdownMenuButton4')
+                            a.dropdown-item(href='#') Today
+                            a.dropdown-item(href='#') Tomorrow
+                            a.dropdown-item(href='#') Yesterday
+                      li.d-flex.align-items-center.gap-3
+                        span.bg-primary
+                        .flex-shrink-0
+                          .checkbox-checked
+                            input.form-check-input(type='checkbox' value='')
+                        .flex-grow-1
+                          h6 Pricesheet approver
+                          p Sending project 
+                            span.font-primary #543 
+                            |  for revision to Stella Penas
+                        .dropdown
+                          button#dropdownMenuButton4.btn.yearly(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+                            i(data-feather="more-horizontal")
+                          .dropdown-menu.dropdown-menu-end(aria-labelledby='dropdownMenuButton4')
+                            a.dropdown-item(href='#') Today
+                            a.dropdown-item(href='#') Tomorrow
+                            a.dropdown-item(href='#') Yesterday
+                      li.d-flex.align-items-center.gap-3
+                        span.bg-secondary
+                        .flex-shrink-0
+                          .checkbox-checked
+                            input.form-check-input(type='checkbox' value='')
+                        .flex-grow-1
+                          h6 Regina Cooper
+                          p Sending project 
+                            span.font-primary #543 
+                            |  for revision to Stella Penas
+                        .dropdown
+                          button#dropdownMenuButton4.btn.yearly(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+                            i(data-feather="more-horizontal")
+                          .dropdown-menu.dropdown-menu-end(aria-labelledby='dropdownMenuButton4')
+                            a.dropdown-item(href='#') Today
+                            a.dropdown-item(href='#') Tomorrow
+                            a.dropdown-item(href='#') Yesterday
+              .col-xl-4.col-md-6
+                .card.news-update
+                  .card-header.card-no-border.pb-0 
+                    h3 News & Update
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          div
+                            i.icon-settings
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body
+                    ul 
+                      li.d-flex.align-items-center.gap-3
+                        .flex-shrink-0
+                          img(src="../assets/images/dashboard/news/news-1.jpg", alt="update")  
+                        .flex-grow-1
+                          h6 Indonesian Navy Lauds Mental Perseverance of Teenager...
+                          p Today’s News Headlines, Breaking...
+                        button.btn(type='button') 10 Min ago
+                      li.d-flex.align-items-center.gap-3
+                        .flex-shrink-0
+                          img(src="../assets/images/dashboard/news/news-2.jpg", alt="update")  
+                        .flex-grow-1
+                          h6 Why now may be the ‘golden age’ for Southeast asia start-ups...
+                          p Check out the latest news from...
+                        button.btn(type='button') 8 Min ago
+                      li.d-flex.align-items-center.gap-3
+                        .flex-shrink-0
+                          img(src="../assets/images/dashboard/news/news-3.jpg", alt="update")  
+                        .flex-grow-1
+                          h6 China’s renewed crypto crackdown wipes nearly $400...
+                          p Technology and indian news...
+                        button.btn(type='button') 12 Min ago
+                      li.d-flex.align-items-center.gap-3
+                        .flex-shrink-0
+                          img(src="../assets/images/dashboard/news/news-4.jpg", alt="update")  
+                        .flex-grow-1
+                          h6 Indonesian Navy Lauds Mental Perseverance of Teenager...
+                          p Today’s News Headlines, Breaking...
+                        button.btn(type='button') 10 Min ago    
+              .col-lg-6
+                .card.selling-product
+                  .card-header.card-no-border
+                    h3 Best Selling Product
+                    .card-header-right
+                      ul.list-unstyled.card-option
+                        li
+                          div
+                            i.icon-settings
+                        li
+                          i.view-html.fa.fa-code
+                        li
+                          i.icofont.icofont-maximize.full-card
+                        li
+                          i.icofont.icofont-minus.minimize-card
+                        li
+                          i.icofont.icofont-refresh.reload-card
+                        li
+                          i.icofont.icofont-error.close-card
+                  .card-body
+                    .selling-top
+                      ul.d-flex
+                        li.d-flex.align-items-center.gap-3
+                          .flex-shrink-0
+                            img(src="../assets/images/dashboard/selling/product-1.png", alt="product")
+                          .flex-grow-1
+                            h5 85.6K / 
+                              span Month
+                            p Latest Nike shoes
+                        li.d-flex.align-items-center.gap-3
+                          .flex-shrink-0
+                            img(src="../assets/images/dashboard/selling/product-2.png", alt="product")
+                          .flex-grow-1
+                            h5 25.4K / 
+                              span Month
+                            p Ladies Handbags
+                        li.d-flex.align-items-center.gap-3
+                          .flex-shrink-0
+                            img(src="../assets/images/dashboard/selling/product-3.png", alt="product")
+                          .flex-grow-1
+                            h5 48.9K / 
+                              span Month
+                            p Latest Cosmetics
+                    .table-responsive.custom-scrollbar
+                      table.table.display(style='width:100%')
+                        tbody 
+                          tr  
+                            td A908
+                            td Nike Sports NK 
+                            td 
+                              .social-user
+                                ul
+                                  li.d-inline-block
+                                    img.img-40.rounded-circle(src="../assets/images/dashboard/selling/1.png", alt="user")
+                                  li.d-inline-block
+                                    img.img-40.rounded-circle(src="../assets/images/dashboard/selling/2.png", alt="user")
+                                  li.d-inline-block
+                                    img.img-40.rounded-circle(src="../assets/images/dashboard/selling/3.png", alt="user")
+                                  li.d-inline-block
+                                    p.bg-primary.rounded-circle 26+
+                            td 16 August
+                            td $23,490
+                            td 
+                              i.fa.fa-sort-desc 
+                              |26.00%
+                            td Done
+                          tr  
+                            td R840
+                            td Women Bag 
+                            td 
+                              .social-user
+                                ul
+                                  li.d-inline-block
+                                    img.img-40.rounded-circle(src="../assets/images/dashboard/selling/4.png", alt="user")
+                                  li.d-inline-block
+                                    img.img-40.rounded-circle(src="../assets/images/dashboard/selling/1.png", alt="user")
+                                  li.d-inline-block
+                                    img.img-40.rounded-circle(src="../assets/images/dashboard/selling/5.png", alt="user")
+                                  li.d-inline-block
+                                    p.bg-primary.rounded-circle 6+
+                            td 02 Octomber
+                            td $45,459
+                            td 
+                              i.fa.fa-sort-desc
+                              |65.00%
+                            td.font-danger Pending
+                          tr  
+                            td V890
+                            td Sunglasses 
+                            td 
+                              .social-user
+                                ul
+                                  li.d-inline-block
+                                    img.img-40.rounded-circle(src="../assets/images/dashboard/selling/6.png", alt="user")
+                                  li.d-inline-block
+                                    img.img-40.rounded-circle(src="../assets/images/dashboard/selling/7.png", alt="user")
+                            td 12 March
+                            td $78,748
+                            td 
+                              i.fa.fa-sort-asc.font-danger
+                              |95.00%
+                            td Done
+                          tr  
+                            td K450
+                            td Cotton T-Shirt 
+                            td 
+                              .social-user
+                                ul
+                                  li.d-inline-block
+                                    img.img-40.rounded-circle(src="../assets/images/dashboard/selling/8.png", alt="user")
+                                  li.d-inline-block
+                                    img.img-40.rounded-circle(src="../assets/images/dashboard/selling/9.png", alt="user")
+                                  li.d-inline-block
+                                    img.img-40.rounded-circle(src="../assets/images/dashboard/selling/1.png", alt="user")
+                                  li.d-inline-block
+                                    p.bg-primary.rounded-circle 5+
+                            td 31 December
+                            td $98,878
+                            td 
+                              i.fa.fa-sort-desc
+                              |68.00%
+                            td.font-danger Pending
+                          tr  
+                            td D480
+                            td Headphone 
+                            td 
+                              .social-user
+                                ul
+                                  li.d-inline-block
+                                    img.img-40.rounded-circle(src="../assets/images/dashboard/selling/10.png", alt="user")
+                                  li.d-inline-block
+                                    img.img-40.rounded-circle(src="../assets/images/dashboard/selling/11.png", alt="user")
+                                  li.d-inline-block
+                                    img.img-40.rounded-circle(src="../assets/images/dashboard/selling/12.png", alt="user")
+                            td 20 Augest
+                            td $34,248
+                            td 
+                              i.fa.fa-sort-asc.font-danger
+                              |91.00%
+                            td.font-danger Pending
+              .col-lg-6
+                .card.temperature
+                  .card-body 
+                    .row 
+                      .col-xl-5.col-sm-6
+                        h3 
+                          svg
+                            use(href='../assets/svg/icon-sprite.svg#location-Dashboard')
+                          | Gotham
+                        h4 Today 00:33 PM
+                        img(src="../assets/images/dashboard/temperature/1.png", alt="temperature")
+                        ul
+                          li
+                            svg
+                              use(href='../assets/svg/icon-sprite.svg#weather-Dashboard')
+                            | 720hpa
+                          li
+                            svg
+                              use(href='../assets/svg/icon-sprite.svg#temperature-Dashboard')
+                            | 32%
+                          li
+                            svg
+                              use(href='../assets/svg/icon-sprite.svg#weather-Blowing')
+                            | 12km/h
+                      .col-xl-7.col-lg-12.col-sm-6
+                        .temperature-box
+                          h3 Temperature
+                          #temperature-chart
 
 
           // Container-fluid Ends

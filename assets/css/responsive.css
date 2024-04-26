@@ -669,7 +669,7 @@
     visibility: visible;
   }
   .md-sidebar .job-sidebar {
-    background-color: #1f2639;
+    background-color: #21222d;
     padding: 20px;
   }
   .md-sidebar .job-sidebar .faq-accordion.default-according {
@@ -1032,6 +1032,11 @@
   .page-wrapper.horizontal-wrapper.material-type .page-body-wrapper .page-body {
     max-width: 930px;
   }
+  .kanban-container .kanban-board {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    width: calc(33.3333333333% - 20px) !important;
+  }
 }
 @media only screen and (max-width: 991.98px) {
   .page-wrapper .page-header .page-title .header-logo-wrapper {
@@ -1082,6 +1087,9 @@
   }
   .project-box {
     margin-bottom: 20px;
+  }
+  .kanban-container .kanban-board {
+    width: calc(50% - 30px) !important;
   }
   .page-wrapper.modern-type .simplebar-mask {
     top: 70px;
@@ -1777,6 +1785,9 @@
   .page-wrapper .page-header .header-wrapper .nav-right ul li::after {
     left: 45px;
   }
+  .kanban-container .kanban-board {
+    width: calc(100% - 30px) !important;
+  }
   .wizard-4 ul.anchor {
     width: 100%;
     height: auto;
@@ -2407,6 +2418,12 @@
   }
   .page-wrapper .page-header .header-wrapper {
     padding: 0;
+  }
+  .page-wrapper .page-body-wrapper .page-body {
+    padding: 0 !important;
+  }
+  .page-wrapper .page-body-wrapper .page-body .page-title {
+    padding: 15px 30px;
   }
   .page-wrapper .page-body-wrapper .page-body .page-title .breadcrumb-content {
     display: block !important;
@@ -3476,9 +3493,6 @@
   h6 {
     font-size: 14px;
   }
-  .prooduct-details-box .flex-grow-1 {
-    margin-left: 0rem !important;
-  }
   .knob-block .chart-clock-main {
     margin: auto;
     width: auto;
@@ -3664,11 +3678,11 @@
   }
 }
 @media only screen and (max-width: 360px) {
+  .page-wrapper.compact-wrapper .page-header .page-title {
+    padding: 0;
+  }
   .page-wrapper.compact-wrapper .page-header .header-wrapper .nav-right > ul > li svg {
     width: 15px;
-  }
-  .page-wrapper .page-body-wrapper .page-body .page-title {
-    padding: 13px 10px;
   }
   .product-box .modal .modal-header .product-box .product-details .product-qnty fieldset .input-group {
     width: 45%;
@@ -3680,10 +3694,6 @@
   .prooduct-details-box .btn {
     padding: 4px 8px;
   }
-  .prooduct-details-box .d-flex {
-    padding: 15px;
-    display: block;
-  }
   .prooduct-details-box .d-flex .flex-grow-1 {
     margin-top: 15px;
   }
@@ -3694,6 +3704,9 @@
   }
   .datepicker--nav-action path {
     stroke: var(--theme-default);
+  }
+  .addcart-btn a:first-child {
+    margin-bottom: 5px;
   }
   .clockpicker-align-top {
     top: 426px !important;
