@@ -272,15 +272,6 @@
       ae: "ÙˆØ­Ø§Øª Ø§Ù„Ù‚ÙŠØ§Ø¯Ø© ",
     },
     {
-      en: "Default",
-      pt: "PadrÃ£o",
-      es: "Vaikimisi",
-      fr: "DÃ©faut",
-      de: "Standaard",
-      cn: "é›»å­å•†å‹™",
-      ae: "ÙˆØ¥ÙØªØ±Ø§Ø¶ÙŠ",
-    },
-    {
       en: "Ecommerce",
       pt: "ComÃ©rcio eletrÃ´nico",
       es: "Komerco",
@@ -288,6 +279,15 @@
       de: "E-commerce",
       cn: "é›»å­å•†å‹™",
       ae: "ÙˆØ§Ù„ØªØ¬Ø§Ø±Ø© Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠØ©",
+    },
+    {
+      en: "CRM",
+      pt: "PadrÃ£o",
+      es: "Vaikimisi",
+      fr: "DÃ©faut",
+      de: "Standaard",
+      cn: "é›»å­å•†å‹™",
+      ae: "ÙˆØ¥ÙØªØ±Ø§Ø¶ÙŠ",
     },
     {
       en: "Widgets",

@@ -402,6 +402,11 @@ $badge-dot-color in (primary, $primary-color),
       }
     }
   }
+  .sales-pipeline {
+    &.card {
+      overflow: hidden;
+    }
+  }
   .pipeline-card{
     .row {
       > div {
@@ -599,12 +604,12 @@ $badge-dot-color in (primary, $primary-color),
               text-align: center;
               font-weight: 600;
             }
-            &:first-child {
+            &:nth-child(2) {
               @media (max-width: 1199px) {
                 min-width: 192px;
               }
             }
-            &:nth-child(4) {
+            &:nth-child(5) {
               @media (max-width: 1680px) and (min-width: 1200px) { 
                 display: none; 
               }
@@ -612,7 +617,7 @@ $badge-dot-color in (primary, $primary-color),
                 min-width: 176px;
               }
             }
-            &:nth-child(3) {
+            &:nth-child(4) {
               @media (max-width: 1399px) and (min-width: 1200px) { 
                 display: none; 
               }
@@ -713,7 +718,11 @@ $badge-dot-color in (primary, $primary-color),
       @media (max-width: 575px) {
         top: 60px;
         right: 18px;
-      }flex-grow-1
+        [dir="rtl"] & {
+          left: 18px;
+          right: unset;
+        }
+      }
       [dir="rtl"] & {
         left: 22px;
         right: unset;

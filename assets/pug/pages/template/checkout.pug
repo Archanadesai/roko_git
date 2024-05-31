@@ -16,21 +16,21 @@ html(lang='en')
       .page-header.row
         
         .page-title.w-auto
-          +breadcrumb(['Dashboard','Advanced'],'Advanced Dashboard')
+          +breadcrumb(['Ecommerce','Checkout'],'Checkout')
         include ../../components/header
       // Page Body Start
       .page-body-wrapper
         include ../../components/sidebar
-        .page-body
+        .page-body.checkout
           .container-fluid         
             .page-title
               .row
                 include ../../components/sub-header
-                +breadcrumb(['Dashboard',' Advanced'],'Advanced Dashboard')
+                +breadcrumb(['Ecommerce',' Checkout'],'Checkout')
           // Container-fluid starts
           .container-fluid
             .card
-              .card-header.pb-0
+              .card-header.pb-0.card-no-border
                 h3 Billing Details
               .card-body
                 .row

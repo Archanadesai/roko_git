@@ -24,7 +24,7 @@ html(lang='en')
       .page-header.row
         
         .page-title.w-auto
-          +breadcrumb(['Dashboard','Advanced'],'Advanced Dashboard')
+          +breadcrumb(['ECommerce','Add Product'],'Add Product')
         include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -34,13 +34,13 @@ html(lang='en')
             .page-title
               .row
                 include ../../components/sub-header
-                +breadcrumb(['Dashboard',' Advanced'],'Advanced Dashboard')
+                +breadcrumb(['ECommerce',' Add Product'],'Add Product')
             // Container-fluid starts
             .container-fluid
               .row 
                 .col-12 
                   .card 
-                    .card-header
+                    .card-header.card-no-border.pb-0
                       h3 Product Form
                     .card-body
                       .row.g-xl-5.g-3
@@ -53,7 +53,7 @@ html(lang='en')
                                       svg.stroke-icon
                                         use(href="../assets/svg/icon-sprite.svg#product-detail")
                                   .product-tab-content
-                                    h6 Add Product Details
+                                    h5 Add Product Details
                                     p Add Product name & details
                               li.nav-item 
                                 a#gallery-product-tab.nav-link(data-bs-toggle='pill' href='#gallery-product' role='tab' aria-controls='gallery-product' aria-selected='false')
@@ -62,7 +62,7 @@ html(lang='en')
                                       svg.stroke-icon
                                         use(href="../assets/svg/icon-sprite.svg#product-gallery")
                                   .product-tab-content
-                                    h6 Product gallery
+                                    h5 Product gallery
                                     p thumbnail & Add Product Gallery
                               li.nav-item 
                                 a#category-product-tab.nav-link(data-bs-toggle='pill' href='#category-product' role='tab' aria-controls='category-product' aria-selected='false')
@@ -71,7 +71,7 @@ html(lang='en')
                                       svg.stroke-icon
                                         use(href="../assets/svg/icon-sprite.svg#product-category")
                                   .product-tab-content
-                                    h6 Product Categories
+                                    h5 Product Categories
                                     p Add Product category, Status and Tags
                               li.nav-item
                                 a#pricings-tab.nav-link(data-bs-toggle='pill' href='#pricings' role='tab' aria-controls='pricings' aria-selected='false')
@@ -80,7 +80,7 @@ html(lang='en')
                                       svg.stroke-icon
                                         use(href="../assets/svg/icon-sprite.svg#pricing") 
                                   .product-tab-content
-                                    h6 Selling prices
+                                    h5 Selling prices
                                     p Add Product basic price & Discount
                               li.nav-item
                                 a#advance-product-tab.nav-link(data-bs-toggle='pill' href='#advance-product' role='tab' aria-controls='advance-product' aria-selected='false')
@@ -89,7 +89,7 @@ html(lang='en')
                                       svg.stroke-icon
                                         use(href="../assets/svg/icon-sprite.svg#advance") 
                                   .product-tab-content
-                                    h6 Advance
+                                    h5 Advance
                                     p Add Meta details & Inventory details
 
                         .col-xxl-9.col-xl-8.box-col-8.position-relative
@@ -193,7 +193,7 @@ html(lang='en')
                                               p.f-light Products can be tagged
                                         .col-12
                                           .category-buton
-                                            a.btn.button-primary(href="#!" data-bs-toggle='modal' data-bs-target='#category-pill-modal')
+                                            a.btn.button-primary.bg-light-primary.font-primary(href="#!" data-bs-toggle='modal' data-bs-target='#category-pill-modal')
                                               i.me-2.fa.fa-plus 
                                               | Create New Category 
                                           #category-pill-modal.modal.fade(tabindex='-1' aria-hidden='true')

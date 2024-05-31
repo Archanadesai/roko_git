@@ -19,7 +19,7 @@ html(lang='en', dir='rtl')
       .page-header.row
         
         .page-title.w-auto
-          +breadcrumb(['Dashboard','Advanced'],'Advanced Dashboard')
+          +breadcrumb(['Page Layout','RTL Layout'],'RTL Layout')
         include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -29,17 +29,17 @@ html(lang='en', dir='rtl')
             .page-title
               .row
                 include ../../components/sub-header
-                +breadcrumb(['Dashboard',' Advanced'],'Advanced Dashboard')
+                +breadcrumb(['Page Layout',' RTL Layout'],'RTL Layout')
           // Container-fluid starts
           .container-fluid
             .row
               .col-sm-12
                 .card.alert.alert-primary(role='alert')
-                  h5 Tip!
+                  h3.text-white Tip!
                   p Add the dir="rtl" to the html tag to get this layout.
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.card-no-border.pb-0
                     h3 How to use it?
                     .card-header-right
                       ul.list-unstyled.card-option

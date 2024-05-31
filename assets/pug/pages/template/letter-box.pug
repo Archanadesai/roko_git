@@ -21,7 +21,7 @@ html(lang='en')
       .page-header.row
         
         .page-title.w-auto
-          +breadcrumb(['Dashboard','Advanced'],'Advanced Dashboard')
+          +breadcrumb(['Email','Letter Box'],'Letter Box')
         include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -31,7 +31,7 @@ html(lang='en')
             .page-title
               .row
                 include ../../components/sub-header
-                +breadcrumb(['Dashboard',' Advanced'],'Advanced Dashboard')
+                +breadcrumb(['Email',' Letter Box'],'Letter Box')
             // Container-fluid starts
             .container-fluid
                 .email-wrap.email-main-wrapper
@@ -147,56 +147,7 @@ html(lang='en')
                                                 li 
                                                     a.dropdown-item(href="#!")
                                                         | Unstarred
-                                    #compose_mail.modal.fade(tabindex='-1'  aria-hidden='true')
-                                        .modal-dialog.modal-lg
-                                            .modal-content
-                                                .modal-header
-                                                    h3.modal-title.fs-5 Compose Message
-                                                    button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
-                                                .modal-body.compose-modal
-                                                    form
-                                                        .row.mb-3
-                                                            label.col-sm-2.col-form-label(for='composeFrom') From :
-                                                            .col-sm-10
-                                                                input#composeFrom.form-control(type='email')
-                                                        .row.mb-3
-                                                            label.col-sm-2.col-form-label(for='composeTo') To :
-                                                            .col-sm-10
-                                                                input#composeTo.form-control(type='email')
-                                                                .add-bcc
-                                                                    .d-flex.gap-2
-                                                                        a.btn(data-bs-toggle='collapse' href='#collapseCc' role='button' aria-expanded='false' aria-controls='collapseCc')
-                                                                            | Cc 
-                                                                        a.btn(data-bs-toggle='collapse' href='#collapseBcc' role='button' aria-expanded='false' aria-controls='collapseBcc')
-                                                                            | Bcc
-                                                        #collapseCc.collapse.row.mb-3 
-                                                            label.col-sm-2.col-form-label(for='composeCc') Cc:
-                                                            .col-sm-10
-                                                                input#composeCc.form-control(type='email')
-                                                        #collapseBcc.collapse.row.mb-3 
-                                                            label.col-sm-2.col-form-label(for='composeBcc') Bcc:
-                                                            .col-sm-10
-                                                                input#composeBcc.form-control(type='email')
-                                                        .row.mb-3
-                                                            label.col-sm-2.col-form-label(for='composeSubject') Subject :
-                                                            .col-sm-10
-                                                                input#composeSubject.form-control(type='email')
-                                                        .toolbar-box
-                                                            #toolbar1
-                                                                button.ql-bold Bold 
-                                                                button.ql-italic Italic 
-                                                                button.ql-underline underline
-                                                                button.ql-strike Strike 
-                                                                button.ql-list(value="ordered") List 
-                                                                button.ql-list(value="bullet") 
-                                                                button.ql-indent(value="-1") 
-                                                                button.ql-indent(value="+1")
-                                                                button.ql-link
-                                                                button.ql-image
-                                                            #editor1
-                                                .modal-footer
-                                                    button.btn.btn-light(type='button') Save as draft
-                                                    button.btn.btn-primary(type='button' data-bs-dismiss='modal') Send
+                                    
 
                                     
                                     
@@ -213,7 +164,7 @@ html(lang='en')
                                                             svg.important-mail.active
                                                                 use(href="../assets/svg/icon-sprite.svg#fill-star")
                                                             .rounded-border
-                                                                img.img-fluid(src="../assets/images/dashboard/user/6.jpg", alt="user")
+                                                                img.img-fluid(src="../assets/images/user/6.jpg", alt="user")
                                                             p Marvin McKinney
                                                         .inbox-message
                                                             .email-data
@@ -507,7 +458,7 @@ html(lang='en')
                                                             svg.important-mail
                                                                 use(href="../assets/svg/icon-sprite.svg#fill-star")
                                                             .rounded-border
-                                                                img.img-fluid(src="../assets/images/dashboard/user/6.jpg", alt="user")
+                                                                img.img-fluid(src="../assets/images/user/6.jpg", alt="user")
                                                             p Marvin McKinney
                                                         .inbox-message
                                                             .email-data
@@ -577,7 +528,7 @@ html(lang='en')
                                                             svg.important-mail.active
                                                                 use(href="../assets/svg/icon-sprite.svg#fill-star")
                                                             .rounded-border
-                                                                img.img-fluid(src="../assets/images/dashboard/user/6.jpg", alt="user")
+                                                                img.img-fluid(src="../assets/images/user/6.jpg", alt="user")
                                                             p Marvin McKinney
                                                         .inbox-message
                                                             .email-data
@@ -947,29 +898,7 @@ html(lang='en')
                                                                 i.fa.fa-envelope-open-o.envelope-2.hide
                                                                 i.fa.fa-trash-o.trash-3
                                                                 i.fa.fa-print
-                                        #label-pill.modal.fade(tabindex='-1' aria-hidden='true')
-                                            .modal-dialog.modal-lg
-                                                .modal-content
-                                                    .modal-header
-                                                        h3.modal-title.fs-5 Add Label
-                                                        button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
-                                                    .modal-body
-                                                        form
-                                                            .row.g-sm-3.g-2.custom-input
-                                                                label.col-sm-2.col-form-label(for='Label_Modal') Label Name :
-                                                                .col-sm-10
-                                                                    input#Label_Modal.form-control(type='email')
-                                                                label.col-sm-2.col-form-label(for='Email_Modal') Email :
-                                                                .col-sm-10
-                                                                    input#Email_Modal.form-control(type='email')
-                                                                label.form-label.col-sm-2(for='exampleColorInput') Label Color :
-                                                                .col-sm-2.col-2
-                                                                    input#exampleColorInput.form-control.form-control-color(type='color' value='#006666' title='Choose your color')
-
-                                                           
-                                                    .modal-footer
-                                                        button.btn.btn-light(type='button' data-bs-dismiss='modal') Cancel
-                                                        button.btn.btn-primary(type='button') Add
+                                        
                                 .card.email-body.email-read
                                     .mail-header-wrapper.header-wrapper1
                                         .mail-header1
@@ -978,20 +907,20 @@ html(lang='en')
                                                     use(href='../assets/svg/icon-sprite.svg#back-arrow')
                                             span Interview Mail
                                         .mail-body1 
-                                            .light-square(data-bs-toggle='tooltip' data-bs-placement='top' data-bs-title='Achieve')
-                                                svg 
+                                            .light-square.bg-light-primary(data-bs-toggle='tooltip' data-bs-placement='top' data-bs-title='Achieve')
+                                                svg.stroke-primary 
                                                     use(href='../assets/svg/icon-sprite.svg#sms')
-                                            .light-square(data-bs-toggle='tooltip' data-bs-placement='top' data-bs-title='Bookmark')
-                                                svg.bookmark-box
+                                            .light-square.bg-light-success(data-bs-toggle='tooltip' data-bs-placement='top' data-bs-title='Bookmark')
+                                                svg.bookmark-box.stroke-success
                                                     use(href='../assets/svg/icon-sprite.svg#bookmark')
-                                            .light-square(data-bs-toggle='tooltip' data-bs-placement='top' data-bs-title='Spam')
-                                                svg 
+                                            .light-square.bg-light-info(data-bs-toggle='tooltip' data-bs-placement='top' data-bs-title='Spam')
+                                                svg.stroke-info
                                                     use(href='../assets/svg/icon-sprite.svg#spam')
-                                            .light-square(data-bs-toggle='tooltip' data-bs-placement='top' data-bs-title='Trash')
+                                            .light-square.bg-light-danger(data-bs-toggle='tooltip' data-bs-placement='top' data-bs-title='Trash')
                                                 svg.stroke-danger
                                                     use(href='../assets/svg/icon-sprite.svg#mail-trash')
-                                            .light-square(data-bs-toggle='tooltip' data-bs-placement='top' data-bs-title='Settings')
-                                                svg 
+                                            .light-square.bg-light-primary(data-bs-toggle='tooltip' data-bs-placement='top' data-bs-title='Settings')
+                                                svg.stroke-primary 
                                                     use(href='../assets/svg/icon-sprite.svg#setting')
                                     .mail-body-wrapper 
                                         .user-mail-wrapper
@@ -1027,7 +956,7 @@ html(lang='en')
                                                         svg 
                                                             use(href='../assets/svg/icon-sprite.svg#print')
                                                     .light-square.btn-group
-                                                        .dropdown-toggle(role='main' data-bs-toggle="dropdown" aria-expanded="false")
+                                                        .show(role='main' data-bs-toggle="dropdown" aria-expanded="false")
                                                             svg
                                                                 use(href='../assets/svg/icon-sprite.svg#menubar')
                                                         .dropdown-menu.dropdown-block
@@ -1077,6 +1006,80 @@ html(lang='en')
                                             .send-btn 
                                                 button.btn.btn-primary Send
                                                     i.fa.fa-paper-plane 
+                            #compose_mail.modal.fade(tabindex='-1'  aria-hidden='true')
+                                .modal-dialog.modal-lg
+                                    .modal-content
+                                        .modal-header
+                                            h3.modal-title.fs-5 Compose Message
+                                            button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                                        .modal-body.compose-modal
+                                            form
+                                                .row.mb-3
+                                                    label.col-sm-2.col-form-label(for='composeFrom') From :
+                                                    .col-sm-10
+                                                        input#composeFrom.form-control(type='email')
+                                                .row.mb-3
+                                                    label.col-sm-2.col-form-label(for='composeTo') To :
+                                                    .col-sm-10
+                                                        input#composeTo.form-control(type='email')
+                                                        .add-bcc
+                                                            .d-flex.gap-2
+                                                                a.btn(data-bs-toggle='collapse' href='#collapseCc' role='button' aria-expanded='false' aria-controls='collapseCc')
+                                                                    | Cc 
+                                                                a.btn(data-bs-toggle='collapse' href='#collapseBcc' role='button' aria-expanded='false' aria-controls='collapseBcc')
+                                                                    | Bcc
+                                                #collapseCc.collapse.row.mb-3 
+                                                    label.col-sm-2.col-form-label(for='composeCc') Cc:
+                                                    .col-sm-10
+                                                        input#composeCc.form-control(type='email')
+                                                #collapseBcc.collapse.row.mb-3 
+                                                    label.col-sm-2.col-form-label(for='composeBcc') Bcc:
+                                                    .col-sm-10
+                                                        input#composeBcc.form-control(type='email')
+                                                .row.mb-3
+                                                    label.col-sm-2.col-form-label(for='composeSubject') Subject :
+                                                    .col-sm-10
+                                                        input#composeSubject.form-control(type='email')
+                                                .toolbar-box
+                                                    #toolbar1
+                                                        button.ql-bold Bold 
+                                                        button.ql-italic Italic 
+                                                        button.ql-underline underline
+                                                        button.ql-strike Strike 
+                                                        button.ql-list(value="ordered") List 
+                                                        button.ql-list(value="bullet") 
+                                                        button.ql-indent(value="-1") 
+                                                        button.ql-indent(value="+1")
+                                                        button.ql-link
+                                                        button.ql-image
+                                                    #editor1
+                                        .modal-footer
+                                            button.btn.btn-light(type='button') Save as draft
+                                            button.btn.btn-primary(type='button' data-bs-dismiss='modal') Send
+                            #label-pill.modal.fade(tabindex='-1' aria-hidden='true')
+                                .modal-dialog.modal-lg
+                                    .modal-content
+                                        .modal-header
+                                            h3.modal-title.fs-5 Add Label
+                                            button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                                        .modal-body
+                                            form
+                                                .row.g-sm-3.g-2.custom-input
+                                                    label.col-sm-2.col-form-label(for='Label_Modal') Label Name :
+                                                    .col-sm-10
+                                                        input#Label_Modal.form-control(type='email')
+                                                    label.col-sm-2.col-form-label(for='Email_Modal') Email :
+                                                    .col-sm-10
+                                                        input#Email_Modal.form-control(type='email')
+                                                    label.form-label.col-sm-2(for='exampleColorInput') Label Color :
+                                                    .col-sm-2.col-2
+                                                        input#exampleColorInput.form-control.form-control-color(type='color' value='#795EBD' title='Choose your color')
+
+                                                
+                                        .modal-footer
+                                            button.btn.btn-light(type='button' data-bs-dismiss='modal') Cancel
+                                            button.btn.btn-primary(type='button') Add
+       
         // Container-fluid Ends
         include ../../components/footer
     include ../../components/footer-files

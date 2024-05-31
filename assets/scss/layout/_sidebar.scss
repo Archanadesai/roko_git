@@ -32,7 +32,7 @@
   transform: translateY(-50%);
   left: 25px;
   border-radius: 100%;
-  background: var(--theme-deafult);
+  background: var(--theme-default);
   opacity: 0;
   visibility: hidden;
   [dir="rtl"] & {
@@ -185,7 +185,7 @@
           @media (max-width: 480px) {
             right: -85px;
             [dir="rtl"] & { 
-              left: -85px;
+              left: -105px;
             }
           }
           &.open {
@@ -220,9 +220,9 @@
               display: none;
             }
             &:nth-child(8)::after {
-              left: 82px;
+              left: 90px;
               [dir="rtl"] &{
-                right: 82px;
+                right: 90px;
               }
             }
             &:last-child::after {
@@ -405,9 +405,8 @@
                 margin: 0 auto;
               }
               span {
-                font-family: $font-roboto, $font-serif;
-                font-size: 12px;
-                font-weight: 500;
+                font-size: 13px;
+                font-weight: 600;
                 letter-spacing: 0.5px;
               }
             }
@@ -494,6 +493,7 @@
             padding: 20px;
             text-align: center;
             border-bottom: 1px solid rgba($dropdown-border-color, 0.3);
+            font-weight: 700;
           }
           ul {
             padding: 15px;
@@ -543,20 +543,23 @@
                 padding-bottom: 0;
                 text-align: center;
               }
+              + li {
+                border-top: 1px solid rgba($dropdown-border-color, 0.3);
+              }
             }
           }
           li {
             padding: 15px;
-            + li {
-              border-top: 1px solid rgba($dropdown-border-color, 0.3);
-            }
             p {
               font-size: 14px;
               letter-spacing: 0.3px;
               margin-bottom: 0;
+              font-weight: 600;
             }
             a {
               letter-spacing: 0.3px;
+              font-size: 15px;
+              font-weight: 600;
             }
             &:last-child {
               padding-bottom: 0;
@@ -575,6 +578,8 @@
                   letter-spacing: 0.8px;
                   padding-right: 10px;
                   display: inline-block;
+                  font-size: 15px;
+                  font-weight: 600;
                 }
                 p {
                   margin-bottom: 8px;
@@ -628,7 +633,7 @@
           .close-circle {
             position: absolute;
             right: 0;
-            top: 0;
+            top: 6px;
             a {
               width: 18px;
               height: 18px;
@@ -672,11 +677,11 @@
             background-color: #f9f9f9;
             border: none;
             h6 {
-              font-family: $font-roboto, $font-serif;
               font-weight: 500;
-              font-size: 12px;
+              font-size: 14px;
               line-height: 14px;
               letter-spacing: 0.5px;
+              font-weight: 600;
               span {
                 font-size: 14px;
               }
@@ -1362,6 +1367,9 @@
       &.close_icon {
         margin-left: 71px;
         width: calc(100% - 71px);
+        @media (max-width: 1199px) {
+          margin-left: 89px;
+        }
       }
       .header-wrapper {
         .logo-wrapper {
@@ -1478,6 +1486,9 @@
                               span {
                                 display: inline-block;
                               }
+                              .according-menu {
+                                display: inline-block;
+                              }
                             }
                           }
                         }
@@ -1505,6 +1516,9 @@
             ~footer {
               margin-left: 71px;
               transition: 0.5s;
+              @media (max-width: 1199px) {
+                margin-left: 90px;
+              }
             }
             ~.footer-fix {
               width: calc(100% - 90px);
@@ -1598,7 +1612,7 @@
                     width: 20px;
                     height: 20px;
                     margin-right: 10px;
-                    vertical-align: -2px;
+                    vertical-align: text-bottom;
                     float: none;
                     transition: all 0.3s ease;
                   }
@@ -1653,7 +1667,7 @@
                             }
                           }
                           [dir="rtl"] & {
-                            padding: 25px 20px 10px 0;
+                            padding: 25px 36px 10px 0;
                           }
                           &:nth-child(2) {
                             margin-top: 0;

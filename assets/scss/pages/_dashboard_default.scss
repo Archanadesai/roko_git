@@ -30,6 +30,7 @@ $badge-light-color in (primary, $primary-color),
 .dashboard_default {
   table {
     thead {
+      background-color: var(--theme-default);
       tr {
         th{
           padding: 0px 8px 8px 0px !important;
@@ -40,7 +41,7 @@ $badge-light-color in (primary, $primary-color),
             input {
               height: 15px;
               &:checked{
-                background-color: var(--theme-deafult);
+                background-color: var(--theme-default);
                 border: 1px solid $table-border-color;
               }
               &:focus {
@@ -60,7 +61,7 @@ $badge-light-color in (primary, $primary-color),
           input {
             height: 15px;
             &:checked{
-              background-color: var(--theme-deafult);
+              background-color: var(--theme-default);
               border: 1px solid $table-border-color;
             }
             &:focus {
@@ -322,14 +323,12 @@ $badge-light-color in (primary, $primary-color),
             p {
               color: $theme-body-sub-title-color;
               font-weight: 600;
-              @media (max-width: 1199px) and (min-width: 992px) {
-                text-overflow:ellipsis;
-                overflow:hidden;
-                display: -webkit-box !important;
-                -webkit-line-clamp: 1;
-                -webkit-box-orient: vertical;
-                white-space: normal;
-              }
+              text-overflow:ellipsis;
+              overflow:hidden;
+              display: -webkit-box !important;
+              -webkit-line-clamp: 1;
+              -webkit-box-orient: vertical;
+              white-space: normal; 
             }
           }
         }
@@ -444,6 +443,7 @@ $badge-light-color in (primary, $primary-color),
         display: flex;
         gap: 5px;
         margin-bottom: 5px;
+        align-items: center;
         svg {
           width: 20px;
           height: 20px;
@@ -921,7 +921,11 @@ $badge-light-color in (primary, $primary-color),
       @media (max-width: 575px) {
         top: 60px;
         right: 18px;
-      }flex-grow-1
+        [dir="rtl"] & { 
+          left: 18px;
+          right: unset;
+        }
+      }
       [dir="rtl"] & {
         left: 22px;
         right: unset;
@@ -967,6 +971,15 @@ $badge-light-color in (primary, $primary-color),
           >td {
             font-weight: 600;
           }
+        }
+      }
+    }
+  }
+  .header-top {
+    .dropdown {
+      .dropdown-toggle {
+        &:active {
+          border: 1px solid $table-border-color;
         }
       }
     }

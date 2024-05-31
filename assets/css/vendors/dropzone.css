@@ -530,7 +530,7 @@
   margin-right: auto;
   margin-left: auto;
   padding: 50px;
-  border: 2px dashed var(--theme-default);
+  border: 2px solid var(--theme-default);
   border-radius: 15px;
   -webkit-border-image: none;
   -o-border-image: none;
@@ -545,7 +545,7 @@
 }
 .dropzone i {
   font-size: 50px;
-  color: var(--theme-deafult);
+  color: var(--theme-default);
 }
 .dropzone .dz-message {
   text-align: center;
@@ -560,7 +560,7 @@
   background-color: #eeeeee;
   width: 120px;
   height: 120px;
-  box-shadow: 0px 0px 3px var(--theme-deafult);
+  box-shadow: 0px 0px 3px var(--theme-default);
 }
 .dropzone .dz-preview .dz-progress {
   display: block;

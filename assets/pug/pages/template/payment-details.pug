@@ -17,7 +17,7 @@ html(lang='en')
       .page-header.row
         
         .page-title.w-auto
-          +breadcrumb(['Dashboard','Advanced'],'Advanced Dashboard')
+          +breadcrumb(['Ecommerce','Payment Details'],'Payment Details')
         include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -27,14 +27,14 @@ html(lang='en')
             .page-title
               .row
                 include ../../components/sub-header
-                +breadcrumb(['Dashboard',' Advanced'],'Advanced Dashboard')
+                +breadcrumb(['Ecommerce',' Payment Details'],'Payment Details')
           // Container-fluid starts
           .container-fluid.credit-card
             .row
               // Individual column searching (text inputs) Starts
               .col-xl-8.box-col-80
                 .card
-                  .card-header
+                  .card-header.card-no-border.pb-0
                     h3 Credit card 
                   .card-body
                     .row
@@ -59,7 +59,7 @@ html(lang='en')
               // Debit Card Starts
               .col-xl-4.col-lg-6.box-col-33.debit-card
                 .card
-                  .card-header
+                  .card-header.card-no-border.pb-0
                     h3 Debit card 
                   .card-body
                     form.theme-form.e-commerce-form.row
@@ -94,7 +94,7 @@ html(lang='en')
               // COD Starts
               .col-xl-4.col-lg-6.box-col-33
                 .card
-                  .card-header
+                  .card-header.card-no-border.pb-0
                     h3 COD
                   .card-body
                     form.theme-form.row
@@ -118,7 +118,7 @@ html(lang='en')
               // EMI Starts
               .col-xl-4.col-lg-6.box-col-33
                 .card
-                  .card-header
+                  .card-header.card-no-border.pb-0
                     h3 EMI
                   .card-body
                     form.theme-form.row
@@ -163,7 +163,7 @@ html(lang='en')
               // EMI Starts
               .col-xl-4.col-lg-6.box-col-33
                 .card
-                  .card-header
+                  .card-header.card-no-border.pb-0
                     h3 Net Banking
                   .card-body
                     form.theme-form.row

@@ -322,6 +322,12 @@
         stroke: $theme-body-sub-title-color;
       }
     } 
+    .dropdown {
+      button {
+        width: 110px;
+        padding: 6px 10px;
+      }
+    }
   } 
 }
 /**======Main Header css Start ======**/

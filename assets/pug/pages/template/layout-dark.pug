@@ -19,7 +19,7 @@ html(lang='en')
       .page-header.row
         
         .page-title.w-auto
-          +breadcrumb(['Dashboard','Advanced'],'Advanced Dashboard')
+          +breadcrumb(['Page Layout','Layout Dark'],'Layout Dark')
         include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -29,18 +29,18 @@ html(lang='en')
             .page-title
               .row
                 include ../../components/sub-header
-                +breadcrumb(['Dashboard',' Advanced'],'Advanced Dashboard')
+                +breadcrumb(['Page Layout',' Layout Dark'],'Layout Dark')
           // Container-fluid starts
           .container-fluid
             .row
               .col-sm-12
                 .card.alert.alert-primary(role='alert')
-                  h3 Tip!
+                  h3.text-white Tip!
                   p
                     | Add the class="dark-only" to the body tag to get this layout.
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.card-no-border.pb-0
                     h3 Title
                     .card-header-right
                       ul.list-unstyled.card-option

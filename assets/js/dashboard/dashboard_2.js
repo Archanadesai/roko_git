@@ -398,7 +398,7 @@ responsive: [
     options: {
       chart: {
         height: 200,
-        offsetY: -10,
+        offsetY: -30,
         offsetX: 0,
       },
     },

@@ -19,7 +19,7 @@ html(lang='en')
       .page-header.row
         
         .page-title.w-auto
-          +breadcrumb(['Dashboard','Advanced'],'Advanced Dashboard')
+          +breadcrumb(['Page Layout','Footer Fixed'],'Footer Fixed')
         include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -29,24 +29,18 @@ html(lang='en')
             .page-title
               .row
                 include ../../components/sub-header
-                +breadcrumb(['Dashboard',' Advanced'],'Advanced Dashboard')
+                +breadcrumb(['Page Layout',' Footer Fixed'],'Footer Fixed')
           // Container-fluid starts
           .container-fluid
             .row
               .col-sm-12
                 .card
-                  .card-header
-                    h5 Sample Card
+                  .card-header.card-no-border.pb-0
+                    h3 Sample Card
                     span lorem ipsum dolor sit amet, consectetur adipisicing elit
                   .card-body
                     p
-                      | "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                      | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                      | enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                      | nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                      | in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                      | nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                      | sunt in culpa qui officia deserunt mollit anim id est laborum."
+                      | The creative minds behind stunning and useful websites are web designers. They possess a special talent for transforming concepts into works of art that attract audiences and provide seamless user experiences. Web designers bring websites to life by selecting fonts, colour palettes, and other design elements. They create layouts that are not only aesthetically pleasing but also optimised for performance and user engagement using their technical expertise and creative flare. Web designers can build flexible and dynamic designs that fit a variety of devices and screen sizes thanks to their proficiency in coding languages like HTML, CSS, and JavaScript. Web designers are essential to helping businesses succeed in an era where having an online presence is essential.
           // Container-fluid Ends
         include ../../components/footer
     include ../../components/footer-files
