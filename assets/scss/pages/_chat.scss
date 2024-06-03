@@ -230,6 +230,7 @@
     cursor: pointer;
     width: 18px;
     height: 18px;
+    stroke: $theme-font-color;
     @media (max-width:360px) {
       width: 14px;
       height: 14px;

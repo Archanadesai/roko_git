@@ -18,7 +18,7 @@ html(lang='en')
       .page-header.row
         
         .page-title.w-auto
-          +breadcrumb(['Dashboard','Advanced'],'Advanced Dashboard')
+          +breadcrumb(['Ecommerce','Recent Orders'],'Recent Orders')
         include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -28,13 +28,13 @@ html(lang='en')
             .page-title
               .row
                 include ../../components/sub-header
-                +breadcrumb(['Dashboard',' Advanced'],'Advanced Dashboard')
+                +breadcrumb(['Ecommerce',' Recent Orders'],'Recent Orders')
           // Container-fluid starts
           .container-fluid
             .row
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.card-no-border.pb-0
                     h3 New Orders
                   .card-body
                     .row.g-sm-4.g-3
@@ -229,7 +229,7 @@ html(lang='en')
                               i.close(data-feather='x')
 
                 .card
-                  .card-header
+                  .card-header.card-no-border.pb-0
                     h3 Shipped Orders
                   .card-body
                     .row.g-sm-4.g-3
@@ -423,7 +423,7 @@ html(lang='en')
                               a.btn.btn-success.btn-xs(href="#") Shipped
                               i.close(data-feather='x')
                 .card
-                  .card-header
+                  .card-header.card-no-border.pb-0
                     h3 Cancelled Orders
                   .card-body
                     .row.g-sm-4.g-3
@@ -618,7 +618,7 @@ html(lang='en')
                               i.close(data-feather='x')
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.card-no-border.pb-0
                     h3 Datatable order history
                   .card-body
                     .order-history.table-responsive.custom-scrollbar

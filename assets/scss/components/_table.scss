@@ -313,6 +313,18 @@ th {
 		}
 	}
 }
+.table {
+	tbody {
+		tr {
+			&:last-child {
+				td , 
+				th {
+					border-bottom: none;
+				}
+			}
+		}
+	}
+}
 /**=====================
     2.30 Table CSS Ends
 ==========================**/

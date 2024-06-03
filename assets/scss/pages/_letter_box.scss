@@ -538,7 +538,9 @@
                     @media (max-width:576px) {
                         min-width: 260px;
                     }
-
+                    p {
+                        color: var(--theme-default);
+                    }
                     .form-check-input {
                         width: 18px;
                         height: 18px;
@@ -632,8 +634,8 @@
 
                             span {
                                 font-weight: 400;
-                                line-height: 1.9;
-
+                                line-height: 1.9;   
+                                color: $theme-font-color;
                             }
                         }
 
@@ -820,10 +822,11 @@
         .btn-email {
             width: 20px;
             height: 20px;
+            stroke: $theme-font-color;
         }
     }
 
-    .mail-body1 {
+    .mail-body1 {   
         display: flex;
         gap: 10px;
 
@@ -942,6 +945,9 @@
                         svg {
                             width: 16px;
                             height: 16px;
+                        }
+                        &:active {
+                            border: none;
                         }
                     }
 
@@ -1072,7 +1078,7 @@
                 }
 
                 svg {
-                    // stroke: var(--chart-text-color);
+                    stroke: var(--chart-text-color);
                     width: 18px;
                     height: 18px;
                 }

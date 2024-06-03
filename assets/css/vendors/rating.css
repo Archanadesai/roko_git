@@ -520,10 +520,10 @@
   color: #d2d2d2;
 }
 .br-theme-fontawesome-stars .br-widget a.br-active:after {
-  color: var(--theme-deafult);
+  color: var(--theme-default);
 }
 .br-theme-fontawesome-stars .br-widget a.br-selected:after {
-  color: var(--theme-deafult);
+  color: var(--theme-default);
 }
 .br-theme-fontawesome-stars .br-widget .br-current-rating {
   display: none;
@@ -558,14 +558,14 @@
   text-align: center;
 }
 .br-theme-bars-1to10 .br-widget a.br-active, .br-theme-bars-1to10 .br-widget a.br-selected {
-  background-color: var(--theme-deafult);
+  background-color: var(--theme-default);
 }
 .br-theme-bars-1to10 .br-widget .br-current-rating {
   font-size: 20px;
   line-height: 1.8;
   float: left;
   padding: 0 20px 0 20px;
-  color: var(--theme-deafult);
+  color: var(--theme-default);
   font-weight: 400;
 }
 .br-theme-bars-1to10 .br-readonly a {
@@ -607,7 +607,7 @@
   margin: 1px;
 }
 .br-theme-bars-horizontal .br-widget a.br-active, .br-theme-bars-horizontal .br-widget a.br-selected {
-  background-color: var(--theme-deafult);
+  background-color: var(--theme-default);
 }
 .br-theme-bars-horizontal .br-widget .br-current-rating {
   width: 120px;
@@ -615,7 +615,7 @@
   font-weight: 600;
   line-height: 2;
   text-align: center;
-  color: var(--theme-deafult);
+  color: var(--theme-default);
 }
 .br-theme-bars-horizontal .br-readonly a {
   cursor: default;
@@ -656,7 +656,7 @@
   margin: 1px;
 }
 .br-theme-bars-movie .br-widget a.br-active, .br-theme-bars-movie .br-widget a.br-selected {
-  background-color: var(--theme-deafult);
+  background-color: var(--theme-default);
 }
 .br-theme-bars-movie .br-widget .br-current-rating {
   clear: both;
@@ -665,7 +665,7 @@
   font-weight: 600;
   display: block;
   padding: 0.5em 0;
-  color: var(--theme-deafult);
+  color: var(--theme-default);
   font-weight: 400;
 }
 .br-theme-bars-movie .br-readonly a {
@@ -700,7 +700,7 @@
 .br-theme-bars-pill .br-widget a {
   padding: 7px 15px;
   background-color: #d3d7f9;
-  color: var(--theme-deafult);
+  color: var(--theme-default);
   text-decoration: none;
   font-size: 13px;
   line-height: 3;
@@ -724,7 +724,7 @@
   border-bottom-right-radius: 999px;
 }
 .br-theme-bars-pill .br-widget a.br-active, .br-theme-bars-pill .br-widget a.br-selected {
-  background-color: var(--theme-deafult);
+  background-color: var(--theme-default);
   color: white;
 }
 .br-theme-bars-pill .br-readonly a {
@@ -767,18 +767,18 @@
   font-size: 15px;
   font-weight: 400;
   line-height: 1.4;
-  color: var(--theme-deafult);
+  color: var(--theme-default);
   text-align: center;
 }
 .br-theme-bars-reversed .br-widget a.br-active, .br-theme-bars-reversed .br-widget a.br-selected {
-  background-color: var(--theme-deafult);
+  background-color: var(--theme-default);
   color: white;
 }
 .br-theme-bars-reversed .br-widget .br-current-rating {
   line-height: 1.3;
   float: left;
   padding: 0 20px 0 20px;
-  color: var(--theme-deafult);
+  color: var(--theme-default);
   font-size: 17px;
   font-weight: 400;
 }
@@ -828,8 +828,8 @@
   font-weight: 600;
 }
 .br-theme-bars-square .br-widget a.br-active, .br-theme-bars-square .br-widget a.br-selected {
-  border: 2px solid var(--theme-deafult);
-  color: var(--theme-deafult);
+  border: 2px solid var(--theme-default);
+  color: var(--theme-default);
 }
 .br-theme-bars-square .br-widget .br-current-rating {
   clear: both;
@@ -844,7 +844,7 @@
   cursor: default;
 }
 .br-theme-bars-square .br-readonly a.br-active, .br-theme-bars-square .br-readonly a.br-selected {
-  border: 2px solid var(--theme-deafult);
+  border: 2px solid var(--theme-default);
   color: #8f9af1;
 }
 
@@ -954,15 +954,15 @@
 }
 .br-theme-fontawesome-stars-o .br-widget a.br-active:after {
   content: "\f005";
-  color: var(--theme-deafult);
+  color: var(--theme-default);
 }
 .br-theme-fontawesome-stars-o .br-widget a.br-selected:after {
   content: "\f005";
-  color: var(--theme-deafult);
+  color: var(--theme-default);
 }
 .br-theme-fontawesome-stars-o .br-widget a.br-fractional:after {
   content: "\f123";
-  color: var(--theme-deafult);
+  color: var(--theme-default);
 }
 .br-theme-fontawesome-stars-o .br-widget .br-current-rating {
   display: none;

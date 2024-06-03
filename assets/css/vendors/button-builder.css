@@ -204,14 +204,14 @@
   position: relative;
   z-index: 1;
   top: 3px;
-  border: 1px solid var(--theme-deafult);
+  border: 1px solid var(--theme-default);
   border-radius: 100%;
 }
 .button-builder .custom-radio:hover {
   background-position: 0 -16px;
 }
 .button-builder .custom-radio.selected {
-  background-color: var(--theme-deafult);
+  background-color: var(--theme-default);
 }
 .button-builder .custom-radio input[type=radio] {
   margin: 1px;
@@ -313,7 +313,7 @@
   position: absolute;
   top: 133px;
   width: 75px;
-  background-color: var(--theme-deafult);
+  background-color: var(--theme-default);
   border-radius: 5px;
 }
 .button-builder .colorpicker-submit:before {
@@ -377,7 +377,7 @@
   margin: 0 auto !important;
 }
 .button-builder .copy a {
-  background-color: var(--theme-deafult);
+  background-color: var(--theme-default);
   color: #fff;
   font-weight: bold;
   display: inline-block;

@@ -22,7 +22,7 @@ function style() {
 // pug to html
 function html() {
   return gulp
-  .src("./assets/pug/pages/template/index.pug")
+  .src("./assets/pug/pages/template/letter-box.pug")
     .pipe(
       pug({
         pretty: true,

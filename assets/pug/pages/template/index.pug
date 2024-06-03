@@ -30,7 +30,7 @@ html(lang='en')
       .page-header.row
         //- include ../../components/toggle-icon
         .page-title.w-auto
-          +breadcrumb(['Dashboard','Advanced'],'Advanced Dashboard')
+          +breadcrumb(['Dashboard','Ecommerce'],'Ecommerce Dashboard')
         include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -40,7 +40,7 @@ html(lang='en')
             .page-title
               .row
                 include ../../components/sub-header
-                +breadcrumb(['Dashboard',' Advanced'],'Advanced Dashboard')  
+                +breadcrumb(['Dashboard',' Ecommerce'],'Ecommerce Dashboard')  
           // Container-fluid starts
           .container-fluid.dashboard_default
             .row.widget-grid
@@ -81,7 +81,7 @@ html(lang='en')
                           i.view-html.fa.fa-code
                         li
                           i.icofont.icofont-maximize.full-card
-                        li
+                        li 
                           i.icofont.icofont-minus.minimize-card
                         li
                           i.icofont.icofont-refresh.reload-card
@@ -614,8 +614,6 @@ html(lang='en')
                         .temperature-box
                           h3 Temperature
                           #temperature-chart
-
-
           // Container-fluid Ends
         include ../../components/footer        
     include ../../components/footer-files

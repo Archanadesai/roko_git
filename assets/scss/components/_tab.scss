@@ -89,6 +89,7 @@ $nav-color: var(--theme-default),
       border: none;
       border-bottom: none;
       transition: 0.3s;
+      font-weight: 600;
 
       @media (min-width: 576px) and (max-width: 1920px) {
         padding-top: 0;

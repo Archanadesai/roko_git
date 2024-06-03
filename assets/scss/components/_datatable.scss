@@ -423,6 +423,16 @@ table {
     }
   }
 }
+.dashboard_default ,
+.ecommerce-dashboard {
+  table {
+    input {
+      &:focus {
+        box-shadow: none !important;
+      }
+    }
+  }
+}
 /**=====================
      2.12 Datatable CSS Ends
 ==========================**/

@@ -22,7 +22,7 @@ html(lang='en')
       .page-header.row
         //- include ../../components/toggle-icon
         .page-title.w-auto
-          +breadcrumb(['Dashboard','Advanced'],'Advanced Dashboard')
+          +breadcrumb(['Dashboard','CRM'],'CRM Dashboard')
         include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -32,7 +32,7 @@ html(lang='en')
             .page-title
               .row
                 include ../../components/sub-header
-                +breadcrumb(['Dashboard',' Advanced'],'Advanced Dashboard')
+                +breadcrumb(['Dashboard',' CRM'],'CRM Dashboard')
           // Container-fluid starts
           .container-fluid.ecommerce-dashboard  
             .row
@@ -95,7 +95,7 @@ html(lang='en')
                         .card.position-relative
                           .card-header.card-no-border.pb-0 
                             .header-top
-                              h3 Monthly sales & views (Jun 2023)
+                              h3 Monthly sales & views (Jun 2024)
                               .card-header-right
                                 ul.list-unstyled.card-option
                                   li
@@ -383,7 +383,7 @@ html(lang='en')
                   .col-lg-8
                     .row
                       .col-lg-6.col-sm-7 
-                        .card
+                        .card.sales-pipeline
                           .card-header.card-no-border.pb-0 
                             .header-top
                               h3 Sales Pipeline
@@ -458,10 +458,10 @@ html(lang='en')
                               table#recent-orders.table.display(style='width:100%')
                                 thead 
                                   tr 
-                                    th.d-flex.gap-3
+                                    th
                                       .form-check.checkbox-checked
                                         input.form-check-input(type='checkbox' value='')
-                                      | Product Name
+                                    th Product Name
                                     th Customer
                                     th Countries
                                     th delivery address
@@ -469,9 +469,10 @@ html(lang='en')
                                     th.text-end Status
                                 tbody 
                                   tr  
-                                    td.d-flex.gap-3.align-items-center
+                                    td
                                       .form-check.checkbox-checked
                                         input.form-check-input(type='checkbox' value='')
+                                    td
                                       .d-flex.gap-2
                                           .flex-shrink-0
                                             img(src="../assets/images/dashboard-2/product/4.png", alt="user") 
@@ -488,9 +489,10 @@ html(lang='en')
                                     td.text-end
                                       span.bg-light-primary.font-primary Paid
                                   tr  
-                                    td.d-flex.gap-3.align-items-center
+                                    td
                                       .form-check.checkbox-checked
                                         input.form-check-input(type='checkbox' value='')
+                                    td
                                       .d-flex.gap-2
                                           .flex-shrink-0
                                             img(src="../assets/images/dashboard-2/product/5.png", alt="user") 
@@ -507,9 +509,10 @@ html(lang='en')
                                     td.text-end
                                       span.bg-light-secondary.font-secondary Pending
                                   tr  
-                                    td.d-flex.gap-3.align-items-center
+                                    td
                                       .form-check.checkbox-checked
                                         input.form-check-input(type='checkbox' value='')
+                                    td
                                       .d-flex.gap-2
                                           .flex-shrink-0
                                             img(src="../assets/images/dashboard-2/product/6.png", alt="user") 
@@ -526,9 +529,10 @@ html(lang='en')
                                     td.text-end
                                       span.bg-light-tertiary.font-tertiary Unpaid
                                   tr  
-                                    td.d-flex.gap-3.align-items-center
+                                    td
                                       .form-check.checkbox-checked
                                         input.form-check-input(type='checkbox' value='')
+                                    td
                                       .d-flex.gap-2
                                           .flex-shrink-0
                                             img(src="../assets/images/dashboard-2/product/7.png", alt="user") 

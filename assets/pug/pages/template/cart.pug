@@ -18,7 +18,7 @@ html(lang='en')
       .page-header.row
         
         .page-title.w-auto
-          +breadcrumb(['Dashboard','Advanced'],'Advanced Dashboard')
+          +breadcrumb(['Ecommerce','Cart'],'Cart')
         include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -28,13 +28,13 @@ html(lang='en')
             .page-title
               .row
                 include ../../components/sub-header
-                +breadcrumb(['Dashboard',' Advanced'],'Advanced Dashboard')
+                +breadcrumb(['Ecommerce',' Cart'],'Cart')
           // Container-fluid starts
           .container-fluid
             .row
               .col-sm-12
                 .card
-                  .card-header.pb-0
+                  .card-header.pb-0.card-no-border
                     h3 Cart
                   .card-body
                     .row

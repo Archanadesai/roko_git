@@ -55,7 +55,7 @@
 }
 .page-builder .ge-mainControls .ge-addRowGroup .ge-row-icon .column {
   height: 10px;
-  background: var(--theme-deafult);
+  background: var(--theme-default);
   padding: 0;
   border-left: 3px solid #fff;
 }
@@ -97,7 +97,7 @@
 }
 .page-builder .ge-canvas.ge-editing .ge-tools-drawer > a:hover {
   cursor: pointer;
-  color: var(--theme-deafult) !important;
+  color: var(--theme-default) !important;
 }
 .page-builder .ge-canvas.ge-editing .ge-tools-drawer .ge-details {
   padding: 5px;

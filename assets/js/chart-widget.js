@@ -91,7 +91,7 @@
         data: [15, 25, 20, 35, 55, 30, 20, 30, 20, 35, 25, 20, 15, 25, 20, 35, 50, 30, 20, 30, 20, 35, 25, 20],
       },
     ],
-    colors: [ "var(--theme-default)" , "#FFA941"],
+    colors: [ "var(--theme-default)" , "var(--theme-secondary)"],
     chart: {
       height: 215,
       offsetY: 20,
@@ -151,7 +151,7 @@
         breakpoint: 376,
         options: {
           chart: {
-            height: 50,
+            height: 100,
           },
         },
       },
@@ -515,6 +515,22 @@
     },
     xaxis: {
       categories: [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
         "Jan",
         "Feb",
         "Mar",
@@ -1136,8 +1152,8 @@
     plotOptions: {
       candlestick: {
         colors: {
-          upward: "#FF474A",
-          downward: "#6540D1",
+          upward: "#795EBD",
+          downward: "#F07EB5",
         },
       },
     },
@@ -1268,42 +1284,42 @@
     chart: {
       height: 350,
       type: "line",
-      // animations: {
-      //   enabled: true,
-      //   easing: "linear",
-      //   dynamicAnimation: {
-      //     speed: 1000,
-      //   },
-      // },
+      animations: {
+        enabled: true,
+        easing: "linear",
+        dynamicAnimation: {
+          speed: 1000,
+        },
+      },
 
-      // events: {
-      //   animationEnd: function (chartCtx) {
-      //     const newData = chartCtx.w.config.series[0].data.slice();
-      //     newData.shift();
-      //     window.setTimeout(function () {
-      //       chartCtx.updateOptions(
-      //         {
-      //           series: [
-      //             {
-      //               data: newData,
-      //             },
-      //           ],
-      //           xaxis: {
-      //             min: chartCtx.minX,
-      //             max: chartCtx.maxX,
-      //           },
-      //           subtitle: {
-      //             text:
-      //               parseInt(getRangeRandom({ min: 1, max: 20 })).toString() +
-      //               "%",
-      //           },
-      //         },
-      //         false,
-      //         false
-      //       );
-      //     }, 300);
-      //   },
-      // },
+      events: {
+        animationEnd: function (chartCtx) {
+          const newData = chartCtx.w.config.series[0].data.slice();
+          newData.shift();
+          window.setTimeout(function () {
+            chartCtx.updateOptions(
+              {
+                series: [
+                  {
+                    data: newData,
+                  },
+                ],
+                xaxis: {
+                  min: chartCtx.minX,
+                  max: chartCtx.maxX,
+                },
+                subtitle: {
+                  text:
+                    parseInt(getRangeRandom({ min: 1, max: 20 })).toString() +
+                    "%",
+                },
+              },
+              false,
+              false
+            );
+          }, 300);
+        },
+      },
       toolbar: {
         show: false,
       },
@@ -1405,6 +1421,7 @@
     optionsColumn
   );
   chartColumn.render();
+
 
   var optionsLine = {
     chart: {

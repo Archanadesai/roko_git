@@ -19,7 +19,7 @@ html(lang='en')
       .page-header.row
         
         .page-title.w-auto
-          +breadcrumb(['Dashboard','Advanced'],'Advanced Dashboard')
+          +breadcrumb(['Page Layout','Box Layout'],'Box Layout')
         include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -29,19 +29,19 @@ html(lang='en')
             .page-title
               .row
                 include ../../components/sub-header
-                +breadcrumb(['Dashboard',' Advanced'],'Advanced Dashboard')
+                +breadcrumb(['Page Layout',' Box Layout'],'Box Layout')
           // Container-fluid starts
           .container-fluid
             .row
               .col-sm-12
                 .card.alert.alert-primary(role='alert')
-                  h4.alert-heading Tip!
+                  h3.alert-heading Tip!
                   p
                     | Add class="box-layout" attribute to get this layout. The boxed layout is helpful when working on
                     | large screens because it prevents the site from stretching very wide.
               .col-sm-12
                 .card
-                  .card-header
+                  .card-header.card-no-border.pb-0
                     h3 Title
                     .card-header-right
                       ul.list-unstyled.card-option

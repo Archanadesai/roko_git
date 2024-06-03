@@ -19,9 +19,8 @@ html(lang='en')
     // page-wrapper Start
     #pageWrapper.page-wrapper.compact-wrapper
       .page-header.row
-        
         .page-title.w-auto
-          +breadcrumb(['Dashboard','Advanced'],'Advanced Dashboard')
+          +breadcrumb(['ECommerce','Product list'],'Product list')
         include ../../components/header
       // Page Body Start
       .page-body-wrapper
@@ -31,7 +30,7 @@ html(lang='en')
             .page-title
               .row
                 include ../../components/sub-header
-                +breadcrumb(['Dashboard',' Advanced'],'Advanced Dashboard')
+                +breadcrumb(['ECommerce',' Product list'],'Product list')
           // Container-fluid starts
           .container-fluid
             .row 
@@ -75,7 +74,6 @@ html(lang='en')
                                 option(value='2') In Stock
                                 option(value='3') Pre Order
                                 option(value='4') Limited Stock 
-
                             .col 
                               select.form-select(aria-label='Default select example')
                                 option(selected='') Price
@@ -107,7 +105,6 @@ html(lang='en')
                               span.f-light.f-w-600 Rating
                             th 
                               span.f-light.f-w-600 Action
-
                         tbody 
                           tr.product-removes
                             td
